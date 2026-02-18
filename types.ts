@@ -33,9 +33,38 @@ export interface TopicContent {
   presentationUrl: string;
 }
 
-export interface UserProgress {
+export interface UserProfile {
   uid: string;
   email: string | null;
   name: string | null;
-  completedTopics: string[]; // List of Topic IDs
+  role: 'admin' | 'professor' | 'student';
+  completedTopics: string[];
+  enrolledCourses: string[];
+}
+
+export interface Resource {
+  id: string;
+  title: string;
+  url: string;
+  type: 'pdf' | 'link';
+}
+
+export interface CourseTemplate {
+  id: string;
+  title: string;
+  description: string;
+  modules: Module[];
+  defaultResources: Resource[];
+  createdBy: string;
+  createdAt: any; // Timestamp
+}
+
+export interface CourseInstance {
+  id: string;
+  templateId: string;
+  professorId: string;
+  title: string;
+  section: string;
+  isPublished: boolean;
+  students: string[]; // UIDs
 }
