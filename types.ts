@@ -22,10 +22,22 @@ export interface Flashcard {
   definition: string;
 }
 
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
+export interface Reference {
+  citation: string;
+  url?: string;
+}
+
 export interface TopicContent {
   summary: string;
   keyPoints: string[];
   realWorldExample: string;
+  faqs: FAQ[];
+  references: Reference[];
   quiz: QuizQuestion[];
   flashcards: Flashcard[];
   mindMapUrl: string;

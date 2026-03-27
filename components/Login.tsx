@@ -29,22 +29,22 @@ export const LoginModal: React.FC<LoginModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in overflow-y-auto">
-      <div className="w-full max-w-md bg-[#0f172a] border border-white/10 p-8 rounded-3xl shadow-2xl relative my-8">
+      <div className="w-full max-w-md bg-[#F5F5DC] border border-[#003366]/20 p-8 rounded-3xl shadow-2xl relative my-8">
         <button 
           onClick={onCancel}
-          className="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors"
+          className="absolute top-4 right-4 text-[#555555] hover:text-[#003366] transition-colors"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
 
         <div className="text-center mb-6">
-          <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
-             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div className="w-16 h-16 bg-[#003366] rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-lg shadow-[#003366]/40">
+             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F5F5DC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
           <h2 className="text-2xl font-bold text-white mb-2">
             {isRegistering ? 'Crear Cuenta' : 'Iniciar Sesión'}
           </h2>
-          <p className="text-slate-400 text-sm">
+          <p className="text-[#555555] text-sm">
             {isRegistering 
               ? 'Regístrate para guardar tu avance.' 
               : 'Inicia sesión para recuperar tu progreso.'}
@@ -52,7 +52,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
         </div>
 
         {error && (
-          <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm text-center">
+          <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-xl text-red-700 text-sm text-center">
             {error}
           </div>
         )}
@@ -60,7 +60,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
         {/* Google Button */}
         <button
           onClick={onLoginGoogle}
-          className="w-full flex items-center justify-center gap-3 bg-white text-slate-900 font-bold py-3.5 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg hover:bg-slate-100 mb-6"
+          className="w-full flex items-center justify-center gap-3 bg-white text-[#333333] font-bold py-3.5 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg hover:bg-slate-100 mb-6"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -76,30 +76,30 @@ export const LoginModal: React.FC<LoginModalProps> = ({
             <div className="w-full border-t border-white/10"></div>
           </div>
           <div className="relative flex justify-center text-sm">
-            <span className="px-2 bg-[#0f172a] text-slate-500">O usa tu correo</span>
+            <span className="px-2 bg-[#F5F5DC] text-[#555555]">O usa tu correo</span>
           </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-1">Correo Electrónico</label>
+            <label className="block text-sm font-medium text-[#003366] mb-1">Correo Electrónico</label>
             <input 
               type="email" 
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all"
+              className="w-full bg-white border border-[#003366]/20 rounded-xl px-4 py-3 text-[#333333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#003366]/40 focus:border-[#003366] transition-all"
               placeholder="estudiante@ingenieria.usac.edu.gt"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-1">Contraseña</label>
+            <label className="block text-sm font-medium text-[#003366] mb-1">Contraseña</label>
             <input 
               type="password" 
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all"
+              className="w-full bg-white border border-[#003366]/20 rounded-xl px-4 py-3 text-[#333333] placeholder-[#999999] focus:outline-none focus:ring-2 focus:ring-[#003366]/40 focus:border-[#003366] transition-all"
               placeholder="••••••••"
               minLength={6}
             />
@@ -107,7 +107,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
           
           <button
             type="submit"
-            className="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg hover:shadow-cyan-500/25 mt-2"
+            className="w-full bg-[#003366] hover:bg-[#00264d] text-white font-bold py-3.5 rounded-xl transition-all shadow-lg hover:shadow-[#003366]/40 mt-2"
           >
             {isRegistering ? 'Crear Cuenta' : 'Iniciar Sesión'}
           </button>
@@ -119,7 +119,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
               setIsRegistering(!isRegistering);
               if (onClearError) onClearError();
             }}
-            className="text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
+            className="text-[#003366] hover:text-[#228B22] text-sm font-medium transition-colors"
           >
             {isRegistering 
               ? '¿Ya tienes cuenta? Inicia sesión' 

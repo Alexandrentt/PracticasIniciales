@@ -216,43 +216,58 @@ function App() {
             onBack={goBack}
             onNavigateToTopic={handleSidebarNavigation}
           >
-            <div className="space-y-4 max-w-4xl mx-auto">
-              {viewState.module.topics.map((topic) => {
-                const isCompleted = user?.completedTopics.includes(topic.id);
-                return (
-                  <div 
-                    key={topic.id}
-                    onClick={() => navigateToTopic(viewState.module, topic)}
-                    className="group flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-500/30 cursor-pointer transition-all duration-300 relative overflow-hidden"
-                  >
-                     {/* Progress bar background for completed items */}
-                    {isCompleted && (
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-500"></div>
-                    )}
+            <div className="space-y-6 max-w-4xl mx-auto">
+              <div className="space-y-4">
+                {viewState.module.topics.map((topic) => {
+                  const isCompleted = user?.completedTopics.includes(topic.id);
+                  return (
+                    <div 
+                      key={topic.id}
+                      onClick={() => navigateToTopic(viewState.module, topic)}
+                      className="group flex items-center justify-between p-6 rounded-2xl bg-white border border-[#003366]/15 hover:bg-[#F5F5DC] hover:border-[#003366] cursor-pointer transition-all duration-300 relative overflow-hidden"
+                    >
+                      {isCompleted && (
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#228B22]"></div>
+                      )}
 
-                    <div className="flex items-center gap-6">
-                      <div className={`w-12 h-12 flex items-center justify-center rounded-xl text-lg font-bold border ${isCompleted ? 'bg-green-500/10 border-green-500/30 text-green-400' : 'bg-slate-800 border-slate-700 text-slate-400'}`}>
-                        {isCompleted ? (
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        ) : (
-                          topic.id
-                        )}
+                      <div className="flex items-center gap-6">
+                        <div className={`w-12 h-12 flex items-center justify-center rounded-xl text-lg font-bold border ${
+                          isCompleted 
+                            ? 'bg-[#228B22]/10 border-[#228B22]/50 text-[#228B22]' 
+                            : 'bg-[#003366]/5 border-[#003366]/30 text-[#003366]'
+                        }`}>
+                          {isCompleted ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                          ) : (
+                            topic.id
+                          )}
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-medium text-[#003366] group-hover:text-[#228B22] transition-colors">
+                            {topic.title}
+                          </h3>
+                          <p className="text-sm text-[#555555] mt-1">
+                            {isCompleted ? 'Completado' : 'Por estudiar'}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="text-xl font-medium text-slate-200 group-hover:text-white transition-colors">
-                          {topic.title}
-                        </h3>
-                        <p className="text-sm text-slate-500 mt-1">
-                          {isCompleted ? 'Completado' : 'Pendiente'}
-                        </p>
+                      <div className="text-[#777777] group-hover:text-[#003366] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                       </div>
                     </div>
-                    <div className="text-slate-600 group-hover:text-cyan-400 transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
+
+              <div className="flex justify-center pt-4">
+                <button
+                  onClick={goBack}
+                  className="px-6 py-3 rounded-full border border-[#003366]/40 bg-white hover:bg-[#F5F5DC] text-[#003366] font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                  Volver al inicio
+                </button>
+              </div>
             </div>
           </Layout>
         );
@@ -263,6 +278,8 @@ function App() {
             user={user}
             onLogout={handleLogout}
             onLoginClick={() => setShowLoginModal(true)}
+            title={viewState.topic.title}
+            showContentTitle={false}
             onBack={goBack}
             onNavigateToTopic={handleSidebarNavigation}
             currentTopicId={viewState.topic.id}
@@ -272,6 +289,7 @@ function App() {
               module={viewState.module}
               onFinishTopic={() => handleTopicCompletion(viewState.topic.id)}
               isCompleted={!!user?.completedTopics.includes(viewState.topic.id)}
+              onBackToModule={goBack}
             />
           </Layout>
         );
