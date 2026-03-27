@@ -1,10 +1,24 @@
 # DOCUMENTACIÓN DEL PROYECTO - PracticasIniciales
 
-## Versión 1.1.0 - 2026-03-27
+## Versión 1.2.0 - 2026-03-27
 
 ---
 
 ## HISTORIAL DE VERSIONES
+
+### Versión 1.2.0 (2026-03-27)
+**Cambios realizados:**
+- **Arreglo de redacción del ejemplo real** en `content3_1` (Administración Estratégica) para mejor claridad
+- **Nuevas interfaces `FAQ` y `Reference`** en `types.ts` para estandarizar preguntas frecuentes y referencias bibliográficas
+- **Actualización de `TopicContent`** para incluir `faqs: FAQ[]` y `references: Reference[]`
+- **Agregadas FAQs y Referencias a TODOS los contenidos implementados:**
+  - `content1_1`: 3 FAQs sobre proyectos/EPS/EDT-WBS, 3 referencias (PMBOK, Sapag, Baca Urbina)
+  - `content3_1`: 5 FAQs completas de Administración Estratégica, 8 referencias bibliográficas de `alex.html`
+  - `content7_1`: 3 FAQs sobre instituciones públicas, 3 referencias (SEGEPLAN, BID, UNESCO)
+  - `content7_2`: 3 FAQs sobre APP/concesiones, 3 referencias (Thompson, Hill, World Bank)
+- **Actualización de `generatePlaceholderContent`** para incluir campos faqs y references en todos los placeholders futuros
+
+**Justificación:** El contenido de `alex.html` incluía secciones completas de "Preguntas Frecuentes" y "Referencias Bibliográficas" que no se habían integrado. Ahora toda la información académica está completa y estructurada de manera uniforme en todos los temas.
 
 ### Versión 1.1.0 (2026-03-27)
 **Cambios realizados:**
@@ -51,14 +65,26 @@
 
 **Interfaces clave:**
 ```typescript
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface Reference {
+  citation: string;
+  url?: string;
+}
+
 interface TopicContent {
   summary: string;           // Resumen académico en Markdown
   keyPoints: string[];       // Puntos clave del tema
   realWorldExample: string;  // Caso de estudio real
+  faqs: FAQ[];               // Preguntas frecuentes
+  references: Reference[];   // Referencias bibliográficas
   flashcards: Flashcard[];   // Tarjetas de estudio
   quiz: QuizQuestion[];      // Evaluación (10 preguntas)
   mindMapUrl: string;        // URL del mapa mental
-  infographicUrl: string;    // URL de infografía
+  infographicUrl: string;  // URL de infografía
   presentationUrl: string;   // URL de presentación
 }
 ```
@@ -230,6 +256,44 @@ Caso de estudio: **Servicios Industriales AGV**
 | 9 | Resultado MEFI en caso AGV | C (2.96 - fuerte internamente con debilidades) |
 | 10 | Crecimiento capital de trabajo AGV | A ($216,091.50 → $357,091.50) |
 
+#### 6. FAQs (`faqs`)
+5 preguntas frecuentes con respuestas completas:
+
+| # | Pregunta |
+|---|----------|
+| 1 | ¿Por qué es importante implementar la administración estratégica? |
+| 2 | ¿Cuál es la diferencia entre formulación e implementación? |
+| 3 | ¿Quiénes son responsables de la administración estratégica? |
+| 4 | ¿Qué ocurre si una empresa no evalúa sus estrategias? |
+| 5 | ¿Es la administración estratégica una ciencia o un arte? |
+
+#### 7. Referencias Bibliográficas (`references`)
+8 referencias académicas del archivo `alex.html`:
+
+| # | Referencia |
+|---|------------|
+| 1 | Hill, C. W. L., y Jones, G. R. (2011). Administración estratégica: Un enfoque integral (9.ª ed.). Cengage Learning. |
+| 2 | David, F. R. (2013). Conceptos de administración estratégica (14.ª ed.). Pearson Educación. |
+| 3 | Hitt, M. A., Ireland, R. D., y Hoskisson, R. E. (2008). Administración estratégica: Competitividad y globalización (7.ª ed.). Cengage Learning. |
+| 4 | Thompson, A. A., et al. (2012). Administración estratégica: Teoría y casos (18.ª ed.). McGraw-Hill Interamericana. |
+| 5 | Lana, R. A. (2008). La administración estratégica como herramienta de gestión. Visión de Futuro, 9(1), 89-104. |
+| 6 | Montesdeca Villavicencio, F. E., et al. (2024). Administración estratégica basada en la toma de decisiones efectiva. Ciencia y Desarrollo, 15(2), 1-14. |
+| 7 | Rangel, N. (2024). Conocimiento en administración estratégica... (con DOI) |
+| 8 | González-Villegas, M. F., et al. (2021). Implementación de la Administración Estratégica en una Microempresa de Servicios... |
+
+| # | Tema de la pregunta | Respuesta correcta |
+|---|---------------------|-------------------|
+| 1 | Propósito fundamental de la administración estratégica | B (Competitividad y rendimientos superiores) |
+| 2 | Diferencia formulación vs implementación | C (Eficacia vs eficiencia) |
+| 3 | Herramienta FODA | B (Alinea fortalezas/debilidades con oportunidades/amenazas) |
+| 4 | Definición de Visión | B (Imagen del futuro deseado) |
+| 5 | Importancia de la evaluación | B (Revisar factores, medir desempeño, medidas correctivas) |
+| 6 | Competencias Centrales | B (Fuente de ventaja competitiva) |
+| 7 | Responsables del proceso | B (Líderes estratégicos y directivos) |
+| 8 | Ciencia vs Arte | C (Ambas: análisis de datos + juicio creativo) |
+| 9 | Resultado MEFI en caso AGV | C (2.96 - fuerte internamente con debilidades) |
+| 10 | Crecimiento capital de trabajo AGV | A ($216,091.50 → $357,091.50) |
+
 ---
 
 ## FLUJO DE DATOS EN LA APLICACIÓN
@@ -321,4 +385,4 @@ App.tsx
 
 ---
 
-*Documentación generada automáticamente. Última actualización: 2026-03-27*
+*Documentación generada automáticamente. Última actualización: 2026-03-27 (Versión 1.2.0)*
