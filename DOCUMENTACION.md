@@ -107,16 +107,27 @@ interface TopicContent {
 - `onBackToModule: () => void` - Callback para volver
 
 **Tabs disponibles:**
-1. **investigacion** - Muestra el resumen, puntos clave y ejemplo real
+1. **investigacion** - Muestra el resumen, puntos clave, ejemplo real, FAQs y referencias bibliográficas
 2. **flashcards** - Renderiza el componente Flashcards
 3. **quiz** - Renderiza el componente Quiz para evaluación
 4. **mapa** - Visualización del mapa mental
 5. **infografia** - Visualización de infografía
 6. **presentacion** - Enlace a material descargable
 
-**Relación con otros componentes:**
-- Importa `Quiz` y `Flashcards` para renderizado condicional
-- Usa `getTopicContent` del servicio para obtener datos
+**Renderizado Markdown:**
+El componente incluye una función `renderMarkdown()` que convierte:
+- `#` → `<h1>`
+- `##` → `<h2>`
+- `###` → `<h3>`
+- `**texto**` → `<strong>` (negrita)
+- `> ` → Bloque de cita destacada
+- Listas con `-` → `<ul>`/`<li>`
+
+Esta función se aplica a `summary`, `realWorldExample` y cualquier contenido con formato Markdown.
+
+**Nuevas secciones (v1.2.0):**
+- **FAQs**: Sección condicional que muestra preguntas frecuentes con diseño de tarjeta con borde izquierdo verde
+- **Referencias Bibliográficas**: Lista numerada con enlaces clicables cuando tienen URL (DOI)
 
 #### `components/Quiz.tsx`
 **Función:** Sistema de evaluación con 10 preguntas por tema.

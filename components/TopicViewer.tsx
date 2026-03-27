@@ -198,9 +198,53 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
 
               <div className="bg-white border border-[#228B22]/20 rounded-3xl p-8">
                 <h3 className="text-xl font-bold text-[#228B22] mb-4">Ejemplo Real</h3>
-                <p className="text-[#333333] italic">"{content.realWorldExample}"</p>
+                <div className="text-[#333333]">{renderMarkdown(content.realWorldExample)}</div>
               </div>
             </div>
+
+            {/* FAQs Section */}
+            {content.faqs && content.faqs.length > 0 && (
+              <div className="bg-white border border-[#003366]/15 rounded-3xl p-8 shadow-lg">
+                <h3 className="text-xl font-bold text-[#003366] mb-6 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                  Preguntas Frecuentes
+                </h3>
+                <div className="space-y-4">
+                  {content.faqs.map((faq, idx) => (
+                    <div key={idx} className="border-l-4 border-[#228B22] bg-[#F5F5DC]/50 p-4 rounded-r-lg">
+                      <h4 className="font-semibold text-[#003366] mb-2">{faq.question}</h4>
+                      <p className="text-[#333333] text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* References Section */}
+            {content.references && content.references.length > 0 && (
+              <div className="bg-white border border-[#003366]/15 rounded-3xl p-8 shadow-lg">
+                <h3 className="text-xl font-bold text-[#003366] mb-6 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                  Referencias Bibliográficas
+                </h3>
+                <ul className="space-y-3">
+                  {content.references.map((ref, idx) => (
+                    <li key={idx} className="flex gap-3 items-start">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#003366]/10 text-[#003366] text-xs font-bold flex items-center justify-center">{idx + 1}</span>
+                      <div className="text-[#333333] text-sm leading-relaxed">
+                        {ref.url ? (
+                          <a href={ref.url} target="_blank" rel="noreferrer" className="text-[#003366] hover:text-[#228B22] hover:underline">
+                            {ref.citation}
+                          </a>
+                        ) : (
+                          <span>{ref.citation}</span>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="flex justify-center mt-12">
                <button 
