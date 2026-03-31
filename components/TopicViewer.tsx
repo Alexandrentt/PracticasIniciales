@@ -12,7 +12,7 @@ interface TopicViewerProps {
   onBackToModule: () => void;
 }
 
-type TabType = 'investigacion' | 'mapa' | 'flashcards' | 'infografia' | 'presentacion' | 'quiz';
+type TabType = 'investigacion' | 'flashcards' | 'infografia' | 'quiz';
 
 export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinishTopic, isCompleted, onBackToModule }) => {
   const [content, setContent] = useState<TopicContent | null>(null);
@@ -157,19 +157,9 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
           icon={<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>}
         />
         <TabButton 
-          id="mapa" 
-          label="Mapa Mental" 
-          icon={<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 3v18h18"/><path d="M14.7 19.6 12 15"/><path d="M9.3 19.6 12 15"/><path d="M12 12V3"/><circle cx="12" cy="3" r="1"/><circle cx="9" cy="20" r="1"/><circle cx="15" cy="20" r="1"/></svg>}
-        />
-        <TabButton 
           id="infografia" 
           label="Infografía" 
           icon={<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>}
-        />
-         <TabButton 
-          id="presentacion" 
-          label="Presentación" 
-          icon={<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>}
         />
       </div>
 
@@ -264,24 +254,6 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
           </div>
         )}
 
-        {activeTab === 'mapa' && (
-          <div className="animate-fade-in-up bg-white rounded-3xl p-4 border border-[#003366]/10">
-            <div className="aspect-video w-full rounded-xl overflow-hidden shadow-2xl relative group bg-slate-900">
-              <div className="absolute inset-0 bg-[#003366]/30 z-0"></div>
-              <img src={content.mindMapUrl} alt="Mapa Mental" className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-100 flex items-end p-8">
-                <p className="text-[#F5F5DC] font-bold text-lg">Mapa Mental: {topic.title}</p>
-              </div>
-            </div>
-            <div className="flex justify-center mt-6">
-              <a href={content.mindMapUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[#003366] hover:text-[#228B22] transition-colors border border-[#003366]/40 px-6 py-2 rounded-full hover:bg-[#003366]/5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Abrir / Descargar
-              </a>
-            </div>
-          </div>
-        )}
-
         {activeTab === 'infografia' && (
           <div className="animate-fade-in-up bg-white rounded-3xl p-4 border border-[#003366]/10 flex flex-col items-center">
             <div className="w-full max-w-2xl rounded-xl overflow-hidden shadow-2xl relative group bg-slate-900">
@@ -295,20 +267,6 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
               </a>
             </div>
           </div>
-        )}
-
-        {activeTab === 'presentacion' && (
-           <div className="animate-fade-in-up flex flex-col items-center justify-center py-20 bg-white rounded-3xl border border-[#003366]/10">
-             <div className="w-24 h-24 bg-red-500/15 text-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(239,68,68,0.2)]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><text x="8" y="18" fontSize="6" fontWeight="bold">PPT</text></svg>
-             </div>
-             <h3 className="text-xl font-bold mb-2 text-[#003366]">Material de Presentación</h3>
-             <p className="text-[#555555] mb-8 max-w-md text-center">Descarga las diapositivas oficiales del curso para este tema en formato PowerPoint.</p>
-             <button className="px-8 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-red-600/20 flex items-center gap-3 transform hover:scale-105">
-               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-               Descargar .PPTX
-             </button>
-           </div>
         )}
 
         {activeTab === 'quiz' && (

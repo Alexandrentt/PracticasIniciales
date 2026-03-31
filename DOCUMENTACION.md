@@ -1,10 +1,22 @@
 # DOCUMENTACIÓN DEL PROYECTO - PracticasIniciales
 
-## Versión 1.2.0 - 2026-03-27
+## Versión 1.3.0 - 2026-03-30
 
 ---
 
 ## HISTORIAL DE VERSIONES
+
+### Versión 1.3.0 (2026-03-30)
+**Cambios realizados:**
+- **Eliminación de pestañas obsoletas:**
+  - Eliminada pestaña "Mapa Mental" (id: 'mapa')
+  - Eliminada pestaña "Presentación" (id: 'presentacion')
+- **Actualización de `TopicViewer.tsx`:**
+  - Simplificado el tipo `TabType` a: 'investigacion' | 'flashcards' | 'infografia' | 'quiz'
+  - Removidos botones de navegación para mapa y presentación
+  - Removidos bloques de renderizado de contenido para estas pestañas
+
+**Justificación:** Las pestañas de Mapa Mental y Presentación no se utilizan en el flujo actual de la aplicación. Los recursos de infografía (`infographicUrl`) permanecen disponibles en la pestaña "Infografía".
 
 ### Versión 1.2.0 (2026-03-27)
 **Cambios realizados:**
@@ -106,13 +118,15 @@ interface TopicContent {
 - `isCompleted: boolean` - Estado de completitud
 - `onBackToModule: () => void` - Callback para volver
 
-**Tabs disponibles:**
+**Tabs disponibles (v1.3.0):**
 1. **investigacion** - Muestra el resumen, puntos clave, ejemplo real, FAQs y referencias bibliográficas
 2. **flashcards** - Renderiza el componente Flashcards
-3. **quiz** - Renderiza el componente Quiz para evaluación
-4. **mapa** - Visualización del mapa mental
-5. **infografia** - Visualización de infografía
-6. **presentacion** - Enlace a material descargable
+3. **infografia** - Visualización de infografía
+4. **quiz** - Renderiza el componente Quiz para evaluación
+
+**Tabs eliminados (v1.3.0):**
+- ~~mapa~~ - Visualización del mapa mental (eliminada)
+- ~~presentacion~~ - Enlace a material descargable (eliminada)
 
 **Renderizado Markdown:**
 El componente incluye una función `renderMarkdown()` que convierte:
@@ -396,4 +410,4 @@ App.tsx
 
 ---
 
-*Documentación generada automáticamente. Última actualización: 2026-03-27 (Versión 1.2.0)*
+*Documentación generada automáticamente. Última actualización: 2026-03-30 (Versión 1.3.0)*
