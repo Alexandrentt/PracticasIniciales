@@ -3,7 +3,7 @@ import { Module } from '../types';
 
 interface ModuleCardProps {
   module: Module;
-  onClick: () => void;
+  onClick: () => void; 
 }
 
 export const ModuleCard: React.FC<ModuleCardProps> = ({ module, onClick }) => {
