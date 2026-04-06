@@ -6468,41 +6468,41 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
 
 **Dilema Ético Identificado:**
 
-**🔍 Conflicto de Intereses:**
+** Conflicto de Intereses:**
 - **Presión gerencial:** Reducir costos de seguridad para acelerar el proyecto
 - **Responsabilidad profesional:** Mantener estándares de seguridad para trabajadores y comunidad
 - **Impacto social:** Proyecto beneficia a comunidades sin acceso eléctrico
 
-**🏗️ Aplicación de Principios Éticos:**
+** Aplicación de Principios Éticos:**
 
-**🛡️ **Prioridad de Seguridad Pública:**
+** **Prioridad de Seguridad Pública:**
 - **Decisión ética:** Mantener todos los estándares de seguridad OSHA
 - **Costo adicional:** $2.5 millones en medidas de seguridad
 - **Resultado:** Cero accidentes graves durante construcción
 
-**🌱 **Implementación de RSE (ISO 26000):**
+** **Implementación de RSE (ISO 26000):**
 - **Programa comunitario:** Capacitación técnica para 200 locales
 - **Empleo local:** 70% de trabajadores de Escuintla
 - **Sostenibilidad ambiental:** Programa de reforestación de 10,000 árboles
 
-**⚖️ **Gestión de Stakeholders:**
+** **Gestión de Stakeholders:**
 - **Comunidades:** Diálogo constante sobre beneficios y preocupaciones
 - **Trabajadores:** Programa de bienestar y seguridad ocupacional
 - **Gobierno:** Cumplimiento de todas las normativas ambientales
 - **Inversores:** Transparencia sobre costos y beneficios sociales
 
-**🔄 **Elección Metodológica:**
+** **Elección Metodológica:**
 - **Fase inicial:** PMBOK tradicional para planificación y permisos
 - **Fase ejecución:** Enfoque ágil para adaptarse a condiciones locales
 - **Resultado:** Proyecto completado 2 meses antes del cronograma
 
-**💡 **Resultados Éticos y Operativos:**
+** **Resultados Éticos y Operativos:**
 - **Seguridad:** 0 accidentes graves vs 15 promedio en industria
 - **Comunidad:** 95% de satisfacción en encuestas locales
 - **Empleo:** 300 empleos directos, 1,200 indirectos
 - **Energía:** 30,000 hogares con acceso a electricidad limpia
 
-**🎯 **Lecciones Éticas Aprendidas:**
+** **Lecciones Éticas Aprendidas:**
 - La seguridad pública nunca debe comprometerse por presiones de costo
 - La RSE bien implementada genera valor compartido
 - El diálogo con stakeholders previene conflictos sociales
@@ -6780,14 +6780,14 @@ Es la interfaz entre una intervención y la sociedad, integrando responsabilidad
 
 ---
 
-## 📖 **Glosario Técnico**
+##  **Glosario Técnico**
 
 | Término | Definición |
 |---------|------------|
-| **🎯 Focalización** | Procedimientos para seleccionar y dar acceso a la población objetivo |
-| **🔄 Gestión Adaptativa** | Capacidad de responder proactivamente a los resultados del monitoreo |
-| **📊 Impactos Acumulativos** | Cambios que resultan del efecto combinado de múltiples proyectos en una región |
-| **💪 Resiliencia Comunitaria** | Capacidad de una población para recuperarse de impactos negativos |`,
+| ** Focalización** | Procedimientos para seleccionar y dar acceso a la población objetivo |
+| ** Gestión Adaptativa** | Capacidad de responder proactivamente a los resultados del monitoreo |
+| ** Impactos Acumulativos** | Cambios que resultan del efecto combinado de múltiples proyectos en una región |
+| ** Resiliencia Comunitaria** | Capacidad de una población para recuperarse de impactos negativos |`,
   keyPoints: [
     "El estudio social analiza consecuencias humanas de intervenciones planeadas",
     "Busca transformar realidades para eliminar déficits que afectan grupos humanos",
@@ -6806,7 +6806,7 @@ Es la interfaz entre una intervención y la sociedad, integrando responsabilidad
 
 **Aplicación del Estudio Social:**
 
-**🔍 Diagnóstico del Problema Social:**
+** Diagnóstico del Problema Social:**
 
 **Árbol de Problemas Identificado:**
 \`\`\`
@@ -6822,7 +6822,7 @@ EFECTO: Resistencia comunitaria al proyecto
     └── Falta de diálogo transparente
 \`\`\`
 
-**👥 Población Objetivo y Línea de Base:**
+** Población Objetivo y Línea de Base:**
 
 **Población Afectada:**
 - **Directamente:** 1,200 personas en 5 comunidades
@@ -6835,7 +6835,7 @@ EFECTO: Resistencia comunitaria al proyecto
 - **Nivel de educación:** 45% analfabetismo funcional
 - **Cohesión comunitaria:** Alta (participación en asuntos locales 85%)
 
-**📈 Evaluación de Impacto Social (EIS):**
+** Evaluación de Impacto Social (EIS):**
 
 **Impactos Positivos Potenciales:**
 - Electrificación de escuelas y centros de salud
@@ -6848,7 +6848,7 @@ EFECTO: Resistencia comunitaria al proyecto
 - **Social:** Programa de capacitación comunitaria
 - **Económico:** Fondo de desarrollo comunitario (1% de ingresos)
 
-**🤝 Estrategia de Participación y Licencia Social:**
+** Estrategia de Participación y Licencia Social:**
 
 **Programa de Diálogo Comunitario:**
 1. **Mes 1-2:** Asambleas informativas en cada comunidad
@@ -6861,7 +6861,7 @@ EFECTO: Resistencia comunitaria al proyecto
 - **Compromiso de monitoreo:** Comité comunitario activo
 - **Acuerdo de beneficios:** 20% de empleos para locales
 
-**📊 Resultados Después de 2 Años:**
+** Resultados Después de 2 Años:**
 
 **Indicadores de Impacto Social Positivo:**
 - **Electrificación:** 100% de las comunidades conectadas
@@ -6874,7 +6874,7 @@ EFECTO: Resistencia comunitaria al proyecto
 - **Conflictos resueltos:** 95% mediante diálogo
 - **Satisfacción:** 9.1/10 en encuesta comunitaria
 
-**💡 Lecciones Aprendidas:**
+** Lecciones Aprendidas:**
 - El diálogo temprano y transparente es fundamental para la aceptación
 - La participación comunitaria real (no solo consultiva) genera legitimidad
 - Los beneficios tangibles rápidos construyen confianza
@@ -7201,14 +7201,14 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
 
 ---
 
-## 📖 **Glosario Técnico**
+##  **Glosario Técnico**
 
 | Término | Definición |
 |---------|------------|
-| **🏢 EPI** | Entidades Públicas de Inversión responsables de la preinversión y ejecución |
-| **📋 SNIP** | Sistema Nacional de Inversión Pública que regula los procedimientos de inversión |
-| **💸 Costo Hundido** | Gastos realizados previamente que no afectan la decisión de inversión futura |
-| **⚙️ Manual Operativo** | Instrumento que describe las acciones específicas para el funcionamiento técnico del proyecto |`,
+| ** EPI** | Entidades Públicas de Inversión responsables de la preinversión y ejecución |
+| ** SNIP** | Sistema Nacional de Inversión Pública que regula los procedimientos de inversión |
+| ** Costo Hundido** | Gastos realizados previamente que no afectan la decisión de inversión futura |
+| ** Manual Operativo** | Instrumento que describe las acciones específicas para el funcionamiento técnico del proyecto |`,
   keyPoints: [
     "El estudio administrativo diseña la estructura organizacional necesaria para ejecución y operación",
     "Determina la viabilidad administrativa y cuantifica costos de inversión y operación",
@@ -7227,7 +7227,7 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
 
 **Aplicación del Estudio Administrativo:**
 
-**🔄 Estructura Organizacional Diseñada:**
+** Estructura Organizacional Diseñada:**
 
 **Fase de Ejecución (12 meses):**
 - **Gerente de Proyecto:** 1 persona (ingeniero civil con experiencia en construcción)
@@ -7243,7 +7243,7 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
 - **Administración:** 2 personas (contabilidad y ventas)
 - **Mantenimiento:** 1 persona (mantenimiento industrial)
 
-**📊 Modelo Estructural Seleccionado: Funcional con Elementos Planos**
+** Modelo Estructural Seleccionado: Funcional con Elementos Planos**
 
 **Justificación:**
 - **Tamaño mediano:** 15 personas en operación permanente
@@ -7251,7 +7251,7 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
 - **Agilidad necesaria:** Respuesta rápida a cambios del mercado
 - **Costo eficiente:** Estructura simplificada reduce gastos administrativos
 
-**🛠️ Recursos Administrativos Identificados:**
+** Recursos Administrativos Identificados:**
 
 **Humanos (Costo Anual):**
 - **Gerencial:** Q360,000 (3 gerentes)
@@ -7283,7 +7283,7 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
 - Protocolos de uso de equipo de protección personal
 - Plan de prevención de accidentes
 
-**🧭 Direccionamiento Estratégico:**
+** Direccionamiento Estratégico:**
 
 **Misión:** "Procesar café especial de alta calidad para maximizar el valor de la producción de nuestros asociados, garantizando sostenibilidad y bienestar comunitario."
 
@@ -7295,7 +7295,7 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
 3. Incrementar ingresos de asociados en 40% en 3 años
 4. Expandir a 2 nuevos mercados internacionales en 5 años
 
-**💰 Impacto en Flujo de Caja:**
+** Impacto en Flujo de Caja:**
 
 **Costos Administrativos Anuales:**
 - **Personal:** Q1,260,000
@@ -7310,7 +7310,7 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
 - **Año 2:** Q5,880,000
 - **Año 3:** Q7,560,000
 
-**💡 Lecciones Aprendidas:**
+** Lecciones Aprendidas:**
 - La estructura funcional permite especialización sin perder agilidad
 - La inversión en tecnología inicial reduce costos operativos a largo plazo
 - Los manuales administrativos son fundamentales para la consistencia operativa
