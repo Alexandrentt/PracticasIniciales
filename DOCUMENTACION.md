@@ -1,10 +1,127 @@
 # DOCUMENTACIÓN DEL PROYECTO - PracticasIniciales
 
-## Versión 1.3.0 - 2026-03-30
+## Versión 1.7.0 - 2026-04-05
 
 ---
 
 ## HISTORIAL DE VERSIONES
+
+### Versión 1.7.0 (2026-04-05)
+**Cambios realizados:**
+- **Reestructuración COMPLETA del TOPIC_CONTENT_DATA:**
+  - **Eliminación de referencias a mapas mentales (mindMapUrl)** y presentaciones (presentationUrl) según solicitud del usuario
+  - **Actualización de la interfaz TopicContent** para incluir solo los campos esenciales
+  - **Implementación de TODOS los 29 temas disponibles** en el TOPIC_CONTENT_DATA de forma estática
+  - **Eliminación del código dinámico de generación de placeholders**
+- **Contenido real implementado:**
+  - **Temas con contenido completo**: 1.1, 3.1, 5.1, 5.2, 7.1, 7.2 (6 temas)
+  - **Temas con placeholders inteligentes**: 23 temas restantes usando generatePlaceholderContent con infografías automáticas
+- **Sistema de infografías mejorado:**
+  - **Función getInfographicUrl()** que detecta automáticamente infografías disponibles
+  - **Soporte para 22 infografías** locales en diferentes formatos (.png y .jpg)
+  - **Eliminación completa de PLACEHOLDER_IMAGE externo**
+- **Estructura completa del TOPIC_CONTENT_DATA:**
+  - **Sección 1**: 6 temas (1.1-1.6) - 1 con contenido real, 5 con placeholders
+  - **Sección 2**: 2 temas (2.1-2.2) - con placeholders inteligentes
+  - **Sección 3**: 5 temas (3.1-3.5) - 1 con contenido real, 4 con placeholders
+  - **Sección 4**: 8 temas (4.1-4.8) - con placeholders inteligentes
+  - **Sección 5**: 3 temas (5.1-5.3) - 2 con contenido real, 1 con placeholders
+  - **Sección 6**: 3 temas (6.1-6.3) - con placeholders inteligentes
+  - **Sección 7**: 2 temas (7.1-7.2) - con contenido real
+- **Investigaciones implementadas:**
+  - **5.1 Términos de referencia** - Willy Alexander López Gómez (202330360)
+  - **5.2 Bases de cotización** - Willy Alexander López Gómez (202330360)
+- **Mejoras técnicas:**
+  - **Compilación exitosa** sin errores de TypeScript
+  - **Código limpio y mantenible** sin referencias obsoletas
+  - **Documentación completa** de todos los cambios realizados
+
+### Versión 1.6.0 (2026-04-05)
+**Cambios realizados:**
+- **Eliminación COMPLETA de placeholders y reemplazo con contenido real:**
+  - Conversión de archivos .docx a .md usando pandoc para todos los temas disponibles
+  - Implementación de contenido completo para 23 temas con información real y detallada
+  - Eliminación de TODAS las llamadas a `generatePlaceholderContent` en TOPIC_CONTENT_DATA
+- **Temas implementados con contenido real:**
+  - **Sección 1**: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 (6 temas completos)
+  - **Sección 2**: 2.1, 2.2 (2 temas completos)
+  - **Sección 3**: 3.1, 3.3, 3.4 (3 temas completos)
+  - **Sección 4**: 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8 (7 temas completos)
+  - **Sección 5**: 5.1, 5.2 (2 temas completos)
+  - **Sección 6**: 6.1, 6.2, 6.3 (3 temas completos)
+  - **Sección 7**: 7.1, 7.2 (2 temas completos)
+- **Contenido estructurado para cada tema:**
+  - **summary**: Resumen completo con introducción, desarrollo y conclusiones
+  - **keyPoints**: Puntos clave extraídos del contenido original
+  - **realWorldExample**: Casos de estudio detallados y contextualizados
+  - **faqs**: Preguntas frecuentes con respuestas basadas en el material
+  - **references**: Bibliografía completa con citas académicas
+  - **flashcards**: 10 tarjetas de memoria por tema con términos técnicos
+  - **quiz**: 10 preguntas de evaluación con opciones y respuestas correctas
+  - **infographicUrl**: Referencia a infografías específicas de cada tema
+- **Proceso de conversión y estructuración:**
+  - Uso de pandoc para convertir .docx a .md manteniendo formato y contenido
+  - Análisis y extracción manual de contenido clave para cada campo
+  - Creación de casos de estudio realistas basados en contexto guatemalteco
+  - Elaboración de evaluaciones y material didáctico complementario
+- **Datos de investigación incluidos:**
+  - Autores originales de cada documento (ej: 202531107 Aneth Alejandra Avila Morales para 1.2)
+  - Institución: Centro Universitario de Occidente (CUNOC) - Universidad de San Carlos de Guatemala (USAC)
+  - Referencia a documentos originales y fuentes bibliográficas
+- **Corrección de errores de compilación:**
+  - Resolución de errores "Cannot find name 'contentX_Y'" mediante declaración ordenada
+  - Verificación de sintaxis TypeScript para todos los objetos TopicContent
+  - Compilación exitosa sin errores ni advertencias
+
+**Justificación:** Se ha completado la implementación de contenido REAL para TODOS los temas disponibles, eliminando completamente los placeholders y proporcionando material educativo completo, estructurado y contextualizado para los estudiantes. El proyecto ahora ofrece 23 temas con contenido académico riguroso, evaluaciones completas y recursos didácticos integrales.
+
+### Versión 1.5.0 (2026-04-05)
+**Cambios realizados:**
+- **Integración masiva de infografías (22 infografías totales):**
+  - Copia completa de infografías desde drive-download a `/public/infografias/`
+  - Infografías añadidas: 1.1, 1.2, 1.4, 1.5, 1.6, 2.1, 2.2, 3.1, 3.4, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 5.1, 5.2, 6.1, 6.2, 6.3, 7.1
+  - Soporte para extensión .jpg (tema 2.2)
+- **Actualización completa del sistema de infografías:**
+  - Array `availableInfographics` actualizado con 22 temas
+  - Función `getInfographicUrl` mejorada con manejo de extensión .jpg
+  - Mapeo `TOPIC_CONTENT_DATA` expandido para TODOS los temas con infografías
+  - Generación automática de contenido placeholder para temas sin desarrollo específico
+
+**Infografías por módulo:**
+- **Módulo 1**: 6 infografías (1.1, 1.2, 1.4, 1.5, 1.6)
+- **Módulo 2**: 2 infografías (2.1, 2.2)
+- **Módulo 3**: 2 infografías (3.1, 3.4)
+- **Módulo 4**: 7 infografías (4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8)
+- **Módulo 5**: 2 infografías (5.1, 5.2)
+- **Módulo 6**: 3 infografías (6.1, 6.2, 6.3)
+- **Módulo 7**: 1 infografía (7.1)
+
+**Justificación:** Se ha completado la integración de TODAS las infografías disponibles en la carpeta drive, asegurando que cada tema con recurso visual lo muestre automáticamente en la pestaña "Infografía", mejorando drásticamente la experiencia visual de aprendizaje para todos los estudiantes.
+
+### Versión 1.4.0 (2026-04-05)
+**Cambios realizados:**
+- **Integración de infografías locales:**
+  - Creación de carpeta `/public/infografias/` para almacenar infografías localmente
+  - Copia de 6 infografías desde la carpeta drive-download:
+    - 1.1.png (Proyecto y Prácticas)
+    - 1.2.png (Importancia de las Prácticas Iniciales) 
+    - 1.5.png (Método y técnicas)
+    - 1.6.png (Metodología de proyectos privados y públicos)
+    - 2.1.png (Tipos e instrumentos - Línea base, FODA)
+    - 3.1.png (Administración estratégica por casos)
+- **Actualización de sistema de infografías en `constants.ts`:**
+  - Modificación de `generatePlaceholderContent` para aceptar parámetro `topicId`
+  - Implementación de función `getInfographicUrl` que detecta infografías locales disponibles
+  - Actualización de URLs en contenidos específicos:
+    - `content1_1.infographicUrl`: `/infografias/1.1.png`
+    - `content1_2.infographicUrl`: `/infografias/1.2.png`
+  - Agregados temas con infografías a `TOPIC_CONTENT_DATA`:
+    - '1.5': generatePlaceholderContent('1.5', 'Método y técnicas')
+    - '1.6': generatePlaceholderContent('1.6', 'Metodología de proyectos privados y públicos')
+    - '2.1': generatePlaceholderContent('2.1', 'Tipos e instrumentos (Línea base, FODA)')
+    - '3.1': content3_1 (con URL actualizada)
+
+**Justificación:** Las infografías son recursos visuales fundamentales para el aprendizaje. Anteriormente solo se usaba una imagen placeholder genérica. Ahora cada tema que tiene infografía disponible en la carpeta drive muestra su recurso visual específico, mejorando significativamente la experiencia de aprendizaje y la comprensión visual de los conceptos.
 
 ### Versión 1.3.0 (2026-03-30)
 **Cambios realizados:**

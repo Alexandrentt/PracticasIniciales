@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología de Proyectos - Ingeniería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F5F5DC] text-[#333333] font-sans p-6 md:p-12 min-h-screen space-y-12">
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-10 border-b-2 border-[#003366]/20 pb-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                1.1. Proyecto y Prácticas
+            </h1>
+            <p class="text-[#228B22] font-semibold mt-2">Portal Académico – Iniciales Ingeniería</p>
+        </header>
+
+        <div class="space-y-8">
+            <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#003366]">
+                <h2 class="text-xl font-semibold text-[#003366] mb-3">
+                    Definición de Proyecto
+                </h2>
+                <p class="leading-relaxed text-justify mb-3">
+                    Un proyecto se define como un <strong>esfuerzo temporal</strong> que se lleva a cabo para crear un producto, servicio o resultado único. A diferencia de las operaciones rutinarias, tiene un principio y un fin establecidos, buscando resolver problemas de forma inteligente.
+                </p>
+                <p class="leading-relaxed text-justify italic border-t border-gray-100 pt-3">
+                    "Ser ingeniero no es solo poseer un título, es tener el ingenio para transformar problemas comunes en soluciones extraordinarias para la sociedad".
+                </p>
+            </article>
+
+            <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#003366]">
+                <h2 class="text-xl font-semibold text-[#003366] mb-4">
+                    Contexto Nacional y Regulación
+                </h2>
+                <p class="leading-relaxed text-justify mb-4">
+                    En Guatemala, la gestión de proyectos está regulada por la <strong>SEGEPLAN</strong> a través del Sistema Nacional de Inversión Pública (<strong>SNIP</strong>).
+                </p>
+                <ul class="space-y-4 pl-2">
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#003366]">Rentabilidad Social:</strong> En proyectos públicos, se priorizan las necesidades urgentes de las comunidades con mayores índices de pobreza, anteponiendo criterios técnicos a los políticos.
+                    </li>
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#003366]">Prácticas Iniciales:</strong> Realizadas en el tercer semestre, capacitan al estudiante en la formulación de proyectos a <strong>nivel de perfil</strong>, utilizando juicio común y datos disponibles para evaluar viabilidad.
+                    </li>
+                </ul>
+            </article>
+
+            <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#003366]">
+                <h2 class="text-xl font-semibold text-[#003366] mb-4">
+                    Importancia de los Proyectos
+                </h2>
+                <ul class="list-disc list-inside space-y-3 pl-2 marker:text-[#228B22]">
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#228B22]">Optimización de Recursos:</strong> Asignación eficiente de capital y esfuerzo humano.
+                    </li>
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#228B22]">Validación del Conocimiento:</strong> Comprobación de la aplicación real de la teoría.
+                    </li>
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#228B22]">Reducción de Incertidumbre:</strong> Evaluación crítica antes de realizar inversiones mayores.
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-10 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                Metodología de Proyectos
+            </h2>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-[#003366] p-4 text-center">
+                    <h3 class="text-xl font-bold text-[#F5F5DC] tracking-wide">Proyectos Privados</h3>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-2 text-center">
+                        <li class="flex items-center justify-center gap-2">
+                            <span class="text-[#228B22]">●</span> Maximizar rentabilidad económica
+                        </li>
+                        <li class="flex items-center justify-center gap-2">
+                            <span class="text-[#228B22]">●</span> Financiamiento de origen privado
+                        </li>
+                        <li class="flex items-center justify-center gap-2">
+                            <span class="text-[#228B22]">●</span> Basado en análisis de mercado
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="bg-[#003366] p-4 text-center">
+                    <h3 class="text-xl font-bold text-[#F5F5DC] tracking-wide">Proyectos Públicos</h3>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-2 text-center">
+                        <li class="flex items-center justify-center gap-2">
+                            <span class="text-[#228B22]">●</span> Búsqueda del bienestar social
+                        </li>
+                        <li class="flex items-center justify-center gap-2">
+                            <span class="text-[#228B22]">●</span> Financiamiento estatal/público
+                        </li>
+                        <li class="flex items-center justify-center gap-2">
+                            <span class="text-[#228B22]">●</span> Sujeto a normativas institucionales
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</body>
+</html>

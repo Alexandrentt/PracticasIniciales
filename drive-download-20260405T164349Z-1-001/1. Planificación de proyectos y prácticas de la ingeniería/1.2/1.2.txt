@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importancia de las Prácticas Iniciales - Ingeniería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para el icono del acordeón (FAQ) */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary::after {
+            content: '+';
+            float: right;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 1;
+            color: #228B22; 
+        }
+        details[open] summary::after {
+            content: '−';
+        }
+    </style>
+</head>
+<body class="bg-[#F5F5DC] text-[#333333] font-sans p-6 md:p-12 min-h-screen space-y-12">
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-10 border-b-2 border-[#003366]/20 pb-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                1.2. Importancia de las Prácticas Iniciales
+            </h1>
+            <p class="text-[#228B22] font-semibold mt-2 text-lg">El puente entre la teoría y la práctica</p>
+            <p class="text-gray-600 text-sm">Portal Académico – Iniciales Ingeniería</p>
+        </header>
+
+        <div class="space-y-8">
+            <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#003366]">
+                <h2 class="text-xl font-semibold text-[#003366] mb-3">
+                    Introducción al "Saber Hacer"
+                </h2>
+                <p class="leading-relaxed text-justify mb-3">
+                    La ingeniería no es simplemente el estudio de las ciencias exactas, sino el uso del ingenio para resolver problemas reales y satisfacer necesidades humanas. En este curso, la importancia radica en ser el puente entre la teoría y la práctica. Mientras que en otros cursos se aprende el "qué", aquí empezamos a explorar el "saber hacer".
+                </p>
+            </article>
+
+            <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#003366]">
+                <h2 class="text-xl font-semibold text-[#003366] mb-4">
+                    Importancia sobre los Proyectos y las Prácticas
+                </h2>
+                <p class="leading-relaxed text-justify mb-4">
+                    Los proyectos son la unidad operativa básica del desarrollo. Su importancia es vital porque:
+                </p>
+                <ul class="space-y-4 pl-2">
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#003366]">Optimizan recursos:</strong> En un mundo de recursos escasos, los proyectos nos permiten asignar capital y esfuerzo a la solución más eficiente.
+                    </li>
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#003366]">Validan el conocimiento:</strong> Las prácticas permiten confrontar los conocimientos teóricos con el mundo real, comprobando su aplicabilidad y desarrollando criterios técnicos propios.
+                    </li>
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#003366]">Reducen la incertidumbre:</strong> Aprender a formular un proyecto desde su etapa de perfil ayuda a determinar si una idea es viable antes de invertir grandes sumas de dinero y tiempo.
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-10 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                2. La Carrera de Ingeniería en Guatemala
+            </h2>
+        </header>
+
+        <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#228B22]">
+            <p class="leading-relaxed text-justify mb-4">
+                En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégica especial. Según los lineamientos de inversión pública en Guatemala (SEGEPLAN), el Estado busca crear una "cultura de proyectos" para mejorar la calidad del gasto público. Para el estudiante guatemalteco, este curso es importante por tres pilares fundamentales:
+            </p>
+            <ol class="list-decimal list-inside space-y-3 pl-2 marker:text-[#228B22] font-semibold mb-6">
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#003366]">Impacto Social:</strong> <span class="font-normal">Se aprende que cada decisión técnica debe buscar el bienestar de la sociedad, priorizando proyectos que den respuesta a las necesidades urgentes de las comunidades con pobreza.</span>
+                </li>
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#003366]">Estandarización Profesional:</strong> <span class="font-normal">Introduce metodologías oficiales (como las del SNIP) que permiten hablar el mismo "idioma técnico" que las instituciones.</span>
+                </li>
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#003366]">Responsabilidad Ética:</strong> <span class="font-normal">La ingeniería requiere profesionales que planifiquen con rigor para evitar daños ambientales y sociales, fortaleciendo la sostenibilidad del país.</span>
+                </li>
+            </ol>
+            <p class="leading-relaxed text-center italic border-t border-gray-200 pt-4 text-[#228B22] font-medium text-lg">
+                "La ingeniería no es un título, es el ingenio transformando necesidades en soluciones sociales para Guatemala".
+            </p>
+        </article>
+    </section>
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-10 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                3. Guía de Estudio: Planificación y Prácticas
+            </h2>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="bg-[#003366] p-4">
+                    <h3 class="text-xl font-bold text-[#F5F5DC]">Conceptos Base</h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div>
+                        <strong class="text-[#228B22]">Definición de Proyecto:</strong>
+                        <p class="text-gray-700 text-sm mt-1 text-justify">Búsqueda de una solución inteligente a una necesidad humana o la resolución de un problema específico.</p>
+                    </div>
+                    <div>
+                        <strong class="text-[#228B22]">Ciclo de Vida:</strong>
+                        <p class="text-gray-700 text-sm mt-1 text-justify">El camino cronológico desde la concepción de la idea, pasando por la preinversión (perfil, prefactibilidad, factibilidad), hasta llegar a la inversión y operación.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="bg-[#003366] p-4">
+                    <h3 class="text-xl font-bold text-[#F5F5DC]">Gestión y Rol</h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div>
+                        <strong class="text-[#228B22]">Triple Restricción:</strong>
+                        <p class="text-gray-700 text-sm mt-1 text-justify">Principio que dicta que todo proyecto debe equilibrar y controlar tres variables críticas para ser exitoso: Tiempo, Costo y Calidad/Desempeño.</p>
+                    </div>
+                    <div>
+                        <strong class="text-[#228B22]">El Rol del Ingeniero:</strong>
+                        <p class="text-gray-700 text-sm mt-1 text-justify">Persona que utiliza su ingenio para tomar decisiones críticas e importantes a partir de datos que, a menudo, son incompletos o difusos en la vida real.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-8 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                4. Preguntas Frecuentes
+            </h2>
+        </header>
+
+        <div class="space-y-4">
+            <details class="bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-[#228B22] cursor-pointer">
+                <summary class="text-lg font-semibold text-[#003366] outline-none">¿Por qué es obligatorio realizar prácticas desde el tercer semestre?</summary>
+                <div class="mt-3 text-justify leading-relaxed text-gray-700 pt-3 border-t border-gray-200">
+                    Es fundamental para que el estudiante inicie tempranamente su inmersión en el "quehacer" de la ingeniería, promoviendo habilidades de diseño y trabajo en equipo antes de avanzar a ciencias y cálculos más complejos.
+                </div>
+            </details>
+
+            <details class="bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-[#228B22] cursor-pointer">
+                <summary class="text-lg font-semibold text-[#003366] outline-none">¿Qué significa desarrollar un proyecto a "nivel de perfil"?</summary>
+                <div class="mt-3 text-justify leading-relaxed text-gray-700 pt-3 border-t border-gray-200">
+                    Es la etapa inicial de un estudio de inversión. Se basa en información existente y juicio común para analizar preliminarmente si una idea es factible, sin incurrir aún en altos costos de investigación de campo o estudios técnicos profundos.
+                </div>
+            </details>
+
+            <details class="bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-[#228B22] cursor-pointer">
+                <summary class="text-lg font-semibold text-[#003366] outline-none">¿Cómo ayuda este curso a mi futuro Ejercicio Profesional Supervisado (EPS)?</summary>
+                <div class="mt-3 text-justify leading-relaxed text-gray-700 pt-3 border-t border-gray-200">
+                    Las prácticas iniciales son el primer paso de un proceso gradual (prácticas iniciales, intermedias y finales) que preparan al estudiante técnica y administrativamente para enfrentar con éxito los retos del EPS y el Examen Técnico Profesional.
+                </div>
+            </details>
+
+            <details class="bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-[#228B22] cursor-pointer">
+                <summary class="text-lg font-semibold text-[#003366] outline-none">¿Por qué estudiamos proyectos sociales si yo quiero trabajar en la industria privada?</summary>
+                <div class="mt-3 text-justify leading-relaxed text-gray-700 pt-3 border-t border-gray-200">
+                    Porque la metodología de formulación y evaluación es muy similar en ambos sectores. Además, en Guatemala la interacción entre el sector público y privado es constante, y comprender el impacto social de una obra es un requisito ético y legal indispensable.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-8 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                5. Glosario Técnico
+            </h2>
+        </header>
+        
+        <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#003366]">
+            <h3 class="text-xl font-semibold text-[#003366] mb-6">
+                Palabras Clave
+            </h3>
+            <ul class="space-y-4 pl-2">
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#003366] bg-[#003366]/10 px-2 py-1 rounded">Cultura de Proyectos:</strong> Enfoque promovido por el Estado para mejorar la calidad del gasto y la inversión pública mediante la planificación estructurada y no improvisada.
+                </li>
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#228B22] bg-[#228B22]/10 px-2 py-1 rounded">Preinversión:</strong> Fases de estudio (perfil, prefactibilidad, factibilidad) que se realizan antes de ejecutar el proyecto para asegurar que la idea es técnica y económicamente viable.
+                </li>
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#003366] bg-[#003366]/10 px-2 py-1 rounded">Incertidumbre:</strong> Riesgo o falta de certeza sobre los resultados y viabilidad de una idea, la cual se reduce drásticamente mediante la evaluación de proyectos.
+                </li>
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#228B22] bg-[#228B22]/10 px-2 py-1 rounded">Saber Hacer:</strong> Competencia práctica del ingeniero que complementa el conocimiento teórico, permitiéndole aplicar la ciencia a la resolución de problemas tangibles.
+                </li>
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#003366] bg-[#003366]/10 px-2 py-1 rounded">EPS (Ejercicio Profesional Supervisado):</strong> Etapa final de la formación académica y práctica del estudiante de la USAC, donde aplica todos sus conocimientos al servicio de la sociedad en un entorno real.
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-8 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                6. Referencias Bibliográficas
+            </h2>
+        </header>
+        
+        <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#228B22]">
+            <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span><strong>Manual de Formulación y Evaluación de Proyectos</strong>, Presentación de las Normas del Sistema Nacional de Inversión Pública. (2013).</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span><strong>Normativo Del Programa De Prácticas De Las Carreras De Ingeniería</strong> De La División De Ciencias De La Ingeniería Del Centro Universitario De Occidente De La Universidad De San Carlos De Guatemala, Quetzaltenango (8 de agosto de 2006).</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span><strong>PMBOK</strong> 4ta. Edición SPA (Junio 2009).</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>Sapag Chain, Nassir. <strong>Preparación y Evaluación de Proyectos</strong> (5ta edición).</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>Baca Urbina, Gabriel. <strong>Evaluación de Proyectos</strong> (6ta. Edición).</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>Thompson Peteraf, Ganlbe Stricklan. <strong>Administración Estratégica. Teoría de casos</strong> (18 Edición). Editorial Mc Graw Hill.</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span><strong>REGLAMENTO EPS</strong> – CUNOC- DIVISION DE INGENIERIA.</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span><strong>Gestión de proyectos</strong> - procem consultores.</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>Dr. William Wallace. <strong>PR-A3-ES 1/2014 (1106) Gestión de Proyectos</strong>.</span>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <footer class="max-w-4xl mx-auto text-center mt-12 mb-4">
+        <div class="border-t-2 border-[#003366]/20 pt-6">
+            <p class="text-[#003366] font-bold text-lg">Realizado por: 202531107 Aneth Alejandra Avila Morales</p>
+            <p class="text-gray-600 mt-2 text-sm">Centro Universitario de Occidente (CUNOC)</p>
+            <p class="text-gray-600 text-sm">Universidad de San Carlos de Guatemala (USAC)</p>
+        </div>
+    </footer>
+
+</body>
+</html>

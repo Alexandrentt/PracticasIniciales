@@ -40,9 +40,7 @@ export interface TopicContent {
   references: Reference[];
   quiz: QuizQuestion[];
   flashcards: Flashcard[];
-  mindMapUrl: string;
   infographicUrl: string;
-  presentationUrl: string;
 }
 
 export interface UserProgress {

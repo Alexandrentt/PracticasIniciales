@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Administrativo - Documentación Técnica</title>
+    <style>
+        /* CSS OBLIGATORIO - PALETA DE COLORES Y ESTILOS */
+        :root {
+            --fondo: #F5F5DC;
+            --titulos: #003366;
+            --texto: #333333;
+            --destacados: #228B22;
+        }
+
+        body {
+            background-color: var(--fondo);
+            color: var(--texto);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: var(--titulos);
+            text-align: center;
+            border-bottom: 3px solid var(--titulos);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: var(--titulos);
+            border-left: 5px solid var(--destacados);
+            padding-left: 15px;
+            margin-top: 40px;
+            background-color: rgba(0, 51, 102, 0.05);
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: var(--titulos);
+            margin-top: 25px;
+        }
+
+        a {
+            color: var(--titulos);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: var(--destacados);
+            text-decoration: underline;
+        }
+
+        /* DISEÑO ESQUEMÁTICO DEL MAPA MENTAL */
+        .mindmap-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+            font-size: 0.9em;
+        }
+
+        .level-1 {
+            border: 2px solid var(--titulos);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--titulos);
+            color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .branches {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .level-2 {
+            border: 2px solid var(--destacados);
+            padding: 8px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: white;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .level-3 {
+            font-weight: normal;
+            font-size: 0.85em;
+            margin-top: 8px;
+            border-top: 1px dashed #ccc;
+            padding-top: 5px;
+            text-align: left;
+        }
+
+        /* CONCEPTOS CLAVE - CALL-OUTS */
+        .callout {
+            border: 2px solid var(--destacados);
+            background-color: rgba(34, 139, 34, 0.05);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .callout strong {
+            color: var(--destacados);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        /* CUESTIONARIO */
+        .question {
+            font-weight: bold;
+            color: var(--titulos);
+            margin-top: 15px;
+            display: block;
+        }
+
+        .answer {
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        /* LISTAS */
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Estudio Administrativo</h1>
+
+        <h2>Introducción al tema</h2>
+        <p>
+            El <strong>estudio administrativo</strong> es una fase crítica de la preinversión que se encarga de diseñar la estructura organizacional necesaria para llevar a cabo la ejecución y operación de un proyecto. Su propósito fundamental es determinar la viabilidad administrativa, identificando los lineamientos, tareas y herramientas que aseguren el funcionamiento armónico de la futura entidad. A través de este análisis, se cuantifican los costos de inversión y operación que impactarán directamente el flujo de caja.
+        </p>
+
+        <h2>Desarrollo del Contenido</h2>
+
+        <h3>Tipo de Organización</h3>
+        <p>Se deben distinguir usualmente dos etapas organizativas fundamentales:</p>
+        <ul>
+            <li><strong>Organización para la ejecución:</strong> Enfocada en la construcción y labores previas.</li>
+            <li><strong>Organización para la operación:</strong> Estructura de departamentos una vez iniciada la producción.</li>
+        </ul>
+
+        <h3>Estructura Organizacional</h3>
+        <p>Modelos principales para la distribución de autoridad:</p>
+        <ul>
+            <li><strong>Funcional:</strong> Agrupación por especialidad (ventas, contabilidad).</li>
+            <li><strong>Horizontal o Plana:</strong> Pocos niveles jerárquicos, agiliza la comunicación.</li>
+            <li><strong>Matricial:</strong> Combinación de especialistas con gerentes de proyectos específicos.</li>
+        </ul>
+
+        <h3>Recursos Administrativos</h3>
+        <ul>
+            <li><strong>Humanos:</strong> Perfiles, cargos y cantidad de personal.</li>
+            <li><strong>Materiales y Tecnológicos:</strong> Equipos, mobiliario, internet y telefonía.</li>
+            <li><strong>Financieros:</strong> Presupuesto para honorarios, servicios e impuestos.</li>
+        </ul>
+
+        <h3>Manuales Administrativos</h3>
+        <p>Documentos normativos esenciales:</p>
+        <ul>
+            <li><strong>Manual de Organización y Funciones:</strong> Estructura orgánica y requisitos de puestos.</li>
+            <li><strong>Manual de Normas y Procedimientos:</strong> Secuencia lógica de actividades.</li>
+            <li><strong>Manual de Salud y Seguridad Ocupacional:</strong> Guías de protección física.</li>
+        </ul>
+
+        <h3>Direccionamiento Estratégico</h3>
+        <p>Define la "brújula" del proyecto mediante:</p>
+        <ul>
+            <li><strong>Misión:</strong> El propósito actual.</li>
+            <li><strong>Visión:</strong> Aspiración futura.</li>
+            <li><strong>Objetivos estratégicos:</strong> Metas que guían la organización.</li>
+        </ul>
+
+        <h2>Mapa Mental</h2>
+        <div class="mindmap-container">
+            <div class="level-1">ESTUDIO ADMINISTRATIVO</div>
+            <div class="branches">
+                <div class="level-2">
+                    ETAPAS
+                    <div class="level-3">
+                        • Ejecución (Construcción)<br>
+                        • Operación (Producción)
+                    </div>
+                </div>
+                <div class="level-2">
+                    ESTRUCTURAS
+                    <div class="level-3">
+                        • Funcional<br>
+                        • Plana / Horizontal<br>
+                        • Matricial
+                    </div>
+                </div>
+                <div class="level-2">
+                    RECURSOS
+                    <div class="level-3">
+                        • Humanos (Perfiles)<br>
+                        • Materiales / Tech<br>
+                        • Financieros
+                    </div>
+                </div>
+                <div class="level-2">
+                    NORMATIVA
+                    <div class="level-3">
+                        • MOF<br>
+                        • Manual de Procedimientos<br>
+                        • Salud y Seguridad
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Conceptos clave</h2>
+        <div class="callout">
+            <strong>Organigrama</strong>
+            Representación visual de los niveles de autoridad y comunicación dentro de la empresa.
+        </div>
+        <div class="callout">
+            <strong>Viabilidad Administrativa</strong>
+            Capacidad institucional y operativa para gestionar eficientemente el proyecto.
+        </div>
+        <div class="callout">
+            <strong>Postinversión</strong>
+            Fase relacionada con la administración, operación y mantenimiento tras la ejecución física.
+        </div>
+        <div class="callout">
+            <strong>Manual de Funciones</strong>
+            Instrumento que especifica las responsabilidades y salarios asignados a cada cargo.
+        </div>
+
+        <h2>Cuestionario de Autoevaluación</h2>
+        
+        <span class="question">¿Cuál es el objetivo principal del estudio administrativo?</span>
+        <span class="answer">Establecer las características de la unidad organizacional y determinar sus costos de inversión y operación.</span>
+
+        <span class="question">¿Qué factores influyen en el diseño de la estructura organizacional?</span>
+        <span class="answer">La complejidad, el tamaño del proyecto, el costo y la tecnología administrativa que se desee adoptar.</span>
+
+        <span class="question">¿Qué es el direccionamiento estratégico?</span>
+        <span class="answer">Es la definición de la filosofía empresarial (misión, visión y objetivos) que sirve de guía para alcanzar las metas del negocio.</span>
+
+        <span class="question">¿Qué diferencia a un organigrama vertical de uno horizontal?</span>
+        <span class="answer">El vertical tiene muchos niveles jerárquicos y líneas de mando estrechas, mientras que el horizontal tiene pocos niveles y líneas más amplias.</span>
+
+        <span class="question">¿Qué incluyen los recursos administrativos tecnológicos?</span>
+        <span class="answer">Servicios de internet, equipos de cómputo y telefonía, entre otros.</span>
+
+        <span class="question">¿Para qué sirve el Manual de Normas y Procedimientos?</span>
+        <span class="answer">Para describir detalladamente los procesos en su orden secuencial y las reglas que se deben cumplir.</span>
+
+        <span class="question">¿Cómo impacta el estudio administrativo en el flujo de caja?</span>
+        <span class="answer">A través de la estimación de gastos recurrentes como sueldos, salarios y servicios básicos necesarios para la operación.</span>
+
+        <span class="question">¿Qué es la fase de postinversión?</span>
+        <span class="answer">Es el periodo en el que se realiza la administración, operación y mantenimiento del proyecto concluido.</span>
+
+        <span class="question">¿Por qué es importante el análisis legal dentro del estudio administrativo?</span>
+        <span class="answer">Porque determina las leyes que facultan a la organización para operar y los trámites legales que generan costos.</span>
+
+        <span class="question">¿Qué información debe contener una descripción de puestos?</span>
+        <span class="answer">El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específicas y las responsabilidades asignadas.</span>
+
+        <h2>Glosario técnico (palabras clave)</h2>
+        <ul>
+            <li><strong>EPI:</strong> Entidades Públicas de Inversión responsables de la preinversión y ejecución.</li>
+            <li><strong>SNIP:</strong> Sistema Nacional de Inversión Pública que regula los procedimientos de inversión.</li>
+            <li><strong>Costo Hundido:</strong> Gastos realizados previamente que no afectan la decisión de inversión futura.</li>
+            <li><strong>Manual Operativo:</strong> Instrumento que describe las acciones específicas para el funcionamiento técnico del proyecto.</li>
+        </ul>
+
+        <h2>Bibliografía</h2>
+        <ul>
+            <li>Cosio Hurtado, J. M. (2011). <a href="http://www.redalyc.org/articulo.oa?id=425941231003">Los proyectos y los planes de negocios. PERSPECTIVAS.</a></li>
+            <li>Gómez Fuentes, M. et al. (2012). <a href="http://www.cua.uam.mx/">Administración de Proyectos. UAM.</a></li>
+            <li>Pinilla Vilches, J. P. <a href="https://repositorio.uchile.cl/">Preparación y Evaluación de Proyectos de Inversión Área Industrial.</a></li>
+            <li>SEGEPLAN (2023). <a href="https://www.segeplan.gob.gt/">Normas del Sistema Nacional de Inversión Pública.</a></li>
+            <li>SEGEPLAN (2022). <a href="https://www.segeplan.gob.gt/">Guía de formulación y evaluación de proyectos de inversión pública (FEPIP).</a></li>
+            <li>Morales C., C. M. (2010). <a href="https://www.gerenciadeproyectos.com/">Notas de Clase: Estudio Organizacional y Legal.</a></li>
+            <li>Monzon, Elmer. <a href="https://www.youtube.com/@ElmerMonzon">Explicación del estudio administrativo (YouTube).</a></li>
+            <li>El Blog de Juan. <a href="https://www.youtube.com/@ElBlogdeJuan-Emprendimiento">Estudio administrativo de un proyecto (YouTube).</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        Documentación Técnica - Generado mediante Estándares de Ingeniería de Software
+    </footer>
+</body>
+</html>

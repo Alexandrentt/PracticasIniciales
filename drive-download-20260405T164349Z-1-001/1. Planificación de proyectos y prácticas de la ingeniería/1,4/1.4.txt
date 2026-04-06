@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etapas y Tipos de Planificación - Ingeniería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para el icono del acordeón (FAQ) */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary::after {
+            content: '+';
+            float: right;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 1;
+            color: #228B22; 
+        }
+        details[open] summary::after {
+            content: '−';
+        }
+    </style>
+</head>
+<body class="bg-[#F5F5DC] text-[#333333] font-sans p-6 md:p-12 min-h-screen space-y-12">
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-10 border-b-2 border-[#003366]/20 pb-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                  1.4 Etapas y tipos de planificación
+            </h1>
+            <p class="text-[#228B22] font-semibold mt-2 text-lg">Estrategias y metodologías para el éxito del proyecto</p>
+            <p class="text-gray-600 text-sm">Portal Académico – Iniciales Ingeniería</p>
+        </header>
+
+        <div class="space-y-8">
+            <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#003366]">
+                <h2 class="text-xl font-semibold text-[#003366] mb-3">
+                    El Pilar de la Ingeniería
+                </h2>
+                <p class="leading-relaxed text-justify mb-3">
+                    La planificación en ingeniería es el proceso estructurado de definir objetivos, asignar recursos y establecer cronogramas para llevar una idea desde el plano hasta la realidad empresarial o social. Un ingeniero no solo diseña soluciones, sino que debe <strong>planificar estratégicamente su ejecución</strong> para evitar sobrecostos, retrasos y fallas técnicas.
+                </p>
+            </article>
+
+            <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#003366]">
+                <h2 class="text-xl font-semibold text-[#003366] mb-4">
+                    Prácticas Fundamentales
+                </h2>
+                <p class="leading-relaxed text-justify mb-4">
+                    Independientemente de la metodología elegida, todo plan de proyecto de ingeniería debe contemplar ciertas prácticas clave para asegurar su viabilidad:
+                </p>
+                <ul class="space-y-4 pl-2">
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#003366]">Definición del Alcance:</strong> Establecer claramente qué se va a entregar y, sobre todo, qué queda fuera del proyecto para evitar el "scope creep" (corrupción del alcance).
+                    </li>
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#003366]">Planificación de Capacidad (Capacity Planning):</strong> Consiste en asegurar que el equipo cuente con el tiempo, las habilidades y las herramientas necesarias para cumplir con los entregables sin sufrir sobrecarga de trabajo.
+                    </li>
+                    <li class="leading-relaxed text-justify">
+                        <strong class="text-[#003366]">Gestión de Riesgos:</strong> Identificar posibles fallas técnicas, problemas financieros o demoras logísticas antes de que ocurran, creando planes de contingencia.
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-10 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                2. Enfoques y Metodologías de Planificación
+            </h2>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="bg-[#003366] p-4">
+                    <h3 class="text-xl font-bold text-[#F5F5DC] text-center">Modelo Predictivo (Cascada)</h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <p class="text-gray-700 text-sm text-justify">
+                        Es el enfoque tradicional. Las fases se ejecutan de manera lineal y secuencial (Inicio, Planificación, Ejecución, Cierre). No se avanza a una fase sin haber terminado y aprobado la anterior.
+                    </p>
+                    <ul class="text-sm space-y-2 text-gray-700">
+                        <li><span class="text-[#228B22] font-bold">✔</span> Ideal para infraestructura y obra civil.</li>
+                        <li><span class="text-[#228B22] font-bold">✔</span> Alto control documental y técnico.</li>
+                        <li><span class="text-red-500 font-bold">✖</span> Poca flexibilidad ante cambios.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="bg-[#003366] p-4">
+                    <h3 class="text-xl font-bold text-[#F5F5DC] text-center">Modelo Ágil (Agile)</h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <p class="text-gray-700 text-sm text-justify">
+                        Enfoque iterativo e incremental. El proyecto se divide en ciclos cortos (sprints) donde se evalúa y adapta el producto constantemente según las necesidades del usuario o cliente.
+                    </p>
+                    <ul class="text-sm space-y-2 text-gray-700">
+                        <li><span class="text-[#228B22] font-bold">✔</span> Ideal para ingeniería de software e I+D.</li>
+                        <li><span class="text-[#228B22] font-bold">✔</span> Alta adaptabilidad a los cambios.</li>
+                        <li><span class="text-red-500 font-bold">✖</span> Riesgo de perder de vista el presupuesto final.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-8 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                3. Preguntas Frecuentes
+            </h2>
+        </header>
+
+        <div class="space-y-4">
+            <details class="bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-[#228B22] cursor-pointer">
+                <summary class="text-lg font-semibold text-[#003366] outline-none">¿Qué metodología de planificación es mejor para mi proyecto?</summary>
+                <div class="mt-3 text-justify leading-relaxed text-gray-700 pt-3 border-t border-gray-200">
+                    No existe una metodología perfecta. Si los requisitos son fijos y el costo del error es altísimo (como construir un puente), se usa el modelo en Cascada. Si el proyecto requiere innovación constante y los requisitos pueden cambiar (como crear una app), se usa Ágil.
+                </div>
+            </details>
+
+            <details class="bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-[#228B22] cursor-pointer">
+                <summary class="text-lg font-semibold text-[#003366] outline-none">¿Qué es exactamente el "Capacity Planning"?</summary>
+                <div class="mt-3 text-justify leading-relaxed text-gray-700 pt-3 border-t border-gray-200">
+                    Es el proceso de equilibrar la demanda de trabajo de un proyecto con la capacidad real de producción de tu equipo. Previene la saturación del personal y asegura que los plazos de entrega sean realistas.
+                </div>
+            </details>
+
+            <details class="bg-white/80 p-5 rounded-lg shadow-sm border-l-4 border-[#228B22] cursor-pointer">
+                <summary class="text-lg font-semibold text-[#003366] outline-none">¿Por qué es importante establecer "Hitos" (Milestones)?</summary>
+                <div class="mt-3 text-justify leading-relaxed text-gray-700 pt-3 border-t border-gray-200">
+                    Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si el proyecto avanza según lo planeado, permitiendo tomar medidas correctivas a tiempo antes de que los problemas se agraven.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-8 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                4. Glosario Técnico
+            </h2>
+        </header>
+        
+        <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#003366]">
+            <ul class="space-y-4 pl-2">
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#003366] bg-[#003366]/10 px-2 py-1 rounded">Corrupción del Alcance (Scope Creep):</strong> Crecimiento descontrolado e imprevisto de los requisitos de un proyecto, lo que agota el tiempo y el presupuesto.
+                </li>
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#228B22] bg-[#228B22]/10 px-2 py-1 rounded">Sprint:</strong> En metodologías ágiles, es un período corto de tiempo (generalmente de 1 a 4 semanas) en el que el equipo trabaja para completar entregables específicos.
+                </li>
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#003366] bg-[#003366]/10 px-2 py-1 rounded">Entregable (Deliverable):</strong> Cualquier producto, resultado o capacidad medible y verificable que debe producirse para completar un proyecto.
+                </li>
+                <li class="leading-relaxed text-justify">
+                    <strong class="text-[#228B22] bg-[#228B22]/10 px-2 py-1 rounded">Project Manager:</strong> Profesional responsable de la planificación, diseño, ejecución, seguimiento y cierre de un proyecto.
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="max-w-4xl mx-auto bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200">
+        <header class="mb-8 border-b-2 border-[#003366]/20 pb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#003366]">
+                5. Referencias Bibliográficas
+            </h2>
+        </header>
+        
+        <article class="bg-white/80 p-6 rounded-lg shadow-sm border-l-4 border-[#228B22]">
+            <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>BMF Business Engineering School. (2020). <strong>Gestión de proyectos para ingenieros: de planos a resultados empresariales.</strong> Recuperado de bmfschool.com</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>Calcumas. (2024). <strong>Proyectos de Ingeniería: Planificación y Ejecución.</strong> Santiago, Chile. Recuperado de calcumas.cl</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>GanttPRO. (2022). <strong>Tipología de proyectos para una gestión eficaz.</strong> Escrito por Anastasia Stepanets. Recuperado de ganttpro.com</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>iLearn Engineering. (2025). <strong>Engineering Projects – Planning for success!</strong> Recuperado de ilearnengineering.com</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>IMF Smart Education. (2026). <strong>Metodologías de gestión de proyectos para un Project Manager.</strong> Recuperado de imf-formacion.com</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>Jellyfish. (s.f.). <strong>Engineering capacity planning: process, strategies, tools.</strong> Recuperado de jellyfish.com</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>Neural Concept. (s.f.). <strong>Engineering Project Planning: Key Principles and Best Practices.</strong> Recuperado de neuralconcept.com</span>
+                </li>
+                <li class="flex items-start gap-3 text-justify leading-relaxed">
+                    <span class="text-[#003366] mt-1">📚</span>
+                    <span>ProjectManager. (2026). <strong>Planeación de Proyectos: Factores Clave en la Planificación de un Proyecto.</strong> Recuperado de projectmanager.com</span>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <footer class="max-w-4xl mx-auto text-center mt-12 mb-4">
+        <div class="border-t-2 border-[#003366]/20 pt-6">
+            <p class="text-[#003366] font-bold text-lg">Realizado por: 202430144 Henry Estuardo Estrada Rojas</p>
+            <p class="text-gray-600 mt-2 text-sm">Centro Universitario de Occidente (CUNOC)</p>
+            <p class="text-gray-600 text-sm">Universidad de San Carlos de Guatemala (USAC)</p>
+        </div>
+    </footer>
+
+</body>
+</html>

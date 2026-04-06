@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Aprendizaje: Ingeniería y Planificación</title>
+    <style>
+        /* Paleta de Colores Solicitada */
+        :root {
+            --azul-marino: #003366; /* Pantone 281 C */
+            --crema-hueso: #F5F5DC; /* Pantone 7527 C */
+            --gris-carbon: #333333; /* Pantone 447 C */
+            --verde-bosque: #228B22; /* Pantone 348 C */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--crema-hueso);
+            color: var(--gris-carbon);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--azul-marino);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--verde-bosque);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .student-info {
+            font-weight: bold;
+            color: var(--crema-hueso);
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Estructura de Contenido */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--azul-marino);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            border-left: 5px solid var(--verde-bosque);
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Blockquote Estilo Solicitado */
+        blockquote {
+            background-color: #e9f5e9;
+            border-left: 10px solid var(--verde-bosque);
+            margin: 20px 0;
+            padding: 20px;
+            font-style: italic;
+            color: var(--verde-bosque);
+            font-weight: 500;
+        }
+
+        /* Sección de Columnas/Tarjetas */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--azul-marino);
+        }
+
+        /* FAQs e Interactividad */
+        .faq-item {
+            background: #ffffff;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .faq-question {
+            background: var(--azul-marino);
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            padding: 15px;
+            display: none;
+            background: white;
+        }
+
+        /* Quiz */
+        .quiz-container {
+            background: var(--azul-marino);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .quiz-option {
+            display: block;
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .quiz-option:hover {
+            background: var(--verde-bosque);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--azul-marino);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--crema-hueso);
+            text-decoration: none;
+        }
+
+        .keywords {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--verde-bosque);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Excelencia en la Gestión de Ingeniería</h1>
+        <p>Portal académico dedicado al dominio de la planificación y ciclos de vida en proyectos de ingeniería mecánica y técnica.</p>
+        <div class="student-info">
+            Henry Estuardo Estrada Rojas | Carné: 202430144 <br>
+            Facultad de Ingeniería, CUNOC.
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <h1 style="text-align: center; margin-bottom: 40px;">Planificación Estratégica y Ciclos de Ingeniería</h1>
+
+        <section>
+            <h2>Introducción</h2>
+            <p>
+                La ingeniería moderna no se limita al diseño técnico; el éxito de cualquier proyecto radica en la capacidad de anticipar recursos, riesgos y tiempos. Para un ingeniero mecánico, entender la diferencia entre los tipos de planificación y las etapas del ciclo de vida es fundamental para transformar planos en soluciones industriales reales y sostenibles.
+            </p>
+            <blockquote>
+                "La planificación no es pensar en decisiones futuras, sino en el futuro de las decisiones presentes." — Peter Drucker. Concepto aplicado a la optimización de procesos en ingeniería.
+            </blockquote>
+        </section>
+
+        <div class="grid-container">
+            <div class="card">
+                <h3>Tipos de Planificación de Proyectos</h3>
+                <p>La planificación se clasifica según su alcance y tiempo:</p>
+                <ul>
+                    <li><strong>Planificación Estratégica:</strong> Define objetivos a largo plazo y la visión del proyecto.</li>
+                    <li><strong>Planificación Táctica:</strong> Desglose de la estrategia en planes específicos para departamentos o áreas.</li>
+                    <li><strong>Planificación Operativa:</strong> Calendarios detallados, asignación de tareas diarias y gestión de recursos inmediatos.</li>
+                    <li><strong>Prácticas de Ingeniería:</strong> Implementación de metodologías como Lean Manufacturing o Agile para maximizar la eficiencia.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Etapas y Ciclos</h3>
+                <p>Un proyecto de ingeniería atraviesa fases críticas para asegurar su viabilidad:</p>
+                <ul>
+                    <li><strong>Inicio:</strong> Definición del alcance, objetivos y viabilidad técnica.</li>
+                    <li><strong>Planificación:</strong> Creación de la estructura de desglose de trabajo (EDT/WBS).</li>
+                    <li><strong>Ejecución:</strong> Desarrollo físico del proyecto y aplicación de ingeniería de detalle.</li>
+                    <li><strong>Seguimiento y Control:</strong> Monitoreo de KPIs y ajustes de calidad.</li>
+                    <li><strong>Cierre:</strong> Entrega final, documentación y lecciones aprendidas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <h2>Recursos y Preguntas Frecuentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cuál es la diferencia entre planificación estratégica y operativa?</div>
+                <div class="faq-answer">La estratégica define el "qué" y "para qué" a largo plazo, mientras que la operativa se enfoca en el "cómo" y "quién" en el día a día.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Qué es un ciclo de vida "Cascada" en ingeniería?</div>
+                <div class="faq-answer">Es un modelo lineal donde cada fase debe completarse antes de pasar a la siguiente, común en grandes infraestructuras.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Por qué es vital la etapa de Seguimiento y Control?</div>
+                <div class="faq-answer">Permite detectar desviaciones en el presupuesto o fallos técnicos antes de que el proyecto sea inviable.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Qué herramientas se usan para la planificación?</div>
+                <div class="faq-answer">Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Project o Primavera P6.</div>
+            </div>
+        </section>
+
+        <section class="quiz-container">
+            <h3>Mini Quiz de Ingeniería</h3>
+            <p id="quiz-question">¿Cuál es la fase donde se define formalmente el alcance del proyecto?</p>
+            <div id="quiz-options">
+                <span class="quiz-option" onclick="checkAnswer(false)">Ejecución</span>
+                <span class="quiz-option" onclick="checkAnswer(true)">Inicio</span>
+                <span class="quiz-option" onclick="checkAnswer(false)">Cierre</span>
+            </div>
+            <p id="quiz-feedback" style="margin-top: 15px; font-weight: bold;"></p>
+        </section>
+
+        <section>
+            <h2>Glosario y Bibliografía</h2>
+            <div class="card" style="margin-bottom: 20px;">
+                <p><strong>Glosario de Términos Clave:</strong></p>
+                <ul>
+                    <li><strong>Alcance:</strong> La suma total de todos los productos del proyecto y sus requisitos.</li>
+                    <li><strong>Hito:</strong> Un punto de referencia que marca un evento importante en el proyecto.</li>
+                    <li><strong>Stakeholders:</strong> Interesados o partes afectadas por el proyecto.</li>
+                    <li><strong>KPI:</strong> Indicador clave de desempeño para medir el éxito técnico.</li>
+                </ul>
+            </div>
+            
+            <h3 style="font-size: 1.1rem;">Fuentes de Consulta</h3>
+            <p style="font-size: 0.9rem;">
+                - Asana (2026). Las 5 fases de la gestión de proyectos. <br>
+                - GanttPRO (2023). Guía de planificación y tipos de proyectos industriales. <br>
+                - Coursera Staff (2023). El ciclo de vida de la gestión de proyectos explicado. <br>
+                - Documentación Técnica de la Facultad de Ingeniería CUNOC.
+            </p>
+        </section>
+
+        <div class="keywords">
+            <strong>Palabras Clave:</strong> Planificación, Ciclo de Vida, Ingeniería Mecánica, Gestión de Proyectos, CUNOC, Eficiencia Industrial.
+        </div>
+
+    </div>
+
+    <footer>
+        <p><strong>Universidad de San Carlos de Guatemala</strong></p>
+        <p>Centro Universitario de Occidente (CUNOC) - Facultad de Ingeniería</p>
+        <p>Carrera: Ingeniería Mecánica</p>
+        <p style="margin-top: 10px;">&copy; 2026 Henry Estuardo Estrada Rojas - 202430144</p>
+        <p><a href="mailto:henry.estrada@cunoc.edu.gt">Contacto Académico</a></p>
+    </footer>
+
+    <script>
+        // Lógica de Preguntas Frecuentes
+        const faqs = document.querySelectorAll('.faq-question');
+        faqs.forEach(q => {
+            q.addEventListener('click', () => {
+                const answer = q.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Lógica del Quiz
+        function checkAnswer(isCorrect) {
+            const feedback = document.getElementById('quiz-feedback');
+            if(isCorrect) {
+                feedback.textContent = "¡Correcto! La fase de Inicio establece la base de todo el proyecto.";
+                feedback.style.color = "#4CAF50";
+            } else {
+                feedback.textContent = "Inténtalo de nuevo. Recuerda que sin autorización de inicio no hay planificación.";
+                feedback.style.color = "#FFD700";
+            }
+        }
+    </script>
+</body>
+</html>

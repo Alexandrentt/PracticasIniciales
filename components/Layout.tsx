@@ -44,7 +44,7 @@ export const Layout: React.FC<LayoutProps> = ({
       </div>
 
       {/* Sidebar (Desktop) */}
-      <aside className={`fixed lg:sticky top-0 h-screen w-80 bg-[#003366] text-white shadow-xl z-40 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
+      <aside className={`fixed lg:sticky top-0 h-screen w-80 sm:w-72 bg-[#003366] text-white shadow-xl z-40 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="p-6 h-full flex flex-col">
           <div className="mb-8 flex items-center gap-3">
              <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center font-bold text-lg shadow-lg shadow-black/20">
@@ -132,14 +132,18 @@ export const Layout: React.FC<LayoutProps> = ({
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile Header */}
-        <header className="sticky top-0 z-30 bg-[#003366] text-white border-b border-[#003366] lg:hidden px-4 h-16 flex items-center justify-between">
-           <button onClick={() => setSidebarOpen(true)} className="p-2 text-blue-100 hover:text-white">
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <header className="sticky top-0 z-30 bg-[#003366] text-white border-b border-[#003366] lg:hidden px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
+           <button 
+             onClick={() => setSidebarOpen(true)} 
+             className="p-2 sm:p-3 text-blue-100 hover:text-white active:scale-95 transition-transform"
+             aria-label="Abrir menú"
+           >
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
            </button>
-           <span className="font-bold text-white truncate max-w-[60%]">
+           <span className="font-bold text-white truncate max-w-[50%] sm:max-w-[60%] text-sm sm:text-base">
              {title || 'Prácticas Iniciales'}
            </span>
-           <div className="w-8"></div> {/* Spacer */}
+           <div className="w-8 sm:w-10"></div> {/* Spacer */}
         </header>
 
         {/* Overlay for mobile sidebar */}
@@ -150,21 +154,21 @@ export const Layout: React.FC<LayoutProps> = ({
           />
         )}
 
-        <main className="flex-1 p-4 sm:p-6 lg:p-10 max-w-6xl mx-auto w-full relative z-10">
+        <main className="flex-1 p-3 sm:p-4 md:p-6 lg:p-10 max-w-6xl mx-auto w-full relative z-10">
           {(showContentTitle && (title || subtitle)) && (
-            <div className="mb-10 animate-fade-in">
-              <div className="flex items-center gap-4 mb-4">
+            <div className="mb-6 sm:mb-8 lg:mb-10 animate-fade-in">
+              <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                 {onBack && (
                   <button 
                     onClick={onBack}
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-[#003366]/20 hover:bg-[#003366]/10 transition-colors text-[#003366] hover:text-[#003366] group"
+                    className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white border border-[#003366]/20 hover:bg-[#003366]/10 transition-colors text-[#003366] hover:text-[#003366] group active:scale-95"
                   >
-                    <svg className="group-hover:-translate-x-0.5 transition-transform" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    <svg className="group-hover:-translate-x-0.5 transition-transform" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                   </button>
                 )}
-                {title && <h1 className="text-3xl md:text-4xl font-bold text-[#003366]">{title}</h1>}
+                {title && <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#003366] leading-tight">{title}</h1>}
               </div>
-              {subtitle && <p className="text-lg text-[#555555] max-w-3xl ml-1">{subtitle}</p>}
+              {subtitle && <p className="text-sm sm:text-base md:text-lg text-[#555555] max-w-3xl ml-1">{subtitle}</p>}
             </div>
           )}
           

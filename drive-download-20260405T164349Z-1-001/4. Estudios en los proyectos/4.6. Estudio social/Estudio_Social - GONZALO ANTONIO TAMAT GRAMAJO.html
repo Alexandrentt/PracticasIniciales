@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Social: Análisis y Gestión del Bienestar Humano</title>
+    <style>
+        /* CSS OBLIGATORIO - PALETA DE COLORES */
+        :root {
+            --fondo: #F5F5DC;      /* Crema / Hueso */
+            --titulos: #003366;    /* Azul Marino */
+            --texto: #333333;      /* Gris Carbón */
+            --destacados: #228B22; /* Verde Bosque */
+        }
+
+        body {
+            background-color: var(--fondo);
+            color: var(--texto);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            color: var(--titulos);
+            text-align: center;
+            border-bottom: 3px solid var(--titulos);
+            padding-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        h2 {
+            color: var(--titulos);
+            border-left: 5px solid var(--destacados);
+            padding-left: 15px;
+            margin-top: 40px;
+            font-size: 1.6em;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: var(--titulos);
+            margin-top: 25px;
+        }
+
+        p { margin-bottom: 15px; }
+
+        a {
+            color: var(--titulos);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--destacados);
+        }
+
+        /* DISEÑO ESQUEMÁTICO DEL MAPA MENTAL */
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .node {
+            border: 2px solid var(--titulos);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: white;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            min-width: 150px;
+        }
+
+        .branches {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .branch-item {
+            border-top: 2px solid var(--titulos);
+            padding: 15px;
+            text-align: center;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .sub-node {
+            font-size: 0.9em;
+            color: var(--texto);
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* CONCEPTOS CLAVE (CALL-OUTS) */
+        .callout {
+            background-color: white;
+            border-left: 8px solid var(--destacados);
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .callout strong {
+            color: var(--destacados);
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* CUESTIONARIO */
+        .quiz-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(0, 51, 102, 0.05);
+            border-radius: 5px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: var(--titulos);
+            display: block;
+        }
+
+        .answer {
+            display: block;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* LISTAS */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>El Estudio Social: Análisis y Gestión del Bienestar Humano</h1>
+
+    <h2>Introducción al tema</h2>
+    <p>
+        El <strong>estudio social</strong> es un proceso sistemático de análisis, monitoreo y gestión de las consecuencias humanas de cualquier intervención planeada, ya sea una política, programa o plan. Su objetivo fundamental es transformar una parcela de la realidad para disminuir o eliminar déficits que afecten a un grupo humano determinado. A diferencia de los enfoques puramente económicos, se centra en la relación funcional entre las personas y su entorno.
+    </p>
+
+    <h2>Desarrollo del Contenido</h2>
+    
+    <h3>1. El Diagnóstico y la Identificación del Problema Social</h3>
+    <p>La base del estudio es el diagnóstico de carencias y necesidades. Un problema social se define como la brecha entre la realidad actual y la situación deseada. Herramientas clave:</p>
+    <ul>
+        <li><strong>Árbol de Problemas:</strong> Organiza causas raíces y efectos.</li>
+        <li><strong>Matriz de Motricidad:</strong> Jerarquiza problemas según su influencia.</li>
+        <li><strong>Exploración de Necesidades:</strong> Detecta problemáticas en salud, educación y cultura.</li>
+    </ul>
+
+    <h3>2. Población Objetivo y Línea de Base</h3>
+    <p>Define a quiénes llegan los beneficios mediante modelos de focalización (pobreza, género, etnia). La <strong>línea de base</strong> establece los indicadores iniciales para medir el éxito futuro de la intervención.</p>
+
+    <h3>3. Evaluación de Impacto Social (EIS)</h3>
+    <p>Proceso continuo que mide cambios en la cultura, comunidad y bienestar. A diferencia de los modelos comerciales, la EIS pone especial valor en los beneficios intangibles como la cohesión comunitaria.</p>
+
+    <h3>4. Participación y Licencia Social</h3>
+    <p>La participación ciudadana legítima el proyecto. El diálogo de buena fe facilita la obtención de la <strong>Licencia Social para Operar</strong>, esencial para la aprobación continua de las actividades en el entorno.</p>
+
+    <h2>Mapa Mental</h2>
+    <div class="mindmap">
+        <div class="node">ESTUDIO SOCIAL</div>
+        <div class="branches">
+            <div class="branch-item">
+                <strong>DIAGNÓSTICO</strong>
+                <span class="sub-node">• Árbol de Problemas</span>
+                <span class="sub-node">• Matriz de Motricidad</span>
+            </div>
+            <div class="branch-item">
+                <strong>METRICAS</strong>
+                <span class="sub-node">• Población Objetivo</span>
+                <span class="sub-node">• Línea de Base</span>
+            </div>
+            <div class="branch-item">
+                <strong>EVALUACIÓN (EIS)</strong>
+                <span class="sub-node">• Impactos Humanos</span>
+                <span class="sub-node">• Bienestar Intangible</span>
+            </div>
+            <div class="branch-item">
+                <strong>LEGITIMIDAD</strong>
+                <span class="sub-node">• Participación Pública</span>
+                <span class="sub-node">• Licencia Social</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>Conceptos Clave</h2>
+    <div class="callout">
+        <strong>Impacto Social</strong>
+        Todo aquello que afecta o involucra a las personas en sentido perceptual, cognitivo o físico.
+    </div>
+    <div class="callout">
+        <strong>Proyecto Social</strong>
+        Unidad mínima de gestión que busca solucionar un problema humano, con o sin inversión monetaria.
+    </div>
+    <div class="callout">
+        <strong>Focalización</strong>
+        Proceso de asegurar que los recursos lleguen exclusivamente a la población objetivo definida.
+    </div>
+    <div class="callout">
+        <strong>Valor Compartido</strong>
+        Filosofía que busca crear beneficios tanto para la organización que interviene como para la sociedad.
+    </div>
+
+    <h2>Cuestionario de Autoevaluación</h2>
+    <div class="quiz-item">
+        <span class="question">¿Qué es un estudio social según los principios internacionales?</span>
+        <span class="answer">Es un proceso de análisis y gestión de las consecuencias sociales de intervenciones planeadas.</span>
+    </div>
+    <div class="quiz-item">
+        <span class="question">¿Cómo se define un "Problema Social"?</span>
+        <span class="answer">Como una brecha empíricamente observable entre lo que la sociedad desea y la realidad actual.</span>
+    </div>
+    <div class="quiz-item">
+        <span class="question">¿Cuál es la función del Árbol de Problemas?</span>
+        <span class="answer">Identificar y organizar las causas y efectos de una problemática central.</span>
+    </div>
+    <div class="quiz-item">
+        <span class="question">¿Qué diferencia a un impacto social de un proceso de cambio social?</span>
+        <span class="answer">El impacto es lo que la gente experimenta o siente, mientras que el cambio es el proceso.</span>
+    </div>
+    <div class="quiz-item">
+        <span class="question">¿Qué es la "Línea de Base"?</span>
+        <span class="answer">Son los datos de indicadores medidos al inicio que permiten monitorear los cambios en el tiempo.</span>
+    </div>
+    <div class="quiz-item">
+        <span class="question">¿Por qué el estudio social es relevante en todas las fases?</span>
+        <span class="answer">Porque los impactos sociales pueden ocurrir desde los primeros rumores previos a la actividad física.</span>
+    </div>
+    <div class="quiz-item">
+        <span class="question">¿Qué es la "Licencia Social para Operar"?</span>
+        <span class="answer">Es el nivel de aceptación o aprobación continua de la comunidad hacia un proyecto.</span>
+    </div>
+    <div class="quiz-item">
+        <span class="question">¿Qué son los beneficiarios indirectos ilegítimos?</span>
+        <span class="answer">Aquellos que reciben beneficios sin ser la población objetivo, atentando contra la equidad.</span>
+    </div>
+    <div class="quiz-item">
+        <span class="question">¿Cuál es el objetivo de la focalización?</span>
+        <span class="answer">Aumentar el impacto y la eficiencia asegurando que los productos lleguen a quienes realmente los necesitan.</span>
+    </div>
+    <div class="quiz-item">
+        <span class="question">¿Qué comprende el concepto de "Desempeño Social"?</span>
+        <span class="answer">Es la interfaz entre una intervención y la sociedad, integrando responsabilidad y sensibilidad social.</span>
+    </div>
+
+    <h2>Glosario técnico</h2>
+    <ul>
+        <li><strong>Focalización:</strong> Procedimientos para seleccionar y dar acceso a la población objetivo.</li>
+        <li><strong>Gestión Adaptativa:</strong> Capacidad de responder proactivamente a los resultados del monitoreo.</li>
+        <li><strong>Impactos Acumulativos:</strong> Cambios que resultan del efecto combinado de múltiples proyectos en una región.</li>
+        <li><strong>Resiliencia Comunitaria:</strong> Capacidad de una población para recuperarse de impactos negativos.</li>
+    </ul>
+
+    <h2>Bibliografía</h2>
+    <ul>
+        <li>CEPAL: <a href="https://www.cepal.org/dds/sifem" target="_blank">Manual de formulación de proyectos sociales</a>.</li>
+        <li>IAIA: <a href="http://www.iaia.org" target="_blank">Evaluación de Impacto Social: Lineamientos</a>.</li>
+        <li>Revista RECUS: <a href="http://revistas.utm.edu.ec/index.php/Recus" target="_blank">Metodología de evaluación de impacto</a>.</li>
+        <li>BID: <a href="https://www.iadb.org/es" target="_blank">Manual de Gestión Social</a>.</li>
+        <li>V. Agustina Guido: <a href="https://www.aacademica.org/000-066/1079" target="_blank">Impacto social en inversión pública</a>.</li>
+        <li>Felipe Administrador: <a href="https://www.youtube.com/watch?v=hISkX0mN96w" target="_blank">7 Pasos Clave (Video)</a>.</li>
+        <li>lepatru007: <a href="https://www.youtube.com/watch?v=kYJvE6O6hC0" target="_blank">Elaboración de Proyectos (Video)</a>.</li>
+        <li>IACC: <a href="http://www.iacc.cl" target="_blank">Evaluación social de proyectos</a>.</li>
+    </ul>
+
+    <div class="footer">
+        Documentación Técnica - Generado para propósitos académicos 2026.
+    </div>
+</div>
+
+</body>
+</html>
