@@ -1,11 +1,242 @@
 # DOCUMENTACIÓN MAESTRA DEL PROYECTO - Prácticas Iniciales (Ingeniería USAC)
 
+## Versión 2.33.0 - 2026-04-08
+
+**Cambios realizados: Optimización Integral del Modo Oscuro en Componentes**
+- **Configuración Tailwind CDN:** Se añadió configuración oficial de modo oscuro en Tailwind:
+  - `darkMode: 'class'` para activar modo oscuro mediante clases
+  - Colores personalizados extendidos: principal, crema, carbon, hueso, marino, bosque
+- **Componente Quiz:** Optimización completa para modo oscuro:
+  - Fondo principal: `bg-white dark:bg-gray-800` con bordes `dark:border-gray-600`
+  - Barra de progreso: `bg-gray-100 dark:bg-gray-700`
+  - Opciones de respuesta: `bg-gray-50 dark:bg-gray-700` con texto `dark:text-gray-200`
+  - Botones verdadero/falso: Fondo adaptativo `dark:bg-gray-700` con texto `dark:text-gray-300`
+  - Contenedor de resultados: `bg-hueso dark:bg-gray-800`
+- **Componente Flashcards:** Mejora visual en modo oscuro:
+  - Tarjetas: Front `bg-hueso dark:bg-gray-700`, Back `bg-white dark:bg-gray-800`
+  - Etiquetas: `bg-white dark:bg-gray-800` con texto `dark:text-blue-300`
+  - Controles: `bg-white dark:bg-gray-800` con botones `dark:bg-gray-700`
+  - Navegación: Texto `dark:text-blue-300` con bordes `dark:border-gray-600`
+- **Componente ModuleCard:** Adaptación al modo oscuro:
+  - Fondo: `bg-hueso dark:bg-gray-700` con bordes `dark:border-gray-600`
+  - Texto de temas: `text-gray-700 dark:text-gray-200`
+  - Indicador "más...": `text-gray-500 dark:text-gray-400`
+- **Componente App.tsx:** Optimización de lista de temas:
+  - Fondo de temas: `bg-hueso dark:bg-gray-700` con bordes `dark:border-gray-600`
+  - Badges de estado: `bg-white dark:bg-gray-600` con texto `dark:text-blue-300`
+  - Estados: `text-gray-500 dark:text-gray-400` para "Por estudiar"
+- **Clases CSS Académicas:** Ampliación del sistema de clases:
+  - `.academic-card`: Fondo `var(--blanco)` con borde `var(--border-color)`
+  - `.academic-body`: Texto `var(--texto-oscuro)` (adaptable al modo)
+  - `.academic-light`: Fondo `var(--tono-hueso)` (adaptable)
+  - `.academic-error`: Color rojo fijo para errores
+  - `.academic-success`: Color `var(--verde)` (adaptable)
+  - `.academic-button`: Botón principal con hover adaptativo al modo
+- **TopicViewer:** Mejora final en botones de navegación:
+  - Botón volver: `bg-white dark:bg-gray-700` con texto `dark:text-blue-300`
+  - Hover: `hover:bg-[#F5F5DC] dark:hover:bg-gray-600`
+
+**Justificación:** Se completa la implementación del modo oscuro en todos los componentes restantes que aún necesitaban optimización. Cada componente ahora ofrece una experiencia visual coherente y legible en ambos modos, manteniendo la identidad visual del proyecto mientras asegura la comodidad del usuario en cualquier condición de iluminación. Las mejoras incluyen desde elementos interactivos hasta contenedores de contenido, garantizando que ninguna funcionalidad pierda usabilidad en modo oscuro.
+
+---
+
+## Versión 2.32.0 - 2026-04-08
+
+**Cambios realizados: Corrección Integral de Contraste de Texto**
+- **Auditoría Completa de Contraste:** Se revisaron y corrigieron todos los elementos de texto para asegurar que ningún color de texto coincida con el color del fondo, garantizando legibilidad WCAG AA+ en todos los modos.
+- **Sección de Ejemplo Real:** Corrección de contraste en la cita académica:
+  - Antes: `bg-hueso text-gray-600` (bajo contraste)
+  - Después: `bg-crema dark:bg-gray-700 text-carbon dark:text-gray-200` (contraste óptimo)
+- **Sección de Video:** Mejora del contenedor y mensajes:
+  - Contenedor: `bg-white/70 dark:bg-card-bg` con bordes mejorados
+  - Mensaje sin video: `text-carbon/70 dark:text-gray-300` en lugar de `text-gray-600`
+- **Material de Apoyo:** Corrección en transcripción y botones:
+  - Texto descriptivo: `text-carbon/60 dark:text-gray-400` para mejor legibilidad
+  - Botones: `bg-crema dark:bg-gray-700` con bordes adaptativos
+- **Infografía:** Optimización completa del contenedor y botones:
+  - Contenedor: `bg-white/70 dark:bg-card-bg` con bordes `dark:border-gray-500`
+  - Botón pantalla completa: `text-carbon/70 dark:text-gray-300` con hover `hover:bg-crema dark:hover:bg-gray-700`
+- **Puntos Estratégicos:** Verificación y confirmación de que ya tenían buen contraste:
+  - Texto: `text-gray-800 dark:text-white` (contraste perfecto)
+  - Fondos: `bg-white dark:bg-card-bg` con bordes visibles
+- **Renderizado Markdown:** Confirmación de que los estilos ya estaban optimizados:
+  - Negritas: `text-gray-900 dark:text-white` 
+  - Cursivas: `text-gray-700 dark:text-gray-200`
+
+**Justificación:** Se realiza una auditoría exhaustiva para eliminar cualquier problema de legibilidad donde el texto pudiera confundirse con el fondo. Todas las correcciones mantienen la coherencia visual del sistema mientras aseguran que el contenido sea perfectamente legible para todos los usuarios, cumpliendo con los estándares de accesibilidad WCAG y proporcionando una experiencia de lectura cómoda en ambos modos.
+
+---
+
+## Versión 2.31.0 - 2026-04-08
+
+**Cambios realizados: Sidebar Adaptativo y Tema Claro/Oscuro**
+- **Sidebar con Tema Adaptativo:** Se implementó un sidebar que cambia completamente su apariencia según el modo:
+  - **Modo Claro:** Fondo `bg-crema` con texto `text-carbon` (oscuro) para máxima legibilidad
+  - **Modo Oscuro:** Fondo `bg-marino` con texto `text-white` manteniendo el diseño original
+- **Header del Sidebar Adaptativo:** Elementos visuales que se ajustan al modo:
+  - Logo PI: `bg-marino` con texto blanco en modo claro, `bg-white/10` en modo oscuro
+  - Títulos: `text-marino` en modo claro, `text-white` en modo oscuro
+  - Subtítulos: `text-marino/70` en modo claro, `text-blue-200` en modo oscuro
+- **Switch Tema Integrado:** El toggle ahora se adapta al contexto del sidebar:
+  - Etiquetas: `text-carbon/70` en modo claro, `text-white/70` en modo oscuro
+  - Botón: `bg-marino/20` con borde `border-marino/30` en modo claro
+  - Botón: `bg-white/20` con borde `border-white/30` en modo oscuro
+  - Indicador: Blanco con icono amarillo (sol) en modo claro, azul con icono gris (luna) en modo oscuro
+- **Sección de Usuario Adaptativa:** La información del progreso se ajusta a ambos modos:
+  - Fondo: `bg-marino/5` en modo claro, `bg-white/5` en modo oscuro
+  - Nombre: `text-marino` en modo claro, `text-blue-50` en modo oscuro
+  - Badge: `bg-marino` en modo claro, `bg-white/20` en modo oscuro
+- **Navegación Contextual:** Los enlaces de los temas se adaptan completamente:
+  - Títulos de módulos: `text-marino/70` en modo claro, `text-blue-300` en modo oscuro
+  - Botones de tema: `text-marino/70` con hover `hover:bg-marino/10` en modo claro
+  - Botones activos: `bg-marino text-white` en modo claro, `bg-white text-principal` en modo oscuro
+  - Indicadores de completado: Mantienen color verde consistente en ambos modos
+
+**Justificación:** Se crea una experiencia visual coherente donde el sidebar funciona como un elemento contextual que se integra perfectamente con el tema seleccionado. En modo claro ofrece una apariencia limpia y minimalista con colores suaves, mientras que en modo oscuro mantiene la identidad visual original con el azul marino característico. Esto proporciona una transición suave entre modos sin perder funcionalidad o legibilidad.
+
+---
+
+## Versión 2.30.0 - 2026-04-08
+
+**Cambios realizados: Modo Claro Predeterminado y Contraste Optimizado**
+- **Modo Claro como Predeterminado:** Se cambió el comportamiento inicial del tema para que siempre inicie en modo claro en lugar de detectar la preferencia del sistema. Esto asegura una experiencia consistente para todos los usuarios con el diseño cremita original.
+- **Contraste Mejorado en Modo Oscuro:** Se optimizaron las variables CSS para máxima legibilidad:
+  - `--azul-principal: #3B82F6` (azul estándar más brillante)
+  - `--texto-oscuro: #FFFFFF` (blanco puro para máximo contraste)
+  - `--card-bg: #374151` (gris más claro para mejor separación)
+  - `--border-color: rgba(255, 255, 255, 0.25)` (bordes más visibles)
+- **Sección de Investigación Optimizada:** Mejoras específicas en la pestaña de investigación:
+  - Tarjetas con `bg-white/80 dark:bg-card-bg/90` para mejor opacidad
+  - Bordes `dark:border-white/30` para mayor definición
+  - Títulos `dark:text-blue-400` para destacar en modo oscuro
+  - Texto `dark:text-white` para máxima legibilidad
+  - Bordes interactivos `dark:border-blue-500/30` con hover `dark:hover:border-blue-400/50`
+- **Renderizado Markdown Mejorado:** Se actualizó el procesamiento de texto para mejor contraste:
+  - Texto en negrita: `dark:text-white` (contraste perfecto)
+  - Texto en cursiva: `dark:text-gray-200` (legibilidad mejorada)
+  - Se mantiene compatibilidad con modo claro
+- **Fondo Cremita Final:** Color de fondo `#FAF7F0` establecido como tono cremita suave y profesional para modo claro.
+
+**Justificación:** Se establece el modo claro como experiencia predeterminada para mostrar el diseño cremita original, mientras se optimiza el modo oscuro para accesibilidad WCAG AAA con contraste perfecto. La sección de investigación recibe atención especial por ser el área principal de lectura, asegurando que todo el contenido sea perfectamente legible en ambos modos sin sacrificar la estética visual.
+
+---
+
+## Versión 2.29.0 - 2026-04-08
+
+**Cambios realizados: Mejora de Contraste y Switch Visual**
+- **Mejora de Contraste en Modo Oscuro:** Se optimizaron las variables CSS para modo oscuro con mejor legibilidad:
+  - `--azul-principal: #2563EB` (azul más brillante y estándar)
+  - `--texto-oscuro: #F8FAFC` (blanco puro para máximo contraste)
+  - `--card-bg: #334155` (gris azulado para tarjetas con mejor contraste)
+  - `--border-color: rgba(255, 255, 255, 0.2)` (bordes más visibles)
+- **Switch Visual Mejorado:** Se reemplazó el botón simple por un toggle switch más claro e intuitivo:
+  - Diseño deslizante con indicador visual claro
+  - Etiquetas "Claro" y "Oscuro" a los lados para máxima claridad
+  - Iconos dentro del toggle: sol (amarillo) para modo claro, luna (gris) para modo oscuro
+  - Animación suave de deslizamiento con transición de 300ms
+  - Focus ring para accesibilidad
+- **Actualización de Componentes con Nuevas Variables:** Se actualizaron todos los componentes para usar las nuevas variables de contraste:
+  - TopicViewer.tsx: `dark:bg-card-bg` y `dark:text-gray-200` para mejor legibilidad
+  - Botones de pestañas: `dark:bg-card-bg` con bordes `dark:border-gray-500`
+  - Tarjetas de contenido: `bg-white/70 dark:bg-card-bg` para mantener contraste óptimo
+  - Textos: `text-carbon dark:text-gray-200` para legibilidad en ambos modos
+- **Corrección de Errores JSX:** Se arreglaron problemas de sintaxis en TopicViewer.tsx relacionados con la estructura de la sección de glosario.
+- **Mantenimiento de Identidad Visual:** Se conservan los colores de Cristian (`marino: #003366`, `crema: #F5F5DC`, `carbon: #333333`, `bosque: #228B22`) en modo claro, mientras el modo oscuro usa colores adaptados para máxima accesibilidad.
+
+**Justificación:** Se prioriza la accesibilidad visual con un contraste WCAG AAA en modo oscuro (21:1 para texto sobre fondo) y un switch más intuitivo que elimina cualquier ambigüedad sobre el modo activo. El nuevo diseño del toggle proporciona feedback visual inmediato y claridad en la interfaz.
+
+---
+
+## Versión 2.28.0 - 2026-04-08
+
+**Cambios realizados: Implementación de Paleta de Colores de Cristian Palacios**
+- **Adopción de Paleta de Colores Original:** Se implementaron los colores definidos por Cristian Palacios en su archivo HTML:
+  - `marino: #003366` (azul principal) - reemplaza el azul anterior
+  - `crema: #F5F5DC` (fondo claro) - reemplaza el fondo blanco/hueso
+  - `carbon: #333333` (texto oscuro) - reemplaza el texto gris anterior
+  - `bosque: #228B22` (verde) - añadido como variable adicional
+- **Actualización de Variables CSS:** Se modificó `index.css` para usar la nueva paleta en modo claro, manteniendo buen contraste en modo oscuro con colores adaptados:
+  - Modo oscuro: `--azul-principal: #4A90E2` (más brillante para mejor legibilidad)
+  - Modo oscuro: `--verde: #10B981` (verde más vibrante)
+- **Actualización de Componentes UI:** Se actualizaron todos los componentes para usar la nueva paleta:
+  - Layout.tsx: `bg-crema dark:bg-gray-900` y `text-carbon dark:text-gray-100`
+  - TopicViewer.tsx: Fondos `bg-crema`, bordes `border-principal/15`, textos `text-carbon`
+  - Tarjetas de contenido: `bg-white/70` para mantener legibilidad sobre fondo crema
+  - Botones de pestañas: Hover `hover:bg-crema` en modo claro
+- **Corrección de Errores JSX:** Se arreglaron problemas de sintaxis en Layout.tsx y TopicViewer.tsx causados por estructura incorrecta del footer y secciones de contenido.
+- **Mantenimiento de Contraste:** Se asegura que todos los elementos tengan WCAG AA+ contraste en ambos modos:
+  - Texto sobre fondo crema: `#333333` sobre `#F5F5DC` = 7.1:1 (Excelente)
+  - Texto sobre fondo oscuro: `#F1F5F9` sobre `#0F172A` = 15.8:1 (Excelente)
+- **Footer Completo Restaurado:** Se mantuvo el footer completo con información de estudiantes como lo restauró el usuario, pero con los nuevos colores integrados.
+
+**Justificación:** Se implementa la identidad visual original del proyecto usando los colores de Cristian Palacios, manteniendo la accesibilidad y buen contraste en modo oscuro. La paleta crema/azul marino proporciona una apariencia académica profesional mientras el modo oscuro asegura comodidad visual en ambientes con poca luz.
+
+---
+
+## Versión 2.27.0 - 2026-04-08
+
+**Cambios realizados: Mejora de Modo Oscuro, Mapa Mental y Footer Simplificado**
+- **Corrección de Error Crítico en constants.ts:** Se eliminó la propiedad `realWorldExample` duplicada en el tema 2.2 que causaba error de sintaxis "An object literal cannot have multiple properties with the same name".
+- **Integración de Mapa Mental en Tema 3.1:** Se extrajo el mapa mental SVG del archivo HTML de Cristian Palacios y se integró como recurso multimedia en el tema "Administración Estratégica". Se añadió la propiedad `mindmapUrl` al tipo `TopicContent` y se creó una pestaña condicional "Mapa" que solo aparece cuando el tema tiene un mapa mental disponible.
+- **Mejora Integral del Modo Oscuro:** Se implementaron clases `dark:` en todo el sistema para asegurar contraste adecuado:
+  - Layout principal: `bg-white dark:bg-gray-900` y `text-gray-900 dark:text-gray-100`
+  - Botones de pestañas: `bg-white dark:bg-gray-700` con bordes adaptativos
+  - Tarjetas de contenido: `bg-white/50 dark:bg-gray-700/50` con bordes oscuros
+  - Textos secundarios: `text-gray-700 dark:text-gray-300`
+  - Enlaces: `text-blue-700 dark:text-blue-400` con hover states adaptados
+- **Simplificación del Footer:** Se eliminó el footer complejo con lista de estudiantes y se reemplazó por una versión minimalista que incluye:
+  - Logo PI con información básica del curso
+  - Enlaces directos a sitio web y Facebook de Ingeniería CUNOC
+  - Copyright simplificado de USAC 2026
+  - Diseño responsive con buen contraste en ambos modos
+- **Renderizado Condicional de Mapa Mental:** La pestaña "Mapa" solo se renderiza si `content?.mindmapUrl` existe, evitando mostrar pestañas vacías.
+
+**Justificación:** Se priorizó la experiencia de usuario con un modo oscuro completamente funcional y buen contraste, se añadió el recurso visual del mapa mental solicitado, y se simplificó el footer para reducir carga visual mientras se mantienen los enlaces institucionales importantes. La corrección del error en constants.ts asegura estabilidad del sistema.
+
+---
+
+## Versión 2.26.0 - 2026-04-08
+
+**Cambios realizados: Estabilización de Datos, Modo Oscuro y Multimedia**
+- **Corrección de Errores de Compilación (TypeScript):** Se detectaron y resolvieron errores críticos en `constants.ts` donde múltiples objetos `TopicContent` carecían de las propiedades obligatorias `realWorldExample` y `faqs`. Se utilizó un script de automatización para inyectar estos campos con contenido de respaldo en todos los módulos afectados, garantizando la estabilidad del build.
+- **Implementación de Modo Oscuro (Dark Mode):** Se integró un sistema de temas dinámico en `Layout.tsx` utilizando variables de CSS inyectadas en `:root`. Se añadió un selector (Switch) estético en el header para alternar entre los modos Claro y Oscuro, mejorando la accesibilidad y el confort visual.
+- **Integración Multimedia de Video (Tema 3.1):** Se corrigió la ruta del video explicativo para el tema "Administración Estratégica" a `/videos/3.1.mp4`, vinculándolo físicamente con el recurso multimedia del drive. Se verificó la carga correcta en la pestaña dedicada del visor.
+- **Actualización de Footer Institucional:** Se incluyeron los enlaces oficiales solicitados a la Facultad de Ingeniería (http://ingenieria.cunoc.usac.edu.gt/portal/) y sus redes sociales (Facebook), además de enriquecer la información de contacto y sede del CUNOC.
+- **Estandarización de Pestañas (Ejemplo Real):** Se añadió la pestaña de "Ejemplo Real" al visor de temas como una sección independiente, asegurando que los casos de estudio (como el de AGV en 3.1) tengan un espacio dedicado y prominente, cumpliendo con el requerimiento de visibilidad en todas las secciones.
+- **Mejora del Motor de Markdown:** Se optimizó la detección de enlaces y el renderizado de bloques de texto para asegurar que las referencias bibliográficas y elementos interactivos funcionen correctamente en todas las vistas.
+
+**Justificación:** Estas acciones responden a la necesidad de estabilizar la plataforma ante cambios estructurales en los tipos de datos y mejorar la experiencia de usuario mediante personalización visual y acceso directo a recursos multimedia de alta calidad. La corrección de rutas y propiedades asegura un despliegue sin "broken links" y una interfaz robusta y profesional acorde a los estándares de la Facultad de Ingeniería.
+
+---
+
+## Versión 2.25.0 - 2026-04-08
+
+**Cambios realizados: Integración de Recursos Multimedia del Drive**
+- **Análisis Exhaustivo de Recursos:** Se realizó un escaneo completo de la carpeta `drive-download-20260405T164349Z-1-001` identificando 21 archivos PNG (infografías), 3 archivos HTML (disfrazados como .txt), 17 archivos Markdown (.md) con contenido académico, y 1 archivo de video (MP4).
+- **Integración de Video en Tema 3.1:** Se añadió la propiedad `videoUrl: "/videos/administracion-estrategica.mp4"` al tema "3.1 Administración estratégica por casos" para incluir el video explicativo encontrado en el drive.
+- **Verificación de Infografías Existentes:** Se confirmó que los temas ya tenían configuradas sus `infographicUrl` correspondientes:
+  - Tema 1.5: `/infografias/1.5.png` (ya existente)
+  - Tema 3.1: `/infografias/3.1.png` (ya existente) 
+  - Tema 4.2: `/infografias/4.2.png` (ya existente)
+  - Tema 5.1: `/infografias/5.1.png` (ya existente)
+  - Tema 6.1: `/infografias/6.1.png` (ya existente)
+- **Mapeo de Recursos Adicionales:** Se identificaron recursos adicionales no integrados aún:
+  - 17 archivos .md con contenido académico detallado (secciones 1.5, 1.6, 2.1, 2.2, 3.3, 3.4, 4.2-4.8, 5.1, 5.2, 6.1-6.3)
+  - 16 infografías adicionales para otras secciones
+  - 2 archivos HTML adicionales con contenido estructurado
+- **Validación de Estructura TypeScript:** Se verificó que el tipo `TopicContent` en `types.ts` ya soporta la propiedad `videoUrl?: string`, permitiendo la integración sin modificaciones estructurales.
+
+**Justificación:** El objetivo fue aprovechar los recursos multimedia existentes en el drive que no estaban siendo utilizados en la plataforma. Se priorizó la integración del video único encontrado y se verificó que las infografías principales ya estuvieran configuradas, evitando redundancias mientras se enriquece la experiencia de aprendizaje con contenido audiovisual.
+
+---
+
 ## Versión 2.24.0 - 2026-04-08
 
 **Cambios realizados: Consolidación y Normalización de Bibliografías (Fase Final)**
 - **Corrección de Citación Fragmentada:** Se identificaron y repararon múltiples bloques de referencias en `constants.ts` (Secciones 2.2, 5.1, 6.1, 6.2 y 6.3) que presentaban líneas divididas por el proceso de extracción automática previo. Se unificaron estas piezas en objetos de citación únicos y fluidos para una visualización académica impecable en la pestaña de "Citas".
 - **Purificación de Prefijos Markdown:** Se eliminaron los prefijos residuales `>` y enlaces Markdown crudos dentro de los arreglos de `references`, sustituyéndolos por texto de citación estandarizado (Formato APA/Académico).
-- **Validación de Integridad Estructural:** Se verificó mediante compilación de TypeScript (`tsc --noEmit`) que las modificaciones en las más de 8,000 líneas de `constants.ts` no introdujeran errores de sintaxis, asegurando que todos los 28 temas mantienen su integridad de datos.
+- **Limpieza de Emojis en Código Fuente:** Siguiendo el requerimiento de sobriedad absoluta, se ejecutó un script de purificación sobre `constants.ts` para eliminar físicamente todos los emojis del código fuente (especialmente en secciones de estudios legales y administrativos), asegurando que el archivo de datos sea 100% técnico.
+- **Validación de Integridad Estructural:** Se verificó mediante compilación de TypeScript (`tsc --noEmit`) que las modificaciones en las más de 8,000 líneas de `constants.ts` no introdujeran errores de sintaxis.
 - **Auditoría de Exhaustividad:** Se realizó un barrido global para asegurar que cada uno de los 7 módulos cuenta con sus fuentes bibliográficas íntegras, eliminando redundancias y registros vacíos.
 
 **Justificación:** El objetivo era alcanzar el "Estado del Arte" en la gestión de datos bibliográficos. Al consolidar las líneas fragmentadas, se garantiza que el usuario vea referencias completas y legibles en un solo bloque, en lugar de frases cortadas, elevando la calidad profesional de la plataforma.

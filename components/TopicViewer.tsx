@@ -12,7 +12,7 @@ interface TopicViewerProps {
   onBackToModule: () => void;
 }
 
-type TabType = 'investigacion' | 'flashcards' | 'infografia' | 'video' | 'glosario' | 'referencias' | 'quiz';
+type TabType = 'investigacion' | 'ejemploreal' | 'flashcards' | 'infografia' | 'video' | 'mindmap' | 'glosario' | 'referencias' | 'quiz';
 
 export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinishTopic, isCompleted, onBackToModule }) => {
   const [content, setContent] = useState<TopicContent | null>(null);
@@ -35,15 +35,15 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
   }, [topic.id]);
 
   const renderInlineMarkdown = (line: string) => {
-    // Handle both bold (**text**) and italic (*text*)
-    // Use a approach that can handle nested or multiple styles in one line
-    const parts = line.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+    // Handle both bold (**text**), italic (*text*), and links ([text](url))
+    // Use an approach that can handle nested or multiple styles in one line
+    const parts = line.split(/(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)]+\))/g);
     
     return parts.map((part, idx) => {
       // Bold
       if (part.startsWith('**') && part.endsWith('**')) {
         return (
-          <strong key={idx} className="font-bold text-gray-900">
+          <strong key={idx} className="font-bold text-gray-900 dark:text-white">
             {part.slice(2, -2)}
           </strong>
         );
@@ -51,9 +51,24 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
       // Italic
       if (part.startsWith('*') && part.endsWith('*')) {
         return (
-          <em key={idx} className="italic text-gray-700">
+          <em key={idx} className="italic text-gray-700 dark:text-gray-200">
             {part.slice(1, -1)}
           </em>
+        );
+      }
+      // Links [text](url)
+      const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (linkMatch) {
+        return (
+          <a 
+            key={idx} 
+            href={linkMatch[2]} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-600 hover:text-blue-800 underline decoration-blue-500/30 hover:decoration-blue-500 transition-all font-medium"
+          >
+            {linkMatch[1]}
+          </a>
         );
       }
       return <span key={idx}>{part}</span>;
@@ -355,12 +370,12 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
           w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-md active:scale-90
           ${activeTab === id 
             ? 'bg-principal text-white scale-110 shadow-lg ring-4 ring-principal/10' 
-            : 'bg-white text-principal hover:bg-hueso hover:scale-105 border border-gray-100'}
+            : 'bg-white dark:bg-card-bg text-principal dark:text-principal/90 hover:bg-crema dark:hover:bg-gray-600 hover:scale-105 border border-principal/20 dark:border-gray-500'}
         `}
       >
         {icon}
       </button>
-      <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-widest transition-colors duration-300 ${activeTab === id ? 'text-principal' : 'text-gray-400'}`}>
+      <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-widest transition-colors duration-300 ${activeTab === id ? 'text-principal' : 'text-gray-400 dark:text-gray-500'}`}>
         {label}
       </span>
     </div>
@@ -397,10 +412,22 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
           icon={<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>}
         />
         <TabButton 
+          id="ejemploreal" 
+          label="Ejemplo" 
+          icon={<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>}
+        />
+        <TabButton 
           id="infografia" 
           label="Visual" 
           icon={<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>}
         />
+        {content?.mindmapUrl && (
+          <TabButton 
+            id="mindmap" 
+            label="Mapa" 
+            icon={<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m4.22-13.22 4.24 4.24M1.54 8.76l4.24 4.24M20.46 8.76l-4.24 4.24M1.54 15.24l4.24-4.24"/></svg>}
+          />
+        )}
         <TabButton 
           id="flashcards" 
           label="Repaso" 
@@ -424,7 +451,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
       </div>
 
       {/* Content Area - Bone Card Style */}
-      <div className="bg-hueso border border-gray-300 rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-10 min-h-[400px] animate-fade relative overflow-hidden">
+      <div className="bg-crema dark:bg-card-bg border border-principal/20 dark:border-gray-600 rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-10 min-h-[400px] animate-fade relative overflow-hidden">
         {activeTab === 'investigacion' && (
           <div className="space-y-12 animate-fade-in-up">
             {/* Header Section from Image */}
@@ -436,24 +463,24 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
 
             {/* Summary Section */}
             <div className="space-y-6">
-              <div className="bg-white/50 p-6 sm:p-8 rounded-2xl border border-principal/10 shadow-inner">
+              <div className="bg-white/80 dark:bg-card-bg/90 p-6 sm:p-8 rounded-2xl border border-principal/20 dark:border-white/30 shadow-inner">
                 {renderMarkdown(content.summary)}
               </div>
             </div>
 
             <div className="space-y-8">
               <div className="flex items-center gap-4 border-l-4 border-principal pl-4">
-                <h3 className="text-3xl font-black text-principal heading-serif">
+                <h3 className="text-3xl font-black text-principal dark:text-blue-400 heading-serif">
                   Puntos Estratégicos
                 </h3>
               </div>
               
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {content.keyPoints.slice(0, 6).map((point, idx) => (
-                  <div key={idx} className="group relative bg-white border-b-4 border-r-4 border-principal/10 rounded-2xl p-8 hover:border-principal/30 hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-xl overflow-hidden">
-                    <div className="absolute top-0 left-0 w-1 h-full bg-principal opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div key={idx} className="group relative bg-white dark:bg-card-bg border-b-4 border-r-4 border-principal/10 dark:border-blue-500/30 rounded-2xl p-8 hover:border-principal/30 dark:hover:border-blue-400/50 hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-xl overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-principal dark:bg-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="relative z-10 flex flex-col h-full">
-                      <p className="text-gray-800 leading-relaxed font-semibold text-lg">
+                      <p className="text-gray-800 dark:text-white leading-relaxed font-semibold text-lg">
                         {stripEmojis(point)}
                       </p>
                     </div>
@@ -462,48 +489,43 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
               </div>
             </div>
 
-            {/* Real World Example */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-black text-principal heading-serif flex items-center gap-3">
-                <div className="w-6 h-6 bg-principal flex-shrink-0" />
-                Ejemplo Real
-              </h3>
-              <div className="bg-gradient-to-br from-principal to-principal/80 p-1 rounded-2xl shadow-xl">
-                <div className="bg-white p-6 sm:p-8 rounded-xl">
-                  {renderMarkdown(content.realWorldExample)}
-                </div>
-              </div>
-            </div>
-
-            {/* FAQs Section */}
-            {content.faqs && content.faqs.length > 0 && (
-              <div className="space-y-6">
-                <h3 className="text-2xl font-black text-principal heading-serif flex items-center gap-3">
-                  <div className="w-6 h-6 bg-principal flex-shrink-0" />
-                  Preguntas Frecuentes
-                </h3>
-                <div className="grid gap-4">
-                  {content.faqs.map((faq, idx) => (
-                    <div key={idx} className="bg-white/70 p-6 rounded-2xl border border-principal/10">
-                      <h4 className="font-bold text-principal text-lg mb-2 flex items-center gap-2">
-                        <span className="text-principal opacity-30 text-2xl font-black">?</span>
-                        {stripEmojis(faq.question)}
-                      </h4>
-                      <p className="text-gray-700 leading-relaxed pl-6 italic">{stripEmojis(faq.answer)}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
             <div className="flex justify-center mt-12">
                <button 
-                onClick={() => setActiveTab('quiz')}
+                onClick={() => setActiveTab('ejemploreal')}
                 className="academic-button group px-10 py-5 flex items-center gap-3 text-lg"
                >
-                 Ir a la Evaluación
+                 Ver Ejemplo Real
                  <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                </button>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'ejemploreal' && (
+          <div className="space-y-12 animate-fade-in-up">
+            <h3 className="text-3xl font-black text-principal heading-serif flex items-center gap-3 pb-4 border-b-2 border-principal/10">
+              <div className="w-8 h-8 bg-principal flex-shrink-0" />
+              Ejemplificación Práctica
+            </h3>
+            <div className="bg-gradient-to-br from-principal to-principal/80 p-0.5 rounded-2xl shadow-2xl">
+              <div className="bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-2xl">
+                {renderMarkdown(content.realWorldExample)}
+              </div>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 gap-8">
+               <div className="bg-crema dark:bg-gray-700 p-6 rounded-2xl border border-principal/10 dark:border-principal/20 italic text-carbon dark:text-gray-200">
+                  "El análisis de casos reales permite cerrar la brecha entre la teoría académica y la práctica profesional en ingeniería."
+               </div>
+               <div className="flex items-center justify-center">
+                  <button 
+                    onClick={() => setActiveTab('flashcards')}
+                    className="academic-button w-full py-5 flex items-center justify-center gap-3"
+                  >
+                    Ir al Diagnóstico
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  </button>
+               </div>
             </div>
           </div>
         )}
@@ -521,21 +543,30 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
               Video Explicativo
             </h3>
             
-            <div className="bg-white/50 border border-principal/10 rounded-2xl p-4 sm:p-6 shadow-xl relative group">
-              <div className="aspect-video bg-principal/5 rounded-xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-principal/5 z-0" />
-                <div className="relative z-10 text-center max-w-sm px-4">
-                  <div className="w-20 h-20 bg-principal text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="8 5 19 12 8 19 8 5"/></svg>
-                  </div>
-                  <h4 className="text-xl font-bold text-principal mb-2 heading-serif uppercase tracking-tight">Clase Magistral: Tema {topic.id}</h4>
-                  <p className="text-gray-600 text-sm italic mb-6">Visualiza la explicación detallada del contenido para profundizar en los conceptos teóricos.</p>
-                  <button className="academic-button px-8 py-3 flex items-center gap-3 mx-auto text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    Iniciar Reproducción
-                  </button>
+            <div className="bg-white/70 dark:bg-card-bg border border-principal/15 dark:border-gray-500 rounded-2xl p-4 sm:p-6 shadow-xl relative group">
+              {content.videoUrl ? (
+                <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+                  <video 
+                    src={content.videoUrl} 
+                    className="w-full h-full" 
+                    controls 
+                    preload="metadata"
+                  >
+                    Tu navegador no soporta el elemento de video.
+                  </video>
                 </div>
-              </div>
+              ) : (
+                <div className="aspect-video bg-principal/5 rounded-xl flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-principal/5 z-0" />
+                  <div className="relative z-10 text-center max-w-sm px-4">
+                    <div className="w-20 h-20 bg-principal text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform cursor-pointer">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="8 5 19 12 8 19 8 5"/></svg>
+                    </div>
+                    <h4 className="text-xl font-bold text-principal mb-2 heading-serif uppercase tracking-tight">Clase Magistral: Tema {topic.id}</h4>
+                    <p className="text-carbon/70 dark:text-gray-300 text-sm italic mb-6">Visualiza la explicación detallada del contenido para profundizar en los conceptos teóricos.</p>
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
@@ -555,8 +586,8 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                    <div className="w-1.5 h-4 bg-principal/40 rounded-full" />
                    Material de Apoyo
                 </h5>
-                <p className="text-xs text-gray-500 mb-4 leading-relaxed">Presentación formal utilizada durante la grabación para facilitar la toma de notas.</p>
-                <button className="text-principal hover:text-principal/80 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-hueso border border-principal/20 rounded-full transition-colors">
+                <p className="text-xs text-carbon/60 dark:text-gray-400 mb-4 leading-relaxed">Presentación formal utilizada durante la grabación para facilitar la toma de notas.</p>
+                <button className="text-principal hover:text-principal/80 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-crema dark:bg-gray-700 border border-principal/20 dark:border-principal/30 rounded-full transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                   Ver Diapositivas
                 </button>
@@ -572,7 +603,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
               Recurso Infográfico
             </h3>
             
-            <div className="bg-white/50 border border-principal/10 rounded-2xl p-4 sm:p-6 shadow-xl">
+            <div className="bg-white/70 dark:bg-card-bg border border-principal/15 dark:border-gray-500 rounded-2xl p-4 sm:p-6 shadow-xl">
               <div className="w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl relative group bg-slate-900 aspect-[4/5] sm:aspect-auto">
                  <div className="absolute inset-0 bg-gradient-to-br from-principal/10 to-transparent z-0" />
                  <img 
@@ -592,6 +623,41 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   Descargar Infografía
                 </a>
+                <button className="flex items-center justify-center gap-3 text-carbon/70 dark:text-gray-300 border border-carbon/20 dark:border-gray-600 px-8 py-3 rounded-full hover:bg-crema dark:hover:bg-gray-700 transition-all text-sm font-bold uppercase tracking-widest">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Vista Pantalla Completa
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'mindmap' && content?.mindmapUrl && (
+          <div className="animate-fade-in-up space-y-8">
+            <h3 className="text-3xl font-black text-principal heading-serif mb-8 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m4.22-13.22 4.24 4.24M1.54 8.76l4.24 4.24M20.46 8.76l-4.24 4.24M1.54 15.24l4.24-4.24"/></svg>
+              Mapa Mental del Tema
+            </h3>
+            
+            <div className="bg-white/70 dark:bg-slate-900 border border-principal/15 dark:border-principal/20 rounded-2xl p-4 sm:p-6 shadow-xl">
+              <div className="w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl relative group bg-white dark:bg-slate-800">
+                <div className="absolute inset-0 bg-gradient-to-br from-principal/5 to-transparent z-0" />
+                <div 
+                  className="w-full h-full min-h-[500px] flex items-center justify-center p-8"
+                  dangerouslySetInnerHTML={{ __html: content.mindmapUrl.includes('<svg') ? content.mindmapUrl : `<img src="${content.mindmapUrl}" alt="Mapa Mental" class="w-full h-full object-contain" />` }}
+                />
+              </div>
+              
+              <div className="flex flex-col sm:flex-row justify-center mt-8 gap-4 px-4">
+                <a 
+                  href={content.mindmapUrl} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="flex items-center justify-center gap-3 text-principal border border-principal/30 px-8 py-3 rounded-full hover:bg-principal/5 transition-all text-sm font-bold uppercase tracking-widest"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Descargar Mapa Mental
+                </a>
                 <button className="flex items-center justify-center gap-3 text-gray-500 border border-gray-200 px-8 py-3 rounded-full hover:bg-gray-50 transition-all text-sm font-bold uppercase tracking-widest">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                   Vista Pantalla Completa
@@ -609,9 +675,9 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
             </h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {content.flashcards.map((card, idx) => (
-                <div key={idx} className="academic-section hover:shadow-xl hover:-translate-y-1 transition-all group">
-                  <h4 className="font-bold text-principal text-lg mb-2 heading-serif border-b border-principal/10 pb-2 group-hover:border-principal/30 transition-colors">{stripEmojis(card.term)}</h4>
-                  <p className="academic-paper text-sm leading-relaxed text-gray-700">{stripEmojis(card.definition)}</p>
+                <div key={idx} className="bg-white/70 dark:bg-card-bg p-6 rounded-2xl border border-principal/15 dark:border-gray-500 shadow-md hover:shadow-lg transition-all">
+                  <h4 className="font-bold text-principal text-lg mb-2 heading-serif border-b border-principal/15 dark:border-gray-500 pb-2">{stripEmojis(card.term)}</h4>
+                  <p className="text-carbon dark:text-gray-200 text-sm leading-relaxed">{stripEmojis(card.definition)}</p>
                 </div>
               ))}
             </div>
@@ -626,10 +692,10 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
             </h3>
             <div className="space-y-6">
               {content.references.map((ref, idx) => (
-                <div key={idx} className="bg-white/50 p-6 rounded-2xl border border-principal/5 flex gap-5 group hover:bg-white hover:border-principal/20 transition-all">
+                <div key={idx} className="bg-white/70 dark:bg-card-bg p-6 rounded-2xl border border-principal/10 dark:border-gray-500 flex gap-5 group hover:bg-white dark:hover:bg-gray-600 hover:border-principal/25 transition-all">
                   <div className="text-principal/20 font-black text-2xl mt-1 select-none">{String(idx + 1).padStart(2, '0')}</div>
                   <div className="flex-1">
-                    <p className="text-gray-800 text-base leading-relaxed pl-4 -indent-4 heading-serif italic">
+                    <p className="text-carbon dark:text-gray-200 text-base leading-relaxed pl-4 -indent-4 heading-serif italic">
                       {stripEmojis(ref.citation)}
                     </p>
                     {ref.url && (
@@ -637,7 +703,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                         href={ref.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-blue-700 hover:text-blue-900 text-[11px] font-black uppercase tracking-[0.2em] mt-3 inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors"
+                        className="text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 text-[11px] font-black uppercase tracking-[0.2em] mt-3 inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 rounded-full group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30 transition-colors"
                       >
                         <span>Consultar Fuente</span>
                         <svg className="group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -660,7 +726,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
       <div className="flex justify-center pt-4">
         <button
           onClick={onBackToModule}
-          className="px-6 py-3 rounded-full border border-[#003366]/40 bg-white hover:bg-[#F5F5DC] text-[#003366] font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md"
+          className="px-6 py-3 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-700 hover:bg-[#F5F5DC] dark:hover:bg-gray-600 text-[#003366] dark:text-blue-300 font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
           Volver al módulo

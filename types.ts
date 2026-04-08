@@ -45,6 +45,8 @@ export interface TopicContent {
   quiz: QuizQuestion[];
   flashcards: Flashcard[];
   infographicUrl: string;
+  videoUrl?: string;
+  mindmapUrl?: string;
   author?: string;
 }
 

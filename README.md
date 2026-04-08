@@ -14,6 +14,8 @@ Plataforma educativa interactiva para el aprendizaje de prácticas iniciales de 
 - **Recursos Visuales**: Infografías específicas para cada tema disponible
 - **Diseño Responsivo**: Interfaz moderna y adaptable a diferentes dispositivos
 - **Diseño Académico Elegante**: Sistema de diseño profesional con paleta de colores académicos y tipografía formal
+- **Modo Oscuro/Claro**: Selector dinámico para cambiar el tema visual de la plataforma
+- **Recursos Multimedia**: Integración de videos explicativos y material audiovisual
 - **Evaluaciones Diversificadas**: Sistema de evaluación con preguntas de opción múltiple y verdadero/falso
 - **Bibliografía Estandarizada**: Sistema de citación académica unificado y completo para cada tema de investigación
 - **Formato Estandarizado**: Contenido con formato "Realizado por:" para autoría consistente
@@ -109,6 +111,14 @@ npm run build
 ```
 
 ## Actualizaciones Recientes
+
+### v2.26.0 (2026-04-08)
+- **Modo Oscuro y Multimedia**
+  - Implementación de selector de Modo Oscuro/Claro en el header.
+  - Integración de video explicativo para el tema "Administración Estratégica" (3.1).
+  - Actualización de footer con enlaces institucionales y redes sociales oficiales.
+  - Nueva pestaña de "Ejemplo Real" independiente en el visor de contenidos.
+  - Corrección de errores de tipado y estabilización de `constants.ts`.
 
 ### v2.4.0 (2026-04-08)
 - **Optimización Mobile Full-Responsive y Refinamiento UX Académico Final**

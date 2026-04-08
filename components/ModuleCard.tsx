@@ -10,7 +10,7 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({ module, onClick }) => {
   return (
     <div 
       onClick={onClick}
-      className="bg-hueso group relative overflow-hidden rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 cursor-pointer flex flex-col h-full active:scale-[0.98] border border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-300"
+      className="bg-hueso dark:bg-gray-700 group relative overflow-hidden rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 cursor-pointer flex flex-col h-full active:scale-[0.98] border border-gray-300 dark:border-gray-600 shadow-lg hover:shadow-2xl transition-all duration-300"
     >
       <div className="flex items-start justify-between mb-4 sm:mb-6">
         <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-principal text-white font-bold border border-white/20 text-sm sm:text-lg shadow-md">
@@ -27,13 +27,13 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({ module, onClick }) => {
       
       <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6 flex-1">
         {module.topics.slice(0, 4).map(topic => (
-          <div key={topic.id} className="text-sm text-gray-700 truncate flex items-center gap-2 sm:gap-3">
+          <div key={topic.id} className="text-sm text-gray-700 dark:text-gray-200 truncate flex items-center gap-2 sm:gap-3">
             <span className="w-1.5 h-1.5 rounded-full bg-principal/40 group-hover:bg-principal transition-colors flex-shrink-0"></span>
             <span className="truncate">{topic.title}</span>
           </div>
         ))}
         {module.topics.length > 4 && (
-          <div className="text-xs text-gray-500 mt-1 sm:mt-2 pl-4 italic">
+          <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 sm:mt-2 pl-4 italic">
             + {module.topics.length - 4} más...
           </div>
         )}

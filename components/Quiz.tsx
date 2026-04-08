@@ -55,7 +55,7 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
 
   if (isFinished) {
     return (
-      <div className="text-center p-10 bg-hueso rounded-3xl border border-principal/10 animate-fade shadow-xl max-w-xl mx-auto">
+      <div className="text-center p-10 bg-hueso dark:bg-gray-800 rounded-3xl border border-principal/10 dark:border-gray-600 animate-fade shadow-xl max-w-xl mx-auto">
         <div className={`mb-6 inline-flex p-6 rounded-full ${isPassed ? 'bg-green-500/10 text-green-600' : 'bg-red-500/10 text-red-600'}`}>
           {isPassed ? (
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -64,7 +64,7 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
           )}
         </div>
         <h3 className="text-3xl font-black mb-2 text-principal tracking-tight">{isPassed ? '¡Excelente Trabajo!' : 'Sigue Practicando'}</h3>
-        <p className="text-gray-600 mb-8 text-lg font-medium">
+        <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg font-medium">
           Obtuviste <span className="font-black text-principal text-3xl">{percentage}%</span> ({score}/{questions.length})
         </p>
         
@@ -89,9 +89,9 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
   const question = questions[currentIdx];
 
   return (
-    <div className="bg-white p-5 sm:p-10 rounded-3xl border border-principal/10 relative overflow-hidden max-w-3xl mx-auto shadow-xl">
+    <div className="bg-white dark:bg-gray-800 p-5 sm:p-10 rounded-3xl border border-principal/10 dark:border-gray-600 relative overflow-hidden max-w-3xl mx-auto shadow-xl">
       {/* Progress Bar */}
-      <div className="absolute top-0 left-0 w-full h-1.5 bg-gray-100">
+      <div className="absolute top-0 left-0 w-full h-1.5 bg-gray-100 dark:bg-gray-700">
         <div 
           className="h-full bg-gradient-to-r from-principal to-blue-400 transition-all duration-700 ease-out"
           style={{ width: `${((currentIdx + 1) / questions.length) * 100}%` }}
@@ -99,7 +99,7 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
       </div>
 
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 mt-2 gap-2">
-        <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">PREGUNTA {currentIdx + 1} / {questions.length}</span>
+        <span className="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.2em]">PREGUNTA {currentIdx + 1} / {questions.length}</span>
         <span className="text-xs font-black text-principal bg-principal/5 px-4 py-1.5 rounded-full border border-principal/10">Puntos: {score}</span>
       </div>
 
@@ -120,7 +120,7 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
                       ? 'bg-green-50 border-green-500 text-green-700'
                       : 'bg-red-50 border-red-500 text-red-700'
                     : 'bg-principal/5 border-principal text-principal'
-                  : 'bg-gray-50 border-gray-100 text-gray-700 hover:bg-white hover:border-principal/30 hover:shadow-md'
+                  : 'bg-gray-50 dark:bg-gray-700 border-gray-100 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-600 hover:border-principal/30 hover:shadow-md'
               } ${showFeedback ? 'cursor-not-allowed opacity-90' : 'cursor-pointer active:scale-[0.99]'}`}
               disabled={showFeedback}
             >
@@ -132,13 +132,13 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
                         ? 'border-green-500 bg-green-500'
                         : 'border-red-500 bg-red-500'
                       : 'border-principal bg-principal'
-                    : 'border-gray-300 group-hover:border-principal/50'
+                    : 'border-gray-300 dark:border-gray-500 group-hover:border-principal/50'
                 }`}>
                   {selectedOption === idx && (
                     <div className="w-2 h-2 rounded-full bg-white shadow-sm"></div>
                   )}
                 </div>
-                <span className={`flex-1 font-bold ${selectedOption === idx ? '' : 'text-gray-600'}`}>{option}</span>
+                <span className={`flex-1 font-bold ${selectedOption === idx ? '' : 'text-gray-600 dark:text-gray-300'}`}>{option}</span>
               </div>
             </button>
           ))}
@@ -154,7 +154,7 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
                     ? 'bg-green-50 border-green-500 text-green-700'
                     : 'bg-red-50 border-red-500 text-red-700'
                   : 'bg-principal/5 border-principal text-principal'
-                : 'bg-gray-50 border-gray-100 text-gray-500 hover:bg-white hover:border-principal/30 hover:shadow-md'
+                : 'bg-gray-50 dark:bg-gray-700 border-gray-100 dark:border-gray-600 text-gray-500 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-600 hover:border-principal/30 hover:shadow-md'
             } ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer active:scale-95'}`}
             disabled={showFeedback}
           >
@@ -170,7 +170,7 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
                     ? 'bg-green-50 border-green-500 text-green-700'
                     : 'bg-red-50 border-red-500 text-red-700'
                   : 'bg-principal/5 border-principal text-principal'
-                : 'bg-gray-50 border-gray-100 text-gray-500 hover:bg-white hover:border-principal/30 hover:shadow-md'
+                : 'bg-gray-50 dark:bg-gray-700 border-gray-100 dark:border-gray-600 text-gray-500 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-600 hover:border-principal/30 hover:shadow-md'
             } ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer active:scale-95'}`}
             disabled={showFeedback}
           >
@@ -179,7 +179,7 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onFinish }) => {
         </div>
       )}
       
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 border-t border-gray-50 pt-8 mt-2">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 border-t border-gray-50 dark:border-gray-700 pt-8 mt-2">
         <div className="text-center sm:text-left min-h-[1.5rem]">
           {showFeedback && (
             <span className={`text-xs font-black uppercase tracking-[0.2em] animate-fade ${

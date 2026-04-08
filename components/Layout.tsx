@@ -30,6 +30,35 @@ export const Layout: React.FC<LayoutProps> = ({
   topicAuthor
 }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('theme');
+      if (saved) return saved === 'dark';
+      return false; // Predeterminado: modo claro
+    }
+    return false;
+  });
+
+  const toggleTheme = () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('theme', newMode ? 'dark' : 'light');
+      if (newMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  };
+
+  React.useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
 
   const calculateProgress = () => {
     if (!user) return 0;
@@ -38,33 +67,54 @@ export const Layout: React.FC<LayoutProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-principal selection:text-white pb-20 flex">
+    <div className="min-h-screen bg-crema dark:bg-gray-900 text-carbon dark:text-gray-100 font-sans selection:bg-principal selection:text-white pb-20 flex">
       {/* Background Accents */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-principal/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-green-500/5 rounded-full blur-[100px]" />
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-principal/5 dark:bg-principal/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-bosque/5 dark:bg-bosque/10 rounded-full blur-[100px]" />
       </div>
 
       {/* Sidebar (Desktop) */}
-      <aside className={`fixed lg:sticky top-0 h-screen w-80 sm:w-72 bg-principal text-white shadow-xl z-40 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
+      <aside className={`fixed lg:sticky top-0 h-screen w-80 sm:w-72 bg-crema dark:bg-marino text-carbon dark:text-white shadow-xl z-40 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="p-6 h-full flex flex-col">
-          <div className="mb-8 flex items-center gap-3">
-             <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center font-bold text-lg shadow-lg shadow-black/20 text-white">
-               PI
+          <div className="mb-8 flex items-center justify-between gap-3">
+             <div className="flex items-center gap-3">
+               <div className="w-10 h-10 rounded-xl bg-marino dark:bg-white/10 border border-marino dark:border-white/20 flex items-center justify-center font-bold text-lg shadow-lg shadow-black/20 text-white dark:text-white">
+                 PI
+               </div>
+               <div className="leading-tight">
+                 <h1 className="font-bold text-marino dark:text-white tracking-tight">Prácticas Iniciales</h1>
+                 <span className="text-[10px] text-marino/70 dark:text-blue-200 uppercase font-black tracking-widest">Ingeniería USAC</span>
+               </div>
              </div>
-             <div className="leading-tight">
-               <h1 className="font-bold text-white tracking-tight">Prácticas Iniciales</h1>
-               <span className="text-[10px] text-blue-200 uppercase font-black tracking-widest">Ingeniería USAC</span>
+             
+             {/* Theme Toggle Switch */}
+             <div className="flex items-center gap-2">
+               <span className="text-[10px] font-medium text-carbon/70 dark:text-white/70">Claro</span>
+               <button 
+                 onClick={toggleTheme}
+                 className="relative w-12 h-6 bg-marino/20 dark:bg-white/20 border border-marino/30 dark:border-white/30 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-marino/50 dark:focus:ring-white/50"
+                 aria-label="Toggle dark mode"
+               >
+                 <span className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white dark:bg-marino rounded-full transition-transform duration-300 flex items-center justify-center ${isDarkMode ? 'translate-x-6' : 'translate-x-0'}`}>
+                   {isDarkMode ? (
+                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-800"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                   ) : (
+                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-yellow-500"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                   )}
+                 </span>
+               </button>
+               <span className="text-[10px] font-medium text-carbon/70 dark:text-white/70">Oscuro</span>
              </div>
           </div>
 
           {user && (
-            <div className="mb-8 p-4 bg-white/5 rounded-xl border border-white/20">
+            <div className="mb-8 p-4 bg-marino/5 dark:bg-white/5 rounded-xl border border-marino/20 dark:border-white/20">
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-bold text-blue-50">{user.name}</span>
-                <span className="bg-white/20 text-white px-2 py-0.5 rounded-full text-xs font-bold">{calculateProgress()}%</span>
+                <span className="text-sm font-bold text-marino dark:text-blue-50">{user.name}</span>
+                <span className="bg-marino dark:bg-white/20 text-white dark:text-white px-2 py-0.5 rounded-full text-xs font-bold">{calculateProgress()}%</span>
               </div>
-              <div className="w-full bg-black/20 rounded-full h-2 overflow-hidden border border-white/10">
+              <div className="w-full bg-marino/20 dark:bg-black/20 rounded-full h-2 overflow-hidden border border-marino/10 dark:border-white/10">
                 <div 
                   className="bg-gradient-to-r from-blue-400 to-green-400 h-2 rounded-full transition-all duration-1000"
                   style={{ width: `${calculateProgress()}%` }}
@@ -76,7 +126,7 @@ export const Layout: React.FC<LayoutProps> = ({
           <div className="flex-1 overflow-y-auto pr-2 space-y-6 no-scrollbar">
              {COURSE_MODULES.map(mod => (
                <div key={mod.id}>
-                 <h3 className="text-[10px] font-black text-blue-300 uppercase tracking-[0.2em] mb-3 px-2">
+                 <h3 className="text-[10px] font-black text-marino/70 dark:text-blue-300 uppercase tracking-[0.2em] mb-3 px-2">
                    Módulo {mod.id}
                  </h3>
                  <div className="space-y-1">
@@ -93,8 +143,8 @@ export const Layout: React.FC<LayoutProps> = ({
                          }}
                          className={`w-full text-left px-3 py-2.5 rounded-xl text-sm transition-all flex items-center justify-between group translate-z-0 ${
                            isActive 
-                             ? 'bg-white text-principal font-bold shadow-lg scale-105' 
-                             : 'text-blue-100/70 hover:text-white hover:bg-white/10 hover:translate-x-1'
+                             ? 'bg-marino text-white font-bold shadow-lg scale-105 dark:bg-white dark:text-principal' 
+                             : 'text-marino/70 hover:text-marino dark:text-blue-100/70 dark:hover:text-white hover:bg-marino/10 dark:hover:bg-white/10 hover:translate-x-1'
                          }`}
                        >
                          <span className="truncate">{topic.id} {topic.title}</span>
@@ -170,7 +220,7 @@ export const Layout: React.FC<LayoutProps> = ({
                 )}
                 {title && <h1 className="text-3xl sm:text-4xl font-extrabold text-principal tracking-tight">{title}</h1>}
               </div>
-              {subtitle && <p className="text-lg text-gray-500 font-medium max-w-3xl leading-relaxed">{subtitle}</p>}
+              {subtitle && <p className="text-lg text-principal/80 font-medium max-w-3xl leading-relaxed">{subtitle}</p>}
               <div className="h-1 w-20 bg-principal/10 rounded-full mt-6" />
             </div>
           )}
@@ -180,16 +230,45 @@ export const Layout: React.FC<LayoutProps> = ({
           </div>
         </main>
 
-        {/* Special Academic Footer */}
-        <footer className="mt-auto relative overflow-hidden bg-principal text-white py-16 px-6 sm:px-10 border-t-4 border-white/5">
-          {/* Decorative background elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48 blur-3xl pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/20 rounded-full -ml-48 -mb-48 blur-3xl pointer-events-none"></div>
-          
-          <div className="max-w-6xl mx-auto relative z-10">
-            <div className="grid lg:grid-cols-12 gap-12 mb-12">
-              <div className="lg:col-span-5">
-                <div className="flex items-center gap-4 mb-6">
+        {/* Simple Academic Footer */}
+        <footer className="mt-auto relative overflow-hidden bg-principal text-white py-8 px-6 border-t border-white/10">
+          <div className="max-w-6xl mx-auto relative z-10 text-center">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center font-bold text-lg">
+                  PI
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-sm">Prácticas Iniciales</h3>
+                  <p className="text-[10px] text-white/70">Facultad de Ingeniería CUNOC</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <a 
+                  href="http://ingenieria.cunoc.usac.edu.gt/portal/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
+                  aria-label="Website"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </a>
+                <a 
+                  href="https://www.facebook.com/DivisionIngenieriaCunoc/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
+                  aria-label="Facebook"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+              </div>
+            </div>
+            
+            <div className="grid lg:grid-cols-12 gap-12 mb-12 text-left pt-12 border-t border-white/10">
+              <div className="lg:col-span-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
+                <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-2xl bg-white text-principal flex items-center justify-center font-black text-xl shadow-2xl rotate-3">
                     PI
                   </div>
@@ -198,12 +277,10 @@ export const Layout: React.FC<LayoutProps> = ({
                     <p className="text-[10px] text-white/50 font-black uppercase tracking-[0.3em] mt-1">Facultad de Ingeniería • CUNOC</p>
                   </div>
                 </div>
-                <p className="text-white/70 text-sm leading-relaxed max-w-sm mb-8 italic">
-                  "Id y enseñad a todos" — Impulsando la excelencia académica a través de la investigación y el desarrollo de herramientas tecnológicas de vanguardia para la formación de ingenieros USAC.
-                </p>
+                
                 <div className="flex gap-4">
                   <div className="px-4 py-2 bg-white/10 rounded-lg border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/80">
-                    Edición 2025
+                    Edición 2026
                   </div>
                   <div className="px-4 py-2 bg-white/10 rounded-lg border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/80">
                     Ingeniería Mecánica
@@ -211,16 +288,16 @@ export const Layout: React.FC<LayoutProps> = ({
                 </div>
               </div>
 
-              <div className="lg:col-span-7">
+              <div className="lg:col-span-12">
                 <div className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10">
                   <h4 className="text-white font-black text-xs uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><circle cx="19" cy="11" r="2"/></svg>
                     {topicAuthor ? 'Autor de Investigación' : 'Equipo de Investigación Académica'}
                   </h4>
-                  <div className="grid sm:grid-cols-2 gap-x-10 gap-y-3">
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-3">
                     {topicAuthor ? (
-                      <div className="col-span-2 py-4 border-b border-white/10">
-                         <p className="text-xl sm:text-2xl font-black text-blue-300 heading-serif italic leading-tight">
+                      <div className="col-span-3 py-4 border-b border-white/10">
+                         <p className="text-xl sm:text-2xl font-black text-blue-300 heading-serif italic leading-tight text-center">
                            {topicAuthor}
                          </p>
                       </div>
@@ -250,19 +327,6 @@ export const Layout: React.FC<LayoutProps> = ({
                     )}
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="pt-10 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-8">
-              <div className="text-center sm:text-left">
-                <span className="text-[10px] text-white/40 font-black uppercase tracking-[0.2em] block mb-1">Cuerpo Estudiantil de Ingeniería</span>
-                <span className="text-xs text-white/20 font-medium italic">
-                  Prácticas Iniciales • Universidad de San Carlos de Guatemala
-                </span>
-              </div>
-              <div className="flex items-center gap-8">
-                 <img src="https://ingenieria.usac.edu.gt/images/logo_usac.png" alt="USAC" className="h-14 brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-500 hover:scale-110 object-contain" crossOrigin="anonymous" referrerPolicy="no-referrer" />
-                 <img src="https://ingenieria.cunoc.edu.gt/portal/wp-content/uploads/2019/04/logo_ingenieria.png" alt="Ingeniería CUNOC" className="h-14 brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-500 hover:scale-110 object-contain" crossOrigin="anonymous" referrerPolicy="no-referrer" />
               </div>
             </div>
           </div>

@@ -1,0 +1,79 @@
+<svg id="strategic-mindmap" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="dropshadow" height="130%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="2" dy="2" result="offsetblur"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.2"/>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <g class="mindmap-links">
+        <path class="mindmap-link" d="M300,300 L150,150" />
+        <path class="mindmap-link" d="M300,300 L450,150" />
+        <path class="mindmap-link" d="M300,300 L150,450" />
+        <path class="mindmap-link" d="M300,300 L450,450" />
+        <path class="mindmap-link" d="M300,300 L300,100" />
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <circle cx="300" cy="100" r="50" fill="#228B22" />
+        <text x="300" y="95" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Visión &</text>
+        <text x="300" y="110" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Misión</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="75" y="100" width="150" height="100" rx="10" ry="10" fill="#228B22" />
+        <text x="150" y="130" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Análisis Externo</text>
+        <text x="150" y="150" text-anchor="middle" fill="white" font-size="10">(Oportunidades &</text>
+        <text x="150" y="165" text-anchor="middle" fill="white" font-size="10">Amenazas - PESTEL)</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="375" y="100" width="150" height="100" rx="10" ry="10" fill="#228B22" />
+        <text x="450" y="130" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Análisis Interno</text>
+        <text x="450" y="150" text-anchor="middle" fill="white" font-size="10">(Fortalezas &</text>
+        <text x="450" y="165" text-anchor="middle" fill="white" font-size="10">Debilidades - FODA)</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="75" y="400" width="150" height="100" rx="10" ry="10" fill="#228B22" />
+        <text x="150" y="430" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Implementación</text>
+        <text x="150" y="450" text-anchor="middle" fill="white" font-size="10">(Objetivos Anuales,</text>
+        <text x="150" y="465" text-anchor="middle" fill="white" font-size="10">Políticas, Recursos)</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="375" y="400" width="150" height="100" rx="10" ry="10" fill="#228B22" />
+        <text x="450" y="430" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Evaluación</text>
+        <text x="450" y="450" text-anchor="middle" fill="white" font-size="10">(Revisión Factores,</text>
+        <text x="450" y="465" text-anchor="middle" fill="white" font-size="10">Medir Desempeño)</text>
+    </g>
+    
+    <g class="mindmap-node">
+        <circle cx="300" cy="300" r="80" fill="#003366" />
+        <text x="300" y="295" text-anchor="middle" fill="white" font-size="16" font-weight="bold">ADMINISTRACIÓN</text>
+        <text x="300" y="315" text-anchor="middle" fill="white" font-size="16" font-weight="bold">ESTRATEGICA</text>
+    </g>
+
+    <style>
+        .mindmap-node {
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .mindmap-node:hover {
+            transform: scale(1.05);
+        }
+        .mindmap-link {
+            stroke: #003366;
+            stroke-width: 2;
+            fill: none;
+            opacity: 0.6;
+        }
+    </style>
+</svg>

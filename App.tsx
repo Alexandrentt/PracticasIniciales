@@ -224,7 +224,7 @@ function App() {
                     <div 
                       key={topic.id}
                       onClick={() => navigateToTopic(viewState.module, topic)}
-                      className="bg-hueso group flex items-center justify-between p-5 cursor-pointer transition-all duration-300 relative overflow-hidden rounded-xl border border-gray-300 shadow-sm hover:shadow-md active:scale-[0.99]"
+                      className="bg-hueso dark:bg-gray-700 group flex items-center justify-between p-5 cursor-pointer transition-all duration-300 relative overflow-hidden rounded-xl border border-gray-300 dark:border-gray-600 shadow-sm hover:shadow-md active:scale-[0.99]"
                     >
                       {isCompleted && (
                         <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-green-500"></div>
@@ -234,7 +234,7 @@ function App() {
                         <div className={`w-12 h-12 flex items-center justify-center rounded-full text-lg font-bold border-2 ${
                           isCompleted 
                             ? 'bg-green-500 border-green-600 text-white' 
-                            : 'bg-white border-principal text-principal'
+                            : 'bg-white dark:bg-gray-600 border-principal text-principal dark:text-blue-300'
                         }`}>
                           {isCompleted ? (
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -246,7 +246,7 @@ function App() {
                           <h3 className="text-xl text-principal font-bold transition-colors">
                             {topic.title}
                           </h3>
-                          <p className={`text-xs font-bold uppercase tracking-widest ${isCompleted ? 'text-green-600' : 'text-gray-500'}`}>
+                          <p className={`text-xs font-bold uppercase tracking-widest ${isCompleted ? 'text-green-600' : 'text-gray-500 dark:text-gray-400'}`}>
                             {isCompleted ? 'Completado' : 'Por estudiar'}
                           </p>
                         </div>

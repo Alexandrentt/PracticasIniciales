@@ -29,7 +29,7 @@ export const COURSE_MODULES: Module[] = [
     id: 3,
     title: "Estudio de casos como herramienta en la ingeniería",
     topics: [
-      { id: "3.1", title: "Administración estratégica por casos", author: "202430144 Henry Estuardo Estrada Rojas" },
+      { id: "3.1", title: "Administración estratégica por casos", author: "Cristian Danilo Palacios Méndez 202530407" },
       { id: "3.3", title: "Técnicas de documentación", author: "202330066 Mynor Estuardo Ruano García" },
       { id: "3.4", title: "Métodos de evaluación interna y externa", author: "202330066 Mynor Estuardo Ruano García" },
       { id: "3.5", title: "Metodología para implementación", author: "202331882 Stivenn Raúl Fuentes Pérez" },
@@ -55,7 +55,7 @@ export const COURSE_MODULES: Module[] = [
     topics: [
       { id: "5.1", title: "Términos de referencia", author: "202330360 Willy Alexander López Gómez" },
       { id: "5.2", title: "Bases de cotización", author: "202330360 Willy Alexander López Gómez" },
-      { id: "5.3", title: "Ética y responsabilidad social", author: "201830286 Marbella Isabel Aguilar Tuc " },
+      { id: "5.3", title: "Ética y responsabilidad social", author: "202331327 José Luis Siquina Xec" },
     ],
   },
   {
@@ -144,9 +144,15 @@ En Guatemala, la gestión de proyectos está regulada por la **SEGEPLAN** a trav
     { question: "¿Cuándo se realizan las prácticas iniciales?", answer: "Se realizan en el tercer semestre de la carrera para capacitar a los estudiantes en formulación de proyectos a nivel de perfil." }
   ],
   references: [
-    { citation: "Project Management Institute (PMI). (2021). Guía de los Fundamentos para la Dirección de Proyectos (PMBOK® 7)." },
-    { citation: "Sapag Chain, N. (2007). Proyectos de inversión: Formulación y evaluación. Pearson Educación." },
-    { citation: "Baca Urbina, G. (2013). Evaluación de proyectos (7ª ed.). McGraw-Hill Interamericana." }
+    { citation: "Manual de Formulación y Evaluación de Proyectos, Presentación de las Normas del Sistema Nacional de Inversión Pública. (2013)." },
+    { citation: "Normativo Del Programa De Prácticas De Las Carreras De Ingeniería De La División De Ciencias De La Ingeniería Del Centro Universitario De Occidente De La Universidad De San Carlos De Guatemala, Quetzaltenango (8 de agosto de 2006)." },
+    { citation: "PMBOK 4ta. Edición SPA (Junio 2009)." },
+    { citation: "Sapag Chain, Nassir. Preparación y Evaluación de Proyectos (5ta edición)." },
+    { citation: "Baca Urbina, Gabriel. Evaluación de Proyectos (6ta. Edición)." },
+    { citation: "Thompson Peteraf, Ganlbe Stricklan. Administración Estratégica. Teoría de casos (18 Edición). Editorial Mc Graw Hill." },
+    { citation: "REGLAMENTO EPS – CUNOC- DIVISIÓN DE INGENIERÍA." },
+    { citation: "Gestión de proyectos - procem consultores." },
+    { citation: "Dr. William Wallace. PR-A3-ES 1/2014 (1106) Gestión de Proyectos." }
   ],
   flashcards: [
     { term: "Proyecto", definition: "Esfuerzo temporal con inicio y fin definidos para crear un producto, servicio o resultado único." },
@@ -371,7 +377,9 @@ Los **líderes estratégicos** son responsables de asegurar que el proceso se ut
       correctAnswerIndex: 0
     }
   ],
-  infographicUrl: "/infografias/3.1.png"
+  infographicUrl: "/infografias/3.1.png",
+  videoUrl: "/videos/3.1.mp4",
+  mindmapUrl: "/infografias/3.1-mindmap.svg"
 };
 
 const content7_1: TopicContent = {
@@ -856,30 +864,15 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
     }
   ],
   references: [
-    { 
-      citation: "Manual de Formulación y Evaluación de Proyectos, Presentación de las Normas del Sistema Nacional de Inversión Pública. (2013)."
-    },
-    { 
-      citation: "PMBOK 4ta. Edición SPA (Junio 2009)."
-    },
-    { 
-      citation: "Sapag Chain, Nassir. Preparación y Evaluación de Proyectos (5ta edición)."
-    },
-    { 
-      citation: "Baca Urbina, Gabriel. Evaluación de Proyectos (6ta. Edición)."
-    },
-    { 
-      citation: "Thompson Peteraf, Ganlbe Stricklan. Administración Estratégica. Teoría de casos (18 Edición). Editorial Mc Graw Hill."
-    },
-    { 
-      citation: "REGLAMENTO EPS – CUNOC- DIVISION DE INGENIERIA."
-    },
-    { 
-      citation: "Gestión de proyectos - procem consultores."
-    },
-    { 
-      citation: "Dr. William Wallace. PR-A3-ES 1/2014 (1106) Gestión de Proyectos."
-    },
+    { citation: "Manual de Formulación y Evaluación de Proyectos, Presentación de las Normas del Sistema Nacional de Inversión Pública. (2013)." },
+    { citation: "Normativo Del Programa De Prácticas De Las Carreras De Ingeniería De La División De Ciencias De La Ingeniería Del Centro Universitario De Occidente De La Universidad De San Carlos De Guatemala, Quetzaltenango (8 de agosto de 2006)." },
+    { citation: "PMBOK 4ta. Edición SPA (Junio 2009)." },
+    { citation: "Sapag Chain, Nassir. Preparación y Evaluación de Proyectos (5ta edición)." },
+    { citation: "Baca Urbina, Gabriel. Evaluación de Proyectos (6ta. Edición)." },
+    { citation: "Thompson Peteraf, Ganlbe Stricklan. Administración Estratégica. Teoría de casos (18 Edición). Editorial Mc Graw Hill." },
+    { citation: "REGLAMENTO EPS – CUNOC- DIVISIÓN DE INGENIERÍA." },
+    { citation: "Gestión de proyectos - procem consultores." },
+    { citation: "Dr. William Wallace. PR-A3-ES 1/2014 (1106) Gestión de Proyectos." }
   ],
   flashcards: [
     { term: "Cultura de Proyectos", definition: "Enfoque promovido por el Estado para mejorar la calidad del gasto y la inversión pública mediante la planificación estructurada y no improvisada." },
@@ -1140,7 +1133,7 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
     { citation: "GanttPRO. (s.f.). *Herramientas de planeación en administración de proyectos eficaces.*" },
     { citation: "Gray, C. F., & Larson, E. W. (2009). *Administración de proyectos: Enfoque técnico* (4ta ed.). McGraw-Hill." },
     { citation: "Lledó, P., & Rivarola, G. (2007). *Gestión de proyectos: Del alcance al plan del proyecto.* Pearson Educación." },
-    { citation: "Project Management Institute [PMI]. (2013). *Guía del PMBOK®* (5ta ed)." }
+    { citation: "Project Management Institute [PMI]. (2013). *Guía del PMBOK* (5ta ed)." }
   ],
   flashcards: [
     { term: "Restricción Triple", definition: "Es el equilibrio dinámico y necesario que debe mantenerse entre las variables de alcance, tiempo y costo. Si una cambia, las otras se ven impactadas." },
@@ -1649,21 +1642,10 @@ Es una herramienta de planificación estratégica que analiza los factores clave
     }
   ],
   references: [
-    { 
-      citation: "https://www.mep.go.cr/sites/default/files/media/evaluacion_diagnostica_2011.pdf"
-    },
-    { 
-      citation: "https://concepto.de/diagnostico/"
-    },
-    { 
-      citation: "https://universidadeuropea.com/blog/instrumentos-evaluacion/"
-    },
-    { 
-      citation: "instrumentos_de_diagnostico.docx"
-    },
-    { 
-      citation: "https://multitestresources.com/site/blog/que-es-la-evaluacion-del-potencial/"
-    },
+    { citation: "MEP. (2011). Evaluación diagnóstica.", url: "https://www.mep.go.cr/sites/default/files/media/evaluacion_diagnostica_2011.pdf" },
+    { citation: "Concepto. Diagnóstico.", url: "https://concepto.de/diagnostico/" },
+    { citation: "Universidad Europea. Instrumentos de evaluación.", url: "https://universidadeuropea.com/blog/instrumentos-evaluacion/" },
+    { citation: "Multitest Resources. Evaluación del potencial.", url: "https://multitestresources.com/site/blog/que-es-la-evaluacion-del-potencial/" }
   ],
   flashcards: [
     { term: "Diagnóstico", definition: "Procedimiento ordenado y sistemático para conocer una circunstancia específica y facilitar la toma de decisiones estratégicas." },
@@ -1820,13 +1802,6 @@ Se centra en aspectos puntuales que requieren una intervención o optimización 
 ### Instrumentación
 Utiliza métodos de evaluación interna y el análisis de potencialidades para determinar las fortalezas y debilidades del área o elemento estudiado, permitiendo una implementación fundamentada en estudios técnicos, económicos y financieros rigurosos.
 
-### Cómo ejecutar un Microdiagnóstico
-
-1. **Definir un objeto de estudio:** Centrarse en analizar detalladamente una unidad específica o un proceso puntual dentro del sistema general.
-2. **Levantar información técnica:** Recopilar datos precisos sobre los recursos con los que se cuenta, las capacidades técnicas, los costos directos y las restricciones operativas.
-3. **Evaluar internamente:** Utilizar métodos de evaluación y analizar las potencialidades para identificar fortalezas y debilidades del área específica.
-4. **Fundamentar las decisiones:** Asegurarse de que la implementación esté respaldada por estudios rigurosos a nivel técnico, económico y financiero.
-
 ## 2.2.2. Macrodiagnósticos
 
 El macrodiagnóstico proporciona una visión panorámica del entorno del proyecto. Este nivel de análisis es vital para entender las influencias externas, las tendencias del mercado, las normativas legales vigentes y los impactos socioambientales que podrían condicionar la viabilidad a gran escala de una propuesta de ingeniería.
@@ -1836,12 +1811,6 @@ Abarca el estudio del contexto general de proyectos públicos o privados, consid
 
 ### Enfoque estratégico
 Al realizar un macrodiagnóstico, se integran herramientas como el análisis FODA (Fortalezas, Oportunidades, Debilidades y Amenazas) para posicionar estratégicamente el proyecto dentro de un marco competitivo o corporativo, asegurando que los resultados esperados se alineen con los requerimientos legales, las directrices nacionales y los estándares técnicos de la industria.
-
-### Cómo ejecutar un Macrodiagnóstico
-
-1. **Analizar el contexto y las variables externas:** Estudiar el entorno general del proyecto, prestando especial atención a las tendencias del mercado, las políticas gubernamentales, las normativas legales vigentes y los posibles impactos socioambientales.
-2. **Establecer una línea base:** Definir claramente cuál es la situación actual del entorno antes de iniciar. Esta línea base es fundamental para medir la evolución e impacto del proyecto.
-3. **Aplicar herramientas de estrategia:** Integrar herramientas de diagnóstico estratégico, como el análisis FODA, para posicionar el proyecto dentro de un marco corporativo o competitivo.
 
 ## Diferencia Clave
 
@@ -1856,65 +1825,42 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
     "El análisis FODA es herramienta clave en macrodiagnóstico para posicionamiento estratégico",
     "Ambos niveles son complementarios y necesarios para toma de decisiones precisas"
   ],
-  realWorldExample: `**Caso de estudio: Optimización de Planta Industrial de Ensamblaje**
+  realWorldExample: `**Caso de Estudio: Optimización de una Planta Industrial**
 
-**Contexto:** Una empresa manufacturera en Quetzaltenango experimentaba ineficiencias en su línea de producción y necesitaba optimizar procesos sin comprometer la calidad.
+Para una propuesta de mejora en una planta de ensamblaje, el diagnóstico se divide en:
 
-**Aplicación de diagnóstico integral:**
+1. **Fase de Macrodiagnóstico:**
+   - **Variables Externas:** Se identifican tendencias del mercado, normativas legales vigentes y posibles impactos socioambientales que condicionan la viabilidad a gran escala.
+   - **Línea Base:** Se definen los parámetros para establecer la situación actual del entorno antes de iniciar la intervención.
 
-**Fase de Macrodiagnóstico:**
-- **Variables externas identificadas:**
-  - Tendencia del mercado: Mayor demanda de productos personalizados
-  - Normativas legales: Nuevas regulaciones ambientales para emisiones industriales
-  - Impacto socioambiental: Necesidad de reducir consumo energético en un 20%
-- **Línea base establecida:** Producción actual de 1,000 unidades/día con 15% de defectos
-
-**Fase de Microdiagnóstico:**
-- **Objeto de estudio:** Línea de ensamblaje principal
-- **Información técnica recopilada:**
-  - Costos directos: Q50,000 mensuales en materia prima
-  - Recursos: 12 operarios, 3 máquinas semiautomáticas
-  - Capacidades técnicas: Procesos manuales con 85% de eficiencia
-- **Evaluación interna:** Fortaleza (personal experimentado) y debilidad (tecnología obsoleta)
-
-**Resultados:**
-- Implementación de sistema automatizado reduciendo defectos a 5%
-- Reducción de costos directos en 30% mediante optimización de materiales
-- Cumplimiento de normativas ambientales con nuevo sistema de filtración
-- Aumento de producción a 1,200 unidades/día
-
-**Lecciones aprendidas:**
-- El macrodiagnóstico identificó oportunidades de mercado que justificaron la inversión
-- El microdiagnóstico permitió focalizar la intervención en el área crítica
-- La línea base fue esencial para medir el impacto real de las mejoras`,
+2. **Fase de Microdiagnóstico:**
+   - **Objeto de Estudio:** La línea de ensamblaje (proceso interno de producción).
+   - **Información Técnica:** Recopilación de datos sobre costos directos, recursos disponibles y capacidades técnicas.
+   - **Evaluación:** Identificación de fortalezas y debilidades específicas de la línea mediante métodos de evaluación interna.`,
   faqs: [
-    { 
-      question: "¿Cuál es la diferencia principal entre el macrodiagnóstico y el microdiagnóstico?", 
-      answer: "El macrodiagnóstico abarca el estudio del contexto general considerando variables externas, mientras el microdiagnóstico se enfoca en el análisis detallado y profundo de una unidad específica o proceso dentro del sistema general."
+    {
+      question: "¿Cuál es la diferencia principal entre el macrodiagnóstico y el microdiagnóstico?",
+      answer: "El macrodiagnóstico abarca el contexto general y variables externas, mientras que el microdiagnóstico se enfoca en el análisis detallado y profundo de una unidad o proceso específico del sistema."
     },
-    { 
-      question: "¿Para qué sirve establecer una línea base en el diagnóstico?", 
-      answer: "Es fundamental para medir la evolución y el impacto del proyecto una vez implementado. Sirve para definir claramente cuál es la situación actual del entorno antes de iniciar."
+    {
+      question: "¿Para qué sirve establecer una línea base en el diagnóstico?",
+      answer: "Es fundamental para definir la situación actual antes de iniciar y permitir la medición posterior de la evolución e impacto del proyecto una vez implementado."
     },
-    { 
-      question: "¿Qué herramienta estratégica se recomienda en el macrodiagnóstico?", 
-      answer: "Se integra el análisis FODA (Fortalezas, Oportunidades, Debilidades y Amenazas) para posicionar estratégicamente el proyecto dentro de un marco competitivo o corporativo."
+    {
+      question: "¿Qué herramienta estratégica se recomienda en el macrodiagnóstico?",
+      answer: "Se recomienda integrar herramientas como el análisis FODA (Fortalezas, Oportunidades, Debilidades y Amenazas) para posicionar estratégicamente el proyecto."
     },
-    { 
-      question: "¿Qué tipo de información se recopila durante un microdiagnóstico?", 
-      answer: "Se requiere información precisa sobre los recursos, las capacidades técnicas, los costos directos y las restricciones operativas que afectan directamente a la ejecución de una solución técnica."
-    },
-    { 
-      question: "¿Por qué son complementarios el macro y microdiagnóstico?", 
-      answer: "Porque el macrodiagnóstico proporciona el contexto estratégico y externo, mientras el microdiagnóstico ofrece los detalles operativos necesarios para implementar soluciones efectivas y fundamentadas."
+    {
+      question: "¿Qué tipo de información se recopila durante un microdiagnóstico?",
+      answer: "Información precisa sobre recursos, capacidades técnicas, costos directos y restricciones operativas que afectan la ejecución de la solución técnica."
     }
   ],
   references: [
-    { citation: "Normativo Del Programa De Prácticas De Las Carreras De Ingeniería Mecánica, CUNOC." },
-    { citation: "Real Academia Española. Diccionario de la Lengua Española (DLE)." },
-    { citation: "Scribd. Conceptos sobre macro diagnóstico y análisis del entorno para formulación de proyectos." },
-    { citation: "Guía de elaboración de diagnósticos. cauqueva.org.ar." },
-    { citation: "YouTube. Importancia del diagnóstico para el diseño de proyectos." }
+    { citation: "Real Academia Española. Diccionario de la Lengua Española." },
+    { citation: "CUNOC. Normativo del Programa de Prácticas de Ingeniería Mecánica." },
+    { citation: "Scribd. Macrodiagnóstico y análisis del entorno.", url: "https://es.scribd.com/doc/28885870/Diagnostico-Para-Formular-Proyecto" },
+    { citation: "YouTube. Importancia del diagnóstico en proyectos.", url: "https://www.youtube.com/watch?v=wrWgw5Z-GRQ" },
+    { citation: "Cauqueva. Guía de elaboración de diagnósticos.", url: "https://www.cauqueva.org.ar/archivos/gu%EDa-de-diagn%F3stico.pdf" }
   ],
   flashcards: [
     { term: "Microdiagnóstico", definition: "Análisis detallado y profundo de una unidad específica o proceso dentro del sistema general, enfocado en aspectos operativos." },
@@ -2112,15 +2058,7 @@ Las normas APA funcionan como un "idioma universal" en el mundo académico, perm
 Más que memorizar márgenes o tamaños de letra, documentar correctamente es un acto de respeto hacia el trabajo de otros investigadores.
 
 ### Simplificación
-La séptima edición demuestra que las normativas evolucionan para hacer la escritura más accesible y menos burocrática, priorizando el contenido y la claridad.
-
-## Ejercicio Práctico
-
-**Escenario:** Estás redactando tu tesis y encontraste un libro excelente escrito por cuatro autores: López, Martínez, Gómez y Pérez (año 2022).
-
-**Instrucciones:** Basado en las nuevas reglas de la 7ma edición de APA, ¿cómo deberías citar a estos autores dentro de tu texto desde la primera vez que los mencionas?
-
-**Respuesta:** López et al. (2022)`,
+La séptima edición demuestra que las normativas evolucionan para hacer la escritura más accesible y menos burocrática, priorizando el contenido y la claridad.`,
   keyPoints: [
     "Las técnicas de documentación unifican la escritura académica y científica a nivel internacional",
     "El Manual APA es el principal referente mundial para normas de citación y formato",
@@ -2131,72 +2069,9 @@ La séptima edición demuestra que las normativas evolucionan para hacer la escr
     "Un trabajo bien documentado demuestra rigor investigativo y credibilidad académica",
     "Las normas APA funcionan como un 'idioma universal' en el mundo académico global"
   ],
-  realWorldExample: `**Caso de estudio: Implementación de Normas APA en Tesis de Ingeniería**
-
-**Contexto:** Un estudiante de ingeniería civil en CUNOC estaba redactando su tesis sobre estructuras sísmicas y necesitaba citar múltiples fuentes académicas correctamente.
-
-**Desafío:** El estudiante tenía que citar un artículo con 5 autores, un libro técnico con 3 autores, y varias normas internacionales de construcción.
-
-**Aplicación de técnicas de documentación APA 7:**
-- **Artículo con 5 autores:** "García et al. (2023) demostraron que..."
-- **Libro con 3 autores:** "Hernández et al. (2022) establecen los principios de..."
-- **Normas internacionales:** "Según ASTM International (2021), los requisitos son..."
-
-**Formato aplicado:**
-- Márgenes de 1 pulgada en todos los lados
-- Fuente Calibri 11 puntos
-- Interlineado doble en todo el documento
-- Sangría de 0.5 pulgadas al inicio de cada párrafo
-- Paginación en esquina superior derecha
-
-**Resultados:**
-- Tesis aprobada sin observaciones de formato
-- Reconocimiento por rigor académico en la citación
-- Facilitó la publicación posterior en revista científica
-- Evitó problemas de plagio mediante documentación adecuada
-
-**Lecciones aprendidas:**
-- El uso correcto de "et al." desde el inicio simplifica significativamente la redacción
-- El formato estandarizado facilita la lectura y comprensión del documento
-- La documentación adecuada protege legalmente al autor y demuestra honestidad intelectual`,
-  faqs: [
-    { 
-      question: "¿Cuál es uno de los cambios más significativos introducidos en la séptima edición de las Normas APA respecto a las citas?", 
-      answer: "Se permite citar usando 'et al.' desde la primera mención para obras con tres o más autores, simplificando las citaciones desde el inicio."
-    },
-    { 
-      question: "¿Cuál es el propósito principal de utilizar las técnicas de documentación (como APA) en un trabajo académico?", 
-      answer: "Evitar el plagio, dar crédito a los autores originales y estandarizar la escritura para facilitar la comprensión y validación internacional."
-    },
-    { 
-      question: "¿Las normas de documentación protegen a los creadores apoyándose en qué base legal?", 
-      answer: "Se apoyan en las Leyes de Derechos de Autor, que protegen los derechos morales y patrimoniales de los creadores sobre sus obras."
-    },
-    { 
-      question: "¿Qué significa la abreviatura 'et al.' y cuándo se utiliza?", 
-      answer: "Es la abreviatura latina que significa 'y otros'. Se utiliza para no enlistar a todos los autores de una obra con múltiples creadores (tres o más)."
-    },
-    { 
-      question: "¿Por qué es importante la estandarización global en la documentación académica?", 
-      answer: "Permite que un documento sea comprendido y validado en cualquier parte del mundo, funcionando como un 'idioma universal' académico."
-    }
-  ],
   references: [
-    { 
-      citation: "American Psychological Association. (2020). Publication manual of the"
-    },
-    { 
-      citation: "American Psychological Association (7th ed.)."
-    },
-    { 
-      citation: "Caribbean University. (2021). Directrices y síntesis de normas de"
-    },
-    { 
-      citation: "redacción, citación y referencia."
-    },
-    { 
-      citation: "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"
-    },
+    { citation: "American Psychological Association. (2020). Publication manual of the American Psychological Association (7th ed.)." },
+    { citation: "Caribbean University. (2021). Directrices y síntesis de normas de redacción, citación y referencia." }
   ],
   flashcards: [
     { term: "APA (American Psychological Association)", definition: "Organización que establece uno de los formatos más utilizados a nivel mundial para la redacción y citación de trabajos académicos." },
@@ -2300,7 +2175,11 @@ question: "¿Cuál es el propósito principal de las normas de documentación?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/3.3.png"
+  infographicUrl: "/infografias/3.3.png",
+  realWorldExample: `Pronto agregaremos un ejemplo práctico real para este tema.`,
+  faqs: [
+    { question: "¿Cuál es el punto central de este tema?", answer: "La comprensión de los fundamentos teóricos para aplicarlos en la resolución de problemas." }
+  ]
 };
 
 // Contenido para el tema 3.4 - Métodos de evaluación interna y externa
@@ -2351,16 +2230,7 @@ Un proyecto que solo confía en su evaluación interna corre el riesgo de caer e
 
 ### 3. Condición para la Inversión
 En proyectos de gran envergadura (infraestructura, plantas industriales), la evaluación externa de prefactibilidad y factibilidad (como las descritas por Sapag Chain) es un requisito no negociable para obtener financiamiento.
-
-## Ejercicio Práctico
-
-**Escenario:** Estás dirigiendo la construcción de una nueva planta procesadora de alimentos. Durante el mes tres de construcción, ocurren tres eventos de revisión.
-
-**Instrucciones:** Clasifica cada evento indicando si es un método de Evaluación Interna o Evaluación Externa:
-
-1. **El ingeniero residente revisa si el consumo de cemento de esta semana coincide con el presupuesto planificado:** Evaluación Interna
-2. **Un inspector del Ministerio de Salud Ambiental llega a la obra para verificar el manejo de desechos líquidos:** Evaluación Externa
-3. **Una firma auditora contratada por el banco inversor revisa los estados financieros del proyecto para aprobar el siguiente desembolso:** Evaluación Externa`,
+`,
   keyPoints: [
     "La evaluación es un proceso sistemático y continuo durante todo el ciclo de vida del proyecto",
     "Mide el rendimiento real contra la línea base planificada (costo, tiempo, alcance, calidad)",
@@ -2371,70 +2241,13 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
     "El Due Diligence es una auditoría externa técnica y financiera para inversionistas",
     "La Evaluación de Impacto Ambiental (EsIA) es exigida por autoridades gubernamentales"
   ],
-  realWorldExample: `**Caso de estudio: Construcción de Planta Procesadora de Alimentos**
-
-**Contexto:** Una empresa agroindustrial en Quetzaltenango construía una planta procesadora de alimentos con inversión de Q15 millones, financiamiento bancario y requerimientos ambientales estrictos.
-
-**Desafío:** El proyecto necesitaba supervisión constante para asegurar cumplimiento de presupuesto, calidad y normativas ambientales.
-
-**Aplicación de métodos de evaluación:**
-
-**Evaluación Interna:**
-- **Control de Rendimiento:** El Director de Proyecto revisaba semanalmente el avance contra el plan usando Earned Value
-- **Auditorías Internas:** El departamento de calidad verificaba que las instalaciones cumplieran con normas sanitarias antes de inspecciones
-- **Desempeño del Equipo:** Evaluación mensual del rendimiento de contratistas y personal técnico
-
-**Evaluación Externa:**
-- **Due Diligence:** Firma consultora independiente revisó proyecciones financieras (VAN positivo de Q3.2M, TIR de 22%)
-- **EsIA:** Ministerio de Ambiente supervisó cumplimiento de normativas de tratamiento de aguas residuales
-- **Inspección Bancaria:** Supervisores del banco autorizaron desembolsos trimestrales tras verificar avance físico
-
-**Resultados:**
-- Proyecto completado 2 semanas antes del plazo previsto
-- Presupuesto ejecutado con 3% de ahorro por control interno eficiente
-- Aprobación ambiental sin observaciones mayores
-- Relación bancaria fortalecida por transparencia en reportes
-
-**Lecciones aprendidas:**
-- La combinación de evaluación interna y externa evita la "ceguera de taller"
-- El control interno permite correcciones rápidas y eficientes
-- La validación externa genera confianza en inversionistas y autoridades
-- Ambos tipos de evaluación son complementarios y necesarios para el éxito`,
-  faqs: [
-    { 
-      question: "¿Cuál es un ejemplo clásico de Evaluación Externa en dirección de proyectos?", 
-      answer: "Un auditor del gobierno verificando el cumplimiento del Estudio de Impacto Ambiental (EsIA), ya que es realizado por una entidad independiente al proyecto."
-    },
-    { 
-      question: "¿Por qué es peligrosa la 'ceguera de taller' y cómo se combate?", 
-      answer: "Es la incapacidad del equipo interno para ver sus propios errores por la costumbre; se combate integrando métodos de evaluación externa e independiente."
-    },
-    { 
-      question: "¿Qué realiza la PMO al revisar internamente que los planos cumplan especificaciones?", 
-      answer: "Está realizando un Control y Evaluación Interna de la calidad, ya que es un departamento interno verificando el trabajo antes de enviarlo al cliente."
-    },
-    { 
-      question: "¿Qué es el Earned Value y quién lo utiliza?", 
-      answer: "Es un método de evaluación interna que integra alcance, cronograma y recursos para medir el desempeño real del proyecto, utilizado por el Director del Proyecto o PMO."
-    },
-    { 
-      question: "¿Por qué la evaluación externa es requisito para financiamiento en grandes proyectos?", 
-      answer: "Porque proporciona objetividad y validación independiente que genera confianza en inversionistas y bancos, mitigando riesgos técnicos y financieros."
-    }
-  ],
   references: [
-    { 
-      citation: "Sullivan, W.G., Wicks, E.M., & Koelling, C.P. (2019). Engineering Economy (16th ed.). Pearson."
-    },
-    { 
-      citation: "Sapag Chain, N. (2025). Preparación y Evaluación de Proyectos (6ta ed.). McGraw-Hill."
-    },
-    { 
-      citation: "Fontaine, E.R. (2008). Evaluación Social de Proyectos (13va ed.). Pearson."
-    },
-    { 
-      citation: "Kerzner, H. (2017). Project Management: A Systems Approach to Planning, Scheduling, and Controlling. Wiley."
-    }
+    { citation: "UNIDO. (1972). Guidelines for Project Evaluation.", url: "https://downloads.unido.org/ot/47/88/4788157/00001-10000_09985S.pdf" },
+    { citation: "Sullivan, W.G., Wicks, E.M., & Koelling, C.P. (2014). Engineering Economy (16th ed.).", url: "https://es.slideshare.net/slideshow/engineering-economy-16th-edition-sullivan-solutions-manual/277403132" },
+    { citation: "Sapag Chain, N. (2011). Preparación y Evaluación de Proyectos (6ta ed.).", url: "https://gestionbolivia.com/wp-content/uploads/2025/09/LIBRO-PREPARACION-Y-EVALUACION-DE-PROYECTOS-NASSIR-REINALDO-JOSE-Sexta-Edicion.pdf" },
+    { citation: "Fontaine, E.R. (2008). Evaluación Social de Proyectos.", url: "https://economicas.unsa.edu.ar/iie/archivos/syc/Fontaine.pdf" },
+    { citation: "Kerzner, H. (2017). Project Management: A Systems Approach to Planning, Scheduling, and Controlling.", url: "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/BUKU%20MANAJEMEN%20PROYEK/project-management-harold-kerzner1.pdf" },
+    { citation: "UNAM. (s.f.). Guía para la evaluación de proyectos.", url: "https://www.paginaspersonales.unam.mx/app/webroot/files/1613/Asignaturas/1818/Archivo1.5036.pdf" }
   ],
   flashcards: [
     { term: "Auditoría Externa", definition: "Examen crítico y sistemático realizado por una entidad independiente a la empresa para validar sus estados financieros o procesos técnicos." },
@@ -2560,7 +2373,11 @@ question: "¿Qué evalúan las inspecciones de entidades financieras?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/3.4.png"
+  infographicUrl: "/infografias/3.4.png",
+  realWorldExample: `Pronto agregaremos un ejemplo práctico real para este tema.`,
+  faqs: [
+    { question: "¿Cuál es el punto central de este tema?", answer: "La comprensión de los fundamentos teóricos para aplicarlos en la resolución de problemas." }
+  ]
 };
 
 // Contenido para el tema 4.2 - Estudio ambiental
@@ -2612,7 +2429,7 @@ Para evitar la subjetividad, los científicos ambientales utilizan metodologías
 
 ---
 
-## 🏗️ Ejemplo de Aplicación Real (Casino y Hotel en Rosario)
+## ️ Ejemplo de Aplicación Real (Casino y Hotel en Rosario)
 
 Para este megaproyecto, se estableció una **Línea Base** dividiendo el entorno en:
 - **Abiótico** (suelo/agua)
@@ -2622,28 +2439,28 @@ Luego, usando la **Matriz de Leopold**, se cruzaron las acciones (ej. uso de maq
 
 ---
 
-## 💡 Conclusiones
+##  Conclusiones
 
-### 🎯 Prevención antes que Reacción
+###  Prevención antes que Reacción
 El gran valor del EsIA radica en su capacidad predictiva, permitiendo rediseñar partes del proyecto antes de que ocurra un daño ecológico irreversible o se infrinja la ley.
 
-### 👥 Necesidad Multidisciplinaria
+###  Necesidad Multidisciplinaria
 Un ingeniero no puede evaluar el impacto en la fauna, ni un biólogo el impacto estructural; la viabilidad ambiental exige equipos diversos que identifiquen cadenas de causalidad complejas.
 
-### 📈 El Monitoreo es Vital
+###  El Monitoreo es Vital
 Un EsIA pierde su validez si no existe un control continuo durante la construcción y operación. El entorno es dinámico, y el proyecto debe adaptarse si surgen impactos no calculados inicialmente.
 
 ---
 
-## 📝 Ejercicio Práctico
+##  Ejercicio Práctico
 
 **Escenario:** Tu empresa va a construir una carretera que atravesará una zona boscosa cercana a un río.
 
 **Instrucciones:** Define brevemente lo siguiente basándote en la teoría del EsIA:
 
-- **🚫 Impacto Negativo:** Identifica un posible daño directo que causaría la maquinaria pesada en ese entorno.
-- **🔄 Medida Compensatoria:** Si la tala de una franja de árboles es inevitable e irreversible, ¿qué acción concreta propondrías para compensarlo en otro lugar?
-- **📊 Herramienta:** ¿Qué matriz usarías para cruzar las "acciones de la obra" con los "factores del bosque" para sacar un puntaje?`,
+- ** Impacto Negativo:** Identifica un posible daño directo que causaría la maquinaria pesada en ese entorno.
+- ** Medida Compensatoria:** Si la tala de una franja de árboles es inevitable e irreversible, ¿qué acción concreta propondrías para compensarlo en otro lugar?
+- ** Herramienta:** ¿Qué matriz usarías para cruzar las "acciones de la obra" con los "factores del bosque" para sacar un puntaje?`,
   keyPoints: [
     "El EsIA es un documento técnico interdisciplinar para predecir y mitigar impactos ambientales",
     "Su finalidad es informar a autoridades sobre la conveniencia ambiental y social de proyectos",
@@ -2924,32 +2741,32 @@ Para abrir una cafetería de especialidad, los emprendedores no confiaron solo e
 
 ---
 
-## 💡 Conclusiones
+##  Conclusiones
 
-### 🎯 **Prevención del Riesgo**
+###  **Prevención del Riesgo**
 El estudio de mercado transforma las corazonadas o intuiciones en datos empíricos, asegurando la viabilidad comercial y financiera de la inversión inicial.
 
-### 📈 **Definición Estratégica**
+###  **Definición Estratégica**
 El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, sino que tenga:
 - El precio correcto
 - Los canales de venta adecuados  
 - Ventajas sobre la competencia
 
-### 🔄 **Diferencia Operativa**
+###  **Diferencia Operativa**
 - **Investigación de mercado:** Monitoreo permanente que hacen las grandes empresas
 - **Estudio de mercado:** Acción puntual y específica requerida antes de arrancar un nuevo proyecto
 
 ---
 
-## 📝 Ejercicio Práctico
+##  Ejercicio Práctico
 
 **Escenario:** Vas a lanzar al mercado una nueva marca de mochilas ecológicas fabricadas con plástico reciclado para estudiantes universitarios.
 
 **Instrucciones:** Define brevemente lo siguiente basándote en la teoría:
 
-- **🎯 Segmentación:** Escribe a qué grupo demográfico específico (edad, ocupación, intereses) va dirigido tu producto.
-- **🔍 Fuente Primaria:** ¿Qué herramienta usarías para preguntarle directamente a estos estudiantes qué características buscan en una mochila?
-- **💰 Fijación de Precios:** Basado en el Marketing Mix, ¿qué criterio usarías para fijar tu precio (tus costos, la competencia o el valor psicológico de ser ecológico)?`,
+- ** Segmentación:** Escribe a qué grupo demográfico específico (edad, ocupación, intereses) va dirigido tu producto.
+- ** Fuente Primaria:** ¿Qué herramienta usarías para preguntarle directamente a estos estudiantes qué características buscan en una mochila?
+- ** Fijación de Precios:** Basado en el Marketing Mix, ¿qué criterio usarías para fijar tu precio (tus costos, la competencia o el valor psicológico de ser ecológico)?`,
   keyPoints: [
     "El estudio de mercado reduce la incertidumbre comercial mediante análisis cuantitativo y cualitativo",
     "Combina fuentes secundarias (estadísticas públicas) y primarias (encuestas directas)",
@@ -3276,7 +3093,7 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
 
 **Aplicación del Estudio Económico:**
 
-**🏗️ Estructura de la Inversión Inicial:**
+**️ Estructura de la Inversión Inicial:**
 
 | Componente | Monto | Detalle |
 |------------|-------|--------|
@@ -3284,7 +3101,7 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
 | **Inversión Diferida** | Q30,000 | Licencias sanitarias (Q8,000), constitución legal (Q12,000), estudios (Q10,000) |
 | **Capital de Trabajo** | Q100,000 | 3 meses de operación: sueldos (Q45,000), insumos (Q35,000), servicios (Q20,000) |
 
-**📊 Presupuestos Anuales Proyectados:**
+** Presupuestos Anuales Proyectados:**
 
 **Ingresos:**
 - Ventas diarias proyectadas: 150 cafés × Q25 = Q3,750
@@ -3295,7 +3112,7 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
 - Costos fijos: Q480,000 (alquiler Q120,000, sueldos Q240,000, servicios Q120,000)
 - Depreciación: Q24,000 (maquinaria 5 años)
 
-**📉 Cálculo del Punto de Equilibrio:**
+** Cálculo del Punto de Equilibrio:**
 - Costos fijos anuales: Q480,000
 - Precio unitario: Q25
 - Costo variable unitario: Q15
@@ -3303,12 +3120,12 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
 - **Punto de equilibrio:** Q480,000 ÷ Q10 = 48,000 cafés al año
 - **Diarias necesarias:** 48,000 ÷ 360 = 133 cafés por día
 
-**📊 Análisis de Resultados:**
+** Análisis de Resultados:**
 - **Ventas diarias necesarias:** 133 cafés (factible según estudio de mercado)
 - **Margen de seguridad:** 17 cafés diarios adicionales antes del punto de equilibrio
 - **Recuperación de inversión:** 18 meses aproximadamente
 
-**💡 Lecciones Aprendidas:**
+** Lecciones Aprendidas:**
 - El capital de trabajo fue crucial para sobrevivir los primeros 3 meses
 - El punto de equilibrio determinó que el proyecto era viable con el mercado objetivo
 - La depreciación properly estructurada permitió optimizar beneficios fiscales
@@ -3567,7 +3384,7 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
 
 ---
 
-## 📚 Glosario Técnico
+##  Glosario Técnico
 
 | Término | Definición |
 |---------|------------|
@@ -3595,16 +3412,16 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
 
 **Aplicación del Estudio Financiero:**
 
-**🏦 Estructura de Financiamiento:**
+** Estructura de Financiamiento:**
 - **Capital Propio:** Q1,200,000 (60%)
 - **Capital de Deuda:** Q800,000 (40%) a tasa del 8% anual
 
-**📊 Parámetros de Evaluación:**
+** Parámetros de Evaluación:**
 - **TMAR exigida:** 12% (inflación 4% + prima de riesgo 8%)
 - **Horizonte de evaluación:** 10 años
 - **Tasa de impuestos:** 25%
 
-**💵 Flujo de Efectivo Proyectado (Años seleccionados):**
+** Flujo de Efectivo Proyectado (Años seleccionados):**
 
 | Año | Ingresos | Costos | Flujo antes de impuestos | Impuestos | Flujo Neto |
 |------|----------|--------|--------------------------|------------|------------|
@@ -3614,31 +3431,31 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
 | ... | ... | ... | ... | ... | ... |
 | 10 | Q1,564,000 | Q680,000 | Q884,000 | Q221,000 | Q663,000 |
 
-**📈 Cálculo de Indicadores:**
+** Cálculo de Indicadores:**
 
 **Valor Actual Neto (VAN):**
 - Suma de flujos descontados al 12%: Q3,850,000
 - Menos inversión inicial: Q2,000,000
-- **VAN = Q1,850,000** ✅ (Positivo)
+- **VAN = Q1,850,000**  (Positivo)
 
 **Tasa Interna de Retorno (TIR):**
-- Calculada iterativamente: **18.5%** ✅ (Superior a TMAR del 12%)
+- Calculada iterativamente: **18.5%**  (Superior a TMAR del 12%)
 
 **Período de Recuperación (PRI):**
 - Acumulado de flujos hasta recuperar Q2,000,000
-- **Recuperación:** 4.2 años ✅ (Aceptable para el sector)
+- **Recuperación:** 4.2 años  (Aceptable para el sector)
 
-**📊 Análisis de Sensibilidad:**
+** Análisis de Sensibilidad:**
 - **Escenario pesimista (ventas -20%):** VAN = Q850,000, TIR = 14.2% (Aún viable)
 - **Escenario optimista (ventas +15%):** VAN = Q2,400,000, TIR = 22.1% (Excelente)
 
-**💡 Decisión Final:**
-- **✅ PROYECTO APROBADO** por cumplir todos los criterios:
+** Decisión Final:**
+- ** PROYECTO APROBADO** por cumplir todos los criterios:
   - VAN > 0 (Q1,850,000)
   - TIR > TMAR (18.5% > 12%)
   - PRI razonable (4.2 años)
 
-**🎯 Lecciones Aprendidas:**
+** Lecciones Aprendidas:**
 - El apalancamiento financiero (40% deuda) mejoró la rentabilidad del capital propio
 - El análisis de sensibilidad demostró resistencia del proyecto a variaciones
 - Los indicadores financieros proporcionaron una base objetiva para la decisión`,
@@ -3910,23 +3727,23 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
 
 **Aplicación del Estudio Técnico:**
 
-**📏 Determinación del Tamaño Óptimo:**
+** Determinación del Tamaño Óptimo:**
 - **Demanda del mercado:** 15,000 garrafones mensuales en la zona
 - **Capacidad instalada:** 1,000 garrafones diarios (25,000 mensuales)
 - **Factor de utilización:** 60% inicial, creciendo al 85% en 2 años
 - **Justificación:** Capacidad para cubrir demanda actual y crecimiento proyectado
 
-**📍 Análisis de Localización Óptima:**
+** Análisis de Localización Óptima:**
 **Factores evaluados:**
-- **✅ Acceso a red municipal de agua potable** (Calidad: Excelente)
-- **✅ Vías de acceso pavimentadas** (Distancia: 2km de ruta principal)
-- **✅ Disponibilidad de mano de obra calificada** (Costo: Competitivo)
-- **✅ Cercanía a mercado objetivo** (Radio: 5km)
-- **❌ Costo del terreno** (Q150/m² - Alto pero negociable)
+- ** Acceso a red municipal de agua potable** (Calidad: Excelente)
+- ** Vías de acceso pavimentadas** (Distancia: 2km de ruta principal)
+- ** Disponibilidad de mano de obra calificada** (Costo: Competitivo)
+- ** Cercanía a mercado objetivo** (Radio: 5km)
+- ** Costo del terreno** (Q150/m² - Alto pero negociable)
 
 **Ubicación seleccionada:** Zona industrial de Quetzaltenango
 
-**🔄 Proceso de Producción Diseñado:**
+** Proceso de Producción Diseñado:**
 
 | Etapa | Descripción | Equipos |
 |-------|-------------|---------|
@@ -3936,20 +3753,20 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
 | **4. Envasado** | Llenado de garrafones | Máquina envasadora semiautomática |
 | **5. Almacenamiento** | Producto terminado | Estanterías, sistema de inventario |
 
-**📦 Disponibilidad de Insumos:**
+** Disponibilidad de Insumos:**
 - **Agua cruda:** 100% disponible (red municipal)
 - **Garrafones PET:** 3 proveedores locales (Q8/unidad)
 - **Etiquetas y tapas:** 2 proveedores (Q1.50/set)
 - **Químicos para tratamiento:** 1 proveedor especializado
 
-**👥 Organización Humana:**
+** Organización Humana:**
 - **Gerente de planta:** 1 persona
 - **Operadores:** 4 personas (2 turnos)
 - **Control de calidad:** 1 persona
 - **Mantenimiento:** 1 persona (tiempo parcial)
 - **Total:** 7 empleados directos
 
-**📊 Análisis de Economías de Escala:**
+** Análisis de Economías de Escala:**
 
 | Producción | Costo unitario | Costo fijo unitario | Costo variable unitario |
 |------------|----------------|---------------------|-------------------------|
@@ -3957,14 +3774,14 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
 | 1,000 garrafones/día | Q10.20 | Q2.00 | Q8.20 |
 | 1,500 garrafones/día | Q9.80 | Q1.33 | Q8.47 |
 
-**💡 Resultados del Estudio Técnico:**
-- **✅ Viabilidad técnica confirmada** con tecnología disponible
-- **📊 Costo unitario óptimo** en 1,000-1,500 garrafones/día
-- **📍 Localización adecuada** con acceso a todos los factores críticos
-- **🔄 Proceso eficiente** con 5 etapas bien definidas
-- **👥 Estructura organizativa mínima** pero funcional
+** Resultados del Estudio Técnico:**
+- ** Viabilidad técnica confirmada** con tecnología disponible
+- ** Costo unitario óptimo** en 1,000-1,500 garrafones/día
+- ** Localización adecuada** con acceso a todos los factores críticos
+- ** Proceso eficiente** con 5 etapas bien definidas
+- ** Estructura organizativa mínima** pero funcional
 
-**🎯 Lecciones Aprendidas:**
+** Lecciones Aprendidas:**
 - El tamaño óptimo de 1,000 garrafones diarios maximiza las economías de escala
 - La localización cerca del mercado reduce costos de distribución
 - El proceso técnico bien definido permite cálculos precisos de inversión`,
@@ -4252,9 +4069,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
 
 **Aplicación de la Estrategia ABP:**
 
-**🎯 Proyecto seleccionado:** "Sistema de Gestión de Inventarios para PyMEs locales"
+** Proyecto seleccionado:** "Sistema de Gestión de Inventarios para PyMEs locales"
 
-**📋 Fases de implementación:**
+** Fases de implementación:**
 
 **Fase 1: Investigación (Semanas 1-2)**
 - **Actividades:** Visitas a 5 PyMEs locales, entrevistas con dueños
@@ -4276,7 +4093,7 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
 - **Resultados:** Evaluación por industria local y académica
 - **Habilidades desarrolladas:** Presentación profesional, argumentación técnica
 
-**📊 Resultados obtenidos:**
+** Resultados obtenidos:**
 
 **Indicadores académicos:**
 - **Tasa de aprobación:** 92% (vs 75% en método tradicional)
@@ -4293,7 +4110,7 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
 - **2 estudiantes** recibieron ofertas de prácticas profesionales
 - **1 empresa** estableció convenio de colaboración con la universidad
 
-**💡 Lecciones aprendidas:**
+** Lecciones aprendidas:**
 - El ABP conecta efectivamente el aula con las necesidades reales de la industria
 - Los estudiantes desarrollan competencias transferibles al mercado laboral
 - Requiere mayor inversión de tiempo docente pero genera resultados superiores
@@ -4501,24 +4318,24 @@ La competitividad industrial en América Latina enfrenta el desafío de la fragm
 
 ---
 
-## 🏭 Ejercicio Práctico: "Evaluación de Competitividad en una PyME"
+##  Ejercicio Práctico: "Evaluación de Competitividad en una PyME"
 
 Diseñado para estudiantes de ingeniería industrial o civil basado en los casos de estudio (Empresas Litográficas y Proyectos de Infraestructura):
 
-**🏪 Escenario:** Una pequeña empresa litográfica en Guatemala o una constructora local en Formosa opera con tecnología de hace 15 años y tiene procesos de gestión informales.
+** Escenario:** Una pequeña empresa litográfica en Guatemala o una constructora local en Formosa opera con tecnología de hace 15 años y tiene procesos de gestión informales.
 
-**🎯 Objetivo:** Diseñar un plan de modernización que incremente la competitividad en un 20%.
+** Objetivo:** Diseñar un plan de modernización que incremente la competitividad en un 20%.
 
-### 📋 **Actividades:**
+###  **Actividades:**
 
-1. **🔍 Diagnóstico:** Aplicar el "Diamante de Porter" para identificar debilidades en los factores de producción.
-2. **👥 Gestión de Talento:** Proponer un sistema de evaluación de desempeño basado en el cumplimiento de hitos de proyecto.
-3. **💡 Innovación:** Identificar una tecnología de información (ERP o software de diseño) que pueda integrarse para reducir desperdicios.
-4. **🌱 Sustentabilidad:** Evaluar el impacto social y ambiental del proyecto propuesto para asegurar su viabilidad a largo plazo.
+1. ** Diagnóstico:** Aplicar el "Diamante de Porter" para identificar debilidades en los factores de producción.
+2. ** Gestión de Talento:** Proponer un sistema de evaluación de desempeño basado en el cumplimiento de hitos de proyecto.
+3. ** Innovación:** Identificar una tecnología de información (ERP o software de diseño) que pueda integrarse para reducir desperdicios.
+4. ** Sustentabilidad:** Evaluar el impacto social y ambiental del proyecto propuesto para asegurar su viabilidad a largo plazo.
 
 ---
 
-## ❓ **10 Preguntas Clave**
+##  **10 Preguntas Clave**
 
 1. ¿Cómo diferencia Michael Porter la ventaja comparativa de la ventaja competitiva?
 2. ¿Por qué Paul Krugman critica la obsesión de los países por competir en el comercio exterior?
@@ -4548,7 +4365,7 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
 
 **Aplicación de la Estrategia Competitiva:**
 
-**🔍 Diagnóstico inicial (Diamante de Porter):**
+** Diagnóstico inicial (Diamante de Porter):**
 
 | Factor | Situación Actual | Oportunidad de Mejora |
 |--------|------------------|----------------------|
@@ -4557,7 +4374,7 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
 | **Mercado** | Clientes locales tradicionales | Expansión a mercados regionales y online |
 | **Infraestructura** | Local propio, pero desorganizado | Reorganización del flujo de trabajo y layout |
 
-**📋 Plan de Modernización Implementado:**
+** Plan de Modernización Implementado:**
 
 **Fase 1: Tecnología (Meses 1-3)**
 - **Inversión:** Q250,000 en equipo de impresión digital
@@ -4579,7 +4396,7 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
 - **Nuevos mercados:** Clientes en el occidente y sur de Guatemala
 - **Resultado:** Aumento del 60% en cartera de clientes
 
-**📊 Resultados obtenidos después de 1 año:**
+** Resultados obtenidos después de 1 año:**
 
 **Indicadores de competitividad:**
 - **Ventas:** +45% comparado con año anterior
@@ -4597,7 +4414,7 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
 - **Capacitación:** 8 empleados certificados en tecnologías digitales
 - **Sustentabilidad:** Reducción del 30% en consumo de papel y energía
 
-**💡 Lecciones aprendidas:**
+** Lecciones aprendidas:**
 - La inversión en tecnología genera retornos rápidos cuando va acompañada de capacitación
 - La gestión del talento humano es clave para la adaptación al cambio
 - Las metodologías ágiles mejoran significativamente la eficiencia operativa
@@ -4777,56 +4594,56 @@ La toma de decisiones en el ámbito de la ingeniería y la gestión de proyectos
 
 ---
 
-## 🔄 Metodología Comparada
+##  Metodología Comparada
 
-### 💰 **Dimensión Económica y de Tiempos**
+###  **Dimensión Económica y de Tiempos**
 Se contrastan los presupuestos y cronogramas. Por ejemplo, la estimación de la duración de actividades (métodos PERT, CPM) y el análisis de precios unitarios. Un caso destacado es la comparación donde el uso de muros en suelo reforzado con geosintéticos demostró ser **un 33% más económico** que el muro de concreto tradicional (ahorro de $13,803.41).
 
-### 🏗️ **Dimensión Técnica y Estructural**
+### ️ **Dimensión Técnica y Estructural**
 Evaluación del rendimiento físico y viabilidad constructiva. Se comparan sistemas convencionales (como el concreto armado) frente a alternativas eficientes (acero estructural), analizando resistencia, adaptabilidad sísmica y peso de las edificaciones.
 
-### 📋 **Dimensión Metodológica y Directiva**
+###  **Dimensión Metodológica y Directiva**
 Contraste de filosofías de trabajo. Se evalúa el ciclo de vida del proyecto bajo metodologías predictivas/tradicionales (Cascada, PMBOK) frente a enfoques adaptativos/ágiles (Scrum, Kanban). Además, se comparan las prácticas de dirección de proyectos (gestión de alcance, tiempo, costo y riesgo) entre empresas del sector público y privado, y el impacto de integrar a un *Project Manager* dedicado versus la gestión no especializada.
 
-### 💻 **Dimensión Tecnológica**
+###  **Dimensión Tecnológica**
 Benchmarking de herramientas de software. Se establecen matrices de criterios para valorar funcionalidades, usabilidad y aplicaciones de software de delineación por ordenador (CAD) y plataformas gratuitas de gestión de proyectos en el sector tecnológico.
 
 ---
 
-## 💡 Conclusiones
+##  Conclusiones
 
-### 🏗️ **Optimización de Costos y Materiales**
+### ️ **Optimización de Costos y Materiales**
 La exploración de materiales no tradicionales (como los geosintéticos o el acero en zonas específicas) suele arrojar beneficios económicos y de reducción de tiempos significativos en comparación con el concreto armado estándar, siempre que el diseño estructural lo permita.
 
-### 🔄 **Adaptabilidad Metodológica**
+###  **Adaptabilidad Metodológica**
 No existe una metodología de gestión "perfecta". Las metodologías tradicionales (PMBOK/PMI) son ideales para proyectos de construcción con requisitos fijos, mientras que las metodologías ágiles son superiores en entornos tecnológicos con alta incertidumbre y necesidad de entregas iterativas.
 
-### 👨‍💼 **Profesionalización de la Gestión**
+### ‍ **Profesionalización de la Gestión**
 La inclusión de la figura del *Project Manager* y la estandarización de prácticas (ya sea en el sector público o privado) mitiga drásticamente los riesgos de sobrecostos y retrasos, mejorando la comunicación entre el cliente y el equipo ejecutor.
 
-### 🛠️ **Selección de Herramientas**
+### ️ **Selección de Herramientas**
 La irrupción del software libre y las herramientas gratuitas de gestión y diseño (CAD) ofrecen alternativas viables de alto rendimiento, obligando a las empresas a basar su elección en las funcionalidades específicas requeridas por el proyecto y no solo en el dominio histórico del mercado por parte de herramientas de pago.
 
 ---
 
-## 🏗️ Ejercicio Práctico: "Proyecto Vía Rápida y Centro Tecnológico"
+## ️ Ejercicio Práctico: "Proyecto Vía Rápida y Centro Tecnológico"
 
-**📋 Contexto:** Eres el Director de Proyectos de una firma de ingeniería. Se te han adjudicado dos proyectos simultáneos:
+** Contexto:** Eres el Director de Proyectos de una firma de ingeniería. Se te han adjudicado dos proyectos simultáneos:
 
-1. **🛣️ La estabilización de un talud crítico en una carretera.**
-2. **💻 El desarrollo de un software para controlar el flujo vehicular de dicha carretera.**
+1. **️ La estabilización de un talud crítico en una carretera.**
+2. ** El desarrollo de un software para controlar el flujo vehicular de dicha carretera.**
 
-### 📝 **Instrucciones del Ejercicio:**
+###  **Instrucciones del Ejercicio:**
 
-1. **🏗️ Selección de Material (Proyecto 1):** Basado en los principios del documento, elabora un cuadro comparativo rápido eligiendo entre un muro de contención de hormigón armado y uno de suelo reforzado con geosintéticos. Define cuál elegirías si el presupuesto del cliente fue recortado en un 25%.
+1. **️ Selección de Material (Proyecto 1):** Basado en los principios del documento, elabora un cuadro comparativo rápido eligiendo entre un muro de contención de hormigón armado y uno de suelo reforzado con geosintéticos. Define cuál elegirías si el presupuesto del cliente fue recortado en un 25%.
 
-2. **🔄 Selección de Metodología (Proyecto 2):** Define qué metodología de gestión utilizarías (Tradicional/PMBOK o Ágil/Scrum) para el desarrollo del software de flujo vehicular, justificando tu respuesta en base a la incertidumbre del comportamiento del usuario final.
+2. ** Selección de Metodología (Proyecto 2):** Define qué metodología de gestión utilizarías (Tradicional/PMBOK o Ágil/Scrum) para el desarrollo del software de flujo vehicular, justificando tu respuesta en base a la incertidumbre del comportamiento del usuario final.
 
-3. **🛠️ Herramientas:** Nombra al menos 3 criterios que utilizarías para seleccionar el software de gestión de proyectos gratuito con el que tu equipo coordinará ambos trabajos.
+3. **️ Herramientas:** Nombra al menos 3 criterios que utilizarías para seleccionar el software de gestión de proyectos gratuito con el que tu equipo coordinará ambos trabajos.
 
 ---
 
-## ❓ **10 Preguntas Clave**
+##  **10 Preguntas Clave**
 
 1. ¿Cuál es la principal ventaja económica de utilizar un muro reforzado con geosintéticos frente a uno de hormigón armado según los estudios presentados?
 2. ¿Qué diferencias fundamentales existen en el ciclo de vida de un proyecto gestionado con metodologías ágiles frente a metodologías tradicionales?
@@ -4841,24 +4658,24 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
 
 ---
 
-## 🧠 **Mapa Mental (Estructura Textual)**
+##  **Mapa Mental (Estructura Textual)**
 
-### 🎯 **Centro:** Estudios Comparativos en Proyectos
+###  **Centro:** Estudios Comparativos en Proyectos
 
-#### 🏗️ **Rama 1: Materiales y Estructuras (Ingeniería)**
+#### ️ **Rama 1: Materiales y Estructuras (Ingeniería)**
 - **Edificaciones Comerciales:** Acero Estructural vs. Concreto Armado
 - **Estabilidad de Taludes:** Hormigón Armado vs. Suelos con Geosintéticos (Mayor economía y rapidez)
 
-#### 📋 **Rama 2: Metodologías de Gestión**
+####  **Rama 2: Metodologías de Gestión**
 - **Tradicionales (Predictivas):** PMBOK, PMI, Enfoque en control estricto de Alcance, Tiempo y Costo
 - **Ágiles (Adaptativas):** Scrum, Kanban, Enfoque en flexibilidad y entregas tempranas
 - **Aplicación Sectorial:** Diferencias en adopción entre Sector Público vs. Sector Privado
 
-#### 👨‍💼 **Rama 3: Dirección y Liderazgo**
+#### ‍ **Rama 3: Dirección y Liderazgo**
 - **Con Project Manager:** Mayor centralización, mejor comunicación, control de riesgos
 - **Sin Project Manager:** Riesgo de dispersión y retrasos
 
-#### 💻 **Rama 4: Herramientas Tecnológicas**
+####  **Rama 4: Herramientas Tecnológicas**
 - **Gestión:** Software gratuito vs. de pago (Criterios: usabilidad, funciones)
 - **Diseño/Ingeniería:** CAD tradicional (AutoCAD) vs. Software libre e iniciativas relacionales`,
   keyPoints: [
@@ -4879,7 +4696,7 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
 
 **Aplicación de la Estrategia Comparativa:**
 
-**🏗️ Proyecto 1: Estabilización de Talud**
+**️ Proyecto 1: Estabilización de Talud**
 
 **Análisis Comparativo de Materiales:**
 
@@ -4893,7 +4710,7 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
 
 **Decisión:** Se seleccionó suelo reforzado con geosintéticos por el ahorro del 33% y reducción de tiempo, cumpliendo con la restricción presupuestaria.
 
-**💻 Proyecto 2: Software Control Flujo Vehicular**
+** Proyecto 2: Software Control Flujo Vehicular**
 
 **Análisis Comparativo de Metodologías:**
 
@@ -4907,7 +4724,7 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
 
 **Decisión:** Se seleccionó Scrum por la alta incertidumbre en el comportamiento del usuario y necesidad de adaptación continua.
 
-**🛠️ Selección de Herramientas Tecnológicas:**
+**️ Selección de Herramientas Tecnológicas:**
 
 **Criterios para Software de Gestión Gratuita:**
 1. **Integración:** Capacidad de coordinar ambos proyectos
@@ -4916,7 +4733,7 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
 
 **Herramienta seleccionada:** Trello + Slack (combinación gratuita con alta funcionalidad)
 
-**📊 Resultados obtenidos:**
+** Resultados obtenidos:**
 
 **Proyecto 1 (Talud):**
 - **Ahorro económico:** Q280,500 (33% menos del presupuesto original)
@@ -4930,7 +4747,7 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
 - **Calidad:** 95% de aceptación por usuarios finales
 - **Costo desarrollo:** Q120,000 (40% menos que estimación tradicional)
 
-**💡 Lecciones aprendidas:**
+** Lecciones aprendidas:**
 - El análisis comparativo sistemático permite tomar decisiones basadas en evidencia
 - Los materiales alternativos pueden ofrecer ventajas significativas en costo y tiempo
 - La metodología ágil es fundamental para proyectos con alta incertidumbre
@@ -5109,76 +4926,76 @@ const content1_4: TopicContent = {
 
 ---
 
-## 📖 Introducción
+##  Introducción
 
 La planificación en ingeniería es el **proceso estructurado de definir objetivos, asignar recursos y establecer cronogramas** para llevar una idea desde el plano hasta la realidad empresarial o social. Un ingeniero no solo diseña soluciones, sino que debe **planificar estratégicamente su ejecución** para evitar sobrecostos, retrasos y fallas técnicas.
 
 ---
 
-## 🏗️ El Pilar de la Ingeniería
+## ️ El Pilar de la Ingeniería
 
-### 📋 **Prácticas Fundamentales**
+###  **Prácticas Fundamentales**
 
 Independientemente de la metodología elegida, todo plan de proyecto de ingeniería debe contemplar ciertas prácticas clave para asegurar su viabilidad:
 
-#### 🎯 **Definición del Alcance**
+####  **Definición del Alcance**
 Establecer claramente qué se va a entregar y, sobre todo, qué queda fuera del proyecto para evitar el **"scope creep"** (corrupción del alcance).
 
-#### ⚡ **Planificación de Capacidad (Capacity Planning)**
+####  **Planificación de Capacidad (Capacity Planning)**
 Consiste en asegurar que el equipo cuente con el tiempo, las habilidades y las herramientas necesarias para cumplir con los entregables sin sufrir sobrecarga de trabajo.
 
-#### 🛡️ **Gestión de Riesgos**
+#### ️ **Gestión de Riesgos**
 Identificar posibles fallas técnicas, problemas financieros o demoras logísticas antes de que ocurran, creando planes de contingencia.
 
 ---
 
-## 🔄 Enfoques y Metodologías de Planificación
+##  Enfoques y Metodologías de Planificación
 
-### 📊 **Modelo Predictivo (Cascada)**
+###  **Modelo Predictivo (Cascada)**
 
 Es el enfoque tradicional. Las fases se ejecutan de manera **lineal y secuencial** (Inicio, Planificación, Ejecución, Cierre). No se avanza a una fase sin haber terminado y aprobado la anterior.
 
-**✅ Ventajas:**
+** Ventajas:**
 - Ideal para infraestructura y obra civil
 - Alto control documental y técnico
 
-**❌ Desventajas:**
+** Desventajas:**
 - Poca flexibilidad ante cambios
 
-### 🚀 **Modelo Ágil (Agile)**
+###  **Modelo Ágil (Agile)**
 
 Enfoque **iterativo e incremental**. El proyecto se divide en ciclos cortos (sprints) donde se evalúa y adapta el producto constantemente según las necesidades del usuario o cliente.
 
-**✅ Ventajas:**
+** Ventajas:**
 - Ideal para ingeniería de software e I+D
 - Alta adaptabilidad a los cambios
 
-**❌ Desventajas:**
+** Desventajas:**
 - Riesgo de perder de vista el presupuesto final
 
 ---
 
-## ❓ **Preguntas Frecuentes**
+##  **Preguntas Frecuentes**
 
-### 🤔 **¿Qué metodología de planificación es mejor para mi proyecto?**
+###  **¿Qué metodología de planificación es mejor para mi proyecto?**
 No existe una metodología perfecta. Si los requisitos son fijos y el costo del error es altísimo (como construir un puente), se usa el modelo en Cascada. Si el proyecto requiere innovación constante y los requisitos pueden cambiar (como crear una app), se usa Ágil.
 
-### 📊 **¿Qué es exactamente el "Capacity Planning"?**
+###  **¿Qué es exactamente el "Capacity Planning"?**
 Es el proceso de equilibrar la demanda de trabajo de un proyecto con la capacidad real de producción de tu equipo. Previene la saturación del personal y asegura que los plazos de entrega sean realistas.
 
-### 🎯 **¿Por qué es importante establecer "Hitos" (Milestones)?**
+###  **¿Por qué es importante establecer "Hitos" (Milestones)?**
 Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si el proyecto avanza según lo planeado, permitiendo tomar medidas correctivas a tiempo antes de que los problemas se agraven.
 
 ---
 
-## 📚 **Glosario Técnico**
+##  **Glosario Técnico**
 
 | Término | Definición |
 |---------|------------|
-| **🔄 Corrupción del Alcance (Scope Creep)** | Crecimiento descontrolado e imprevisto de los requisitos de un proyecto, lo que agota el tiempo y el presupuesto |
-| **🏃 Sprint** | En metodologías ágiles, es un período corto de tiempo (generalmente de 1 a 4 semanas) en el que el equipo trabaja para completar entregables específicos |
-| **📦 Entregable (Deliverable)** | Cualquier producto, resultado o capacidad medible y verificable que debe producirse para completar un proyecto |
-| **👨‍💼 Project Manager** | Profesional responsable de la planificación, diseño, ejecución, seguimiento y cierre de un proyecto |`,
+| ** Corrupción del Alcance (Scope Creep)** | Crecimiento descontrolado e imprevisto de los requisitos de un proyecto, lo que agota el tiempo y el presupuesto |
+| ** Sprint** | En metodologías ágiles, es un período corto de tiempo (generalmente de 1 a 4 semanas) en el que el equipo trabaja para completar entregables específicos |
+| ** Entregable (Deliverable)** | Cualquier producto, resultado o capacidad medible y verificable que debe producirse para completar un proyecto |
+| **‍ Project Manager** | Profesional responsable de la planificación, diseño, ejecución, seguimiento y cierre de un proyecto |`,
   keyPoints: [
     "La planificación en ingeniería es el proceso estructurado de definir objetivos, asignar recursos y establecer cronogramas",
     "Un ingeniero debe planificar estratégicamente la ejecución para evitar sobrecostos, retrasos y fallas técnicas",
@@ -5197,25 +5014,25 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
 
 **Aplicación de Metodología de Planificación:**
 
-**🎯 Definición del Alcance:**
+** Definición del Alcance:**
 - **Incluido:** Construcción del puente, accesos peatonales, iluminación básica
 - **Excluido:** Sistema de drenaje complejo, miradores turísticos
 - **Justificación:** Priorizar funcionalidad esencial dentro del presupuesto y tiempo
 
-**⚡ Planificación de Capacidad:**
+** Planificación de Capacidad:**
 - **Equipo:** 8 trabajadores (4 ingenieros, 4 técnicos especializados)
 - **Habilidades requeridas:** Ingeniería estructural, construcción civil, soldadura
 - **Herramientas:** Grua móvil, equipo de soldadura, andamios
 - **Cálculo:** Capacidad para completar 20m² por día
 
-**🛡️ Gestión de Riesgos Identificados:**
+**️ Gestión de Riesgos Identificados:**
 | Riesgo | Probabilidad | Impacto | Plan de Contingencia |
 |--------|-------------|---------|-------------------|
 | **Lluvas inesperadas** | Media | Alto | Programa flexible con días de recuperación |
 | **Fallas en suministro de materiales** | Baja | Medio | Proveedores alternativos locales |
 | **Problemas técnicos en cimentación** | Baja | Alto | Estudio geotécnico previo detallado |
 
-**📊 Selección de Metodología: Cascada (Predictiva)**
+** Selección de Metodología: Cascada (Predictiva)**
 
 **Justificación:**
 - Requisitos fijos y bien definidos
@@ -5238,13 +5055,13 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
 - Iluminación y acabados
 - Inspección final y entrega
 
-**📈 Resultados Obtenidos:**
+** Resultados Obtenidos:**
 - **Tiempo de ejecución:** 5.5 semanas (dentro del plazo)
 - **Costo final:** Q1,950,000 (2.5% bajo presupuesto)
 - **Calidad:** 100% cumplimiento de especificaciones técnicas
 - **Seguridad:** Cero accidentes durante construcción
 
-**💡 Lecciones Aprendidas:**
+** Lecciones Aprendidas:**
 - La planificación detallada previa evita sobrecostos y retrasos
 - El Capacity Planning bien hecho asegura productividad óptima
 - La gestión proactiva de riesgos minimiza impactos negativos
@@ -5272,30 +5089,14 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
     }
   ],
   references: [
-    { 
-      citation: "BMF Business Engineering School. (2020). Gestión de proyectos para ingenieros: de planos a resultados empresariales. Recuperado de bmfschool.com"
-    },
-    { 
-      citation: "Calcumas. (2024). Proyectos de Ingeniería: Planificación y Ejecución. Santiago, Chile. Recuperado de calcumas.cl"
-    },
-    { 
-      citation: "GanttPRO. (2022). Tipología de proyectos para una gestión eficaz. Escrito por Anastasia Stepanets. Recuperado de ganttpro.com"
-    },
-    { 
-      citation: "iLearn Engineering. (2025). Engineering Projects – Planning for success! Recuperado de ilearnengineering.com"
-    },
-    { 
-      citation: "IMF Smart Education. (2026). Metodologías de gestión de proyectos para un Project Manager. Recuperado de imf-formacion.com"
-    },
-    { 
-      citation: "Jellyfish. (s.f.). Engineering capacity planning: process, strategies, tools. Recuperado de jellyfish.com"
-    },
-    { 
-      citation: "Neural Concept. (s.f.). Engineering Project Planning: Key Principles and Best Practices. Recuperado de neuralconcept.com"
-    },
-    { 
-      citation: "ProjectManager. (2026). Planeación de Proyectos: Factores Clave en la Planificación de un Proyecto. Recuperado de projectmanager.com"
-    },
+    { citation: "BMF Business Engineering School. (2020). Gestión de proyectos para ingenieros: de planos a resultados empresariales. Recuperado de bmfschool.com" },
+    { citation: "Calcumas. (2024). Proyectos de Ingeniería: Planificación y Ejecución. Santiago, Chile. Recuperado de calcumas.cl" },
+    { citation: "GanttPRO. (2022). Tipología de proyectos para una gestión eficaz. Escrito por Anastasia Stepanets. Recuperado de ganttpro.com" },
+    { citation: "iLearn Engineering. (2025). Engineering Projects – Planning for success! Recuperado de ilearnengineering.com" },
+    { citation: "IMF Smart Education. (2026). Metodologías de gestión de proyectos para un Project Manager. Recuperado de imf-formacion.com" },
+    { citation: "Jellyfish. (s.f.). Engineering capacity planning: process, strategies, tools. Recuperado de jellyfish.com" },
+    { citation: "Neural Concept. (s.f.). Engineering Project Planning: Key Principles and Best Practices. Recuperado de neuralconcept.com" },
+    { citation: "ProjectManager. (2026). Planeación de Proyectos: Factores Clave en la Planificación de un Proyecto. Recuperado de projectmanager.com" }
   ],
   flashcards: [
     { term: "Planificación en Ingeniería", definition: "Proceso estructurado de definir objetivos, asignar recursos y establecer cronogramas para llevar una idea desde el plano hasta la realidad." },
@@ -5522,32 +5323,7 @@ Interesados o partes afectadas por el proyecto.
 Indicador clave de desempeño para medir el éxito técnico.
 
 ---
-
-## Preguntas Frecuentes
-
-**¿Cuál es la diferencia entre planificación estratégica y operativa?**
-La estratégica define el "qué" y "para qué" a largo plazo, mientras que la operativa se enfoca en el "cómo" y "quién" en el día a día.
-
-**¿Qué es un ciclo de vida "Cascada" en ingeniería?**
-Es un modelo lineal donde cada fase debe completarse antes de pasar a la siguiente, común en grandes infraestructuras.
-
-**¿Por qué es vital la etapa de Seguimiento y Control?**
-Permite detectar desviaciones en el presupuesto o fallos técnicos antes de que el proyecto sea inviable.
-
-**¿Qué herramientas se usan para la planificación?**
-Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Project o Primavera P6.
-
----
-
-## 📖 **Glosario Técnico**
-
-| Término | Definición |
-|---------|------------|
-| **🎯 Alcance** | La suma total de todos los productos del proyecto y sus requisitos |
-| **📍 Hito** | Un punto de referencia que marca un evento importante en el proyecto |
-| **👥 Stakeholders** | Interesados o partes afectadas por el proyecto |
-| **📊 KPI** | Indicador clave de desempeño para medir el éxito técnico |
-| **🔄 EDT/WBS** | Estructura de Desglose del Trabajo / Work Breakdown Structure |`,
+`,
   keyPoints: [
     "La planificación estratégica define objetivos a largo plazo y visión del proyecto",
     "La planificación táctica desglosa la estrategia en planes específicos por departamentos",
@@ -5564,62 +5340,62 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
 
 **Aplicación de la Planificación Estratégica:**
 
-**🎯 Planificación Estratégica (5 años):**
+** Planificación Estratégica (5 años):**
 - **Objetivo:** Convertirse en el principal proveedor de componentes para la industria automotriz centroamericana
 - **Visión:** Ser reconocida como la planta más eficiente y sostenible de la región para 2030
 - **Mercado meta:** Ensambladoras en México, Costa Rica y Colombia
 
-**⚙️ Planificación Táctica (18 meses):**
+**️ Planificación Táctica (18 meses):**
 - **Departamento de Ingeniería:** Diseño de layout industrial y especificaciones técnicas
 - **Departamento de Recursos Humanos:** Plan de capacitación y contratación progresiva
 - **Departamento de Compras:** Cadena de suministro con proveedores locales e internacionales
 - **Departamento de Calidad:** Implementación de certificación ISO 9001
 
-**🔧 Planificación Operativa (primer año):**
+** Planificación Operativa (primer año):**
 - **Mes 1-3:** Preparación del terreno y permisos municipales
 - **Mes 4-9:** Construcción de infraestructura principal
 - **Mes 10-15:** Instalación de maquinaria y sistemas
 - **Mes 16-18:** Pruebas de operación y puesta en marcha
 
-**🔄 Implementación del Ciclo de Vida:**
+** Implementación del Ciclo de Vida:**
 
-**🚀 Fase de Inicio:**
+** Fase de Inicio:**
 - **Viabilidad técnica:** Estudio de suelo, disponibilidad de servicios, acceso vial
 - **Análisis de stakeholders:** Municipalidad, comunidad local, sindicatos, proveedores
 - **Definición de alcance:** Planta de 15,000 m², capacidad de 50,000 unidades/año
 
-**📊 Fase de Planificación:**
+** Fase de Planificación:**
 - **EDT/WBS:** Descomposición en 15 paquetes de trabajo principales
 - **Diagrama de Gantt:** Cronograma con 127 hitos críticos
 - **Presupuesto detallado:** $25M distribuidos en 18 categorías
 - **Plan de riesgos:** 27 riesgos identificados con estrategias de mitigación
 
-**🏗️ Fase de Ejecución:**
+**️ Fase de Ejecución:**
 - **Ingeniería de detalle:** Planos específicos para cada sistema
 - **Construcción:** Gestión diaria de 3 contratistas principales
 - **Instalación:** Montaje de 85 equipos industriales principales
 - **Capacitación:** Programa de 240 horas para operarios
 
-**📈 Fase de Seguimiento y Control:**
+** Fase de Seguimiento y Control:**
 - **KPIs principales:** Cumplimiento de cronograma (92%), presupuesto (98%), calidad (99.5%)
 - **Reuniones semanales:** Comité de dirección con 12 gerentes de área
 - **Informes mensuales:** Reporte de avance a corporativo internacional
 - **Auditorías trimestrales:** Verificación de estándares de calidad y seguridad
 
-**✅ Fase de Cierre:**
+** Fase de Cierre:**
 - **Entrega final:** Planta operativa al 100% de capacidad
 - **Documentación:** 3,200 documentos técnicos y administrativos
 - **Lecciones aprendidas:** 47 mejores prácticas documentadas
 - **Celebración:** Evento de inauguración con autoridades nacionales
 
-**💡 Resultados Obtenidos:**
+** Resultados Obtenidos:**
 - **Cumplimiento de plazo:** 2 semanas de adelanto sobre cronograma
 - **Control presupuestario:** 2% bajo presupuesto original
 - **Calidad:** Certificación ISO 9001 obtenida en primer intento
 - **Empleo:** 315 empleos creados (5% sobre lo planeado)
 - **Productividad:** 103% de capacidad en primeros 6 meses
 
-**🎯 Lecciones Clave:**
+** Lecciones Clave:**
 - La planificación estratégica clara facilitó decisiones tácticas difíciles
 - La coordinación operativa diaria fue fundamental para cumplir metas
 - El seguimiento riguroso de KPIs permitió correcciones tempranas
@@ -5647,18 +5423,15 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
     }
   ],
   references: [
-    { 
-      citation: "Asana (2026). Las 5 fases de la gestión de proyectos."
-    },
-    { 
-      citation: "GanttPRO (2023). Guía de planificación y tipos de proyectos industriales."
-    },
-    { 
-      citation: "Coursera Staff (2023). El ciclo de vida de la gestión de proyectos explicado."
-    },
-    { 
-      citation: "Documentación Técnica de la Facultad de Ingeniería CUNOC."
-    }
+    { citation: "Asana (2026). Las 5 fases de la gestión de proyectos para mejorar el flujo de trabajo. Guía de gestión de recursos y procesos." },
+    { citation: "BMF School. Gestión de proyectos para ingenieros: de planos a resultados empresariales. Enfoque en la transición técnica a la dirección." },
+    { citation: "Calcumas (2024). Proyectos de Ingeniería: Planificación y Ejecución. Consultoría técnica sobre infraestructuras y diseño estructural." },
+    { citation: "Coursera / Google. Certificado profesional de Gestión de Proyectos de Google. Fundamentos del ciclo de vida y metodologías tradicionales." },
+    { citation: "GanttPRO Blog (2022/2023). Tipología de proyectos para una gestión eficaz y Fases de la formulación de proyectos." },
+    { citation: "Inesdi / ISDI. Ciclo de vida de un proyecto: fases, ejemplos y claves para una gestión efectiva. Especialistas en transformación digital y management." },
+    { citation: "Neural Concept. Engineering Project Planning: Key Principles and Best Practices. Integración de IA y herramientas modernas en ingeniería." },
+    { citation: "Project Management Institute (PMI). A Guide to the Project Management Body of Knowledge (PMBOK Guide). Estándar global de la industria." },
+    { citation: "ProjectManager.com (2026). Planeación de Proyectos: Factores Clave en la Planificación." }
   ],
   flashcards: [
     { term: "Planificación Estratégica", definition: "Define objetivos a largo plazo y la visión del proyecto a nivel organizacional." },
@@ -5941,32 +5714,32 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
 
 **Aplicación del Estudio Legal:**
 
-**🏛️ **Análisis de Forma Jurídica:**
+**️ **Análisis de Forma Jurídica:**
 - **Decisión**: Constituir sociedad anónima (persona jurídica)
 - **Razón**: Limitar responsabilidad personal y facilitar inversiones internacionales
 - **Costo constitución**: $25,000 en abogados y registros
 - **Resultado**: Empresa debidamente registrada en Guatemala
 
-**📄 **Trámites y Permisos:**
+** **Trámites y Permisos:**
 - **Permiso municipal de uso de suelo**: $5,000
 - **Licencia de construcción**: $8,000
 - **Certificado de impacto ambiental**: $15,000
 - **Registro sanitario**: $3,000
 - **Total permisos**: $31,000
 
-**👥 **Obligaciones Patronales:**
+** **Obligaciones Patronales:**
 - **Seguridad social (IGSS)**: 10.67% de planillas
 - **Prestaciones**: Aguinaldo, vacaciones, indemnización
 - **Seguridad ocupacional**: Programa de higiene industrial
 - **Costo anual estimado**: $180,000 en obligaciones laborales
 
-**💰 **Análisis de Carga Impositiva:**
+** **Análisis de Carga Impositiva:**
 - **ISR (Impuesto sobre la Renta)**: 25% sobre utilidades
 - **IVA**: 12% sobre ventas (recuperable)
 - **Impuesto único sobre inmuebles**: Variable según ubicación
 - **Carga fiscal anual proyectada**: $450,000
 
-**🛡️ **Normativas Especiales:**
+**️ **Normativas Especiales:**
 - **Registro sanitario**: Ministerio de Salud Pública
 - **Certificaciones fitosanitarias:**
   - Normas HACCP para seguridad alimentaria
@@ -5974,7 +5747,7 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
   - Análisis de laboratorio mensuales
 - **Costo cumplimiento normativo**: $50,000 anuales
 
-**💡 **Impacto Financiero Integrado:**
+** **Impacto Financiero Integrado:**
 
 **Costos Legales Totales Primer Año:**
 - **Constitución y permisos**: $56,000 (único)
@@ -5983,7 +5756,7 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
 - **Normativas especiales**: $50,000 (anual)
 - **Total año 1**: $736,000
 
-**🎯 **Decisiones Estratégicas Basadas en Estudio Legal:**
+** **Decisiones Estratégicas Basadas en Estudio Legal:**
 
 **1. Localización en Zona Franca:**
 - **Beneficio**: Exención de ISR por 10 años
@@ -6000,13 +5773,13 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
 - **Patentes**: 2 procesos de fabricación patentados
 - **Protección legal total**: $25,000
 
-**📊 **Resultados del Estudio Legal:**
-- **Viabilidad**: ✅ Jurídicamente viable con cumplimiento normativo
+** **Resultados del Estudio Legal:**
+- **Viabilidad**:  Jurídicamente viable con cumplimiento normativo
 - **Costos legales**: $578,500 anuales (después de optimizaciones)
 - **Riesgos mitigados**: Multas, clausura, litigios
 - **Factor de éxito**: Cumplimiento del 100% de normativas
 
-**🏆 **Lecciones Clave del Estudio Legal:**
+** **Lecciones Clave del Estudio Legal:**
 - La planificación legal previene multas y retrasos
 - Las zonas francas ofrecen ventajas competitivas significativas
 - El cumplimiento normativo genera confianza con inversionistas
@@ -6357,55 +6130,55 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
 
 **Aplicación de Metodología de Implementación:**
 
-**🚀 Fase de Inicio:**
+** Fase de Inicio:**
 - **Project Charter elaborado** definiendo patrocinador (Director de Ingeniería)
 - **Objetivos principales**: Motor 500 HP, eficiencia 95%, costo operativo 30% menor
 - **Director del proyecto asignado**: Ing. María García con 15 años de experiencia
 - **Autorización formal**: Aprobación del consejo directivo con presupuesto inicial
 
-**📊 Fase de Planificación:**
+** Fase de Planificación:**
 - **Hoja de ruta detallada** con 127 actividades críticas
 - **Cronograma**: 18 meses con hitos trimestrales de verificación
 - **Presupuesto detallado**: $8M distribuidos en 15 categorías
 - **Términos de Referencia**: Especificaciones técnicas exactas del motor
 - **Análisis de riesgos**: 23 riesgos identificados con estrategias de mitigación
 
-**🏗️ Fase de Ejecución:**
+**️ Fase de Ejecución:**
 - **Enfoque híbrido seleccionado**: Lineal para fabricación, ágil para diseño
 - **Recursos coordinados**: 25 ingenieros, 50 técnicos, 3 turnos de trabajo
 - **Entregables físicos**: Prototipo → Pruebas → Producción en serie
 - **Control de calidad**: 4 puntos de verificación por fase
 
-**📈 Fase de Monitoreo y Control:**
+** Fase de Monitoreo y Control:**
 - **KPIs establecidos**: Cumplimiento de cronograma (95%), presupuesto (98%), calidad (99%)
 - **Reuniones semanales**: Comité de dirección con 8 gerentes de área
 - **Informes mensuales**: Reporte de avance al consejo directivo
 - **Ajustes realizados**: Rediseño de componentes en mes 7 por pruebas de resistencia
 
-**✅ Fase de Cierre:**
+** Fase de Cierre:**
 - **Entrega formal**: 50 motores producidos y entregados al cliente
 - **Documentación completa**: 1,200 planos técnicos y manuales de operación
 - **Reunión post-mortem**: 47 mejores prácticas documentadas
 - **Lecciones aprendidas**: Sistema de enfriamiento mejorado para futuros modelos
 
-**💡 Resultados Obtenidos:**
+** Resultados Obtenidos:**
 - **Cumplimiento de plazo**: 2 semanas de adelanto sobre cronograma
 - **Control presupuestario**: 3% bajo presupuesto original
 - **Calidad**: Eficiencia del 96% (1% sobre especificación)
 - **Satisfacción cliente**: 9.2/10 en encuesta de satisfacción
 
-**🎯 Aplicación del Ejercicio Práctico:**
+** Aplicación del Ejercicio Práctico:**
 
 **Pregunta 1:** ¿Qué documento necesitas al principio del proyecto?
-**Respuesta:** Project Charter (Acta de Constitución) - ✅ **Correctamente aplicado**
+**Respuesta:** Project Charter (Acta de Constitución) -  **Correctamente aplicado**
 
 **Pregunta 2:** ¿Qué enfoque si el diseño cambia varias veces?
-**Respuesta:** Enfoque Iterativo (Ágil) - ✅ **Aplicado en fase de diseño**
+**Respuesta:** Enfoque Iterativo (Ágil) -  **Aplicado en fase de diseño**
 
 **Pregunta 3:** ¿Cómo se llama la reunión final de análisis?
-**Respuesta:** Post-mortem - ✅ **Realizada con éxito**
+**Respuesta:** Post-mortem -  **Realizada con éxito**
 
-**🏆 Lecciones Clave del Proyecto:**
+** Lecciones Clave del Proyecto:**
 - La planificación detallada previno sobrecostos del 15%
 - El enfoque híbrido permitió flexibilidad sin perder control
 - El monitoreo continuo detectó problemas a tiempo
@@ -7534,7 +7307,7 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
 - **Internet y redes:** Q48,000 (instalación + 1 año servicio)
 - **Mobiliario:** Q180,000 (escritorios, sillas, archivadores)
 
-**📚 Manuales Administrativos Elaborados:**
+** Manuales Administrativos Elaborados:**
 
 **Manual de Organización y Funciones:**
 - Definición de 15 puestos con descripción detallada

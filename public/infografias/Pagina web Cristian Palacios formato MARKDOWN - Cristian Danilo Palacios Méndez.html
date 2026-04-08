@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Aprendizaje: Administración Estratégica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        marino: '#003366',
+                        crema: '#F5F5DC',
+                        carbon: '#333333',
+                        bosque: '#228B22'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .mindmap-node {
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .mindmap-node:hover {
+            transform: scale(1.05);
+        }
+        .mindmap-link {
+            stroke: #003366;
+            stroke-width: 2;
+            fill: none;
+            opacity: 0.6;
+        }
+        #strategic-mindmap {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-crema text-carbon font-sans">
+
+    <header class="bg-marino text-white p-12 text-center shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Administración Estratégica</h1>
+        <p class="mt-4 text-xl opacity-90">Formulación, implementación y evaluación de estrategias para la ventaja competitiva sostenible.</p>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 space-y-16">
+        
+        <section class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-marino">
+                <h2 class="text-2xl font-bold text-marino mb-4">Introducción Técnica</h2>
+                <p class="leading-relaxed text-base">La administración estratégica se define como el arte y la ciencia de formular, implementar y evaluar decisiones multidisciplinarias que permiten a una organización alcanzar sus objetivos a largo plazo. Este proceso requiere una visión holística que integra la intuición con el análisis cuantitativo y cualitativo, permitiendo a la firma adaptarse de manera proactiva a los cambios constantes y a la incertidumbre del entorno empresarial global.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-bosque">
+                <h2 class="text-2xl font-bold text-marino mb-4">Resumen del Proceso</h2>
+                <p class="mb-4 text-base">El modelo de administración estratégica es iterativo y consta de tres fases fundamentales que deben alinearse continuamente:</p>
+                <ul class="list-disc pl-5 space-y-2 text-base">
+                    <li><strong>Fase de Formulación:</strong> Incluye el desarrollo de la visión y misión, la identificación de oportunidades y amenazas externas, la determinación de fortalezas y debilidades internas, y el establecimiento de objetivos a largo plazo.</li>
+                    <li><strong>Fase de Implementación:</strong> Requiere que la empresa establezca objetivos anuales, diseñe políticas, motive a los empleados y asigne recursos para que las estrategias formuladas puedan ejecutarse.</li>
+                    <li><strong>Fase de Evaluación:</strong> Consiste en revisar los factores internos y externos que fundamentan las estrategias actuales, medir el desempeño organizativo y aplicar acciones correctivas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-white p-10 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-marino text-center mb-12">Mapa Mental: Administración Estratégica</h2>
+            
+            <div class="relative overflow-hidden p-4">
+                <svg id="strategic-mindmap" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="dropshadow" height="130%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+                            <feOffset dx="2" dy="2" result="offsetblur"/>
+                            <feComponentTransfer>
+                                <feFuncA type="linear" slope="0.2"/>
+                            </feComponentTransfer>
+                            <feMerge>
+                                <feMergeNode/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <g class="mindmap-links">
+                        <path class="mindmap-link" d="M300,300 L150,150" />
+                        <path class="mindmap-link" d="M300,300 L450,150" />
+                        <path class="mindmap-link" d="M300,300 L150,450" />
+                        <path class="mindmap-link" d="M300,300 L450,450" />
+                        <path class="mindmap-link" d="M300,300 L300,100" />
+                    </g>
+
+                    <g class="mindmap-node" filter="url(#dropshadow)">
+                        <circle cx="300" cy="100" r="50" fill="#228B22" />
+                        <text x="300" y="95" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Visión &</text>
+                        <text x="300" y="110" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Misión</text>
+                    </g>
+
+                    <g class="mindmap-node" filter="url(#dropshadow)">
+                        <rect x="75" y="100" width="150" height="100" rx="10" ry="10" fill="#228B22" />
+                        <text x="150" y="130" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Análisis Externo</text>
+                        <text x="150" y="150" text-anchor="middle" fill="white" font-size="10">(Oportunidades &</text>
+                        <text x="150" y="165" text-anchor="middle" fill="white" font-size="10">Amenazas - PESTEL)</text>
+                    </g>
+
+                    <g class="mindmap-node" filter="url(#dropshadow)">
+                        <rect x="375" y="100" width="150" height="100" rx="10" ry="10" fill="#228B22" />
+                        <text x="450" y="130" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Análisis Interno</text>
+                        <text x="450" y="150" text-anchor="middle" fill="white" font-size="10">(Fortalezas &</text>
+                        <text x="450" y="165" text-anchor="middle" fill="white" font-size="10">Debilidades - FODA)</text>
+                    </g>
+
+                    <g class="mindmap-node" filter="url(#dropshadow)">
+                        <rect x="75" y="400" width="150" height="100" rx="10" ry="10" fill="#228B22" />
+                        <text x="150" y="430" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Implementación</text>
+                        <text x="150" y="450" text-anchor="middle" fill="white" font-size="10">(Objetivos Anuales,</text>
+                        <text x="150" y="465" text-anchor="middle" fill="white" font-size="10">Políticas, Recursos)</text>
+                    </g>
+
+                    <g class="mindmap-node" filter="url(#dropshadow)">
+                        <rect x="375" y="400" width="150" height="100" rx="10" ry="10" fill="#228B22" />
+                        <text x="450" y="430" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Evaluación</text>
+                        <text x="450" y="450" text-anchor="middle" fill="white" font-size="10">(Revisión Factores,</text>
+                        <text x="450" y="465" text-anchor="middle" fill="white" font-size="10">Medir Desempeño)</text>
+                    </g>
+                    
+                    <g class="mindmap-node">
+                        <circle cx="300" cy="300" r="80" fill="#003366" />
+                        <text x="300" y="295" text-anchor="middle" fill="white" font-size="16" font-weight="bold">ADMINISTRACIÓN</text>
+                        <text x="300" y="315" text-anchor="middle" fill="white" font-size="16" font-weight="bold">ESTRATEGICA</text>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold text-marino mb-8">Conceptos Clave</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow border-b-4 border-bosque transition hover:shadow-lg">
+                    <h3 class="font-bold text-xl text-marino mb-2">Ventaja Competitiva</h3>
+                    <p class="text-base leading-relaxed">Capacidad fundamental de una organización para crear y sostener un valor económico superior al de sus rivales. Se logra mediante el desarrollo y despliegue de competencias centrales distintivas que son valiosas y difíciles de imitar.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow border-b-4 border-bosque transition hover:shadow-lg">
+                    <h3 class="font-bold text-xl text-marino mb-2">Análisis FODA</h3>
+                    <p class="text-base leading-relaxed">Herramienta analítica estructurada que permite evaluar los factores internos (Fortalezas y Debilidades) y externos (Oportunidades y Amenazas). Es crucial para alinear las capacidades de la firma con su entorno empresarial.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow border-b-4 border-bosque transition hover:shadow-lg">
+                    <h3 class="font-bold text-xl text-marino mb-2">Competencias Centrales</h3>
+                    <p class="text-base leading-relaxed">Conjunto integrado de recursos y capacidades singulares que posee una organización. Son el fundamento del liderazgo en el mercado al permitir realizar actividades estratégicas de manera más eficiente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="bg-white p-10 rounded-lg shadow-lg border-2 border-marino">
+            <h2 class="text-3xl font-bold text-marino mb-8">Ejercicio Práctico de Autoevaluación</h2>
+            <p class="mb-6 text-gray-700 font-medium">Responde las siguientes preguntas basándote en la información técnica presentada anteriormente.</p>
+            <div id="quiz-container" class="space-y-8"></div>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow border-l-4 border-marino">
+            <h2 class="text-xl font-bold text-marino mb-6 uppercase tracking-wider">Referencias Bibliográficas</h2>
+            <div class="grid grid-cols-1 gap-4 text-xs text-gray-600 leading-relaxed italic">
+                <p>David, F. R. (2013). <i>Conceptos de administración estratégica</i> (14.ª ed.). Pearson Educación.</p>
+                <p>González-Villegas, M. F., García-Treviño, I. L., Guzmán-Franco, G. M., y Ocegueda-Mercado, C. G. (2021). Implementación de la Administración Estratégica en una Microempresa de Servicios. <i>Revista Interdisciplinaria de Ingeniería Sustentable y Desarrollo Social</i>, 7(1), 1-11.</p>
+                <p>Hill, C. W. L., y Jones, G. R. (2011). <i>Administración estratégica: Un enfoque integral</i> (9.ª ed.). Cengage Learning.</p>
+                <p>Hitt, M. A., Ireland, R. D., y Hoskisson, R. E. (2008). <i>Administración estratégica: Competitividad y globalización. Conceptos y casos</i> (7.ª ed.). Cengage Learning.</p>
+                <p>Lana, R. A. (2008). La administración estratégica como herramienta de gestión. <i>Visión de Futuro</i>, 9(1), 89-104.</p>
+                <p>Montesdeca Villavicencio, F. E., Wilson Salgado, V. A., Hurtado Tenorio, N. S., Bravo Alban, S. D., & Villacreses Franco, R. A. (2024). Administración estratégica basada en la toma de decisiones efectiva. <i>Ciencia y Desarrollo</i>, 15(2), 1-14.</p>
+                <p>Rangel, N. (2024). Conocimiento en administración estratégica y su importancia en la gestión de los supervisores y jefes. <i>Ciencia Latina Revista Científica Multidisciplinar</i>, 8(6), 4031-4045. https://doi.org/10.37811/cl_rcm.v8i6.15144.</p>
+                <p>Thompson, A. A., Gamble, J. E., Peteraf, M. A., y Strickland, A. J. (2012). <i>Administración estratégica: Teoría y casos</i> (18.ª ed.). McGraw-Hill Interamericana.</p>
+            </div>
+        </section>
+
+        <footer class="text-center text-sm text-carbon border-t pt-8 pb-10">
+            <p class="text-lg font-bold text-marino">Cristian Danilo Palacios Mendez</p>
+            <p class="text-base font-semibold">Carnet: 202530407</p>
+            <p class="text-xs mt-2 text-gray-500 uppercase tracking-widest">Portal Académico - Ingeniería Mecánica</p>
+        </footer>
+    </main>
+
+    <script>
+        const quizData = [
+            { 
+                q: "¿Cuál es el fin último de la administración estratégica según el texto?", 
+                a: ["Reducir costos operativos", "Alcanzar objetivos a largo plazo", "Maximizar ventas mensuales"], 
+                correct: 1, 
+                exp: "La introducción define que este proceso permite a la organización alcanzar sus objetivos a largo plazo." 
+            },
+            { 
+                q: "¿En qué fase se establecen las políticas y se asignan los recursos?", 
+                a: ["Fase de Evaluación", "Fase de Formulación", "Fase de Implementación"], 
+                correct: 2, 
+                exp: "La implementación requiere diseñar políticas y asignar recursos para ejecutar las estrategias." 
+            },
+            { 
+                q: "¿Qué elementos evalúa el análisis FODA?", 
+                a: ["Entorno macroeconómico solamente", "Fortalezas, Oportunidades, Debilidades y Amenazas", "Solo factores financieros"], 
+                correct: 1, 
+                exp: "El análisis FODA evalúa tanto factores internos (F/D) como externos (O/A)." 
+            },
+            { 
+                q: "¿Qué etapa consiste en revisar factores y aplicar acciones correctivas?", 
+                a: ["Fase de Evaluación", "Fase de Formulación", "Fase de Acción"], 
+                correct: 0, 
+                exp: "La evaluación consiste en medir el desempeño y aplicar las acciones correctivas necesarias." 
+            },
+            { 
+                q: "¿Qué son las Competencias Centrales?", 
+                a: ["Habilidades básicas de oficina", "Recursos y capacidades singulares de la organización", "Programas de software externos"], 
+                correct: 1, 
+                exp: "Se definen como un conjunto integrado de recursos y capacidades singulares que posee la empresa." 
+            }
+        ];
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            quizData.forEach((item, i) => {
+                const div = document.createElement('div');
+                div.className = "bg-crema p-6 rounded-lg border border-gray-200";
+                div.innerHTML = `
+                    <p class="font-bold text-lg mb-4 text-marino">${i+1}. ${item.q}</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        ${item.a.map((opt, ai) => `<button onclick="checkAnswer(${i}, ${ai})" class="p-4 bg-white hover:bg-gray-100 border-2 rounded-lg text-left font-medium transition duration-150 quiz-option-${i}">${opt}</button>`).join('')}
+                    </div>
+                    <div id="feedback-${i}" class="mt-4 p-4 rounded-lg hidden font-semibold"></div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        window.checkAnswer = (qIndex, aIndex) => {
+            const feedback = document.getElementById(`feedback-${qIndex}`);
+            const correct = quizData[qIndex].correct;
+            const buttons = document.querySelectorAll(`.quiz-option-${qIndex}`);
+            
+            buttons.forEach(btn => btn.disabled = true);
+            feedback.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+
+            if(aIndex === correct) {
+                feedback.innerHTML = `<span>¡Correcto!</span> <span class="block text-sm font-normal mt-1">${quizData[qIndex].exp}</span>`;
+                feedback.classList.add('bg-green-100', 'text-green-800');
+            } else {
+                feedback.innerHTML = `<span>Incorrecto.</span> <span class="block text-sm font-normal mt-1">${quizData[qIndex].exp}</span>`;
+                feedback.classList.add('bg-red-100', 'text-red-800');
+            }
+        };
+
+        renderQuiz();
+    </script>
+</body>
+</html>
