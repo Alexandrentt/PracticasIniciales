@@ -34,9 +34,9 @@ export const Layout: React.FC<LayoutProps> = ({
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('theme');
       if (saved) return saved === 'dark';
-      return false; // Predeterminado: modo claro
+      return true; // Predeterminado: modo oscuro
     }
-    return false;
+    return true;
   });
 
   const toggleTheme = () => {
@@ -58,7 +58,7 @@ export const Layout: React.FC<LayoutProps> = ({
     } else {
       document.documentElement.classList.remove('dark');
     }
-  }, []);
+  }, [isDarkMode]);
 
   const calculateProgress = () => {
     if (!user) return 0;
