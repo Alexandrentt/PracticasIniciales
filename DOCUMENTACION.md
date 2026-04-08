@@ -1,5 +1,43 @@
 # DOCUMENTACIÓN MAESTRA DEL PROYECTO - Prácticas Iniciales (Ingeniería USAC)
 
+## Versión 2.24.0 - 2026-04-08
+
+**Cambios realizados: Consolidación y Normalización de Bibliografías (Fase Final)**
+- **Corrección de Citación Fragmentada:** Se identificaron y repararon múltiples bloques de referencias en `constants.ts` (Secciones 2.2, 5.1, 6.1, 6.2 y 6.3) que presentaban líneas divididas por el proceso de extracción automática previo. Se unificaron estas piezas en objetos de citación únicos y fluidos para una visualización académica impecable en la pestaña de "Citas".
+- **Purificación de Prefijos Markdown:** Se eliminaron los prefijos residuales `>` y enlaces Markdown crudos dentro de los arreglos de `references`, sustituyéndolos por texto de citación estandarizado (Formato APA/Académico).
+- **Validación de Integridad Estructural:** Se verificó mediante compilación de TypeScript (`tsc --noEmit`) que las modificaciones en las más de 8,000 líneas de `constants.ts` no introdujeran errores de sintaxis, asegurando que todos los 28 temas mantienen su integridad de datos.
+- **Auditoría de Exhaustividad:** Se realizó un barrido global para asegurar que cada uno de los 7 módulos cuenta con sus fuentes bibliográficas íntegras, eliminando redundancias y registros vacíos.
+
+**Justificación:** El objetivo era alcanzar el "Estado del Arte" en la gestión de datos bibliográficos. Al consolidar las líneas fragmentadas, se garantiza que el usuario vea referencias completas y legibles en un solo bloque, en lugar de frases cortadas, elevando la calidad profesional de la plataforma.
+
+---
+
+## Versión 2.23.0 - 2026-04-08
+
+**Cambios realizados: Globalización de Filtros Especiales (Emoji-Free & Redundancia)**
+- **Aplicación Universal del `stripEmojis`:** Anteriormente, el filtro contra emojis y caracteres pictográficos solo operaba sobre el renderizador de Markdown (aplicable al Resumen y Ejemplo Práctico). Ahora, se inyectó una utilidad `stripEmojis` al nivel superior del componente funcional `TopicViewer.tsx` aplicándose **absolutamente a todas las secciones**: puntos clave, tarjetas del glosario, preguntas frecuentes y citas bibliográficas directas.
+- **Auditoría Multi-Pestaña Constante (`skipSection`):** Se perfeccionó el algoritmo de exclusión de referencias/glosario redundantes introduciendo una varible de estado lógico `skipSection`. Ahora, cuando el renderizador encuentra el título de una sección segregada (`# Bibliografía` o `# Glosario`), intercepta y silencia no solo el título, sino también **todo el texto y contenido subsecuente** hasta detectar el inicio del próximo bloque educativo válido.
+- **Consolidación de las Bibliografías (Ref 1-7):** Se comprobó que todos los tópicos (28 temas en total) contienen estructuralemente un arreglo de `references: []` intacto en `constants.ts`. Gracias a la nueva exclusión condicional, todos los módulos purifican el contenido garantizando uniformidad sin filtración (data leakage) hacia el resumen inicial.
+
+**Justificación:** El requerimiento demandaba llevar ambos cambios (extinción de emojis y redundancia estructural) a **todas y cada una** de las secciones sin excepción. Los renderizados directos escapan a filtros específicos de Markdown, de ahí que crear el Wrapper React general de `stripEmojis` consolidó este estándar uniformemente.
+
+---
+
+## Versión 2.22.0 - 2026-04-08
+
+**Cambios realizados: Supresión de Redundancia Multi-Pestaña**
+- **Silo de Información por Pestañas:** Se ajustó el motor de `TopicViewer.tsx` para que oculte automáticamente del texto de "Estudio" las secciones que ya tienen su propia pestaña dedicada. Esto incluye:
+    - **Glosario:** Ya no aparece en el resumen si existe la pestaña de Glosario.
+    - **Citas / Bibliografía:** Se filtra del cuerpo principal para centralizarse en la pestaña de "Citas".
+    - **Ejemplo Práctico:** Se omite del resumen principal ya que cuenta con su propia sección destacada al final del visor.
+    - **Palabras Clave:** Ya no ensucian el texto de introducción.
+- **Detección Inteligente de Encabezados:** El filtro identifica estas secciones mediante palabras clave en encabezados o líneas cortas, evitando que la información se duplique innecesariamente en la interfaz.
+- **Organización Estructural:** Con este cambio, cada dato tiene su lugar único en la UI, mejorando la navegación y la claridad del material de estudio.
+
+**Justificación:** Se eliminó la duplicidad de información. Al tener pestañas dedicadas para glosario y referencias, mantener ese texto dentro del resumen principal era redundante y afectaba la limpieza visual del proyecto.
+
+---
+
 ## Versión 2.21.0 - 2026-04-08
 
 **Cambios realizados: Motor de Pureza Ultra (Emoji-Free & Zero-Redundancy Hardened)**
@@ -877,4 +915,4 @@ App.tsx
 
 ---
 
-*Documentación generada automáticamente. Última actualización: 2026-04-08 (Versión 2.21.0)*
+*Documentación generada automáticamente. Última actualización: 2026-04-08 (Versión 2.22.0)*

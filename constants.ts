@@ -619,26 +619,13 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
     }
   ],
   references: [
-    { 
-      citation: "Banco Mundial - Documento de Referencia",
-      url: "https://documents1.worldbank.org/curated/en/242471468335458560/pdf/801420PUB0Span00Box379796B00PUBLIC0.pdf"
-    },
-    { 
-      citation: "Repositorio Institucional UDEP - Bitstreams",
-      url: "https://pirhua.udep.edu.pe/backend/api/core/bitstreams/e843f41e-ea28-4804-a945-98301a13ebfb/content"
-    },
-    { 
-      citation: "PND Guatemala - Guía para la elaboración de TdR",
-      url: "https://pnd.gt/Documentos/Guia_para_la_elaboracion_TdR_de_evaluaciones_de_disenio.pdf"
-    },
-    { 
-      citation: "Dialnet - Artículo Descargable 9220050",
-      url: "https://dialnet.unirioja.es/descarga/articulo/9220050.pdf"
-    },
-    { 
-      citation: "Consejo Profesional de Biología - Normatividad",
-      url: "https://consejoprofesionaldebiologia.gov.co/transparencia/normatividad/?smd_process_download=1&download_id=31491"
-    }
+    { citation: "Banco Mundial. Documento de Referencia sobre Términos de Referencia para Consultoría." },
+    { citation: "Consejo Profesional de Biología. Normatividad sobre elaboración de TdR." },
+    { citation: "Repositorio Institucional UDEP. Guía para la elaboración de Términos de Referencia." },
+    { citation: "PND Guatemala. Guía para la elaboración de TdR de evaluaciones de diseño." },
+    { citation: "Dialnet. Artículos académicos sobre metodología de Términos de Referencia en consultoría." },
+    { citation: "Aula Virtual UNaM. Elaboración de Términos de Referencia para proyectos." },
+    { citation: "Medina G., A. Cómo elaborar Términos de Referencia para contratar servicios de consultoría." }
   ],
   flashcards: [
     { term: "Términos de Referencia (TdR)", definition: "Documento técnico-legal que establece los parámetros, metodologías, entregables y condiciones operativas para contratar un servicio especializado de consultoría." },
@@ -873,7 +860,7 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       citation: "Manual de Formulación y Evaluación de Proyectos, Presentación de las Normas del Sistema Nacional de Inversión Pública. (2013)."
     },
     { 
-      citation: "Normativo Del Programa De Prácticas De Las Carreras De Ingeniería De La División De Ciencias De La Ingeniería Del Centro Universitario De Occidente De La Universidad De San Carlos De Guatemala, Quetzaltenango (8 de agosto de 2006)."
+      citation: "PMBOK 4ta. Edición SPA (Junio 2009)."
     },
     { 
       citation: "Sapag Chain, Nassir. Preparación y Evaluación de Proyectos (5ta edición)."
@@ -882,8 +869,17 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       citation: "Baca Urbina, Gabriel. Evaluación de Proyectos (6ta. Edición)."
     },
     { 
-      citation: "REGLAMENTO EPS -- CUNOC- DIVISION DE INGENIERIA."
-    }
+      citation: "Thompson Peteraf, Ganlbe Stricklan. Administración Estratégica. Teoría de casos (18 Edición). Editorial Mc Graw Hill."
+    },
+    { 
+      citation: "REGLAMENTO EPS – CUNOC- DIVISION DE INGENIERIA."
+    },
+    { 
+      citation: "Gestión de proyectos - procem consultores."
+    },
+    { 
+      citation: "Dr. William Wallace. PR-A3-ES 1/2014 (1106) Gestión de Proyectos."
+    },
   ],
   flashcards: [
     { term: "Cultura de Proyectos", definition: "Enfoque promovido por el Estado para mejorar la calidad del gasto y la inversión pública mediante la planificación estructurada y no improvisada." },
@@ -1138,21 +1134,13 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
     }
   ],
   references: [
-    { 
-      citation: "Project Management Institute [PMI]. (2013). Guía del PMBOK® (5ta ed.)."
-    },
-    { 
-      citation: "Gray, C. F., & Larson, E. W. (2009). Administración de proyectos: Enfoque técnico (4ta ed.). McGraw-Hill."
-    },
-    { 
-      citation: "Lledó, P., & Rivarola, G. (2007). Gestión de proyectos: Del alcance al plan del proyecto. Pearson Educación."
-    },
-    { 
-      citation: "Banco Interamericano de Desarrollo [BID]. (s.f.). Guía metodología PM4R para resultados de desarrollo sostenibles."
-    },
-    { 
-      citation: "Ahuja, H. N., & Lendzion, C. (s.f.). Métodos y técnicas de planeación y control de proyectos de ingeniería. Editorial Académica."
-    }
+    { citation: "Ahuja, H. N., & Lendzion, C. (s.f.). *Métodos y técnicas de planeación y control de proyectos de ingeniería.* Editorial Académica." },
+    { citation: "Asana. (s.f.). *Las 12 metodologías más populares para la gestión de proyectos de ingeniería.* Recuperado de asana.com" },
+    { citation: "Banco Interamericano de Desarrollo [BID]. (s.f.). *Guía metodología PM4R para resultados de desarrollo sostenibles.* BID." },
+    { citation: "GanttPRO. (s.f.). *Herramientas de planeación en administración de proyectos eficaces.*" },
+    { citation: "Gray, C. F., & Larson, E. W. (2009). *Administración de proyectos: Enfoque técnico* (4ta ed.). McGraw-Hill." },
+    { citation: "Lledó, P., & Rivarola, G. (2007). *Gestión de proyectos: Del alcance al plan del proyecto.* Pearson Educación." },
+    { citation: "Project Management Institute [PMI]. (2013). *Guía del PMBOK®* (5ta ed)." }
   ],
   flashcards: [
     { term: "Restricción Triple", definition: "Es el equilibrio dinámico y necesario que debe mantenerse entre las variables de alcance, tiempo y costo. Si una cambia, las otras se ven impactadas." },
@@ -1392,6 +1380,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
   references: [
     { 
       citation: "Asociación de Gestión de Proyectos. (2013). Guía del PMBOK (5ta ed.). PMI."
+    },
+    { 
+      citation: "Congreso de la República de Guatemala. (1970). Decreto 2-70: Código de Comercio."
     },
     { 
       citation: "Fontaine, ER (2008). Evaluación social de proyectos (13va ed.). Pearson."
@@ -1668,8 +1659,11 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       citation: "https://universidadeuropea.com/blog/instrumentos-evaluacion/"
     },
     { 
+      citation: "instrumentos_de_diagnostico.docx"
+    },
+    { 
       citation: "https://multitestresources.com/site/blog/que-es-la-evaluacion-del-potencial/"
-    }
+    },
   ],
   flashcards: [
     { term: "Diagnóstico", definition: "Procedimiento ordenado y sistemático para conocer una circunstancia específica y facilitar la toma de decisiones estratégicas." },
@@ -1916,18 +1910,11 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
     }
   ],
   references: [
-    { 
-      citation: "Normativo Del Programa De Prácticas De Las Carreras De Ingeniería mecanica CUNOC"
-    },
-    { 
-      citation: "Scribd: Conceptos sobre macro diagnóstico y análisis del entorno"
-    },
-    { 
-      citation: "Youtube: Importancia del diagnóstico para el diseño de proyectos"
-    },
-    { 
-      citation: "Guía de elaboración de diagnósticos"
-    }
+    { citation: "Normativo Del Programa De Prácticas De Las Carreras De Ingeniería Mecánica, CUNOC." },
+    { citation: "Real Academia Española. Diccionario de la Lengua Española (DLE)." },
+    { citation: "Scribd. Conceptos sobre macro diagnóstico y análisis del entorno para formulación de proyectos." },
+    { citation: "Guía de elaboración de diagnósticos. cauqueva.org.ar." },
+    { citation: "YouTube. Importancia del diagnóstico para el diseño de proyectos." }
   ],
   flashcards: [
     { term: "Microdiagnóstico", definition: "Análisis detallado y profundo de una unidad específica o proceso dentro del sistema general, enfocado en aspectos operativos." },
@@ -2196,11 +2183,20 @@ La séptima edición demuestra que las normativas evolucionan para hacer la escr
   ],
   references: [
     { 
-      citation: "American Psychological Association. (2020). Publication manual of the American Psychological Association (7th ed.)."
+      citation: "American Psychological Association. (2020). Publication manual of the"
     },
     { 
-      citation: "Caribbean University. (2021). Directrices y síntesis de normas de redacción, citación y referencia."
-    }
+      citation: "American Psychological Association (7th ed.)."
+    },
+    { 
+      citation: "Caribbean University. (2021). Directrices y síntesis de normas de"
+    },
+    { 
+      citation: "redacción, citación y referencia."
+    },
+    { 
+      citation: "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"
+    },
   ],
   flashcards: [
     { term: "APA (American Psychological Association)", definition: "Organización que establece uno de los formatos más utilizados a nivel mundial para la redacción y citación de trabajos académicos." },
@@ -4325,15 +4321,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
     }
   ],
   references: [
-    { 
-      citation: "Rico Jiménez, B. A., Garay Jiménez, L. I., & Ruiz Ledesma, E. F. (2018). Implementación del aprendizaje basado en proyectos como herramienta en asignaturas de ingeniería aplicada. RIDE Revista Iberoamericana para la Investigación y el Desarrollo Educativo. DOI: 10.23913/ride.v9i17.372."
-    },
-    { 
-      citation: "Díaz-Barriga, F. (2006). Enseñanza situada: Vínculo entre la escuela y la vida. México: McGraw-Hill."
-    },
-    { 
-      citation: "Pérez, J. (2015). Metodologías activas en el aula de ingeniería. Editorial Universitaria."
-    }
+    { citation: "Rico Jiménez, B. A., Garay Jiménez, L. I., & Ruiz Ledesma, E. F. (2018). Implementación del aprendizaje basado en proyectos como herramienta en asignaturas de ingeniería aplicada. RIDE Revista Iberoamericana para la Investigación y el Desarrollo Educativo. DOI: 10.23913/ride.v9i17.372." },
+    { citation: "Díaz-Barriga, F. (2006). Enseñanza situada: Vínculo entre la escuela y la vida. México: McGraw-Hill." },
+    { citation: "Pérez, J. (2015). Metodologías activas en el aula de ingeniería. Editorial Universitaria." }
   ],
   flashcards: [
     { term: "Aprendizaje Basado en Proyectos (ABP)", definition: "Metodología constructivista que sitúa al estudiante en el centro del proceso mediante resolución de problemas reales." },
@@ -4635,24 +4625,12 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
     }
   ],
   references: [
-    { 
-      citation: "Pérez-Castaño, B. J. (2007). Competitividad, desarrollo e ingeniería: algunas definiciones y reflexiones. Ingeniería y Competitividad."
-    },
-    { 
-      citation: "Falcón Borges, V. J. Los proyectos y la proyección del ingeniero en la sociedad."
-    },
-    { 
-      citation: "Lall, S., Albaladejo, M., & Moreira, M. M. (2005). La competitividad industrial de América Latina y el desafío de la globalización. BID - INTAL."
-    },
-    { 
-      citation: "Ancayay Leal, V. P. (2024). Integración de Proyectos de Ingeniería Multidisciplinarios en el Currículo Universitario. Reincisol."
-    },
-    { 
-      citation: "Barreto, Ó. D., et al. (2013). Una nueva materia para promover la competitividad y el desarrollo. WEEF Cartagena."
-    },
-    { 
-      citation: "Avila, E. L. (2006). Competitividad en la pequeña empresa litográfica de Guatemala. Universidad de San Carlos de Guatemala."
-    }
+    { citation: "Pérez-Castaño, B. J. (2007). Competitividad, desarrollo e ingeniería: algunas definiciones y reflexiones. Ingeniería y Competitividad." },
+    { citation: "Falcón Borges, V. J. Los proyectos y la proyección del ingeniero en la sociedad." },
+    { citation: "Lall, S., Albaladejo, M., & Moreira, M. M. (2005). La competitividad industrial de América Latina y el desafío de la globalización. BID." },
+    { citation: "Ancayay Leal, V. P. (2024). Integración de Proyectos de Ingeniería Multidisciplinarios en el Currículo Universitario. Reincisol." },
+    { citation: "Barreto, Ó. D., et al. (2013). Una nueva materia para promover la competitividad y el desarrollo. WEEF Cartagena." },
+    { citation: "Avila, E. L. (2006). Competitividad en la pequeña empresa litográfica de Guatemala." }
   ],
   flashcards: [
     { term: "Competitividad", definition: "Indicador multidimensional del desarrollo de una nación basado en capacidad de transformar recursos en soluciones de alto valor agregado." },
@@ -4981,30 +4959,14 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
     }
   ],
   references: [
-    { 
-      citation: "Arias Marquez, J. C. (2023). Gestión de Proyectos en Edificación: Estudio Comparativo de Proyectos con y sin la Figura del Project Manager. Universitat Politècnica de Catalunya."
-    },
-    { 
-      citation: "Carvajalino Quiroz, D. L., Cantero Díaz, W. L., & Castellanos Cedeño, J. S. (2025). Análisis Comparativo de Herramientas Gratuitas de Gestión de Proyectos en Sector Tecnológico: Funcionalidades y Aplicaciones. Corporación Universitaria Minuto de Dios."
-    },
-    { 
-      citation: "Mondaca Cerda, J. A. (2017). Análisis comparativo de las prácticas de dirección de proyectos del PMI en empresas públicas y privadas en Chile. Universidad de Chile."
-    },
-    { 
-      citation: "Piquer Vicent, A., Aleixos Borrás, N., Galmes Gual, V., & Company Calleja, P. (2002). Estudio comparativo de aplicaciones de delineación por ordenador. XIV Congreso Internacional de Ingeniería Gráfica."
-    },
-    { 
-      citation: "Riaño Nossa, N. D. (2021). Estudio comparativo de metodologías tradicionales y ágiles aplicadas en la gestión de proyectos. Universidad Pontificia Bolivariana."
-    },
-    { 
-      citation: "Rodríguez Vásquez, E. E. (2016). Análisis de metodologías de estimación de duración de actividades en proyectos de ingeniería civil. Universidad de Chile."
-    },
-    { 
-      citation: "Rosero, D., Falquez, D., Noboa, D., & Proaño, G. (s.f.). Estudio Comparativo Del Muro De Hormigón Armado Y Del Muro Reforzado Con Geosinteticos Para La Estabilidad Del Talud. ESPOL."
-    },
-    { 
-      citation: "Untiveros Acuña, E. (2020). Análisis comparativo técnico y económico entre una edificación comercial empleando acero estructural y concreto armado en la ciudad de Huancayo."
-    }
+    { citation: "Arias Marquez, J. C. (2023). Gestión de Proyectos en Edificación: Estudio Comparativo de Proyectos con y sin la Figura del Project Manager. Trabajo de Fin de Grado. Universitat Politècnica de Catalunya, Barcelona." },
+    { citation: "Carvajalino Quiroz, D. L., Cantero Díaz, W. L., & Castellanos Cedeño, J. S. (2025). Análisis Comparativo de Herramientas Gratuitas de Gestión de Proyectos en Sector Tecnológico: Funcionalidades y Aplicaciones. Corporación Universitaria Minuto de Dios." },
+    { citation: "Mondaca Cerda, J. A. (2017). Análisis comparativo de las prácticas de dirección de proyectos del PMI en empresas públicas y privadas en Chile. Memoria de Título. Universidad de Chile, Santiago." },
+    { citation: "Piquer Vicent, A., Aleixos Borrás, N., Galmes Gual, V., & Company Calleja, P. (2002). Estudio comparativo de aplicaciones de delineación por ordenador. XIV Congreso Internacional de Ingeniería Gráfica, INGEGRAF, Santander, España." },
+    { citation: "Riaño Nossa, N. D. (2021). Estudio comparativo de metodologías tradicionales y ágiles aplicadas en la gestión de proyectos. Universidad Pontificia Bolivariana, Bucaramanga." },
+    { citation: "Rodríguez Vásquez, E. E. (2016). Análisis de metodologías de estimación de duración de actividades en proyectos de ingeniería civil. Memoria de Título. Universidad de Chile, Santiago." },
+    { citation: "Rosero, D., Falquez, D., Noboa, D., & Proaño, G. Estudio Comparativo Del Muro De Hormigón Armado Y Del Muro Reforzado Con Geosinteticos Para La Estabilidad Del Talud. ESPOL, Guayaquil, Ecuador." },
+    { citation: "Untiveros Acuña, E. (2020). Análisis comparativo técnico y económico entre una edificación comercial empleando acero estructural y concreto armado en la ciudad de Huancayo." }
   ],
   flashcards: [
     { term: "Estudios Comparativos", definition: "Herramienta indispensable para evaluar alternativas técnicas, económicas y metodológicas en proyectos de ingeniería." },
@@ -5311,29 +5273,29 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
   ],
   references: [
     { 
-      citation: "BMF Business Engineering School. (2020). Gestión de proyectos para ingenieros: de planos a resultados empresariales."
+      citation: "BMF Business Engineering School. (2020). Gestión de proyectos para ingenieros: de planos a resultados empresariales. Recuperado de bmfschool.com"
     },
     { 
-      citation: "Calcumas. (2024). Proyectos de Ingeniería: Planificación y Ejecución. Santiago, Chile."
+      citation: "Calcumas. (2024). Proyectos de Ingeniería: Planificación y Ejecución. Santiago, Chile. Recuperado de calcumas.cl"
     },
     { 
-      citation: "GanttPRO. (2022). Tipología de proyectos para una gestión eficaz. Escrito por Anastasia Stepanets."
+      citation: "GanttPRO. (2022). Tipología de proyectos para una gestión eficaz. Escrito por Anastasia Stepanets. Recuperado de ganttpro.com"
     },
     { 
-      citation: "iLearn Engineering. (2025). Engineering Projects – Planning for success!"
+      citation: "iLearn Engineering. (2025). Engineering Projects – Planning for success! Recuperado de ilearnengineering.com"
     },
     { 
-      citation: "IMF Smart Education. (2026). Metodologías de gestión de proyectos para un Project Manager."
+      citation: "IMF Smart Education. (2026). Metodologías de gestión de proyectos para un Project Manager. Recuperado de imf-formacion.com"
     },
     { 
-      citation: "Jellyfish. (s.f.). Engineering capacity planning: process, strategies, tools."
+      citation: "Jellyfish. (s.f.). Engineering capacity planning: process, strategies, tools. Recuperado de jellyfish.com"
     },
     { 
-      citation: "Neural Concept. (s.f.). Engineering Project Planning: Key Principles and Best Practices."
+      citation: "Neural Concept. (s.f.). Engineering Project Planning: Key Principles and Best Practices. Recuperado de neuralconcept.com"
     },
     { 
-      citation: "ProjectManager. (2026). Planeación de Proyectos: Factores Clave en la Planificación de un Proyecto."
-    }
+      citation: "ProjectManager. (2026). Planeación de Proyectos: Factores Clave en la Planificación de un Proyecto. Recuperado de projectmanager.com"
+    },
   ],
   flashcards: [
     { term: "Planificación en Ingeniería", definition: "Proceso estructurado de definir objetivos, asignar recursos y establecer cronogramas para llevar una idea desde el plano hasta la realidad." },
@@ -5686,31 +5648,16 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
   ],
   references: [
     { 
-      citation: "Asana (2026). Las 5 fases de la gestión de proyectos para mejorar el flujo de trabajo. Guía de gestión de recursos y procesos."
+      citation: "Asana (2026). Las 5 fases de la gestión de proyectos."
     },
     { 
-      citation: "BMF School. Gestión de proyectos para ingenieros: de planos a resultados empresariales. Enfoque en la transición técnica a la dirección."
+      citation: "GanttPRO (2023). Guía de planificación y tipos de proyectos industriales."
     },
     { 
-      citation: "Calcumas (2024). Proyectos de Ingeniería: Planificación y Ejecución. Consultoría técnica sobre infraestructuras y diseño estructural."
+      citation: "Coursera Staff (2023). El ciclo de vida de la gestión de proyectos explicado."
     },
     { 
-      citation: "Coursera / Google. Certificado profesional de Gestión de Proyectos de Google. Fundamentos del ciclo de vida y metodologías tradicionales."
-    },
-    { 
-      citation: "GanttPRO Blog (2022/2023). Tipología de proyectos para una gestión eficaz y Fases de la formulación de proyectos."
-    },
-    { 
-      citation: "Inesdi / ISDI. Ciclo de vida de un proyecto: fases, ejemplos y claves para una gestión efectiva. Especialistas en transformación digital y management."
-    },
-    { 
-      citation: "Neural Concept. Engineering Project Planning: Key Principles and Best Practices. Integración de IA y herramientas modernas en ingeniería."
-    },
-    { 
-      citation: "Project Management Institute (PMI). A Guide to the Project Management Body of Knowledge (PMBOK Guide). Estándar global de la industria."
-    },
-    { 
-      citation: "ProjectManager.com (2026). Planeación de Proyectos: Factores Clave en la Planificación."
+      citation: "Documentación Técnica de la Facultad de Ingeniería CUNOC."
     }
   ],
   flashcards: [
@@ -7210,29 +7157,32 @@ EFECTO: Resistencia comunitaria al proyecto
   ],
   references: [
     { 
-      citation: "CEPAL: Manual de formulación de proyectos sociales. https://www.cepal.org/dds/sifem"
+      citation: "CEPAL: Manual de formulación de proyectos sociales."
     },
     { 
-      citation: "IAIA: Evaluación de Impacto Social: Lineamientos. http://www.iaia.org"
+      citation: "IAIA: Evaluación de Impacto Social: Lineamientos."
     },
     { 
-      citation: "Revista RECUS: Metodología de evaluación de impacto. http://revistas.utm.edu.ec/index.php/Recus"
+      citation: "Revista RECUS: Metodología de evaluación de impacto."
     },
     { 
-      citation: "BID: Manual de Gestión Social. https://www.iadb.org/es"
+      citation: "BID: Manual de Gestión Social."
     },
     { 
-      citation: "V. Agustina Guido: Impacto social en inversión pública. https://www.aacademica.org/000-066/1079"
+      citation: "V. Agustina Guido: Impacto social en inversión pública."
     },
     { 
-      citation: "Felipe Administrador: 7 Pasos Clave (Video). https://www.youtube.com/watch?v=hISkX0mN96w"
+      citation: "Felipe Administrador: 7 Pasos Clave (Video)."
     },
     { 
-      citation: "lepatru007: Elaboración de Proyectos (Video). https://www.youtube.com/watch?v=kYJvE6O6hC0"
+      citation: "lepatru007: Elaboración de Proyectos (Video)."
     },
     { 
-      citation: "IACC: Evaluación social de proyectos. http://www.iacc.cl"
-    }
+      citation: "IACC: Evaluación social de proyectos."
+    },
+    { 
+      citation: "Documentación Técnica - Generado para propósitos académicos 2026."
+    },
   ],
   flashcards: [
     { term: "Estudio Social", definition: "Proceso sistemático de análisis y gestión de consecuencias humanas de intervenciones planeadas." },
@@ -7658,29 +7608,29 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
   ],
   references: [
     { 
-      citation: "Cosio Hurtado, J. M. (2011). Los proyectos y los planes de negocios. PERSPECTIVAS. http://www.redalyc.org/articulo.oa?id=425941231003"
+      citation: "Cosio Hurtado, J. M. (2011). Los proyectos y los planes de negocios. PERSPECTIVAS."
     },
     { 
-      citation: "Gómez Fuentes, M. et al. (2012). Administración de Proyectos. UAM. http://www.cua.uam.mx/"
+      citation: "Gómez Fuentes, M. et al. (2012). Administración de Proyectos. UAM."
     },
     { 
-      citation: "Pinilla Vilches, J. P. Preparación y Evaluación de Proyectos de Inversión Área Industrial. https://repositorio.uchile.cl/"
+      citation: "Pinilla Vilches, J. P. Preparación y Evaluación de Proyectos de Inversión Área Industrial."
     },
     { 
-      citation: "SEGEPLAN (2023). Normas del Sistema Nacional de Inversión Pública. https://www.segeplan.gob.gt/"
+      citation: "SEGEPLAN (2023). Normas del Sistema Nacional de Inversión Pública."
     },
     { 
-      citation: "SEGEPLAN (2022). Guía de formulación y evaluación de proyectos de inversión pública (FEPIP). https://www.segeplan.gob.gt/"
+      citation: "SEGEPLAN (2022). Guía de formulación y evaluación de proyectos de inversión pública (FEPIP)."
     },
     { 
-      citation: "Morales C., C. M. (2010). Notas de Clase: Estudio Organizacional y Legal. https://www.gerenciadeproyectos.com/"
+      citation: "Morales C., C. M. (2010). Notas de Clase: Estudio Organizacional y Legal."
     },
     { 
-      citation: "Monzon, Elmer. Explicación del estudio administrativo (YouTube). https://www.youtube.com/@ElmerMonzon"
+      citation: "Monzon, Elmer. Explicación del estudio administrativo (YouTube)."
     },
     { 
-      citation: "El Blog de Juan. Estudio administrativo de un proyecto (YouTube). https://www.youtube.com/@ElBlogdeJuan-Emprendimiento"
-    }
+      citation: "El Blog de Juan. Estudio administrativo de un proyecto (YouTube)."
+    },
   ],
   flashcards: [
     { term: "Estudio Administrativo", definition: "Fase crítica de preinversión que diseña estructura organizacional y determina viabilidad administrativa del proyecto." },

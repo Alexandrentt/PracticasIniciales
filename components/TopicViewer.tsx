@@ -60,17 +60,22 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
     });
   };
 
+  const stripEmojis = (text: string) => {
+    if (!text) return "";
+    return text.replace(/\p{Extended_Pictographic}/gu, '');
+  };
+
   const renderMarkdown = (text: string) => {
     const lines = text.split('\n');
     const elements: JSX.Element[] = [];
 
     let currentTable: string[][] = [];
     let isInsideTable = false;
+    let skipSection = false;
 
     lines.forEach((rawLine, index) => {
-      // Remover EMOJIS de forma global usando propiedades Unicode modernas (\p{Extended_Pictographic})
-      // Esto elimina absolutamente todos los pictogramas, símbolos y decoración informal.
-      const lineWithoutEmojis = rawLine.replace(/\p{Extended_Pictographic}/gu, '');
+      // Remover EMOJIS de forma global usando el helper
+      const lineWithoutEmojis = stripEmojis(rawLine);
       
       const line = lineWithoutEmojis.trimEnd();
       const trimmedLine = line.trim();
@@ -103,11 +108,31 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
         /Willy Alexander López Gómez/i
       ];
 
+      // Section Skipper Logic: If we hit a heading that goes to its own tab, skip its entire content
+      if (trimmedLine.startsWith('#')) {
+        if (
+          lowerLine.includes('glosario') ||
+          lowerLine.includes('bibliograf') ||
+          lowerLine.includes('referencias') ||
+          lowerLine.includes('ejemplo pr') ||
+          lowerLine.includes('preguntas frecuentes') ||
+          lowerLine.includes('palabras clave')
+        ) {
+          skipSection = true;
+          return;
+        } else {
+          skipSection = false; // Normal heading, resume rendering
+        }
+      }
+
+      if (skipSection) return;
+
       // GLOBAL FILTER: Remove redundant attribution lines, duplicative titles, and carnets
       if (
         redundantPatterns.some(pattern => pattern.test(trimmedLine)) ||
         lowerLine.includes('realizado por') || // Captura variaciones sin importar mayúsculas o símbolos extra
         lowerLine.replace(/[^a-z]/g, '').includes('realizadopor') || // Super-filtro normalize
+
         (trimmedLine.startsWith('# ') && (
           lowerLine.includes(topic.title.toLowerCase().substring(0, 15)) || 
           topic.title.toLowerCase().includes(trimmedLine.toLowerCase().replace(/#\s+/, '').substring(0, 15)) ||
@@ -429,7 +454,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                     <div className="absolute top-0 left-0 w-1 h-full bg-principal opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="relative z-10 flex flex-col h-full">
                       <p className="text-gray-800 leading-relaxed font-semibold text-lg">
-                        {point}
+                        {stripEmojis(point)}
                       </p>
                     </div>
                   </div>
@@ -462,9 +487,9 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                     <div key={idx} className="bg-white/70 p-6 rounded-2xl border border-principal/10">
                       <h4 className="font-bold text-principal text-lg mb-2 flex items-center gap-2">
                         <span className="text-principal opacity-30 text-2xl font-black">?</span>
-                        {faq.question}
+                        {stripEmojis(faq.question)}
                       </h4>
-                      <p className="text-gray-700 leading-relaxed pl-6 italic">{faq.answer}</p>
+                      <p className="text-gray-700 leading-relaxed pl-6 italic">{stripEmojis(faq.answer)}</p>
                     </div>
                   ))}
                 </div>
@@ -585,8 +610,8 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
             <div className="grid sm:grid-cols-2 gap-6">
               {content.flashcards.map((card, idx) => (
                 <div key={idx} className="academic-section hover:shadow-xl hover:-translate-y-1 transition-all group">
-                  <h4 className="font-bold text-principal text-lg mb-2 heading-serif border-b border-principal/10 pb-2 group-hover:border-principal/30 transition-colors">{card.term}</h4>
-                  <p className="academic-paper text-sm leading-relaxed text-gray-700">{card.definition}</p>
+                  <h4 className="font-bold text-principal text-lg mb-2 heading-serif border-b border-principal/10 pb-2 group-hover:border-principal/30 transition-colors">{stripEmojis(card.term)}</h4>
+                  <p className="academic-paper text-sm leading-relaxed text-gray-700">{stripEmojis(card.definition)}</p>
                 </div>
               ))}
             </div>
@@ -605,7 +630,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                   <div className="text-principal/20 font-black text-2xl mt-1 select-none">{String(idx + 1).padStart(2, '0')}</div>
                   <div className="flex-1">
                     <p className="text-gray-800 text-base leading-relaxed pl-4 -indent-4 heading-serif italic">
-                      {ref.citation}
+                      {stripEmojis(ref.citation)}
                     </p>
                     {ref.url && (
                       <a 

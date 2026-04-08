@@ -206,7 +206,7 @@ export const Layout: React.FC<LayoutProps> = ({
                     Edición 2025
                   </div>
                   <div className="px-4 py-2 bg-white/10 rounded-lg border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/80">
-                    Ingeniería Civil / Industrial
+                    Ingeniería Mecánica
                   </div>
                 </div>
               </div>
@@ -239,7 +239,8 @@ export const Layout: React.FC<LayoutProps> = ({
                         { name: "José Mario Roberto Rodríguez Figueroa", id: "202431192" },
                         { name: "Mynor Estuardo Ruano García", id: "202330066" },
                         { name: "Stivenn Raúl Fuentes Pérez", id: "202331882" },
-                        { name: "Willy Alexander López Gómez", id: "202330360" }
+                        { name: "Willy Alexander López Gómez", id: "202330360" },
+                        { name: "Marbella Isabel Aguilar Tuc", id: "201830286" }
                       ].map((student, i) => (
                         <div key={i} className="flex justify-between items-center text-[10px] sm:text-[11px] border-b border-white/5 py-2 hover:bg-white/5 transition-colors px-2 rounded-lg group">
                           <span className="font-bold text-white/80 truncate mr-2 group-hover:text-white transition-colors">{student.name}</span>

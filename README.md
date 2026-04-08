@@ -15,6 +15,7 @@ Plataforma educativa interactiva para el aprendizaje de prácticas iniciales de 
 - **Diseño Responsivo**: Interfaz moderna y adaptable a diferentes dispositivos
 - **Diseño Académico Elegante**: Sistema de diseño profesional con paleta de colores académicos y tipografía formal
 - **Evaluaciones Diversificadas**: Sistema de evaluación con preguntas de opción múltiple y verdadero/falso
+- **Bibliografía Estandarizada**: Sistema de citación académica unificado y completo para cada tema de investigación
 - **Formato Estandarizado**: Contenido con formato "Realizado por:" para autoría consistente
 
 ## Módulos Disponibles
