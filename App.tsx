@@ -291,6 +291,7 @@ function App() {
               onFinishTopic={() => handleTopicCompletion(viewState.topic.id)}
               isCompleted={!!user?.completedTopics.includes(viewState.topic.id)}
               onBackToModule={goBack}
+              onNavigateToTopic={handleSidebarNavigation}
             />
           </Layout>
         );

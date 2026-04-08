@@ -10,11 +10,12 @@ interface TopicViewerProps {
   onFinishTopic: () => void;
   isCompleted: boolean;
   onBackToModule: () => void;
+  onNavigateToTopic?: (module: Module, topicId: string) => void;
 }
 
 type TabType = 'investigacion' | 'ejemploreal' | 'flashcards' | 'infografia' | 'video' | 'mindmap' | 'glosario' | 'referencias' | 'quiz';
 
-export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinishTopic, isCompleted, onBackToModule }) => {
+export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinishTopic, isCompleted, onBackToModule, onNavigateToTopic }) => {
   const [content, setContent] = useState<TopicContent | null>(null);
   const [activeTab, setActiveTab] = useState<TabType>('investigacion');
 
@@ -33,6 +34,26 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
     fetchContent();
     return () => { isMounted = false; };
   }, [topic.id]);
+
+  const navigateToPreviousTopic = () => {
+    if (!onNavigateToTopic) return;
+    
+    const currentTopicIndex = module.topics.findIndex(t => t.id === topic.id);
+    if (currentTopicIndex > 0) {
+      const previousTopic = module.topics[currentTopicIndex - 1];
+      onNavigateToTopic(module, previousTopic.id);
+    }
+  };
+
+  const navigateToNextTopic = () => {
+    if (!onNavigateToTopic) return;
+    
+    const currentTopicIndex = module.topics.findIndex(t => t.id === topic.id);
+    if (currentTopicIndex < module.topics.length - 1) {
+      const nextTopic = module.topics[currentTopicIndex + 1];
+      onNavigateToTopic(module, nextTopic.id);
+    }
+  };
 
   const renderInlineMarkdown = (line: string) => {
     // Handle both bold (**text**), italic (*text*), and links ([text](url))
@@ -181,7 +202,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
         if (currentTable.length > 0) {
             elements.push(
                 <div key={`table-${index}`} className="overflow-x-auto my-8 border border-principal/20 rounded-lg shadow-sm">
-                    <table className="min-w-full divide-y divide-principal/20 bg-white">
+                    <table className="min-w-full divide-y divide-principal/20 bg-white dark:bg-gray-800">
                         <thead className="bg-principal/5">
                             <tr>
                                 {currentTable[0].map((header, hIdx) => (
@@ -191,11 +212,11 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                                 ))}
                             </tr>
                         </thead>
-                        <tbody className="divide-y divide-gray-100">
+                        <tbody className="divide-y divide-gray-100 dark:divide-gray-600">
                             {currentTable.slice(1).map((row, rIdx) => (
-                                <tr key={rIdx} className="hover:bg-hueso/30 transition-colors">
+                                <tr key={rIdx} className="hover:bg-hueso/30 dark:hover:bg-gray-700 transition-colors">
                                     {row.map((cell, cIdx) => (
-                                        <td key={cIdx} className="px-4 py-3 text-sm text-gray-700 border-r border-gray-100 last:border-0">
+                                        <td key={cIdx} className="px-4 py-3 text-sm text-gray-700 dark:text-gray-200 border-r border-gray-100 dark:border-gray-600 last:border-0">
                                             {renderInlineMarkdown(cell)}
                                         </td>
                                     ))}
@@ -286,7 +307,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
         elements.push(
           <div
             key={`bq-${index}`}
-            className="academic-quote my-6 p-6 border-l-4 border-principal bg-white/50 italic text-principal/80"
+            className="academic-quote my-6 p-6 border-l-4 border-principal bg-white/50 dark:bg-gray-800/50 italic text-principal/80"
           >
             {renderInlineMarkdown(line.replace(/^>\s+/, ''))}
           </div>
@@ -297,7 +318,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
         elements.push(
           <div key={`ol-${index}`} className="flex gap-3 mb-2 pl-4">
             <span className="font-bold text-principal min-w-[1.2rem] mt-1 text-sm">{num![1]}.</span>
-            <p className="text-body text-gray-800 leading-relaxed text-justify flex-1">
+            <p className="text-body text-gray-800 dark:text-gray-100 leading-relaxed text-justify flex-1">
               {renderInlineMarkdown(line.trim().replace(/^\d+\.\s+/, ''))}
             </p>
           </div>
@@ -306,14 +327,14 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
          elements.push(
            <div key={`li-${index}`} className="flex gap-3 mb-2 pl-4">
              <div className="w-1.5 h-1.5 rounded-full bg-principal mt-2 flex-shrink-0" />
-             <p className="text-body text-gray-800 leading-relaxed text-justify flex-1">
+             <p className="text-body text-gray-800 dark:text-gray-100 leading-relaxed text-justify flex-1">
                {renderInlineMarkdown(line.trim().replace(/^[-*]\s+/, ''))}
              </p>
            </div>
          );
       } else {
         elements.push(
-          <p key={`p-${index}`} className="text-body text-gray-800 leading-relaxed mb-4 text-justify">
+          <p key={`p-${index}`} className="text-body text-gray-800 dark:text-gray-100 leading-relaxed mb-4 text-justify">
             {renderInlineMarkdown(line)}
           </p>
         );
@@ -324,7 +345,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
     if (isInsideTable && currentTable.length > 0) {
         elements.push(
             <div key="table-final" className="overflow-x-auto my-8 border border-principal/20 rounded-lg shadow-sm">
-                <table className="min-w-full divide-y divide-principal/20 bg-white">
+                <table className="min-w-full divide-y divide-principal/20 bg-white dark:bg-gray-800">
                     <thead className="bg-principal/5">
                         <tr>
                             {currentTable[0].map((header, hIdx) => (
@@ -334,11 +355,11 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                             ))}
                         </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-100">
+                    <tbody className="divide-y divide-gray-100 dark:divide-gray-600">
                         {currentTable.slice(1).map((row, rIdx) => (
-                            <tr key={rIdx} className="hover:bg-hueso/30 transition-colors">
+                            <tr key={rIdx} className="hover:bg-hueso/30 dark:hover:bg-gray-700 transition-colors">
                                 {row.map((cell, cIdx) => (
-                                    <td key={cIdx} className="px-4 py-3 text-sm text-gray-700 border-r border-gray-100 last:border-0">
+                                    <td key={cIdx} className="px-4 py-3 text-sm text-gray-700 dark:text-gray-200 border-r border-gray-100 dark:border-gray-600 last:border-0">
                                         {renderInlineMarkdown(cell)}
                                     </td>
                                 ))}
@@ -492,7 +513,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
             <div className="flex justify-center mt-12">
                <button 
                 onClick={() => setActiveTab('ejemploreal')}
-                className="academic-button group px-10 py-5 flex items-center gap-3 text-lg"
+                className="bg-white dark:bg-gray-800 border border-[#003366]/20 dark:border-gray-600 text-[#003366] dark:text-white font-bold px-10 py-5 rounded-xl transition-all shadow-lg hover:shadow-xl hover:bg-[#F5F5DC] dark:hover:bg-gray-700 flex items-center gap-3 text-lg"
                >
                  Ver Ejemplo Real
                  <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -520,7 +541,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                <div className="flex items-center justify-center">
                   <button 
                     onClick={() => setActiveTab('flashcards')}
-                    className="academic-button w-full py-5 flex items-center justify-center gap-3"
+                    className="bg-white dark:bg-gray-800 border border-[#003366]/20 dark:border-gray-600 text-[#003366] dark:text-white font-bold w-full py-5 rounded-xl transition-all shadow-lg hover:shadow-xl hover:bg-[#F5F5DC] dark:hover:bg-gray-700 flex items-center justify-center gap-3"
                   >
                     Ir al Diagnóstico
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
@@ -570,24 +591,24 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-2xl border border-principal/10 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-principal/10 dark:border-gray-600 shadow-sm hover:shadow-md transition-shadow">
                 <h5 className="font-bold text-principal mb-2 heading-serif flex items-center gap-2">
                   <div className="w-1.5 h-4 bg-principal/40 rounded-full" />
                   Transcripción Académica
                 </h5>
-                <p className="text-xs text-gray-500 mb-4 leading-relaxed">Documento completo con el guion técnico y explicativo del video en formato PDF.</p>
-                <button className="text-blue-700 hover:text-blue-900 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-blue-50 rounded-full transition-colors">
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">Documento completo con el guion técnico y explicativo del video en formato PDF.</p>
+                <button className="text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 rounded-full transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   Descargar PDF
                 </button>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-principal/10 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-principal/10 dark:border-gray-600 shadow-sm hover:shadow-md transition-shadow">
                 <h5 className="font-bold text-principal mb-2 heading-serif flex items-center gap-2">
                    <div className="w-1.5 h-4 bg-principal/40 rounded-full" />
                    Material de Apoyo
                 </h5>
                 <p className="text-xs text-carbon/60 dark:text-gray-400 mb-4 leading-relaxed">Presentación formal utilizada durante la grabación para facilitar la toma de notas.</p>
-                <button className="text-principal hover:text-principal/80 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-crema dark:bg-gray-700 border border-principal/20 dark:border-principal/30 rounded-full transition-colors">
+                <button className="text-white hover:text-white/80 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-gray-800 dark:bg-gray-900 border border-gray-600 dark:border-gray-500 rounded-full transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                   Ver Diapositivas
                 </button>
@@ -623,7 +644,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   Descargar Infografía
                 </a>
-                <button className="flex items-center justify-center gap-3 text-carbon/70 dark:text-gray-300 border border-carbon/20 dark:border-gray-600 px-8 py-3 rounded-full hover:bg-crema dark:hover:bg-gray-700 transition-all text-sm font-bold uppercase tracking-widest">
+                <button className="flex items-center justify-center gap-3 text-white border border-gray-600 px-8 py-3 rounded-full hover:bg-gray-700 transition-all text-sm font-bold uppercase tracking-widest">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                   Vista Pantalla Completa
                 </button>
@@ -642,10 +663,20 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
             <div className="bg-white/70 dark:bg-slate-900 border border-principal/15 dark:border-principal/20 rounded-2xl p-4 sm:p-6 shadow-xl">
               <div className="w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl relative group bg-white dark:bg-slate-800">
                 <div className="absolute inset-0 bg-gradient-to-br from-principal/5 to-transparent z-0" />
-                <div 
-                  className="w-full h-full min-h-[500px] flex items-center justify-center p-8"
-                  dangerouslySetInnerHTML={{ __html: content.mindmapUrl.includes('<svg') ? content.mindmapUrl : `<img src="${content.mindmapUrl}" alt="Mapa Mental" class="w-full h-full object-contain" />` }}
-                />
+                <div className="w-full h-full min-h-[500px] flex items-center justify-center p-8 relative">
+                  {content.mindmapUrl.includes('<svg') ? (
+                    <div 
+                      className="w-full h-full"
+                      dangerouslySetInnerHTML={{ __html: content.mindmapUrl }}
+                    />
+                  ) : (
+                    <img 
+                      src={content.mindmapUrl} 
+                      alt="Mapa Mental" 
+                      className="w-full h-full object-contain max-w-full max-h-full"
+                    />
+                  )}
+                </div>
               </div>
               
               <div className="flex flex-col sm:flex-row justify-center mt-8 gap-4 px-4">
@@ -658,7 +689,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   Descargar Mapa Mental
                 </a>
-                <button className="flex items-center justify-center gap-3 text-gray-500 border border-gray-200 px-8 py-3 rounded-full hover:bg-gray-50 transition-all text-sm font-bold uppercase tracking-widest">
+                <button className="flex items-center justify-center gap-3 text-white border border-gray-600 px-8 py-3 rounded-full hover:bg-gray-700 transition-all text-sm font-bold uppercase tracking-widest">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                   Vista Pantalla Completa
                 </button>
@@ -723,12 +754,34 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
         )}
       </div>
 
-      <div className="flex justify-center pt-4">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+        {/* Navegación entre temas */}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={navigateToPreviousTopic}
+            disabled={!onNavigateToTopic || module.topics.findIndex(t => t.id === topic.id) === 0}
+            className="px-4 py-2 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-800 hover:bg-[#F5F5DC] dark:hover:bg-gray-700 text-[#003366] dark:text-white font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            Tema anterior
+          </button>
+          
+          <button
+            onClick={navigateToNextTopic}
+            disabled={!onNavigateToTopic || module.topics.findIndex(t => t.id === topic.id) === module.topics.length - 1}
+            className="px-4 py-2 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-800 hover:bg-[#F5F5DC] dark:hover:bg-gray-700 text-[#003366] dark:text-white font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Tema siguiente
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        {/* Botón volver al módulo */}
         <button
           onClick={onBackToModule}
-          className="px-6 py-3 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-700 hover:bg-[#F5F5DC] dark:hover:bg-gray-600 text-[#003366] dark:text-blue-300 font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md"
+          className="px-6 py-3 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-800 hover:bg-[#F5F5DC] dark:hover:bg-gray-700 text-[#003366] dark:text-white font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
           Volver al módulo
         </button>
       </div>

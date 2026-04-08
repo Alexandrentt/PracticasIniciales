@@ -19,7 +19,7 @@
 .dark {
   --azul-principal: #FFFFFF;
   --fondo-general: #0F172A;
-  --tono-hueso: #1E293B;
+  --tono-hueso: #0F172A;
   --texto-oscuro: #FFFFFF;
   --blanco: #1E293B;
   --card-bg: #1A202C;
@@ -276,4 +276,109 @@ body {
 
 .dark .text-gray-400 {
   color: #9CA3AF !important;
+}
+
+.dark .text-gray-800 {
+  color: #F3F4F6 !important;
+}
+
+.dark .text-gray-900 {
+  color: #FFFFFF !important;
+}
+
+.dark .text-body {
+  color: #E5E7EB !important;
+}
+
+/* Mindmap SVG Styles */
+#strategic-mindmap {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.dark #strategic-mindmap .mindmap-link {
+  stroke: #93C5FD;
+  opacity: 0.8;
+}
+
+.dark #strategic-mindmap .mindmap-node:hover {
+  filter: brightness(1.2);
+}
+
+/* Forzar fondos oscuros en modo oscuro */
+.dark .bg-crema {
+  background-color: #0F172A !important;
+}
+
+.dark .bg-hueso {
+  background-color: #0F172A !important;
+}
+
+.dark .bg-\[\/infografias\/3\.1-mindmap\.svg\] {
+  background-color: #0F172A !important;
+}
+
+/* Forzar cualquier elemento con fondo claro */
+.dark [class*="bg-crema"],
+.dark [class*="bg-hueso"] {
+  background-color: #0F172A !important;
+}
+
+/* Forzar fondos específicos del mapa mental */
+.dark .bg-white\/70,
+.dark .bg-white\/80,
+.dark .bg-white\/90 {
+  background-color: #1E293B !important;
+}
+
+/* Forzar cualquier elemento que tenga fondo blanco semitransparente */
+.dark [class*="bg-white"] {
+  background-color: #1E293B !important;
+}
+
+/* Forzar fondos de contenedores específicos */
+.dark .bg-gradient-to-br {
+  background: linear-gradient(to bottom right, #1E293B, #0F172A) !important;
+}
+
+/* Forzar botón volver al módulo */
+.dark button {
+  background-color: #1F2937 !important;
+  color: #FFFFFF !important;
+  border-color: #374151 !important;
+}
+
+.dark button:hover {
+  background-color: #374151 !important;
+}
+
+/* Excepción para botones específicos que deben mantener otros colores */
+.dark button[class*="TabButton"] {
+  background: transparent !important;
+  color: var(--azul-principal) !important;
+  border: none !important;
+}
+
+/* Forzar todo el texto a blanco en modo oscuro */
+.dark * {
+  color: #FFFFFF !important;
+}
+
+/* Excepciones para elementos que deben mantener color */
+.dark .text-principal {
+  color: #FFFFFF !important;
+}
+
+.dark .text-blue-600,
+.dark .text-blue-700,
+.dark .text-blue-800 {
+  color: #93C5FD !important;
+}
+
+.dark .text-green-600,
+.dark .text-green-700,
+.dark .text-green-800 {
+  color: #6EE7B7 !important;
 }
