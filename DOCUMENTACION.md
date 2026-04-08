@@ -1,5 +1,29 @@
 # DOCUMENTACIÓN MAESTRA DEL PROYECTO - Prácticas Iniciales (Ingeniería USAC)
 
+## Versión 2.21.0 - 2026-04-08
+
+**Cambios realizados: Motor de Pureza Ultra (Emoji-Free & Zero-Redundancy Hardened)**
+- **Eliminación Absoluta de Emojis:** Se migró a un sistema de limpieza basado en propiedades Unicode modernas (`\p{Extended_Pictographic}`). Esto garantiza la eliminación de cualquier rastro de emojis (libros, herramientas, blancos, etc.) sin importar su codificación, logrando un texto puramente técnico.
+- **Detección de Atribución Blindada:** Se implementó un "super-filtro" que normaliza las líneas (eliminando espacios, símbolos y mayúsculas) buscando la secuencia "realizadopor". Esto asegura que bloques de autoría se oculten incluso si están dentro de etiquetas de encabezado o contienen caracteres especiales.
+- **Normalización de Texto Académico:** El visor ahora procesa el contenido para que el 100% de la interfaz visible sea material educativo, eliminando metadatos de autoría y símbolos decorativos informales que persistían en versiones anteriores.
+- **Estabilidad de Interfaz:** Se reforzó la lógica de filtrado global para que cualquier cambio futuro en los archivos Markdown de origen sea procesado bajo este estándar de sobriedad absoluta.
+
+**Justificación:** Se alcanzó el nivel máximo de purificación solicitado. La plataforma ahora luce como una publicación académica oficial de alta gama, libre de ruido visual y centrada exclusivamente en el conocimiento.
+
+---
+
+## Versión 2.20.0 - 2026-04-08
+
+**Cambios realizados: Sobriedad Académica (Cero Emojis) y Limpieza de Atribución Total**
+- **Prohibición Global de Emojis:** Se implementó un filtro basado en Unicode que elimina cualquier pictograma, emoji o símbolo decorativo del texto de investigación. Esto asegura un tono uniforme, profesional y 100% formal para un entorno universitario.
+- **Refuerzo del Filtro "Realizado por":** Se amplió la detección para capturar la frase "Realizado por" incluso cuando no lleva dos puntos o cuando está formateada como un encabezado (Markdown `##` o `###`). Esto elimina los bloques de autoría que aún eran visibles en algunos temas.
+- **Deduplicación de Separadores de Cabecera:** Se ajustó la lógica para eliminar líneas horizontales residuo que aparecían tras ocultar los títulos de autoría, dejando los temas limpios desde el primer párrafo.
+- **Estándar Editorial de Ingeniería:** El motor de renderizado ahora produce una salida de texto pura, eliminando cualquier rastro de informalidad o redundancia que no aporte valor pedagógico directo.
+
+**Justificación:** Se alcanzó la sobriedad total del contenido. Al eliminar emojis y cabeceras de autoría persistentes, el visor se convierte en un recurso educativo de nivel editorial, alineado con el prestigio de la Facultad de Ingeniería.
+
+---
+
 ## Versión 2.19.0 - 2026-04-08
 
 **Cambios realizados: Filtro de Limpieza Profunda de Investigadores**
@@ -853,4 +877,4 @@ App.tsx
 
 ---
 
-*Documentación generada automáticamente. Última actualización: 2026-04-08 (Versión 2.19.0)*
+*Documentación generada automáticamente. Última actualización: 2026-04-08 (Versión 2.21.0)*

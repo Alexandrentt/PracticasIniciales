@@ -68,7 +68,11 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
     let isInsideTable = false;
 
     lines.forEach((rawLine, index) => {
-      const line = rawLine.trimEnd();
+      // Remover EMOJIS de forma global usando propiedades Unicode modernas (\p{Extended_Pictographic})
+      // Esto elimina absolutamente todos los pictogramas, símbolos y decoración informal.
+      const lineWithoutEmojis = rawLine.replace(/\p{Extended_Pictographic}/gu, '');
+      
+      const line = lineWithoutEmojis.trimEnd();
       const trimmedLine = line.trim();
       const lowerLine = trimmedLine.toLowerCase();
 
@@ -102,6 +106,8 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
       // GLOBAL FILTER: Remove redundant attribution lines, duplicative titles, and carnets
       if (
         redundantPatterns.some(pattern => pattern.test(trimmedLine)) ||
+        lowerLine.includes('realizado por') || // Captura variaciones sin importar mayúsculas o símbolos extra
+        lowerLine.replace(/[^a-z]/g, '').includes('realizadopor') || // Super-filtro normalize
         (trimmedLine.startsWith('# ') && (
           lowerLine.includes(topic.title.toLowerCase().substring(0, 15)) || 
           topic.title.toLowerCase().includes(trimmedLine.toLowerCase().replace(/#\s+/, '').substring(0, 15)) ||
