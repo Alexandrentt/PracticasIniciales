@@ -69,9 +69,52 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
 
     lines.forEach((rawLine, index) => {
       const line = rawLine.trimEnd();
+      const trimmedLine = line.trim();
+      const lowerLine = trimmedLine.toLowerCase();
+
+      const redundantPatterns = [
+        /Realizado por:/i,
+        /Nombre:/i,
+        /Carn[ée]:/i,
+        /\d{9}/, // Carnets
+        /Universidad de San Carlos/i,
+        /Facultad de Ingeniería/i,
+        /Centro Universitario de Occidente/i,
+        /CUNOC/i,
+        /USAC/i,
+        /Investigador:/i,
+        // Lista completa de investigadores del proyecto para eliminación global
+        /Aneth Alejandra Avila Morales/i,
+        /Antony Edilsar Gómez Sánchez/i,
+        /Carlos Guillermo Obregón Custodio/i,
+        /Cecilia Mariann Alejandra López Estacuy/i,
+        /Edgar Daniel Sierra Mantanico/i,
+        /Fernando Josué Mejía Tezó/i,
+        /Gonzalo Antonio Tamat Gramajo/i,
+        /Henry Estuardo Estrada Rojas/i,
+        /Horacio Caín Barrios Barrios/i,
+        /José Mario Roberto Rodríguez Figueroa/i,
+        /Mynor Estuardo Ruano García/i,
+        /Stivenn Raúl Fuentes Pérez/i,
+        /Willy Alexander López Gómez/i
+      ];
+
+      // GLOBAL FILTER: Remove redundant attribution lines, duplicative titles, and carnets
+      if (
+        redundantPatterns.some(pattern => pattern.test(trimmedLine)) ||
+        (trimmedLine.startsWith('# ') && (
+          lowerLine.includes(topic.title.toLowerCase().substring(0, 15)) || 
+          topic.title.toLowerCase().includes(trimmedLine.toLowerCase().replace(/#\s+/, '').substring(0, 15)) ||
+          (trimmedLine.match(/^\#\s+\d+(\.\d+)*/) && lowerLine.includes(topic.id)) // Matches "1.1" etc.
+        )) ||
+        /\d{9}/.test(trimmedLine) || // Any 9-digit sequence (carnets) 
+        /20\d{7}/.test(trimmedLine)   // USAC specific carnet pattern (20XXXXXXX)
+      ) {
+        return;
+      }
 
       // Table Detection
-      if (line.trim().startsWith('|') && line.trim().endsWith('|')) {
+      if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {
         const cells = line.split('|').filter(cell => cell.trim() !== '' || line.startsWith('|') && cell === '').map(c => c.trim());
         
         // Skip separator line |---|---|
@@ -127,8 +170,26 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
         return;
       }
 
-      // Horizontal Rule
-      if (line === '---' || line === '***' || line === '___') {
+      // Horizontal Rule - Suppress if it's leading or trailing attribution
+      if (trimmedLine === '---' || trimmedLine === '***' || trimmedLine === '___') {
+        const remainingLines = lines.slice(index + 1);
+        
+        // Suppress if it's at the very beginning (after filtering titles/names)
+        const isLeading = elements.filter(el => el.type !== 'div').length === 0;
+
+        const isTrailingAttribution = remainingLines.every(futureLine => {
+          const t = futureLine.trim();
+          const low = t.toLowerCase();
+          return t === '' || 
+            low.includes('realizado por') || 
+            low.includes('investigador') ||
+            (low.includes('centro universitario') && low.includes('occidente')) || 
+            (low.includes('universidad de san carlos') && low.includes('guatemala')) ||
+            /\d{9}/.test(t);
+        });
+
+        if (isLeading || isTrailingAttribution) return;
+
         elements.push(<hr key={`hr-${index}`} className="my-8 border-t-2 border-principal/10" />);
         return;
       }
@@ -174,15 +235,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-principal rounded-full group-hover:w-32 transition-all duration-500" />
           </h1>
         );
-      } else if (line.includes('Realizado por:') || line.includes('**Realizado por**')) {
-        elements.push(
-          <div key={`author-${index}`} className="my-8 p-6 bg-hueso rounded-2xl border-2 border-dashed border-principal/20 flex flex-col items-center text-center animate-fade">
-            <span className="text-xs uppercase tracking-[0.2em] font-black text-principal/40 mb-2">Investigación Académica</span>
-            <p className="text-xl font-bold text-principal heading-serif italic">
-              {renderInlineMarkdown(line)}
-            </p>
-          </div>
-        );
+
       } else if (line.startsWith('> ')) {
         elements.push(
           <div
@@ -352,30 +405,27 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
 
             {/* Summary Section */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-black text-principal heading-serif flex items-center gap-3">
-                <div className="w-6 h-6 bg-principal flex-shrink-0" />
-                Resumen del Tema
-              </h3>
               <div className="bg-white/50 p-6 sm:p-8 rounded-2xl border border-principal/10 shadow-inner">
                 {renderMarkdown(content.summary)}
               </div>
             </div>
 
-            {/* 6 Key Points Grid */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-black text-principal heading-serif flex items-center gap-3">
-                <div className="w-6 h-6 bg-principal flex-shrink-0" />
-                6 Puntos Clave
-              </h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="space-y-8">
+              <div className="flex items-center gap-4 border-l-4 border-principal pl-4">
+                <h3 className="text-3xl font-black text-principal heading-serif">
+                  Puntos Estratégicos
+                </h3>
+              </div>
+              
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {content.keyPoints.slice(0, 6).map((point, idx) => (
-                  <div key={idx} className="bg-white p-6 rounded-2xl border border-principal/10 shadow-sm relative group hover:shadow-md transition-all">
-                    <div className="absolute -top-3 -left-3 w-10 h-10 rounded-xl bg-principal text-white font-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      {idx + 1}
+                  <div key={idx} className="group relative bg-white border-b-4 border-r-4 border-principal/10 rounded-2xl p-8 hover:border-principal/30 hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-xl overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-principal opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="relative z-10 flex flex-col h-full">
+                      <p className="text-gray-800 leading-relaxed font-semibold text-lg">
+                        {point}
+                      </p>
                     </div>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-medium pt-2">
-                      {point}
-                    </p>
                   </div>
                 ))}
               </div>
@@ -434,70 +484,86 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
         )}
 
         {activeTab === 'video' && (
-          <div className="animate-fade-in-up space-y-6">
-            <div className="bg-gradient-to-br from-[#003366]/5 to-[#228B22]/5 border border-[#003366]/15 rounded-3xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-[#003366] mb-6 flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-                Video Explicativo
-              </h3>
-              <div className="bg-white rounded-2xl p-4 border border-[#003366]/10">
-                <div className="aspect-video bg-gradient-to-br from-[#003366]/10 to-[#228B22]/10 rounded-xl flex items-center justify-center relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-[#003366]/20 z-0"></div>
-                  <div className="relative z-10 text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#003366] to-[#228B22] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-xl">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="8 5 19 12 8 19 8 5"/></svg>
-                    </div>
-                    <h4 className="text-xl font-bold text-[#003366] mb-2">Video del Tema {topic.id}</h4>
-                    <p className="text-[#333333] mb-4">Contenido multimedia para complementar tu aprendizaje</p>
-                    <button className="px-6 py-3 bg-gradient-to-r from-[#003366] to-[#228B22] text-white font-bold rounded-full hover:shadow-lg transition-all flex items-center gap-2 mx-auto">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                      Reproducir Video
-                    </button>
+          <div className="animate-fade-in-up space-y-8">
+            <h3 className="text-3xl font-black text-principal heading-serif mb-8 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+              Video Explicativo
+            </h3>
+            
+            <div className="bg-white/50 border border-principal/10 rounded-2xl p-4 sm:p-6 shadow-xl relative group">
+              <div className="aspect-video bg-principal/5 rounded-xl flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-principal/5 z-0" />
+                <div className="relative z-10 text-center max-w-sm px-4">
+                  <div className="w-20 h-20 bg-principal text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="8 5 19 12 8 19 8 5"/></svg>
                   </div>
+                  <h4 className="text-xl font-bold text-principal mb-2 heading-serif uppercase tracking-tight">Clase Magistral: Tema {topic.id}</h4>
+                  <p className="text-gray-600 text-sm italic mb-6">Visualiza la explicación detallada del contenido para profundizar en los conceptos teóricos.</p>
+                  <button className="academic-button px-8 py-3 flex items-center gap-3 mx-auto text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Iniciar Reproducción
+                  </button>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white border border-[#228B22]/20 rounded-3xl p-6 shadow-lg">
-              <h4 className="text-lg font-bold text-[#228B22] mb-4 flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
-                Recursos Adicionales
-              </h4>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-gradient-to-r from-[#003366]/5 to-transparent border border-[#003366]/15 rounded-xl p-4">
-                  <h5 className="font-semibold text-[#003366] mb-2">Transcripción</h5>
-                  <p className="text-sm text-[#333333]">Texto completo del video para referencia</p>
-                  <button className="mt-2 text-[#003366] hover:text-[#228B22] text-sm font-semibold">Descargar PDF</button>
-                </div>
-                <div className="bg-gradient-to-r from-[#228B22]/5 to-transparent border border-[#228B22]/15 rounded-xl p-4">
-                  <h5 className="font-semibold text-[#228B22] mb-2">Presentación</h5>
-                  <p className="text-sm text-[#333333]">Diapositivas complementarias</p>
-                  <button className="mt-2 text-[#228B22] hover:text-[#003366] text-sm font-semibold">Ver Presentación</button>
-                </div>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-2xl border border-principal/10 shadow-sm hover:shadow-md transition-shadow">
+                <h5 className="font-bold text-principal mb-2 heading-serif flex items-center gap-2">
+                  <div className="w-1.5 h-4 bg-principal/40 rounded-full" />
+                  Transcripción Académica
+                </h5>
+                <p className="text-xs text-gray-500 mb-4 leading-relaxed">Documento completo con el guion técnico y explicativo del video en formato PDF.</p>
+                <button className="text-blue-700 hover:text-blue-900 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-blue-50 rounded-full transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Descargar PDF
+                </button>
+              </div>
+              <div className="bg-white p-6 rounded-2xl border border-principal/10 shadow-sm hover:shadow-md transition-shadow">
+                <h5 className="font-bold text-principal mb-2 heading-serif flex items-center gap-2">
+                   <div className="w-1.5 h-4 bg-principal/40 rounded-full" />
+                   Material de Apoyo
+                </h5>
+                <p className="text-xs text-gray-500 mb-4 leading-relaxed">Presentación formal utilizada durante la grabación para facilitar la toma de notas.</p>
+                <button className="text-principal hover:text-principal/80 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-hueso border border-principal/20 rounded-full transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Ver Diapositivas
+                </button>
               </div>
             </div>
           </div>
         )}
 
         {activeTab === 'infografia' && (
-          <div className="animate-fade-in-up bg-gradient-to-br from-[#003366]/5 to-[#228B22]/5 rounded-3xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-[#003366] mb-6 flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
-              Infografía Interactiva
+          <div className="animate-fade-in-up space-y-8">
+            <h3 className="text-3xl font-black text-principal heading-serif mb-8 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+              Recurso Infográfico
             </h3>
-            <div className="bg-white rounded-2xl p-6 border border-[#003366]/10">
-              <div className="w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl relative group bg-slate-900">
-                 <div className="absolute inset-0 bg-gradient-to-br from-[#228B22]/20 to-[#003366]/20 z-0"></div>
-                 <img src={content.infographicUrl} alt="Infografía" className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
+            
+            <div className="bg-white/50 border border-principal/10 rounded-2xl p-4 sm:p-6 shadow-xl">
+              <div className="w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl relative group bg-slate-900 aspect-[4/5] sm:aspect-auto">
+                 <div className="absolute inset-0 bg-gradient-to-br from-principal/10 to-transparent z-0" />
+                 <img 
+                   src={content.infographicUrl} 
+                   alt="Infografía Académica" 
+                   className="w-full h-full object-contain sm:object-cover opacity-90 group-hover:opacity-100 transition-opacity" 
+                 />
               </div>
-              <div className="flex justify-center mt-6 gap-4">
-                <a href={content.infographicUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[#228B22] hover:text-[#003366] transition-colors border border-[#228B22]/40 px-6 py-2 rounded-full hover:bg-[#228B22]/5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              
+              <div className="flex flex-col sm:flex-row justify-center mt-8 gap-4 px-4">
+                <a 
+                  href={content.infographicUrl} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="flex items-center justify-center gap-3 text-principal border border-principal/30 px-8 py-3 rounded-full hover:bg-principal/5 transition-all text-sm font-bold uppercase tracking-widest"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   Descargar Infografía
                 </a>
-                <button className="flex items-center gap-2 text-[#003366] hover:text-[#228B22] transition-colors border border-[#003366]/40 px-6 py-2 rounded-full hover:bg-[#003366]/5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                  Vista Ampliada
+                <button className="flex items-center justify-center gap-3 text-gray-500 border border-gray-200 px-8 py-3 rounded-full hover:bg-gray-50 transition-all text-sm font-bold uppercase tracking-widest">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Vista Pantalla Completa
                 </button>
               </div>
             </div>

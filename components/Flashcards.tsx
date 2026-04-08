@@ -50,15 +50,15 @@ export const Flashcards: React.FC<FlashcardsProps> = ({ cards }) => {
           </div>
 
           {/* Back */}
-          <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white flex flex-col items-center justify-center p-4 sm:p-8 shadow-xl rounded-2xl sm:rounded-3xl border-2 border-green-500/20 overflow-hidden">
-            <div className="absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-10 transition-opacity rounded-3xl"></div>
-            <span className="absolute top-4 left-4 sm:top-6 sm:left-6 text-[8px] sm:text-[10px] font-black text-green-600 uppercase tracking-[0.2em] border border-green-500/20 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full z-10 bg-green-50">Definición</span>
+          <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white flex flex-col items-center justify-center p-4 sm:p-8 shadow-xl rounded-2xl sm:rounded-3xl border-2 border-principal/20 overflow-hidden">
+            <div className="absolute inset-0 bg-principal/5 opacity-0 group-hover:opacity-10 transition-opacity rounded-3xl"></div>
+            <span className="absolute top-4 left-4 sm:top-6 sm:left-6 text-[8px] sm:text-[10px] font-black text-principal uppercase tracking-[0.2em] border border-principal/20 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full z-10 bg-hueso">Definición</span>
             
             <p className="text-base sm:text-2xl text-gray-700 text-center font-medium z-10 leading-relaxed px-4 sm:px-6 select-none max-w-3xl overflow-y-auto no-scrollbar max-h-[70%]">
               {cards[currentIdx].definition}
             </p>
             
-            <div className="absolute bottom-4 sm:bottom-6 flex items-center gap-2 text-green-600/40 text-[9px] sm:text-xs font-bold uppercase tracking-widest z-10 group-hover:text-green-600/80 transition-colors">
+            <div className="absolute bottom-4 sm:bottom-6 flex items-center gap-2 text-principal/40 text-[9px] sm:text-xs font-bold uppercase tracking-widest z-10 group-hover:text-principal/80 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
               <span>Click para volver</span>
             </div>

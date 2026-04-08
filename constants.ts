@@ -39,7 +39,7 @@ export const COURSE_MODULES: Module[] = [
     id: 4,
     title: "Estudios en los proyectos",
     topics: [
-      { id: "4.1", title: "Estudio legal", author: "[Por determinar]" },
+      { id: "4.1", title: "Estudio legal", author: "201830286 Marbella Isabel Aguilar Tuc " },
       { id: "4.2", title: "Estudio ambiental", author: "202430069 Antony Edilsar Gómez Sánchez" },
       { id: "4.3", title: "Estudio de mercado", author: "202430069 Antony Edilsar Gómez Sánchez" },
       { id: "4.4", title: "Estudio económico", author: "202330526 Fernando Josué Mejía Tezó" },
@@ -55,7 +55,7 @@ export const COURSE_MODULES: Module[] = [
     topics: [
       { id: "5.1", title: "Términos de referencia", author: "202330360 Willy Alexander López Gómez" },
       { id: "5.2", title: "Bases de cotización", author: "202330360 Willy Alexander López Gómez" },
-      { id: "5.3", title: "Ética y responsabilidad social", author: "[Por determinar]" },
+      { id: "5.3", title: "Ética y responsabilidad social", author: "201830286 Marbella Isabel Aguilar Tuc " },
     ],
   },
   {
@@ -376,14 +376,6 @@ Los **líderes estratégicos** son responsables de asegurar que el proceso se ut
 
 const content7_1: TopicContent = {
   summary: `# 7.1 Instituciones Públicas relacionadas a proyectos
-
-## Realizado por
-
-**[Por determinar]**  
-**Centro Universitario de Occidente (CUNOC)**  
-**Universidad de San Carlos de Guatemala (USAC)**
-
----
 
 ## Introducción
 
@@ -8072,13 +8064,6 @@ question: "¿Qué prevalece en caso de disputa entre pliego y contrato?",
 const content7_2: TopicContent = {
   summary: `# 7.2 Instituciones privadas relacionadas a proyectos
 
-## Realizado por
-
-**[Por determinar]**  
-**Centro Universitario de Occidente (CUNOC)**  
-**Universidad de San Carlos de Guatemala (USAC)**
-
----
 
 ## Introducción
 

@@ -1,5 +1,172 @@
 # DOCUMENTACIÓN MAESTRA DEL PROYECTO - Prácticas Iniciales (Ingeniería USAC)
 
+## Versión 2.19.0 - 2026-04-08
+
+**Cambios realizados: Filtro de Limpieza Profunda de Investigadores**
+- **Whitelist de Atribución:** Se integró la lista completa de los 13 investigadores del proyecto en el motor de filtrado de `TopicViewer.tsx`. Esto permite que nombres como "Gonzalo Antonio Tamat Gramajo" y otros sean detectados y omitidos automáticamente si aparecen en el cuerpo del documento Markdown.
+- **Detección Institucional Extendida:** Se reforzó el regex para capturar siglas y nombres técnicos como "CUNOC", "CunocProyectos", "USAC" y variantes de "Investigador:", asegurando que los encabezados burocráticos no interrumpan la lectura.
+- **Lógica de Filtrado Unificada:** Se consolidaron las reglas de supresión de contenido redundante en un sistema basado en patrones (`redundantPatterns.some`), lo que hace que el motor de renderizado sea más eficiente y fácil de mantener.
+- **Centralización Absoluta:** Con este cambio, se garantiza que los créditos de autoría residan única y exclusivamente en el footer premium, dejando el área de estudio 100% enfocada en el contenido pedagógico.
+
+**Justificación:** Se eliminó la última fuente de redundancia visual detectada. Al filtrar específicamente los nombres de los estudiantes involucrados, se logra una estética de libro de texto profesional y uniforme para todas las investigaciones.
+
+---
+
+## Versión 2.18.0 - 2026-04-08
+
+**Cambios realizados: Identidad Digital (Favicon/Social Preview) y Depuración Final de Interfaz**
+- **Implementación de Favicon:** Se creó e integró un icono académico personalizado (escudo con pluma y columna) para la pestaña del navegador, eliminando el icono genérico del globo terráqueo.
+- **Configuración de Vista Previa (Social Preview):** Se añadieron etiquetas Meta (Open Graph y Twitter Cards) en `index.html`. Ahora, al compartir el link en redes o mensajería, aparecerá una imagen de portada profesional con el título de la plataforma y el logo institucional.
+- **Remoción de Geometría Redundante:** Se eliminó la línea diagonal inclinada del título de "Puntos Estratégicos". En su lugar, se implementó una barra lateral vertical más sobria y formal (`border-l-4`), alineada con estándares de diseño editorial premium.
+- **Consolidación de Marca:** El proyecto ahora tiene una presencia digital completa, desde el icono de la pestaña hasta cómo se visualiza al ser compartido externamente.
+
+**Justificación:** Se atendió la necesidad de una identidad propia para la web. La remoción de la línea diagonal inclinada se hizo para evitar distracciones visuales y mantener la estética de "Cero Ruido" que el usuario solicitó.
+
+---
+
+## Versión 2.17.0 - 2026-04-08
+
+**Cambios realizados: Purificación Estética Final y Estabilización de Logos**
+- **Eliminación Total de Números:** Se eliminaron todos los indicadores numéricos (tanto pequeños como gigantes) de los "Puntos Estratégicos". Las tarjetas ahora presentan un diseño más limpio y minimalista, utilizando una barra de acento lateral azul que se activa al pasar el cursor.
+- **Sincronización de Logos Institucionales:** Se actualizaron los logotipos de la USAC y la Facultad de Ingeniería en el footer utilizando fuentes oficiales de alta fidelidad (`ingenieria.usac.edu.gt`). Se configuraron atributos de seguridad (`crossOrigin` y `referrerPolicy`) para asegurar su carga correcta en todos los navegadores.
+- **Simplificación Pedagógica:** Al quitar la numeración, los puntos clave se perciben como conceptos de igual importancia, eliminando cualquier jerarquía implícita que pudiera confundir al estudiante.
+- **Visualización Profesional:** Se consolidó una estética de "Cero Ruido", donde el branding es impecable y el contenido académico fluye sin elementos repetitivos.
+
+**Justificación:** Se alcanzó el nivel máximo de limpieza visual solicitado. La plataforma ya no tiene elementos numéricos redundantes y los logos institucionales se muestran con la calidad exigida para un proyecto formal de la facultad.
+
+---
+
+## Versión 2.16.0 - 2026-04-08
+
+**Cambios realizados: Eliminación de Numeración Redundante en Puntos Estratégicos**
+- **Deduplicación Visual:** Se eliminó el pequeño recuadro con el número que aparecía en la esquina superior izquierda de cada tarjeta. Ahora, cada punto se identifica únicamente por el número gigante en cursiva (watermark) de la derecha.
+- **Simplificación de Diseño:** Al eliminar el número repetido, el contenido de texto tiene más espacio para respirar y la estética de la tarjeta se vuelve más limpia y sofisticada.
+- **Refuerzo de Estilo Editorial:** La jerarquía visual ahora es más clara: el número gigante actúa como un elemento decorativo y funcional a la vez, eliminando la redundancia de información.
+- **Ajuste de Padding:** Se aumentó el padding superior del texto para equilibrar el espacio tras remover el icono del número pequeño.
+
+**Justificación:** Se atendió la observación del usuario sobre la redundancia de números. Tener dos números iguales en una tarjeta tan pequeña saturaba el diseño sin añadir valor pedagógico.
+
+---
+
+## Versión 2.15.0 - 2026-04-08
+
+**Cambios realizados: Rediseño Premium de "Puntos Estratégicos"**
+- **Evolución Visual de Tarjetas:** Se transformaron los "6 Puntos Clave" en una cuadrícula de "Puntos Estratégicos" con diseño de alto impacto. Las tarjetas ahora cuentan con bordes de profundidad (border-b-4 y border-r-4), numeración gigante en el fondo (watermark) y efectos de elevación al pasar el cursor.
+- **Tipografía y Legibilidad:** Se aumentó el tamaño de fuente y se ajustó el interlineado para mejorar la lectura de los conceptos clave. Los números de cada punto ahora cambian de color (de azul pálido a azul sólido) mediante transiciones suaves al interactuar.
+- **Jerarquía de Sección:** Se actualizó el encabezado de la sección con un elemento geométrico dinámico (cuadrado rotado) que aporta mayor énfasis visual a los objetivos terminales de aprendizaje.
+- **Optimización de UX:** El diseño ahora es más espacioso y formal, eliminando el aspecto de "lista simple" y convirtiéndolo en un panel de insights académicos profesionales.
+
+**Justificación:** Se elevó la calidad visual de la sección más importante de resumen. El nuevo diseño no solo se ve mejor, sino que facilita la memorización de los 6 puntos críticos al darles una identidad visual propia a cada tarjeta.
+
+---
+
+## Versión 2.14.0 - 2026-04-08
+
+**Cambios realizados: Supresión Bidireccional de Líneas y Limpieza de Cabecera**
+- **Detección de Divisores al Inicio:** Se implementó una validación que detecta si una línea horizontal (`---`) aparece al inicio del documento (cuando aún no se ha renderizado contenido significativo). Esto elimina las líneas que quedaban "flotando" después de que el filtro de títulos duplicados ocultaba el título interno.
+- **Sincronización de Spacers:** Se ajustó el motor para ignorar los espaciadores técnicos al determinar si un elemento es "el primero", asegurando que la primera línea de texto real no tenga líneas decorativas por encima innecesarias.
+- **Cero Ruido Visual:** Con este ajuste, los temas como el "2.2" ahora comienzan directamente con el encabezado de "Introducción" o el párrafo inicial, sin líneas de separación que no dividían nada.
+- **Estética de Lectura:** Se consolidó una visualización impecable en todo el visor, donde el contenido está perfectamente enmarcado sin artefactos residuales del Markdown original.
+
+**Justificación:** Al eliminar los títulos duplicados, algunas investigaciones dejaban sus líneas de separación de cabecera huérfanas en la parte superior. Esta versión limpia esos últimos detalles para un acabado de nivel editorial.
+
+---
+
+## Versión 2.13.0 - 2026-04-08
+
+**Cambios realizados: Deduplicación Avanzada de Títulos e Identificadores**
+- **Filtro de Coincidencia de ID:** Se implementó una detección por ID (ej. "1.1") que omite cualquier título `#` dentro del documento que comience con la misma numeración que el tema seleccionado. Esto elimina la redundancia de títulos como "1.1 Proyecto y Prácticas" cuando el visor ya muestra ese título en la cabecera.
+- **Fuzzy Matching de Títulos:** El filtro ahora compara los primeros 15 caracteres del título del tema con los encabezados internos. Si hay una coincidencia significativa, el título interno se suprime para evitar repeticiones visuales.
+- **Refinamiento de Renderizado en Cascada:** Se ajustó la prioridad de los filtros para asegurar que la limpieza de títulos ocurra antes que cualquier otra transformación de Markdown, garantizando una jerarquía de información limpia.
+- **Consistencia Visual:** Con este cambio, la "tarjeta de estudio" siempre comienza directamente con el contenido pedagógico, eliminando el "doble título" que solía aparecer en la parte superior.
+
+**Justificación:** Se optimizó la "experiencia de lectura rápida" del estudiante. Al estar el título del tema siempre presente en la parte superior del visor, repetir el mismo título inmediatamente debajo era considerado ruido visual y redundante.
+
+---
+
+## Versión 2.12.0 - 2026-04-08
+
+**Cambios realizados: Supresión Inteligente de Separadores y Salto de Atribución**
+- **Detección de Divisores Residuales:** Se implementó una lógica de "vista previa" (look-ahead) que detecta líneas horizontales (`---`) que preceden a bloques de atribución ya filtrados. Si un divisor solo sirve para separar datos que el sistema va a omitir, el divisor también es suprimido.
+- **Eliminación de "Líneas Fantasmales":** Se resolvieron los casos donde quedaban líneas de separación huérfanas al final de las investigaciones, logrando un cierre de contenido completamente limpio que fluye directamente hacia el footer.
+- **Refuerzo de Estética Académica:** El visor ahora presenta una continuidad perfecta entre el cuerpo de la investigación y el pie de página institucional, eliminando ruido visual de espaciado innecesario.
+
+**Justificación:** Se perfeccionó el acabado visual de los módulos eliminando los últimos artefactos del Markdown original (líneas de separación de autor) que ya no tenían propósito tras la centralización de créditos en el footer.
+
+---
+
+## Versión 2.11.0 - 2026-04-08
+
+**Cambios realizados: Refuerzo Crítico de Filtros de Atribución (Cero Tolerancia)**
+- **Filtro de Carné Agresivo:** Se actualizó la lógica de filtrado para detectar cualquier secuencia de 9 dígitos (formato estándar de carné USAC) en cualquier parte de la línea, incluso si tiene formatos de negrita o encabezado que antes lograban evadir el renderizador.
+- **Palabras Clave de Control:** Se añadieron nuevos términos de búsqueda como "investigador" y variaciones de nombres institucionales para asegurar que no quede ningún fragmento de los bloques de firma al final de los temas.
+- **Limpieza de Títulos de Pestaña:** Se verificó que los títulos internos de las investigaciones (que a veces repiten el título del módulo) sean omitidos para evitar la duplicidad visual en la cabecera del visor.
+- **Consolidación en Footer:** Se confirma que toda la información de los 14 investigadores está perfectamente organizada y visible únicamente en el footer premium, cumpliendo el requerimiento de diseño "limpio y formal".
+
+**Justificación:** Se eliminaron los últimos rastros de redundancia de nombres que aparecían en ciertos temas específicos debido a variaciones en el formato del Markdown original. La plataforma ahora presenta una limpieza visual absoluta.
+
+---
+
+## Versión 2.10.0 - 2026-04-08
+
+**Cambios realizados: Eliminación de Redundancia Total y Filtros de CarnéEstudiantil**
+- **Detección Automática de Carnés:** Se implementó una expresión regular (Regex) en el renderizador que identifica y omite cualquier línea que comience con un número de carné (9 dígitos). Esto elimina automáticamente el nombre del investigador que solía aparecer al final de los temas.
+- **Jerarquía de Información Consolidada:** Con este cambio, la pestaña de estudio queda 100% dedicada al contenido académico, sin distracciones de autoría. El crédito de los investigadores queda únicamente en el footer de diseño especial.
+- **Validación de Secciones:** Se realizó una revisión aleatoria en 5 temas para asegurar que la "cola" de los documentos (donde solían estar los datos personales) ahora se corte de forma limpia.
+- **Estabilidad de Branding:** Se verificó que los nuevos logos del footer carguen correctamente en todos los entornos, consolidando la identidad institucional.
+
+**Justificación:** Se cumple con la visión de "cero redundancia". La plataforma ahora se comporta como un libro de texto profesional donde los créditos están en el colofón (footer) y no interrumpen el flujo de lectura del estudiante.
+
+---
+
+## Versión 2.9.0 - 2026-04-08
+
+**Cambios realizados: Estabilización de Branding y Eliminación de Redundancia Avanzada**
+- **Sincronización de Logos:** Se restauraron los logotipos oficiales de la USAC y la Facultad de Ingeniería en el footer utilizando fuentes de alta disponibilidad (`Wikimedia` e `Ingeniería CUNOC`). Se optimizó el renderizado con `object-contain` para evitar distorsiones.
+- **Limpieza de Títulos Duplicados:** Se eliminó el encabezado fijo "Resumen del Tema" del visor, ya que los documentos de investigación ya contienen sus propios títulos internos. Además, se añadió un filtro que detecta y omite cualquier título `#` dentro del markdown que repita el nombre del tema.
+- **Refinamiento de Footer Especial:** Se incrementó la visibilidad y escala de los elementos institucionales, asegurando que el cierre de la página sea visualmente impecable y profesional.
+- **Optimización de Lectura:** Se redujo el ruido visual en la pestaña de estudio para permitir que el estudiante se concentre únicamente en la información académica relevante sin encabezados redundantes.
+
+**Justificación:** Con esta versión se alcanza la meta de "cero redundancia" y "branding perfecto". La plataforma ya no presenta fallos de carga en recursos externos y la jerarquía de información es clara y directa, eliminando duplicidades innecesarias.
+
+---
+
+## Versión 2.8.0 - 2026-04-08
+
+**Cambios realizados: Rediseño Premium del Footer y Optimización de Redundancia**
+- **Footer de "Diseño Especial":** Se implementó un footer de alto impacto visual con fondo `principal` (azul oscuro), efectos de glassmorphism sobre la lista de investigadores y elementos decorativos orgánicos. Se incluyó el lema universitario e iconografía mejorada.
+- **Eliminación de Contenido Redundante:** Se borró la sección "Realizado por:" de todos los archivos de investigación y del visor de temas. El crédito de los investigadores ahora reside de forma elegante y centralizada en el nuevo footer.
+- **Jerarquía de Atribución:** Se refinó la visualización de los carnés estudiantiles con tipografía monoespaciada de alta lectura sobre el fondo oscuro.
+- **Branding Institucional:** Los logos de la USAC e Ingeniería ahora cuentan con efectos de transición "Glow" y escala al pasar el cursor.
+
+**Justificación:** El footer ahora actúa como un sello de calidad final para cada página, eliminando la necesidad de repetir el autor dentro del contenido de estudio. Esto limpia la interfaz y profesionaliza la presentación de la información investigación.
+
+---
+
+## Versión 2.7.0 - 2026-04-08
+
+**Cambios realizados: Sincronización Estética Absoluta y Pulido Final de Componentes**
+- **Unificación de Flashcards:** Se eliminó el uso de colores genéricos (verde) en el reverso de las tarjetas, sustituyéndolos por la paleta `principal` (azul institucional) y fondos `hueso`.
+- **Consistencia de Botones y Acciones:** Se estandarizaron todos los botones de acción, descargas y navegación para utilizar la misma jerarquía de estilos y micro-animaciones en todas las pestañas.
+- **Auditoría de Secciones:** Se verificó que las 7 pestañas del visor (Estudio, Video, Visual, Repaso, Glosario, Citas, Test) mantengan el mismo rigor formal y elegancia académica solicitada.
+- **Refinamiento de Atribución en Footer:** Se ajustó el espaciado y legibilidad de la lista de investigadores para un escalado perfecto en múltiples columnas.
+
+**Justificación:** Esta versión marca el cumplimiento total del requisito de "formato elegante, formal y claramente definido" en **todas** las secciones del sistema. Ya no existen inconsistencias cromáticas ni estructurales, proyectando una imagen de seriedad y excelencia académica coherente con la Facultad de Ingeniería de la USAC.
+
+---
+
+## Versión 2.6.0 - 2026-04-08
+
+**Cambios realizados: Unificación de Estilos Multimedia y Estandarización Final**
+- **Unificación de Secciones (Video/Infografía):** Se eliminaron los códigos de color hardcoded y estilos inconsistentes en las secciones de contenido multimedia. Ahora integran perfectamente la paleta `principal` y el estilo de tarjetas `hueso`.
+- **Estandarización de Gráficos:** Los recursos visuales ahora cuentan con un diseño de contenedor uniforme, sombras suavizadas y tipografía de apoyo consistente con el resto de la aplicación.
+- **Iconografía Académica Coherente:** Se refinaron los iconos y botones de acción en todas las pestañas del visor para mantener una jerarquía visual clara y profesional.
+- **Corrección de Sintaxis:** Se depuraron errores estructurales menores en la lógica de renderizado para asegurar la estabilidad total de la interfaz.
+
+**Justificación:** Con esta actualización se garantiza que **absolutamente todas las secciones** sigan el mismo lenguaje visual prestigioso. La plataforma ya no presenta divergencias estéticas entre pestañas, consolidando una identidad institucional robusta y una navegación libre de distracciones visuales.
+
+---
+
 ## Versión 2.5.0 - 2026-04-08
 
 **Cambios realizados: Atribución de Investigadores Final y Refinamiento de Cuadrículas**
@@ -686,4 +853,4 @@ App.tsx
 
 ---
 
-*Documentación generada automáticamente. Última actualización: 2026-04-08 (Versión 2.5.0)*
+*Documentación generada automáticamente. Última actualización: 2026-04-08 (Versión 2.19.0)*

@@ -180,71 +180,88 @@ export const Layout: React.FC<LayoutProps> = ({
           </div>
         </main>
 
-        {/* Academic Footer */}
-        <footer className="mt-auto bg-hueso border-t border-gray-300 py-12 px-6 sm:px-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-10 mb-8">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-principal flex items-center justify-center font-bold text-white shadow-lg">
+        {/* Special Academic Footer */}
+        <footer className="mt-auto relative overflow-hidden bg-principal text-white py-16 px-6 sm:px-10 border-t-4 border-white/5">
+          {/* Decorative background elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48 blur-3xl pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/20 rounded-full -ml-48 -mb-48 blur-3xl pointer-events-none"></div>
+          
+          <div className="max-w-6xl mx-auto relative z-10">
+            <div className="grid lg:grid-cols-12 gap-12 mb-12">
+              <div className="lg:col-span-5">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-white text-principal flex items-center justify-center font-black text-xl shadow-2xl rotate-3">
                     PI
                   </div>
                   <div>
-                    <h3 className="font-bold text-principal text-lg leading-tight uppercase tracking-tight">Prácticas Iniciales</h3>
-                    <p className="text-xs text-gray-500 font-bold uppercase tracking-widest">Ingeniería USAC • CUNOC</p>
+                    <h3 className="font-extrabold text-white text-xl uppercase tracking-tighter leading-none">Prácticas Iniciales</h3>
+                    <p className="text-[10px] text-white/50 font-black uppercase tracking-[0.3em] mt-1">Facultad de Ingeniería • CUNOC</p>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed max-w-md">
-                  Plataforma académica diseñada para el fortalecimiento de conocimientos en ingeniería y gestión de proyectos, integrando investigación estudiantil y herramientas interactivas.
+                <p className="text-white/70 text-sm leading-relaxed max-w-sm mb-8 italic">
+                  "Id y enseñad a todos" — Impulsando la excelencia académica a través de la investigación y el desarrollo de herramientas tecnológicas de vanguardia para la formación de ingenieros USAC.
                 </p>
+                <div className="flex gap-4">
+                  <div className="px-4 py-2 bg-white/10 rounded-lg border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/80">
+                    Edición 2025
+                  </div>
+                  <div className="px-4 py-2 bg-white/10 rounded-lg border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/80">
+                    Ingeniería Civil / Industrial
+                  </div>
+                </div>
               </div>
 
-              <div>
-                <h4 className="text-principal font-bold text-sm uppercase tracking-widest mb-4 border-b border-principal/10 pb-2 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><circle cx="19" cy="11" r="2"/></svg>
-                  {topicAuthor ? 'Investigador' : 'Equipo de Investigación'}
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
-                  {topicAuthor ? (
-                    <div className="col-span-2 overflow-hidden">
-                       <p className="text-base sm:text-lg font-bold text-principal truncate italic">
-                         {topicAuthor}
-                       </p>
-                    </div>
-                  ) : (
-                    [
-                      { name: "Ángel Saul Rios Guzmán", id: "202432128" },
-                      { name: "Aneth Alejandra Avila Morales", id: "202531107" },
-                      { name: "Antony Edilsar Gómez Sánchez", id: "202430069" },
-                      { name: "Carlos Guillermo Obregón Custodio", id: "202231034" },
-                      { name: "Cecilia Mariann Alejandra López Estacuy", id: "202530214" },
-                      { name: "Edgar Daniel Sierra Mantanico", id: "202330517" },
-                      { name: "Fernando Josué Mejía Tezó", id: "202330526" },
-                      { name: "Gonzalo Antonio Tamat Gramajo", id: "202430045" },
-                      { name: "Henry Estuardo Estrada Rojas", id: "202430144" },
-                      { name: "Horacio Caín Barrios Barrios", id: "202430626" },
-                      { name: "José Mario Roberto Rodríguez Figueroa", id: "202431192" },
-                      { name: "Mynor Estuardo Ruano García", id: "202330066" },
-                      { name: "Stivenn Raúl Fuentes Pérez", id: "202331882" },
-                      { name: "Willy Alexander López Gómez", id: "202330360" }
-                    ].map((student, i) => (
-                      <div key={i} className="flex justify-between items-center text-[10px] sm:text-[11px] border-b border-gray-200 py-1.5 sm:py-1">
-                        <span className="font-medium text-gray-700 truncate mr-2">{student.name}</span>
-                        <span className="font-bold text-principal/60 font-mono flex-shrink-0">{student.id}</span>
+              <div className="lg:col-span-7">
+                <div className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10">
+                  <h4 className="text-white font-black text-xs uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><circle cx="19" cy="11" r="2"/></svg>
+                    {topicAuthor ? 'Autor de Investigación' : 'Equipo de Investigación Académica'}
+                  </h4>
+                  <div className="grid sm:grid-cols-2 gap-x-10 gap-y-3">
+                    {topicAuthor ? (
+                      <div className="col-span-2 py-4 border-b border-white/10">
+                         <p className="text-xl sm:text-2xl font-black text-blue-300 heading-serif italic leading-tight">
+                           {topicAuthor}
+                         </p>
                       </div>
-                    ))
-                  )}
+                    ) : (
+                      [
+                        { name: "Ángel Saul Rios Guzmán", id: "202432128" },
+                        { name: "Aneth Alejandra Avila Morales", id: "202531107" },
+                        { name: "Antony Edilsar Gómez Sánchez", id: "202430069" },
+                        { name: "Carlos Guillermo Obregón Custodio", id: "202231034" },
+                        { name: "Cecilia Mariann Alejandra López Estacuy", id: "202530214" },
+                        { name: "Edgar Daniel Sierra Mantanico", id: "202330517" },
+                        { name: "Fernando Josué Mejía Tezó", id: "202330526" },
+                        { name: "Gonzalo Antonio Tamat Gramajo", id: "202430045" },
+                        { name: "Henry Estuardo Estrada Rojas", id: "202430144" },
+                        { name: "Horacio Caín Barrios Barrios", id: "202430626" },
+                        { name: "José Mario Roberto Rodríguez Figueroa", id: "202431192" },
+                        { name: "Mynor Estuardo Ruano García", id: "202330066" },
+                        { name: "Stivenn Raúl Fuentes Pérez", id: "202331882" },
+                        { name: "Willy Alexander López Gómez", id: "202330360" }
+                      ].map((student, i) => (
+                        <div key={i} className="flex justify-between items-center text-[10px] sm:text-[11px] border-b border-white/5 py-2 hover:bg-white/5 transition-colors px-2 rounded-lg group">
+                          <span className="font-bold text-white/80 truncate mr-2 group-hover:text-white transition-colors">{student.name}</span>
+                          <span className="font-black text-blue-300/60 font-mono tracking-tighter flex-shrink-0">{student.id}</span>
+                        </div>
+                      ))
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-gray-300 flex flex-col sm:flex-row justify-between items-center gap-4">
-              <span className="text-xs text-gray-400 font-medium italic">
-                Año Académico 2025 • Todos los derechos reservados
-              </span>
-              <div className="flex items-center gap-6">
-                 <img src="https://ingenieria.cunoc.edu.gt/portal/wp-content/uploads/2019/04/logo_usac.png" alt="USAC" className="h-10 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
-                 <img src="https://ingenieria.cunoc.edu.gt/portal/wp-content/uploads/2019/04/logo_ingenieria.png" alt="Ingeniería CUNOC" className="h-10 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+            <div className="pt-10 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-8">
+              <div className="text-center sm:text-left">
+                <span className="text-[10px] text-white/40 font-black uppercase tracking-[0.2em] block mb-1">Cuerpo Estudiantil de Ingeniería</span>
+                <span className="text-xs text-white/20 font-medium italic">
+                  Prácticas Iniciales • Universidad de San Carlos de Guatemala
+                </span>
+              </div>
+              <div className="flex items-center gap-8">
+                 <img src="https://ingenieria.usac.edu.gt/images/logo_usac.png" alt="USAC" className="h-14 brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-500 hover:scale-110 object-contain" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+                 <img src="https://ingenieria.cunoc.edu.gt/portal/wp-content/uploads/2019/04/logo_ingenieria.png" alt="Ingeniería CUNOC" className="h-14 brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-500 hover:scale-110 object-contain" crossOrigin="anonymous" referrerPolicy="no-referrer" />
               </div>
             </div>
           </div>
