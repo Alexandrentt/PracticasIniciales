@@ -9,71 +9,70 @@ export const COURSE_MODULES: Module[] = [
     id: 1,
     title: "Planificación de proyectos y prácticas de la ingeniería",
     topics: [
-      { id: "1.1", title: "La planificación de proyectos y el ejercicio de las prácticas de ingeniería" },
-      { id: "1.2", title: "Importancia de la planificación" },
-      { id: "1.3", title: "Tipos de proyectos" },
-      { id: "1.4", title: "Etapas y ciclos" },
-      { id: "1.5", title: "Método y técnicas" },
-      { id: "1.6", title: "Metodología de proyectos privados y públicos" },
+      { id: "1.1", title: "La planificación de proyectos y el ejercicio de las prácticas de ingeniería", author: "202531107 Aneth Alejandra Avila Morales" },
+      { id: "1.2", title: "Importancia de la planificación", author: "202531107 Aneth Alejandra Avila Morales" },
+      { id: "1.3", title: "Tipos de proyectos", author: "202430144 Henry Estuardo Estrada Rojas" },
+      { id: "1.4", title: "Etapas y ciclos", author: "202430144 Henry Estuardo Estrada Rojas" },
+      { id: "1.5", title: "Método y técnicas", author: "202530214 Cecilia Mariann Alejandra López Estacuy" },
+      { id: "1.6", title: "Metodología de proyectos privados y públicos", author: "202530214 Cecilia Mariann Alejandra López Estacuy" },
     ],
   },
   {
-    id: 2,
+    id: 2, 
     title: "Diagnósticos",
     topics: [
-      { id: "2.1", title: "Tipos e instrumentos (Línea base, FODA)" },
-      { id: "2.2", title: "Niveles (Micro y Macrodiagnósticos)" },
+      { id: "2.1", title: "Tipos e instrumentos (Línea base, FODA)", author: "202231034 Carlos Guillermo Obregón Custodio" },
+      { id: "2.2", title: "Niveles (Micro y Macrodiagnósticos)", author: "202432128 Ángel Saul Rios Guzmán" },
     ],
   },
   {
     id: 3,
     title: "Estudio de casos como herramienta en la ingeniería",
     topics: [
-      { id: "3.1", title: "Administración estratégica por casos" },
-      { id: "3.2", title: "Conceptos y aplicaciones" },
-      { id: "3.3", title: "Técnicas de documentación" },
-      { id: "3.4", title: "Métodos de evaluación interna y externa" },
-      { id: "3.5", title: "Metodología para implementación" },
+      { id: "3.1", title: "Administración estratégica por casos", author: "202430144 Henry Estuardo Estrada Rojas" },
+      { id: "3.3", title: "Técnicas de documentación", author: "202330066 Mynor Estuardo Ruano García" },
+      { id: "3.4", title: "Métodos de evaluación interna y externa", author: "202330066 Mynor Estuardo Ruano García" },
+      { id: "3.5", title: "Metodología para implementación", author: "202331882 Stivenn Raúl Fuentes Pérez" },
     ],
   },
   {
     id: 4,
     title: "Estudios en los proyectos",
     topics: [
-      { id: "4.1", title: "Estudio legal" },
-      { id: "4.2", title: "Estudio ambiental" },
-      { id: "4.3", title: "Estudio de mercado" },
-      { id: "4.4", title: "Estudio económico" },
-      { id: "4.5", title: "Estudio financiero" },
-      { id: "4.6", title: "Estudio social" },
-      { id: "4.7", title: "Estudio administrativo" },
-      { id: "4.8", title: "Estudio técnico o de ingeniería" },
+      { id: "4.1", title: "Estudio legal", author: "[Por determinar]" },
+      { id: "4.2", title: "Estudio ambiental", author: "202430069 Antony Edilsar Gómez Sánchez" },
+      { id: "4.3", title: "Estudio de mercado", author: "202430069 Antony Edilsar Gómez Sánchez" },
+      { id: "4.4", title: "Estudio económico", author: "202330526 Fernando Josué Mejía Tezó" },
+      { id: "4.5", title: "Estudio financiero", author: "202330526 Fernando Josué Mejía Tezó" },
+      { id: "4.6", title: "Estudio social", author: "202430045 Gonzalo Antonio Tamat Gramajo" },
+      { id: "4.7", title: "Estudio administrativo", author: "202430045 Gonzalo Antonio Tamat Gramajo" },
+      { id: "4.8", title: "Estudio técnico o de ingeniería", author: "202430626 Horacio Caín Barrios Barrios" },
     ],
   },
   {
     id: 5,
     title: "Elaboración y preparación de documentos",
     topics: [
-      { id: "5.1", title: "Términos de referencia" },
-      { id: "5.2", title: "Bases de cotización" },
-      { id: "5.3", title: "Ética y responsabilidad social" },
+      { id: "5.1", title: "Términos de referencia", author: "202330360 Willy Alexander López Gómez" },
+      { id: "5.2", title: "Bases de cotización", author: "202330360 Willy Alexander López Gómez" },
+      { id: "5.3", title: "Ética y responsabilidad social", author: "[Por determinar]" },
     ],
   },
   {
     id: 6,
     title: "Estrategias de Implementación",
     topics: [
-      { id: "6.1", title: "Corporativa" },
-      { id: "6.2", title: "Competitiva" },
-      { id: "6.3", title: "Comparativa" },
+      { id: "6.1", title: "Corporativa", author: "202330517 Edgar Daniel Sierra Mantanico" },
+      { id: "6.2", title: "Competitiva", author: "202330517 Edgar Daniel Sierra Mantanico" },
+      { id: "6.3", title: "Comparativa", author: "202330517 Edgar Daniel Sierra Mantanico" },
     ],
   },
   {
     id: 7,
     title: "Instituciones relacionadas a proyectos",
     topics: [
-      { id: "7.1", title: "Públicas" },
-      { id: "7.2", title: "Privadas" },
+      { id: "7.1", title: "Públicas", author: "202431192 José Mario Roberto Rodríguez Figueroa" },
+      { id: "7.2", title: "Privadas", author: "202431192 José Mario Roberto Rodríguez Figueroa" },
     ],
   },
 ];
@@ -150,26 +149,85 @@ En Guatemala, la gestión de proyectos está regulada por la **SEGEPLAN** a trav
     { citation: "Baca Urbina, G. (2013). Evaluación de proyectos (7ª ed.). McGraw-Hill Interamericana." }
   ],
   flashcards: [
-    { term: "Dicotomía de Gestión: Proyecto vs. Operación", definition: "Un Proyecto se ejecuta de forma rigurosamente 'Milenial y temporal' para parir milagros técnicos funcionales únicos y repetibles en cronograma cerrado; diametral contra una Operación rutinaria puramente perpetua circular infinita destinada llanamente a prolongar la estabilidad agónica diaria fabril del negocio local cotidiano general cíclico general." },
-    { term: "Visión del PMBOK® 7 de PMI Global", definition: "Standard o Corpus Gerencial Global y sagrada biblia gerencial norteamericana y universal que concibe filosóficamente y reestructura operativamente que los magisterios del éxito o de los proyectos recaen netamente en enfocar, optimizar matemáticamente y articular inteligentemente sus 'Dominios integrales de Desempeño' alrededor de lograr maximizar radicalmente el aporte inmanente vital invaluable del crucial Valor Comunitario, Social y Financiero global humano final generalizado absoluto medido palpable real local." },
-    { term: "Modelo de Ciclo de Inversión Formativa o Pública (Preinversión)", definition: "La monumental pirámide de estudios progresivos exhaustivos técnicos paramétricos escalados (esquematizado académicamente por genios como Sapag y Baca Urbina) que amalgama las fases jerárquicas encadenadas indisolubles ascendentes de perfilamiento preuniversitario como la simple Idea matriz central, luego evoluciona llanamente como un rápido Perfil superficial global borrador, posteriormente avanza al rígido microscopio profundo general de la dolorosa Prefactibilidad analítica y finalmente clímax metodológico y el éxtasis presupuestario económico en la Factibilidad Primaria Total del proyecto técnico económico local supremo." },
-    { term: "Prácticas Iniciales Didácticas", definition: "Insumo Pedagógico de primer nivel analítico y umbral formativo vocacional donde a un futuro profesional emergente en potencia se le motiva, fomenta e impulsa empíricamente de forma segura, despertando agresivamente su conceptualización inmadura, y guiándole de manera cálida en escenarios experimentales y controlados limpios en laboratorio de muy minúscula pero incipiente complejidad para enamorarse visceralmente del núcleo genio del quehacer técnico real innegable abstracto real absoluto puro académico científico real metodológico inalterado de la magna e hiper-exacta ingeniería técnica milenaria universal general contemporánea básica." },
-    { term: "Prácticas Intermedias Integrales de Choque Realista", definition: "La ruda etapa madura universitaria intermedia formativa integral exigente de campo puro de simulación avanzada que expone drástica, rápida, pedagógica y controladamente un fuerte shock caótico y crudo contra todas las impías limitaciones materiales globales, el trabajo en conjunto colaborativo tenaz bajo presiones cronometradas hostiles demandantes de tiempos y exigiendo drástica habilidad social innata multidisciplinaria vital entre profesionales heterogéneos y caracteres incompatibles logrando consensos para la optimización brutal de envergaduras técnicas desafiantes de alto nivel real resolutivo general puro complejo superior superior logístico." },
-    { term: "Gran Pilar Formativo: EPS Inmersión Total Comunitaria", definition: "Siglas de 'Ejercicio Profesional Supervisado'. Residencia culminante de total inmersión institucional pura sináptica. Su mandato ético y social fundamental de suprema jerarquía es retribuir honorable, científica, humana y fielmente al Estado y la urbe integrando al máximo voltaje mental analítico: Investigación Aplicada Analítica Severa In Situ, Docencia Comunitaria Capacitadora Desinteresada Altruista Activa Dinámica e Indomable de Impacto Generacional y un Servicio Activo Fiel Constante en instituciones nacionales desprovistas, solventando deficiencias técnicas de urgente prioridad, mejorando calidad intrínseca paramétrica vital existencial del tejido y desarrollo biológico productivo y macroeconómico de la red inquebrantable soberana de vida humana poblacional regional pública nacional." },
-    { term: "Dominio Operativo Central Clave: La Estructura de Desglose del Trabajo (La famosa y gloriosa EDT/WBS)", definition: "Piedra angular directriz suprema gráfica fundamental en un organigrama matemático. La estrategia lógica divisoria máxima por antonomasia irreflexiva indiscutible universal de ramificar un enorme alcance titanico o abrumador colosal monolítico jerárquicamente fracturando quirúrgica, meticulosa, minuciosa y sistemáticamente una gigantesca obligación técnica paralizante indomable macrocefálica, en pequeños ladrillos granulares simples denominados paquetes lógicos individuales minúsculos de control operativo ineludible con la vital tarea y gran fin inmenso e indispensable subyacente para gestionar de forma milimétrica absoluta la certidumbre económica métrica presupuestal humana administrativa final inviolable indomable real final." }
+    { term: "Proyecto", definition: "Esfuerzo temporal con inicio y fin definidos para crear un producto, servicio o resultado único." },
+    { term: "Operación", definition: "Actividad continua y repetitiva que mantiene el funcionamiento de un sistema existente." },
+    { term: "SEGEPLAN", definition: "Secretaría de Planificación y Programación de la Presidencia de Guatemala." },
+    { term: "SNIP", definition: "Sistema Nacional de Inversión Pública que establece normas para gestión de proyectos públicos." },
+    { term: "Prácticas Iniciales", definition: "Actividades formativas del tercer semestre para capacitar en formulación de proyectos." },
+    { term: "Rentabilidad Social", definition: "Enfoque en proyectos públicos que prioriza el bienestar comunitario sobre el beneficio económico." }
   ],
   quiz: [
-    { question: "En un caluroso debate de campo entre estudiantes novatos, un practicante empedernido insiste que la pavimentación indefinida de un tramo vecinal por baches durante meses sin metas escritas exactas y continuas es su indubitable nuevo y magno “Gran Proyecto Técnico Mensual de Ingeniería Civil”. De acuerdo a los rígidos e inviolables cánones éticos universales globales vigentes en el tomo del PMBOK® 7ma Edición, ¿cuál es el grave e imperdonable pecado capital analítico en su falaz, burdo e ignorante razonamiento abstracto de oficina y obra de calle técnica básica local de primer nivel de análisis estructural básico?", options: ["Está completamente equivocado, porque no consideró las regulaciones ni multas económicas de tránsito rodante de pesaje para vehículos mayores ni solicitó firmas selladas por alcaldes de turno en papel protocolario de acta oficial y en papel membretado internacionalmente ni en sus actas notariales oficiales iniciales locales previas a la inversión teórica fiscal regional.", "Este razonamiento cojea absurdamente y falta rotundamente al marco técnico porque algo 'continuo', indefinidisimo temporalmente y totalmente 'rutinario intermitente ciego' sin un principio claro cronológico analizado delimitado matemático rígido ni un fin inamovible programado exacto y objetivo de cierre de entrega de acta final tangible estigmatizable de una única e indiscutida sola gran vez de impacto único medible contable; es indiscutiblemente la clara encripción viviente de una sencilla 'Operación de Mantenimiento', jamás en absoluto un esfuerzo macro temporal y único bautizado dignamente como sagrado 'Proyecto' por una cámara reguladora directiva colegiada global.", "El fallo es estrictamente monetario, pues un bacheo callejero vecinal en teoría de la ciencia macroeconómica global y los presupuestos internacionales jamás costará ni tendrá un requerimiento fiscal analítico suficiente para solicitar préstamos grandes colosales a los grandes gigantescos bancos mundiales o la federación central capitalista local del estado y de endeudamiento gigantesco astronómico local.", "Realmente el principiante tiene absolutamente la perfecta y divina magna razón teórica y está en todo el derecho y lógica teórica general básica científica plena legal humana, simple y llanamente porque todo gasto e inversión en maquinaria y herramientas pesadas con combustible califica inalienablemente como proyecto oficial registrado de obra física civil mayor real innegable contable real final y pura obra general."], correctAnswerIndex: 1 },
-    { question: "Desde la cúpula académica formativa y según los estándares humanistas adoptados inquebrantablemente por esquemas como los laboratorios didácticos y la gloriosa e histórica escuela formativa de la insigne universidad nacional por ejemplo unánimemente el sistema implementado en la gran División Superior de Ciencias Analíticas CUNOC local, ¿Qué objetivo sagrado subyace, impulsa y dota de brillante sentido humano ético fundamental e indiscutible y enciende ardientemente todo el colosal esquema trinitario pedagógico didáctico integrador puro operativo que forma y define estrictamente al famoso e inmaculado pilar y última frontera denominado en actas curriculares oficiales plenas mayores de carrera como magistral e indispensable 'Ejercicio Profesional Supervisado (Comúnmente EPS)' de la ingeniería real latinoamericana formativa final del último bloque regional semestral analítico general global formativo final superior y real formativa y del conocimiento de campo técnico en todo su fulgor del campo técnico in situ mayor?", options: ["Unicamente proveer indiscriminadamente de la muy lúgubre mano de masa obrera barata gratuita y servicial mano estudiantil masificada desesperada obligatoria incansable de labor mecánica exhaustiva a empresas multinacionales puramente de corte y régimen privado y lucrativo total capitalista extranjero y monopolios sin límite, suprimiendo toda la paga monetaria a cambio del crédito universitario puro para poder cerrar currículo obligatorio y conseguir plazas internas gratuitas vacantes finales para evadir costo local e ir directo ciegamente directo al mercado.", "Evadir contundentemente un doloroso y extenuante exhaustivo mega examen privado técnico matemático tortuoso final riguroso tradicional del claustro decanal magistral local analítico a cambio del sudor puramente de fuerza física humana sin intelecto, simplificando velozmente drásticamente de manera atroz un trámite burocrático de salida rápida técnica de graduación fácil expedita a masas estudiantiles poco versadas y aburridas de forma exprés directa cívica libre e ingenieril.", "Amalgamar magistral y armoniosamente al mismo tiempo en el calor real del laboratorio abierto al mundo real puro, una gloriosa docencia pedagógica recíproca pura técnica comunitaria y humanista social incisiva noble transparente e innegable, una ardua punzante metódica metódica técnica rigurosísima incansable pura labor de campo inquebrantable suprema indomable vital superior científica real fáctica social pura metódica en un majestuoso supremo innegable marco superior supremo general supremo rigurosa inviable, integrando el indisoluble pilar social y de total investigación in situ y proponer con sudor en frente una incalculable de suprema gigantesca labor valía comunitaria social pura indiscutida resolviendo crisis públicas latentes complejas reales resolviendo un déficit gubernamental con talento social técnico in situ en una valiente propuesta humana civil para una población local inmersa en la penuria real del entorno hostil técnico del estado deficiente social real.", "Sintetizar únicamente, a puerta puramente muy oscura y rígidamente blindada y cerrada, la fría e insensible contabilidad abstracta paramétrica total de datos tabulares excel abstractos contables abstractos absolutos en grandes servidores inmensos de una alcaldía rural escondida olvidada sin interactuar para nada con ningún alma caritativa poblacional o gente humana nativa que rodea el terreno inhóspito rural natural inexplorado agreste total."], correctAnswerIndex: 2 },
-    { question: "En el escarpado abismo que constituye la magna preparación analítica económica teórica científica metódica total global inicial del majestuoso ciclo paramétrico total matemático absoluto de estudios del pilar gigante de la gran base general universal de las monumentales ideas denominadas técnica general económica global preinversionista fáctica global total del pilar del bloque del pilar colosal académico universal fáctico (tal cual como rechinan repetitivamente con magistral tesón y pasión contable Sapag y Baca Urbina en cada párrafo y compendio financiero), la fase o la rigurosísima capa de profundización investigativa económica científica profunda en donde categóricamente sin temblar la mano en ningún minuto de tiempo operativo finalmente el genio analista gestor técnico de facto de una vez y por todas recurre absolutamente sin mediar otra palabra obligatoriamente y sin titubeos ciegos teóricos absolutos puros, directo de lleno sin excusas a investigar recolectando sin descanso de forma innegociable con fuentes informativas absolutas y encuestas reales encarecidas encuestas totales puras recabación metódica local y levantamiento directo fáctico y muestreo estadístico incuestionable rigurosamente estricto directo innegable superior puro riguroso 100% denominadas magistral y formalmente metodológicamente absolutamente fáctica como puramente de grado estricto denominadas siempre 'fuentes verídicas primarias reales fácticas primigenias de contacto vital rigurosa' para erradicar y extirpar cada centigramo diminuto de riesgo económico, asegurar y optimizar la tecnología y localización al milímetro ciego puro total paramétrico sin vacilar en el retorno absoluto fiscal económico es en resumidas cuentas en el magno léxico técnico predeterminado e indiscutible:", options: ["En la efímera simple somera somnífera pura inefable sencilla abstracta incondicional simple puramente y general macro superficial vaga teórica rápida pre-concepción volátil ideal primaria conceptual abstracta inexplorada puramente fase de la fugaz simple 'Idea y Lluvia Grupal Teórica Libre Inicial', en una de las esquinas de ideas aleatorias.", "Totalmente se clava puramente y sucede todo esto al borde del muy básico, macro contable estimativo general borrador sencillo y aproximado global puro análisis elemental innegable teórico elemental de papel ligero borrable a lápiz genérico simple primigenio llamado fáctica ineludiblemente general y teóricamente solo borroso borrador de macro datos económicos globales generales simples fase de 'El Perfil o borrador Global del Macro Plan Base Fáctico Económico Inicial'.", "Únicamente en el rigurosísimo apoteósico majestuoso, costoso, exigente e ineludible colosal tramo científico macro analítico matemático paramétrico y pormenorizado definitivo absoluto hiper preciso superior minucioso denso riguroso gigantesco real macro y el bloque titánico macroscópico de certeza absoluta de optimización económica suprema matemática fáctica pura denominado académica y legalmente a los cuatro vientos mundiales unánimemente e incontrovertiblemente como 'El monumental, supremo y majestuoso Estudio analítico definitivo absoluto global rigurosísimo de Factibilidad Técnica Local Total Económica Pura'.", "En ninguna de las nombradas opciones posibles previas que hemos barajado y enumerado o puesto a la vista arriba, puesto y recayendo en la total farsa que es sabido públicamente y a gritos puros contables metodológicos financieros generalizados de manera internacional e irrevocable innegablemente que nunca por ley bajo ningún motivo ni presión legal posible estatal o preinversión financiera matemática técnica paramétrica financiera innegociable inquebrantable rigurosa técnica metódica suprema mundial se requiere rigurosamente ni remotamente recopilar ni pisar jamás ninguna clase abstracta técnica pura ni de contacto ni campo rigurosísimas costosas analíticas encuestas o desgastantes y complejas metodológicas en campo totales fuentes informativas complejas en terreno vivas primarias estadísticas para optimizar ninguna decisión jamás porque el proyecto por puro instinto innato místico natural genético inquebrantable del experto siempre absolutamente ciegamente instintivamente funcionará ciegamente siempre solo intuitivo."], correctAnswerIndex: 2 },
-    { question: "En el vertiginoso dominio implacable y el voraz efervescente torbellino indomable del majestuoso, imperante supremo y siempre tan denso e inagotable monumental universo incansable general corporativo y del siempre caótico mundo real gigante fáctico general administrativo indubitable e indomable de la fiera e hiperdinámica gestión y orquestación paramétrica global de dirección, administración directriz central metódica técnica estratégica de megaproyectos en la civilización global técnica general fáctica del ingeniero real contable y metódico en campo, la técnica estrella insignia salvavidas incondicional por excelencia suprema algorítmica y la máxima y más potente y reverenciada colosal gran arma de artillería puramente organizacional algorítmica fundamental ineludible absoluta e indiscutible pura gerencial directiva incuestionable metódica suprema fundamental paramétrica analítica teórica conceptual general visual recomendada y exigida universalmente ciegamente por la mismísima santa y rectora directiva incansable del dogma y cuerpo literario inquebrantable mundial formal del PMBOK® 7ma colosal edición para subyugar y destruir aniquilar dominar pulverizar conquistar controlar organizar y someter férreamente ante sus rodillas metódicas y sin una pizca de piedad organizativa alguna toda la aterradora hiper-complejidad macro de alcance del titánico bloque macro colosal masivo bloque paralizante e indomable trabajo agobiante general puro absoluto abstracto en una gran infinita red o matriz inmaculada gigantesca total y enorme cantidad monumental de manejables microfases minúsculas de control granular operativo riguroso exacto financiero generalizadas paramétricas milimétricas perfectas microscópicas minúsculas exactitas paramétricas contables totalmente perfectas apegadas a ley jerárquica total operativa económica y de costo riguroso puntual paramétrica jerárquica es en resúmen general simple y abstracto bautizado nominalmente:", options: ["Por mucho es indudablemente indiscutible universal simple nominal fáctico abstracto indubitable puramente global matemático general teórico técnico la inmensamente gran respetadísima famosa teórica y globalizada 'Magnificiente Árbol Analítico Gigantesco Macro Lógico Abstracto Paramétrico Económico Diagnóstico Profundo General Abstracto Del Problema Focal Abstracto Global Puro Indiscutido Central Abstracto' innegable majestuosa metódico macro central técnico riguroso global macro puro.", "Indiscutiblemente incuestionablemente la majestuosa indiscutible inamovible estrella mundial fáctica económica paramétrica técnica la colosal la gigantesca técnica rigurosísima teórica visual denominada unánimemente el colosal magno gigantesco titánico majestuoso e inamovible fáctico estructural y global magno indiscutible diagrama o grandiosa e hiper famosa inconfundible la Estructura metodológica y jerárquica colosal de Desglose riguroso implacable del Trabajo Inmenso global general abstracto fáctico operativo conocida como gran y respetada indomable EDT o famosa macro tabla anglosajona indomable de estructura operativa algorítmica gigantesca y paramétrica Work Breakdown macro Structure WBS.", "El afamado y muy reverenciado rigurosamente en la gran matriz indomable el siempre bien famoso incansable majestuoso el muy colosal muy inmenso riguroso gigantesco esquema de la 'Factibilidad Económica pura y la siempre inmaculada paramétrica inalienable Tasa Interna Real Del Flujo Macro Monetaria Directa o Retorno Analítico Macroeconómico TIR macro Económico Puro General Contable Puro Analítico Innegociable Central Puro'.", "El sumamente complejo e hiper técnico el siempre reverenciado y rigurosísimo el gran y el respetadisimo magno colosal monumental el grandioso indiscutible inamovible 'Estudio general Legal macro analítico y el organigrama Fáctico Metodológico Superior general De RRHH Legal Institucional macro Administrativo Jurídico Básico Titánico Indiscutible De Constitución Notarial Superior y Central y Organizacional Inquebrantable puro metódico legal superior fáctico y orgánico de constitución magna indiscutible real puro legal metódico legal'."], correctAnswerIndex: 1 },
-    { question: "¿Cuál es verdaderamente la gran gran la inmensurable gigantesca máxima superior inigualable la suprema y magistral y gran conclusión innegociable inquebrantable central fundamental definitiva subyacente absoluta implícita e incuestionable general que se puede asimilar y digerir destilar aprender absorber y de este largo y exhaustivo riguroso profundo magistral detallado colosal y el denso compendio académico metódico fáctico educativo supremo riguroso y denso texto monumental sobre el siempre indomable vital importantísimo imperioso necesario matrimonio intrínseco de vital suprema jerárquica colosal comunión profunda la gran gigantesca y gran irrompible hiper colosal de la relación pura inquebrantable inmaculada indisoluble simbiótica sinérgica entrelazada colosal entre la incalculable colosal disciplina pura de orquestación de vida y muerte de la implacable directriz férrea de la formal teórica macro del formalismo 'proyecto teórico riguroso puro conceptual innegociable metódico estricto financiero cerrado y acotado' contra o mejor conjugada de la mano en total armonía del gigantesco pilar o el vasto y experimental mundo de barro sudor colosal experimental inquebrantable y vivencia inamovible formativo macro fáctico ético cívico general puro gigante de inmersivo puramente que representa vital indiscutible de las invaluables macro 'Prácticas académicas macro universitarias In situ Reales Puras Técnicas Profesionales formativas'? ", options: ["Totalmente abstracto y erróneo que ambas son disciplinas enemigas encarnizadas teóricas teóricas fácticas macro y mutuamente excluyentes; puesto y en base general que si un experto profesional ya domina al dedillo ciegamente a ojo cerrado teóricamente cómo llenar un gran formato burócrata rígido gigantesco excel u hojas de cálculo macros para calcular abstractamente todo y cualquier un grandioso súper plan macro abstracto burocrático, indiscutiblemente inamovible ya no jamás de los jamases nunca bajo ningún sentido por más mínimo que parezca en la vida ni al final del tiempo puro lógico y humano necesita siquiera levantarse jamás en la vida de inmersarse empíricamente jamás pidiendo tocar piso salir ni enfrentarse ni sudar empíricamente mancharse los zapatos fácticos abstractos puros cívicos en ni en simulaciones académicas técnicas minúsculas incipientes ni a prácticas jamás remotas o inmersiones reales y complejas técnicas o de EPS reales vivas prácticas operativas sociales para formarse cívica integralmente un honor y prestigio o ser exitoso humano global y líder cívico total ni resiliencia total alguna.", "Ambas fungen general macroscópicamente a la final juntas unánimemente y bailan gloriosa, magistral sinérgicamente, vital metódicamente y entrelazadamente indiscutible rígidamente una soberbia gloriosa indispensable vital importantísima inquebrantable coreografía suprema majestuosa matemática sinérgica e inseparable e indisoluble indiscutible magna técnica formativa cíclica integral tridimensional pura didáctica y cívica: donde inequívocamente e innegociablemente las Prácticas colotales forjan y otorgan inquebrantablemente al profesional emergente a gritos un invaluable cimiento blindado inigualable acervo real fáctico vivencial supremo la adaptabilidad macro humana social fáctica ética inmaculada indomable en carne propia de innovación ética, humana vivencial empírica, cívica abstracta puramente resiliente y puramente investigativa en campo hostil fáctico social innegociable inamovible inquebrantable metódica viva de resiliencia innegable frente a imprevisibles fácticos, y su contraparte vital técnica complementaria macro analítica colosal teórica económica y técnica o el majestuoso 'Proyecto rígidamente blindado económico formativo', simplemente provee indiscutible firme sólida como piedra matemáticamente inamovible jerárquica un inmenso monolítico y rígidamente esqueleto gigante indiscutible el esqueleto irrompible la coraza jerárquica colosal técnica el férreo escudo implacable económico riguroso presupuestal gigante supremo o estructura organizativa teórica económica macro puramente el rígido marco de blindaje gigantesco paramétrico operativo, algorítmico jerárquico innegociable, de contención temporal económica, fiscal administrativa formal y rígido colosal control administrativo puro macro paramétrico metódico estricto económico garantizando así invariablemente al unísono de manera certera aplastante el seguro éxito triunfal sin fisuras glorioso inquebrantable global del enorme esfuerzo social inmenso paramétrico absoluto y el bienestar gigantesco seguro ético y la máxima suprema e indiscutida intocable gran y absoluta gloriosa e irrebatible optimización general macro universal suprema inigualable financiera contable máxima indiscutida y definitiva incuestionable irrenunciable magna eficiencia gigante técnica económica de cualquier y todo majestuoso proyecto esfuerzo inmenso de la humanidad técnica económica civil resolutivo resolutiva humana indomable indudable gigantesca pura civilizatoria humana real social indiscutible superior contable operativa pura administrativa."], correctAnswerIndex: 1 }
+    { 
+      type: "multiple-choice", 
+      question: "¿Cuál es la definición fundamental de un proyecto según el PMBOK?", 
+      options: [
+        "Un esfuerzo continuo y repetitivo", 
+        "Un esfuerzo temporal realizado para crear un producto, servicio o resultado único", 
+        "Una operación rutinaria sin fin definido", 
+        "Una actividad permanente sin objetivos específicos"
+      ], 
+      correctAnswerIndex: 1 
+    },
+    { 
+      type: "multiple-choice", 
+      question: "¿Qué institución regula la gestión de proyectos públicos en Guatemala?", 
+      options: [
+        "Ministerio de Finanzas", 
+        "SEGEPLAN a través del SNIP", 
+        "Universidad de San Carlos", 
+        "Colegio de Ingenieros"
+      ], 
+      correctAnswerIndex: 1 
+    },
+    { 
+      type: "multiple-choice", 
+      question: "¿En qué semestre se realizan las prácticas iniciales de ingeniería?", 
+      options: [
+        "Primer semestre", 
+        "Segundo semestre", 
+        "Tercer semestre", 
+        "Cuarto semestre"
+      ], 
+      correctAnswerIndex: 2 
+    },
+    { 
+      type: "multiple-choice", 
+      question: "¿Cuál es el objetivo principal de los proyectos privados?", 
+      options: [
+        "Maximizar el bienestar social", 
+        "Cumplir normativas gubernamentales", 
+        "Maximizar la rentabilidad económica", 
+        "Evitar la generación de utilidades"
+      ], 
+      correctAnswerIndex: 2 
+    },
+    { 
+      type: "multiple-choice", 
+      question: "¿Qué característica distingue fundamentalmente un proyecto de una operación rutinaria?", 
+      options: [
+        "Su naturaleza temporal con inicio y fin definidos", 
+        "Su continuidad perpetua", 
+        "Su falta de objetivos específicos", 
+        "Su independencia de recursos"
+      ], 
+      correctAnswerIndex: 0 
+    }
   ],
   infographicUrl: "/infografias/1.1.png"
 };
 
 const content3_1: TopicContent = {
   summary: `# 3.1 Administración Estratégica por Casos
+
+---
+
+## Realizado por
+
+**202430144 Henry Estuardo Estrada Rojas**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
+
+---
 
 ## Definición y Propósito
 
@@ -253,51 +311,61 @@ Los **líderes estratégicos** son responsables de asegurar que el proceso se ut
   ],
   quiz: [
     {
+      type: "multiple-choice",
       question: "¿Cuál es el propósito fundamental de la administración estratégica?",
       options: ["Reducir costos operativos inmediatamente", "Lograr competitividad estratégica y rendimientos superiores al promedio", "Eliminar la competencia del mercado", "Automatizar todos los procesos administrativos"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Cuál es la diferencia clave entre formulación e implementación de estrategias?",
       options: ["No hay diferencia, son el mismo proceso", "La formulación es la 'etapa de acción' y la implementación es intelectual", "La formulación se enfoca en eficacia (hacer lo correcto) y la implementación en eficiencia (hacerlo bien)", "La implementación solo la hacen los directivos y la formulación los empleados"],
       correctAnswerIndex: 2
     },
     {
+      type: "multiple-choice",
       question: "¿Qué herramienta se utiliza para alinear fortalezas/debilidades internas con oportunidades/amenazas externas?",
       options: ["Balanced Scorecard", "Análisis FODA (SWOT)", "Modelo de las cinco fuerzas de Porter", "Cadena de valor"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Qué representa la 'Visión' de una organización?",
       options: ["El registro contable actual de la empresa", "La imagen de lo que la organización quiere ser y alcanzar en el futuro", "El manual de procedimientos operativos", "La lista de proveedores autorizados"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Por qué es importante la evaluación de estrategias?",
       options: ["Solo para cumplir requisitos legales", "Para revisar factores internos/externos, medir desempeño y aplicar medidas correctivas", "Para eliminar empleados que no cumplen objetivos", "Para duplicar la inversión inicial"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Qué son las 'Competencias Centrales'?",
       options: ["El grupo de gerentes más antiguos de la empresa", "Recursos y capacidades que sirven como fuente de ventaja competitiva fundamental", "Las habilidades técnicas del departamento de TI", "Los certificados de calidad ISO"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Quiénes son responsables de asegurar que el proceso de administración estratégica se utilice correctamente?",
       options: ["Solo los accionistas mayoritarios", "Los líderes estratégicos y directivos de todos los niveles", "Únicamente el departamento de recursos humanos", "Los consultores externos contratados anualmente"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Es la administración estratégica ciencia o arte?",
       options: ["Solo ciencia, porque usa matemáticas complejas", "Solo arte, porque depende de la intuición", "Ambas: ciencia por el análisis de datos y arte por el juicio creativo bajo incertidumbre", "Ninguna, es un proceso mecánico automatizado"],
       correctAnswerIndex: 2
     },
     {
+      type: "multiple-choice",
       question: "En el caso de Servicios Industriales AGV, ¿cuál fue el resultado del análisis MEFI?",
       options: ["2.95 - indicando debilidad total", "3.50 - indicando fortaleza extrema", "2.96 - indicando que la empresa es fuerte internamente pero debe atender puntos débiles", "1.50 - indicando cierre inminente"],
       correctAnswerIndex: 2
     },
     {
+      type: "multiple-choice",
       question: "¿Cuál fue el crecimiento del capital de trabajo de Servicios Industriales AGV tras la implementación?",
       options: ["De $216,091.50 a $357,091.50", "De $100,000 a $200,000", "De $500,000 a $600,000", "No hubo cambio significativo"],
       correctAnswerIndex: 0
@@ -307,7 +375,17 @@ Los **líderes estratégicos** son responsables de asegurar que el proceso se ut
 };
 
 const content7_1: TopicContent = {
-  summary: `## Introducción
+  summary: `# 7.1 Instituciones Públicas relacionadas a proyectos
+
+## Realizado por
+
+**[Por determinar]**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
+
+---
+
+## Introducción
 
 En el complejo ecosistema de la ingeniería y la gestión de iniciativas de desarrollo, las instituciones públicas desempeñan un papel rector fundamental: regulan, planifican, priorizan y, con frecuencia, actúan como el principal cliente de proyectos de gran envergadura. Su función va más allá de ejecutar obras; incluye la creación de marcos normativos y procedimientos que aseguren que la inversión de los recursos del Estado se traduzca en bienestar efectivo para la ciudadanía.
 
@@ -362,51 +440,61 @@ Finalmente, las instituciones públicas fungen como espacios clave para la **for
   ],
   quiz: [
     {
+      type: "multiple-choice",
       question: "¿Cuál es un rol típico de las instituciones públicas en proyectos de ingeniería?",
       options: ["Evitar toda regulación para acelerar obras", "Regular, planificar y priorizar la inversión pública", "Operar solo como proveedores privados", "Trabajar sin seguimiento ni control presupuestario"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice", 
       question: "¿Qué aportan normalmente organismos multilaterales como el BID o el Banco Mundial?",
       options: ["Solo mano de obra", "Financiamiento y asistencia técnica con estándares de sostenibilidad", "Únicamente permisos ambientales locales", "Exclusivamente auditorías internas de empresas privadas"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "Un sistema nacional de inversión pública (como el SNIP) busca principalmente:",
       options: ["Eliminar la evaluación previa", "Asignar recursos a alternativas más eficaces y socialmente rentables", "Sustituir a todas las municipalidades", "Garantizar ganancias privadas"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Cuál es un ejemplo de institución pública ejecutora o rectora sectorial?",
       options: ["Un fondo de capital de riesgo", "Un ministerio de energía o de ambiente", "Una consultora privada", "Una ONG internacional sin convenios estatales"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Qué significa control físico-financiero?",
       options: ["Revisar únicamente la estética del proyecto", "Comparar avance real y gasto frente a lo planificado", "Reemplazar el cronograma por reuniones", "Ignorar variaciones y riesgos"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "En proyectos públicos, la medida de éxito suele incluir:",
       options: ["Solo retorno financiero privado", "Bienestar ciudadano y rentabilidad social", "Únicamente velocidad de ejecución", "Evitar participación ciudadana"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Qué actor suele impulsar proyectos con enfoque territorial y servicios locales?",
       options: ["Municipalidades", "Bolsas de valores", "Incubadoras privadas", "Colegios profesionales"],
       correctAnswerIndex: 0
     },
     {
+      type: "multiple-choice",
       question: "La razón de ser de la normativa y procedimientos en inversión pública es:",
       options: ["Complicar por defecto el proceso", "Asegurar eficiencia, transparencia y uso racional de recursos", "Garantizar monopolios privados", "Eliminar la rendición de cuentas"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "En el contexto de formación, el sector público es relevante porque:",
       options: ["No requiere metodología", "Permite prácticas/EPS aplicando gestión a problemas reales con impacto social", "Solo ofrece trabajos administrativos sin análisis", "Impide el trabajo interdisciplinario"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "Si un Estado no cuenta con recursos suficientes para un proyecto crítico, una alternativa común es:",
       options: ["Cancelar siempre el proyecto", "Complementar con financiamiento multilateral bajo condiciones técnicas", "Transferirlo sin regulación", "Ejecutarlo sin estudios por urgencia"],
       correctAnswerIndex: 1
@@ -421,9 +509,11 @@ const content5_1: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202330360 Willy Alexander López Gómez**
+**202330360 Willy Alexander López Gómez**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -442,6 +532,7 @@ En disciplinas como la ingeniería, donde la precisión es vital, un TdR bien es
 ## Desarrollo del Contenido y Metodología
 
 ### Definición Técnica
+
 
 Los Términos de Referencia (TdR) se definen técnicamente como el documento que detalla las condiciones y parámetros operativos para la contratación de servicios intelectuales, consultorías o asistencia técnica. A diferencia de la compra de suministros (donde se adquieren bienes físicos), los TdR se centran en el **valor del conocimiento especializado**.
 
@@ -570,8 +661,9 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
     { term: "Metodología", definition: "Descripción de cómo se procesará la información, especificando métodos (cualitativos/cuantitativos) y normas de ingeniería aplicables." }
   ],
   quiz: [
-    { 
-      question: "A diferencia de la compra tradicional de suministros, ¿en qué se centran principalmente los Términos de Referencia (TdR)?", 
+    {
+  type: "multiple-choice",
+question: "A diferencia de la compra tradicional de suministros, ¿en qué se centran principalmente los Términos de Referencia (TdR)?", 
       options: [
         "En la adquisición de bienes físicos y mobiliario", 
         "En el valor del conocimiento especializado y los servicios intelectuales", 
@@ -580,8 +672,9 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "Dentro de la estructura universal de los TdR, ¿qué sección sirve para evitar que el consultor asuma responsabilidades fuera de los límites del proyecto?", 
+    {
+  type: "multiple-choice",
+question: "Dentro de la estructura universal de los TdR, ¿qué sección sirve para evitar que el consultor asuma responsabilidades fuera de los límites del proyecto?", 
       options: [
         "Los Antecedentes y Justificación", 
         "El Alcance y Enfoque", 
@@ -590,8 +683,9 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué ocurre si un requerimiento técnico no se incluyó explícitamente en los TdR originales firmados con el consultor?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué ocurre si un requerimiento técnico no se incluyó explícitamente en los TdR originales firmados con el consultor?", 
       options: [
         "Se le puede exigir legalmente si el Director del Proyecto lo solicita de forma verbal", 
         "El proyecto debe cancelarse de inmediato por incumplimiento", 
@@ -600,8 +694,9 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "Para proteger la eficiencia financiera del proyecto, los pagos al consultor deben estar estrictamente vinculados a:", 
+    {
+  type: "multiple-choice",
+question: "Para proteger la eficiencia financiera del proyecto, los pagos al consultor deben estar estrictamente vinculados a:", 
       options: [
         "La aprobación de los Entregables o productos verificables estipulados en el cronograma", 
         "La cantidad de horas que el consultor pase dentro de las instalaciones de la empresa", 
@@ -610,8 +705,9 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Cuál es la función principal de los TdR en proyectos de ingeniería?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la función principal de los TdR en proyectos de ingeniería?", 
       options: [
         "Servir como documento administrativo básico", 
         "Actuar como el plano maestro que guía servicios intelectuales y define responsabilidades exactas", 
@@ -620,18 +716,18 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué sección de los TdR es considerada 'el corazón del documento'?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué sección de los TdR es considerada 'el corazón del documento'?", 
       options: [
         "Los Antecedentes y Justificación", 
         "Los Entregables (Productos e Informes)", 
-        "El Perfil del Consultor",
-        "La Duración y Cronograma"
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué diferencia existe entre trabajo de campo y trabajo de gabinete en un TdR?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué diferencia existe entre trabajo de campo y trabajo de gabinete en un TdR?", 
       options: [
         "Son exactamente lo mismo", 
         "El campo es en sitio/planta, el gabinete es en oficina/diseño", 
@@ -640,8 +736,9 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué característica debe tener el perfil del consultor en los TdR?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué característica debe tener el perfil del consultor en los TdR?", 
       options: [
         "Ser flexible y adaptable", 
         "Formación académica específica y años de experiencia técnica comprobable", 
@@ -650,8 +747,20 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el principal riesgo de tener TdR ambiguos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué ocurre si un requerimiento técnico no se incluyó explícitamente en los TdR originales?", 
+      options: [
+        "Se le puede exigir legalmente si el Director del Proyecto lo solicita de forma verbal", 
+        "El proyecto debe cancelarse de inmediato por incumplimiento", 
+        "Generalmente no se le puede exigir, ya que los TdR definen el alcance estricto y legal del contrato",
+        "El consultor debe hacerlo sin costo adicional"
+      ], 
+      correctAnswerIndex: 2 
+    },
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el principal riesgo de tener TdR ambiguos?", 
       options: [
         "El proyecto será más rápido", 
         "Queda expuesto a sobrecostos, retrasos operativos y entregas deficientes", 
@@ -660,15 +769,15 @@ Para garantizar la cobertura técnica total del servicio, el esqueleto estándar
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué beneficio adicional proporcionan los TdR bien elaborados?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué beneficio adicional proporcionan los TdR bien elaborados?", 
       options: [
         "Solo sirven para legalizar contratos", 
         "Facilitan la supervisión técnica, control de calidad y transferencia de tecnología al equipo interno", 
         "Eliminan la necesidad de pagos",
         "No proporcionan beneficios adicionales"
       ], 
-      correctAnswerIndex: 1 
     }
   ],
   infographicUrl: "/infografias/5.1.png"
@@ -680,7 +789,7 @@ const content1_2: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
 **202531107 Aneth Alejandra Avila Morales**
 
@@ -797,8 +906,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
     { term: "Impacto Social", definition: "Efecto que un proyecto tiene en el bienestar de la sociedad, especialmente en las comunidades más necesitadas, siendo un criterio fundamental en la evaluación de proyectos en Guatemala." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es el propósito principal de las prácticas iniciales en la ingeniería?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal de las prácticas iniciales en la ingeniería?", 
       options: [
         "Enfocarse solo en cálculos matemáticos complejos", 
         "Ser el puente entre la teoría y la práctica, explorando el 'saber hacer'", 
@@ -807,8 +917,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué entidad gubernamental promueve la 'cultura de proyectos' en Guatemala?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué entidad gubernamental promueve la 'cultura de proyectos' en Guatemala?", 
       options: [
         "Ministerio de Educación", 
         "Universidad de San Carlos", 
@@ -817,8 +928,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué significa desarrollar un proyecto a 'nivel de perfil'?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué significa desarrollar un proyecto a 'nivel de perfil'?", 
       options: [
         "Ejecutar el proyecto completamente", 
         "Análisis preliminar basado en información existente para determinar factibilidad", 
@@ -827,8 +939,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es uno de los tres pilares fundamentales de las prácticas iniciales en Guatemala?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es uno de los tres pilares fundamentales de las prácticas iniciales en Guatemala?", 
       options: [
         "Especialización técnica únicamente", 
         "Impacto social, estandarización profesional y responsabilidad ética", 
@@ -837,8 +950,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cómo ayudan los proyectos a optimizar recursos?", 
+    {
+  type: "multiple-choice",
+question: "¿Cómo ayudan los proyectos a optimizar recursos?", 
       options: [
         "Desperdiciando capital y esfuerzo", 
         "Permitiendo asignar capital y esfuerzo a la solución más eficiente", 
@@ -847,8 +961,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la Triple Restricción en la gestión de proyectos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la Triple Restricción en la gestión de proyectos?", 
       options: [
         "Tiempo, Costo y Calidad/Desempeño", 
         "Solo el costo del proyecto", 
@@ -857,8 +972,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Por qué es importante el 'saber hacer' en ingeniería?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué es importante el 'saber hacer' en ingeniería?", 
       options: [
         "No es importante", 
         "Complementa el conocimiento teórico permitiendo aplicar la ciencia a problemas reales", 
@@ -867,8 +983,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué relación tienen las prácticas iniciales con el EPS?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué relación tienen las prácticas iniciales con el EPS?", 
       options: [
         "No tienen relación alguna", 
         "Son el primer paso de un proceso gradual que prepara para el EPS", 
@@ -877,8 +994,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la preinversión en un proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la preinversión en un proyecto?", 
       options: [
         "La ejecución del proyecto", 
         "Fases de estudio antes de ejecutar para asegurar viabilidad", 
@@ -887,8 +1005,9 @@ En nuestro país, las "Prácticas Iniciales" adquieren una relevancia estratégi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Por qué un ingeniero del sector privado debe conocer proyectos sociales?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué un ingeniero del sector privado debe conocer proyectos sociales?", 
       options: [
         "No es necesario", 
         "Porque la metodología es similar y hay interacción constante entre sectores", 
@@ -907,7 +1026,7 @@ const content1_5: TopicContent = {
 
 ---
 
-**Investigación realizada por:** 202530214 Cecilia Mariann Alejandra López Estacuy  
+## Realizado por 202530214 Cecilia Mariann Alejandra López Estacuy  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
 
@@ -1056,8 +1175,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
     { term: "PM4R", definition: "Metodología de Gestión por Resultados orientada a fortalecer capacidades en proyectos de desarrollo, asegurando impacto mediante siete pasos lógicos de control." }
   ],
   quiz: [
-    { 
-      question: "¿Qué característica principal define a las tareas en la Ruta Crítica?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué característica principal define a las tareas en la Ruta Crítica?", 
       options: [
         "Mayor costo unitario", 
         "Holgura igual a cero", 
@@ -1066,8 +1186,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "El nivel más bajo de una EDT se denomina:", 
+    {
+  type: "multiple-choice",
+question: "El nivel más bajo de una EDT se denomina:", 
       options: [
         "Hito", 
         "Paquete de trabajo", 
@@ -1076,8 +1197,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué enfoque es más adecuado para proyectos con requerimientos cambiantes?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué enfoque es más adecuado para proyectos con requerimientos cambiantes?", 
       options: [
         "Cascada (Predictivo)", 
         "Ágil (Adaptativo)", 
@@ -1086,8 +1208,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué representa la Restricción Triple en gestión de proyectos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué representa la Restricción Triple en gestión de proyectos?", 
       options: [
         "Solo el costo del proyecto", 
         "El equilibrio entre alcance, tiempo y costo", 
@@ -1096,8 +1219,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el propósito principal de la EDT/WBS?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal de la EDT/WBS?", 
       options: [
         "Aumentar el costo del proyecto", 
         "Descomponer el alcance en paquetes manejables", 
@@ -1106,8 +1230,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué técnica utiliza tres estimaciones de tiempo (optimista, probable, pesimista)?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué técnica utiliza tres estimaciones de tiempo (optimista, probable, pesimista)?", 
       options: [
         "Diagrama de Gantt", 
         "Ruta Crítica", 
@@ -1116,8 +1241,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué sucede si se recorta el presupuesto en un proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué sucede si se recorta el presupuesto en un proyecto?", 
       options: [
         "No afecta其他变量", 
         "El tiempo aumentará o el alcance se reducirá", 
@@ -1126,8 +1252,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es un 'stakeholder' en gestión de proyectos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es un 'stakeholder' en gestión de proyectos?", 
       options: [
         "Solo el cliente del proyecto", 
         "Persona u organización que puede afectar o verse afectada por el proyecto", 
@@ -1136,8 +1263,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el beneficio principal de identificar la ruta crítica?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el beneficio principal de identificar la ruta crítica?", 
       options: [
         "No tiene ningún beneficio", 
         "Permite concentrar el control donde más impacta la duración total", 
@@ -1146,8 +1274,9 @@ Técnica estadística que calcula el tiempo esperado bajo incertidumbre mediante
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la holgura en una tarea?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la holgura en una tarea?", 
       options: [
         "El costo adicional de la tarea", 
         "Tiempo flexible que puede retrasarse sin afectar la fecha final", 
@@ -1166,7 +1295,7 @@ const content1_6: TopicContent = {
 
 ---
 
-**Investigación realizada por:** 202530214 Cecilia Mariann Alejandra López Estacuy  
+## Realizado por 202530214 Cecilia Mariann Alejandra López Estacuy  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
 
@@ -1298,8 +1427,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
     { term: "Licitación", definition: "Proceso competitivo de selección de proveedores para asegurar transparencia en el sector público." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es el objetivo principal de los proyectos públicos?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el objetivo principal de los proyectos públicos?", 
       options: [
         "Maximizar ganancias", 
         "Generar valor público y bienestar social", 
@@ -1308,8 +1438,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué sistema norma los proyectos públicos en Guatemala?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué sistema norma los proyectos públicos en Guatemala?", 
       options: [
         "Sistema bancario", 
         "SNIP (Sistema Nacional de Inversión Pública)", 
@@ -1318,8 +1449,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuándo un proyecto público se considera rentable?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuándo un proyecto público se considera rentable?", 
       options: [
         "Cuando el VAN es negativo", 
         "Cuando el VANE es positivo a tasa social de descuento", 
@@ -1328,8 +1460,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el VAN en evaluación de proyectos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el VAN en evaluación de proyectos?", 
       options: [
         "Valor actual de costos only", 
         "Valor presente de flujos de fondos proyectados", 
@@ -1338,8 +1471,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es la fase crítica que requiere mayor rigor técnico?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la fase crítica que requiere mayor rigor técnico?", 
       options: [
         "Operación", 
         "Evaluación Ex-post", 
@@ -1348,8 +1482,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué busca principalmente un proyecto privado?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué busca principalmente un proyecto privado?", 
       options: [
         "Bienestar social", 
         "Rentabilidad financiera y competitividad", 
@@ -1358,8 +1493,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la TIR en evaluación de proyectos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la TIR en evaluación de proyectos?", 
       options: [
         "Tasa de interés bancaria", 
         "Tasa de descuento que hace el VAN cero", 
@@ -1368,8 +1504,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la licitación en proyectos públicos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la licitación en proyectos públicos?", 
       options: [
         "Compra directa sin competencia", 
         "Proceso competitivo de selección de proveedores", 
@@ -1378,8 +1515,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuántas fases tiene el ciclo de vida del proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuántas fases tiene el ciclo de vida del proyecto?", 
       options: [
         "2 fases", 
         "3 fases", 
@@ -1388,8 +1526,9 @@ Iniciativas impulsadas por capital particular destinadas a satisfacer necesidade
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué incluye la fase de preinversión?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué incluye la fase de preinversión?", 
       options: [
         "Solo construcción", 
         "Idea, Perfil, Prefactibilidad y Factibilidad", 
@@ -1408,7 +1547,7 @@ const content2_1: TopicContent = {
 
 ---
 
-**Investigación realizada por:** 202231034 Carlos Guillermo Obregón Custodio  
+## Realizado por 202231034 Carlos Guillermo Obregón Custodio  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
 
@@ -1553,8 +1692,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
     { term: "Evaluación 360 grados", definition: "Recolección de percepciones y retroalimentación que involucra a superiores, pares y subordinados para obtener visión integral del desempeño." }
   ],
   quiz: [
-    { 
-      question: "Un equipo de ciberseguridad decide utilizar un procedimiento de 'Análisis de tráfico de red' utilizando un 'Script en Bash' ejecutado dentro de una 'Máquina Virtual en AWS'. ¿Qué representa el 'Script en Bash'?", 
+    {
+  type: "multiple-choice",
+question: "Un equipo de ciberseguridad decide utilizar un procedimiento de 'Análisis de tráfico de red' utilizando un 'Script en Bash' ejecutado dentro de una 'Máquina Virtual en AWS'. ¿Qué representa el 'Script en Bash'?", 
       options: [
         "La técnica", 
         "La herramienta", 
@@ -1563,8 +1703,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Cuál es el propósito principal de realizar un 'Diagnóstico de Línea Base' antes de migrar una base de datos?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal de realizar un 'Diagnóstico de Línea Base' antes de migrar una base de datos?", 
       options: [
         "Evaluar las fortalezas y debilidades del equipo", 
         "Establecer tiempos de respuesta actuales para comparación", 
@@ -1573,8 +1714,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "Durante una matriz FODA, se identifica que 'han surgido nuevas normativas internacionales de protección de datos'. ¿En qué cuadrante debe ubicarse este factor?", 
+    {
+  type: "multiple-choice",
+question: "Durante una matriz FODA, se identifica que 'han surgido nuevas normativas internacionales de protección de datos'. ¿En qué cuadrante debe ubicarse este factor?", 
       options: [
         "Fortalezas", 
         "Debilidades", 
@@ -1583,8 +1725,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué instrumento es el más adecuado para diagnosticar potencialidades en tiempo real?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué instrumento es el más adecuado para diagnosticar potencialidades en tiempo real?", 
       options: [
         "Análisis PESTEL", 
         "Lluvia de ideas", 
@@ -1593,8 +1736,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       ], 
       correctAnswerIndex: 3 
     },
-    { 
-      question: "¿Qué es la diferencia fundamental entre técnica e instrumento?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la diferencia fundamental entre técnica e instrumento?", 
       options: [
         "Son lo mismo", 
         "La técnica es el procedimiento, el instrumento es el soporte", 
@@ -1603,8 +1747,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué evalúa el análisis FODA?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué evalúa el análisis FODA?", 
       options: [
         "Solo factores internos", 
         "Solo factores externos", 
@@ -1613,8 +1758,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué son las pruebas psicométricas?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué son las pruebas psicométricas?", 
       options: [
         "Tests de rendimiento de hardware", 
         "Evaluaciones estandarizadas de habilidades cognitivas", 
@@ -1623,8 +1769,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué complementa el análisis FODA en la evaluación externa?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué complementa el análisis FODA en la evaluación externa?", 
       options: [
         "Assessment Centers", 
         "Evaluación 360 grados", 
@@ -1633,8 +1780,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué es un Assessment Center?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es un Assessment Center?", 
       options: [
         "Un centro de datos", 
         "Una simulación de situaciones laborales reales", 
@@ -1643,8 +1791,9 @@ Es una herramienta de planificación estratégica que analiza los factores clave
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el objetivo principal del diagnóstico?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el objetivo principal del diagnóstico?", 
       options: [
         "Incrementar costos", 
         "Facilitar la toma de decisiones estratégicas", 
@@ -1663,7 +1812,7 @@ const content2_2: TopicContent = {
 
 ---
 
-**Investigación realizada por:** 202432128 Ángel Saul Rios Guzmán  
+## Realizado por 202432128 Ángel Saul Rios Guzmán  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
 
@@ -1801,8 +1950,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
     { term: "Costos Directos", definition: "Gastos directamente asociados a la producción o ejecución de un proceso específico, incluyendo materiales y mano de obra." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es la diferencia principal entre el macrodiagnóstico y el microdiagnóstico?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la diferencia principal entre el macrodiagnóstico y el microdiagnóstico?", 
       options: [
         "Son exactamente lo mismo", 
         "El macrodiagnóstico estudia el contexto general, el microdiagnóstico se enfoca en unidades específicas", 
@@ -1811,8 +1961,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Para qué sirve establecer una línea base en el diagnóstico?", 
+    {
+  type: "multiple-choice",
+question: "¿Para qué sirve establecer una línea base en el diagnóstico?", 
       options: [
         "No tiene utilidad", 
         "Para medir la evolución e impacto del proyecto una vez implementado", 
@@ -1821,8 +1972,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué herramienta estratégica se recomienda en el macrodiagnóstico?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué herramienta estratégica se recomienda en el macrodiagnóstico?", 
       options: [
         "Análisis FODA", 
         "Diagrama de Gantt", 
@@ -1831,8 +1983,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Qué tipo de información se recopila durante un microdiagnóstico?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué tipo de información se recopila durante un microdiagnóstico?", 
       options: [
         "Solo noticias del mercado", 
         "Información precisa sobre recursos, capacidades técnicas, costos directos y restricciones operativas", 
@@ -1841,8 +1994,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué abarca el alcance del microdiagnóstico?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué abarca el alcance del microdiagnóstico?", 
       options: [
         "Todo el país", 
         "Aspectos puntuales que requieren intervención técnica específica", 
@@ -1851,8 +2005,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué permite establecer la línea base?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué permite establecer la línea base?", 
       options: [
         "Definir la situación actual del entorno antes de iniciar", 
         "Eliminar la necesidad de evaluación", 
@@ -1861,8 +2016,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Qué considera el macrodiagnóstico como variables externas?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué considera el macrodiagnóstico como variables externas?", 
       options: [
         "Solo procesos internos", 
         "Tendencias del mercado, políticas gubernamentales, normativas legales, impactos socioambientales", 
@@ -1871,8 +2027,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es fundamental para la toma de decisiones precisas?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es fundamental para la toma de decisiones precisas?", 
       options: [
         "Usar solo un tipo de diagnóstico", 
         "La combinación complementaria de macro y microdiagnóstico", 
@@ -1881,8 +2038,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué permite el análisis FODA en el macrodiagnóstico?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué permite el análisis FODA en el macrodiagnóstico?", 
       options: [
         "Posicionar estratégicamente el proyecto", 
         "Calcular costos exactos", 
@@ -1891,8 +2049,9 @@ El microdiagnóstico se centra en un análisis detallado de una unidad o proceso
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Cuál es el objetivo principal del diagnóstico en ingeniería?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el objetivo principal del diagnóstico en ingeniería?", 
       options: [
         "Aumentar complejidad", 
         "Establecer condiciones actuales, identificar necesidades y determinar viabilidad técnica", 
@@ -1911,9 +2070,11 @@ const content3_3: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202330066 Mynor Estuardo Ruano García**
+**202330066 Mynor Estuardo Ruano García**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -2062,8 +2223,9 @@ La séptima edición demuestra que las normativas evolucionan para hacer la escr
     { term: "Formato APA 7", definition: "Séptima edición del manual de la American Psychological Association, introducida en 2019 con cambios significativos para modernizar la redacción académica." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es uno de los cambios más significativos introducidos en la séptima edición de las Normas APA respecto a las citas?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es uno de los cambios más significativos introducidos en la séptima edición de las Normas APA respecto a las citas?", 
       options: [
         "Se prohibió el uso de libros físicos como fuentes", 
         "Se permite citar usando 'et al.' desde la primera mención para obras con tres o más autores", 
@@ -2072,28 +2234,9 @@ La séptima edición demuestra que las normativas evolucionan para hacer la escr
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el propósito principal de utilizar las técnicas de documentación (como APA) en un trabajo académico?", 
-      options: [
-        "Rellenar más páginas para que el documento se vea más largo", 
-        "Evitar el plagio, dar crédito a los autores originales y estandarizar la escritura", 
-        "Demostrar que el autor sabe utilizar Microsoft Word",
-        "Hacer el documento más difícil de leer"
-      ], 
-      correctAnswerIndex: 1 
-    },
-    { 
-      question: "Las normas de documentación protegen a los creadores apoyándose en:", 
-      options: [
-        "Las Leyes de Derechos de Autor", 
-        "El Registro Civil", 
-        "El Ministerio de Economía", 
-        "Las normas municipales"
-      ], 
-      correctAnswerIndex: 0 
-    },
-    { 
-      question: "¿Qué significa 'et al.' en las citas académicas?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué significa 'et al.' en las citas académicas?", 
       options: [
         "Significa 'et alii' que es 'y otros'", 
         "Significa 'etcétera'", 
@@ -2102,8 +2245,9 @@ La séptima edición demuestra que las normativas evolucionan para hacer la escr
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Cuál es el interlineado requerido por APA 7?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el interlineado requerido por APA 7?", 
       options: [
         "Espacio sencillo (1.0)", 
         "Espacio y medio (1.5)", 
@@ -2112,8 +2256,9 @@ La séptima edición demuestra que las normativas evolucionan para hacer la escr
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué tamaño de márgenes requiere APA 7?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué tamaño de márgenes requiere APA 7?", 
       options: [
         "0.5 pulgadas en todos los lados", 
         "1 pulgada (2.54 cm) en todos los lados", 
@@ -2122,8 +2267,9 @@ La séptima edición demuestra que las normativas evolucionan para hacer la escr
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el plagio académico?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el plagio académico?", 
       options: [
         "Citar correctamente las fuentes", 
         "Apropiación de ideas o palabras de otros sin dar crédito", 
@@ -2132,8 +2278,9 @@ La séptima edición demuestra que las normativas evolucionan para hacer la escr
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué función cumplen las normas APA a nivel mundial?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué función cumplen las normas APA a nivel mundial?", 
       options: [
         "Complicar la escritura", 
         "Funcionan como un 'idioma universal' académico", 
@@ -2142,34 +2289,37 @@ La séptima edición demuestra que las normativas evolucionan para hacer la escr
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué permite la flexibilidad tipográfica de APA 7?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la sangría en formato APA 7?", 
       options: [
-        "Usar cualquier fuente sin restricciones", 
-        "Usar diversas fuentes legibles como Calibri, Arial o Times New Roman", 
-        "Solo usar fuentes decorativas", 
-        "No usar fuentes digitales"
+        "No se usa sangría", 
+        "0.5 pulgadas (1.27 cm) al inicio de cada párrafo", 
+        "1 pulgada al inicio de cada párrafo", 
+        "2 pulgadas solo en la primera página"
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Por qué es importante la documentación adecuada en una tesis?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal de las normas de documentación?", 
       options: [
-        "No es importante", 
-        "Demuestra rigor investigativo, evita plagio y cumple requisitos legales", 
-        "Solo es una formalidad sin propósito", 
-        "Hace que la tesis sea más corta"
+        "Hacer los textos más largos", 
+        "Evitar el plagio y estandarizar la escritura académica", 
+        "Solo para publicaciones científicas", 
+        "No tienen un propósito claro"
       ], 
       correctAnswerIndex: 1 
     }
   ],
   infographicUrl: "/infografias/3.3.png"
 };
+
 // Contenido para el tema 3.4 - Métodos de evaluación interna y externa
 const content3_4: TopicContent = {
   summary: `# 3.4 Métodos de Evaluación Interna y Externa
 
-**Investigación realizada por:** 202330066 Mynor Estuardo Ruano García  
+## Realizado por 202330066 Mynor Estuardo Ruano García  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
 
@@ -2311,8 +2461,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
     { term: "Inspección de Entidades Financieras", definition: "Evaluaciones de avance físico realizadas por supervisores bancarios para autorizar desembolsos de préstamos." }
   ],
   quiz: [
-    { 
-      question: "En la dirección de un proyecto de ingeniería, ¿cuál es un ejemplo clásico de Evaluación Externa?", 
+    {
+  type: "multiple-choice",
+question: "En la dirección de un proyecto de ingeniería, ¿cuál es un ejemplo clásico de Evaluación Externa?", 
       options: [
         "El Director del Proyecto midiendo el avance diario de los obreros", 
         "Un auditor del gobierno verificando el cumplimiento del Estudio de Impacto Ambiental (EsIA)", 
@@ -2321,8 +2472,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Por qué es peligrosa la 'ceguera de taller' y cómo se combate?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué es peligrosa la 'ceguera de taller' y cómo se combate?", 
       options: [
         "Es el exceso de luz en la obra; se combate con equipo de protección", 
         "Es la incapacidad del equipo interno para ver sus propios errores; se combate con evaluación externa", 
@@ -2331,8 +2483,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "Cuando la PMO revisa internamente que los planos cumplan especificaciones, está realizando:", 
+    {
+  type: "multiple-choice",
+question: "Cuando la PMO revisa internamente que los planos cumplan especificaciones, está realizando:", 
       options: [
         "Una Evaluación Externa de preinversión", 
         "Un Control y Evaluación Interna de la calidad", 
@@ -2341,8 +2494,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el Earned Value?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el Earned Value?", 
       options: [
         "El valor total del proyecto", 
         "Un método interno que integra alcance, cronograma y recursos para medir desempeño", 
@@ -2351,8 +2505,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Quién realiza la Evaluación Interna?", 
+    {
+  type: "multiple-choice",
+question: "¿Quién realiza la Evaluación Interna?", 
       options: [
         "Auditores externos", 
         "El gobierno", 
@@ -2361,8 +2516,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué es el Due Diligence?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el Due Diligence?", 
       options: [
         "Un tipo de impuesto", 
         "Una auditoría técnica y financiera realizada por firmas independientes", 
@@ -2371,8 +2527,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué exige la EsIA?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué exige la EsIA?", 
       options: [
         "Solo pagos", 
         "Cumplimiento de normativas ecológicas", 
@@ -2381,8 +2538,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Por qué son complementarias la evaluación interna y externa?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué son complementarias la evaluación interna y externa?", 
       options: [
         "No son complementarias", 
         "La interna es ágil para correcciones diarias, la externa proporciona legitimidad y confianza", 
@@ -2391,8 +2549,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la línea base en un proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la línea base en un proyecto?", 
       options: [
         "El punto de partida geográfico", 
         "El plan original aprobado contra el cual se mide el rendimiento", 
@@ -2401,8 +2560,9 @@ En proyectos de gran envergadura (infraestructura, plantas industriales), la eva
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué evalúan las inspecciones de entidades financieras?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué evalúan las inspecciones de entidades financieras?", 
       options: [
         "Solo documentos legales", 
         "Avance físico para autorizar desembolsos de préstamos", 
@@ -2421,9 +2581,11 @@ const content4_2: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202430069 Antony Edilsar Gómez Sánchez**
+**202430069 Antony Edilsar Gómez Sánchez**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -2583,8 +2745,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
     { term: "Monitoreo Ambiental", definition: "Seguimiento continuo durante la vida del proyecto para verificar la efectividad de las medidas de mitigación y detectar impactos no previstos." }
   ],
   quiz: [
-    { 
-      question: "¿Qué herramienta analítica utiliza un formato de doble entrada para cruzar las acciones operativas del proyecto con los factores ambientales afectados?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué herramienta analítica utiliza un formato de doble entrada para cruzar las acciones operativas del proyecto con los factores ambientales afectados?", 
       options: [
         "El Método de Battelle-Columbus", 
         "La Matriz de Leopold", 
@@ -2593,8 +2756,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "Si durante la construcción de un proyecto se destruye un hábitat y el daño es catalogado como inevitable e irreversible, ¿qué tipo de medida se debe aplicar?", 
+    {
+  type: "multiple-choice",
+question: "Si durante la construcción de un proyecto se destruye un hábitat y el daño es catalogado como inevitable e irreversible, ¿qué tipo de medida se debe aplicar?", 
       options: [
         "Una Medida Compensatoria (ej. restituir los recursos en otro lugar)", 
         "Una Medida de Control Financiero", 
@@ -2603,8 +2767,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Es el Estudio de Impacto Ambiental un documento que se elabora y se archiva una sola vez antes de iniciar la obra?", 
+    {
+  type: "multiple-choice",
+question: "¿Es el Estudio de Impacto Ambiental un documento que se elabora y se archiva una sola vez antes de iniciar la obra?", 
       options: [
         "Sí, solo sirve para obtener el permiso del gobierno", 
         "No, requiere un monitoreo y seguimiento continuo durante toda la vida del proyecto", 
@@ -2613,8 +2778,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Por qué es necesario un equipo multidisciplinario en el EsIA?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué es necesario un equipo multidisciplinario en el EsIA?", 
       options: [
         "Porque es más caro", 
         "Porque diferentes expertos pueden evaluar diferentes aspectos ambientales complejos", 
@@ -2623,8 +2789,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué miden las Unidades de Impacto Ambiental (UIA)?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué miden las Unidades de Impacto Ambiental (UIA)?", 
       options: [
         "Solo el costo del proyecto", 
         "Alteraciones ecológicas, estéticas y de interés humano de manera cuantitativa", 
@@ -2633,8 +2800,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el propósito principal del EsIA?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal del EsIA?", 
       options: [
         "Aumentar costos del proyecto", 
         "Predecir, identificar, valorar y establecer medidas para corregir o prevenir consecuencias ambientales", 
@@ -2643,8 +2811,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la Línea Base en un EsIA?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la Línea Base en un EsIA?", 
       options: [
         "El punto de partida geográfico", 
         "Diagnóstico analítico del estado actual del ambiente antes de la intervención", 
@@ -2653,8 +2822,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuántas etapas tiene el Proceso de Evaluación Ambiental?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuántas etapas tiene el Proceso de Evaluación Ambiental?", 
       options: [
         "2 etapas", 
         "3 etapas", 
@@ -2663,8 +2833,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué característica debe tener el equipo que realiza el EsIA?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué característica debe tener el equipo que realiza el EsIA?", 
       options: [
         "Ser del mismo proyecto", 
         "Ser multidisciplinario e independiente sin conflictos de interés", 
@@ -2673,8 +2844,9 @@ Un EsIA pierde su validez si no existe un control continuo durante la construcci
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué son las medidas de control y monitoreo?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué son las medidas de control y monitoreo?", 
       options: [
         "Acciones minimizadoras o compensatorias con seguimiento continuo", 
         "Solo documentos legales", 
@@ -2693,9 +2865,11 @@ const content4_3: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202430069 Antony Edilsar Gómez Sánchez**
+**202430069 Antony Edilsar Gómez Sánchez**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -2892,8 +3066,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
     { term: "Fuentes Secundarias", definition: "Información ya existente como estadísticas gubernamentales, informes y estudios publicados." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es la diferencia técnica entre 'Investigación de mercado' y 'Estudio de mercado'?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la diferencia técnica entre 'Investigación de mercado' y 'Estudio de mercado'?", 
       options: [
         "Son exactamente lo mismo y se usan como sinónimos", 
         "La investigación es un monitoreo continuo que hacen las empresas, mientras que el estudio es una acción puntual que se hace antes de tomar una gran decisión", 
@@ -2902,8 +3077,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué elementos conforman el 'Producto ampliado' dentro del Marketing Mix?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué elementos conforman el 'Producto ampliado' dentro del Marketing Mix?", 
       options: [
         "Únicamente la necesidad básica que cubre el producto", 
         "Las características tangibles como la marca, el diseño y el empaque", 
@@ -2912,8 +3088,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Cuáles son las tres metodologías principales para determinar el precio de un nuevo producto?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuáles son las tres metodologías principales para determinar el precio de un nuevo producto?", 
       options: [
         "Basarse en los costos internos, basarse en los precios de la competencia, o basarse en el valor psicológico percibido por el comprador", 
         "Preguntar al gobierno, basarse en la inflación y copiar a otras industrias diferentes", 
@@ -2922,8 +3099,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Qué es el Benchmarking?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el Benchmarking?", 
       options: [
         "Un tipo de impuesto", 
         "Evaluar directamente a los rivales para identificar precios, calidad y oportunidades", 
@@ -2932,8 +3110,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el propósito principal del estudio de mercado?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal del estudio de mercado?", 
       options: [
         "Gastar más dinero", 
         "Reducir la incertidumbre comercial asegurando demanda verificable", 
@@ -2942,8 +3121,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué son las fuentes secundarias?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué son las fuentes secundarias?", 
       options: [
         "Encuestas directas a clientes", 
         "Información ya existente como estadísticas gubernamentales e informes", 
@@ -2952,8 +3132,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuántas P's componen el Marketing Mix?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuántas P's componen el Marketing Mix?", 
       options: [
         "2 P's", 
         "3 P's", 
@@ -2962,8 +3143,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué es la segmentación de mercado?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la segmentación de mercado?", 
       options: [
         "Dividir el mercado en nichos más pequeños y homogéneos", 
         "Unir todos los mercados en uno solo", 
@@ -2972,8 +3154,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Qué mide la cuota de mercado?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué mide la cuota de mercado?", 
       options: [
         "La participación porcentual de ventas de una empresa en su industria", 
         "Solo el beneficio económico", 
@@ -2982,8 +3165,9 @@ El uso de las 4 P's y el Benchmarking garantiza que el producto no solo exista, 
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Por qué es importante el muestreo?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué es importante el muestreo?", 
       options: [
         "Para seleccionar una parte representativa de la población y extrapolar resultados", 
         "Para encuestar a todas las personas", 
@@ -3002,9 +3186,11 @@ const content4_4: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202330526 Fernando Josué Mejía Tezó**
+**202330526 Fernando Josué Mejía Tezó**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -3185,8 +3371,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
     { term: "Presupuesto de Egresos", definition: "Suma de los costos de producción, administración y ventas proyectados." }
   ],
   quiz: [
-    { 
-      question: "¿Qué concepto incluye el dinero necesario para comprar materia prima y pagar sueldos durante los primeros meses de operación?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué concepto incluye el dinero necesario para comprar materia prima y pagar sueldos durante los primeros meses de operación?", 
       options: [
         "Inversión Fija", 
         "Inversión Diferida", 
@@ -3195,8 +3382,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué significa alcanzar el 'Punto de Equilibrio' en un proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué significa alcanzar el 'Punto de Equilibrio' en un proyecto?", 
       options: [
         "Que ya se recuperó toda la inversión inicial", 
         "Que los ingresos totales son iguales a los costos totales (no hay pérdida ni ganancia)", 
@@ -3205,8 +3393,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿La compra de una patente de software para operar se clasifica como?", 
+    {
+  type: "multiple-choice",
+question: "¿La compra de una patente de software para operar se clasifica como?", 
       options: [
         "Capital de Trabajo", 
         "Inversión Diferida (Intangible)", 
@@ -3215,8 +3404,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la Inversión Fija?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la Inversión Fija?", 
       options: [
         "Dinero para sueldos", 
         "Compras de activos tangibles como maquinaria y terrenos", 
@@ -3225,8 +3415,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es la principal función del estudio económico?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la principal función del estudio económico?", 
       options: [
         "Ganar mucho dinero", 
         "Traducir información a términos monetarios y estructurar inversiones", 
@@ -3235,8 +3426,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué mide la depreciación?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué mide la depreciación?", 
       options: [
         "La pérdida de valor de activos fijos por uso o tiempo", 
         "Solo las ventas", 
@@ -3245,8 +3437,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Por qué muchos proyectos fracasan en los primeros meses?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué muchos proyectos fracasan en los primeros meses?", 
       options: [
         "Por falta de clientes", 
         "Por quedarse sin efectivo antes de alcanzar el punto de equilibrio", 
@@ -3255,8 +3448,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué son los costos fijos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué son los costos fijos?", 
       options: [
         "Gastos que cambian con la producción", 
         "Gastos que se pagan independientemente del nivel de producción", 
@@ -3265,8 +3459,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué son los costos variables?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué son los costos variables?", 
       options: [
         "Gastos que cambian en proporción directa al volumen de producción", 
         "Gastos fijos mensuales", 
@@ -3275,8 +3470,9 @@ Sin presupuestos exactos de ingresos, costos y depreciaciones, es imposible cons
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Qué es necesario para construir el Flujo de Caja?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es necesario para construir el Flujo de Caja?", 
       options: [
         "Presupuestos exactos de ingresos, costos y depreciaciones", 
         "Solo la intuición", 
@@ -3295,9 +3491,11 @@ const content4_5: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202330526 Fernando Josué Mejía Tezó**
+**202330526 Fernando Josué Mejía Tezó**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -3502,8 +3700,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
     { term: "Prima de Riesgo", definition: "Porcentaje adicional sobre la inflación que exige un inversionista por asumir el riesgo de un proyecto." }
   ],
   quiz: [
-    { 
-      question: "¿Qué significa la sigla TMAR (o TREMA) en la evaluación de proyectos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué significa la sigla TMAR (o TREMA) en la evaluación de proyectos?", 
       options: [
         "La Tasa Mínima Aceptable de Rendimiento exigida por el inversionista", 
         "El Tiempo Máximo para Aprobar el Riesgo", 
@@ -3512,8 +3711,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "Si tu proyecto tiene una TIR del 8% y el banco te cobra una tasa de interés del 12% por prestarte el dinero, ¿qué deberías hacer?", 
+    {
+  type: "multiple-choice",
+question: "Si tu proyecto tiene una TIR del 8% y el banco te cobra una tasa de interés del 12% por prestarte el dinero, ¿qué deberías hacer?", 
       options: [
         "Aceptar el proyecto porque genera un 8% de ganancia", 
         "Rechazar el proyecto porque el rendimiento no alcanza para pagar la deuda", 
@@ -3522,8 +3722,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué indicador financiero te dice exactamente en cuántos años y meses recuperarás el dinero que invertiste al principio?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué indicador financiero te dice exactamente en cuántos años y meses recuperarás el dinero que invertiste al principio?", 
       options: [
         "El Flujo de Efectivo", 
         "El Valor Actual Neto (VAN)", 
@@ -3532,8 +3733,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Cuándo se acepta un proyecto según el VAN?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuándo se acepta un proyecto según el VAN?", 
       options: [
         "Cuando VAN es negativo", 
         "Cuando VAN es mayor que cero", 
@@ -3542,8 +3744,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el Capital Propio?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el Capital Propio?", 
       options: [
         "Préstamos bancarios", 
         "Aportaciones directas de los inversionistas", 
@@ -3552,8 +3755,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es la principal diferencia entre flujo de caja y estado de resultados?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la principal diferencia entre flujo de caja y estado de resultados?", 
       options: [
         "Son iguales", 
         "El flujo de caja solo registra dinero en efectivo real", 
@@ -3562,8 +3766,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el apalancamiento financiero?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el apalancamiento financiero?", 
       options: [
         "Usar solo capital propio", 
         "Usar deuda para financiar parte del proyecto y buscar mayor rentabilidad", 
@@ -3572,8 +3777,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Por qué un dólar hoy vale más que un dólar futuro?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué un dólar hoy vale más que un dólar futuro?", 
       options: [
         "Por la inflación y el costo de oportunidad", 
         "No vale más", 
@@ -3582,8 +3788,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Qué sucede si la TIR es menor que la TMAR?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué sucede si la TIR es menor que la TMAR?", 
       options: [
         "Se acepta el proyecto", 
         "Se rechaza el proyecto", 
@@ -3592,8 +3799,9 @@ Financiar una parte del proyecto con deuda (bancos) puede ser beneficioso si la 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el propósito principal del estudio financiero?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal del estudio financiero?", 
       options: [
         "Gastar más dinero", 
         "Determinar si vale la pena invertir el dinero requerido", 
@@ -3612,9 +3820,11 @@ const content4_8: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202430626 Horacio Caín Barrios Barrios**
+**202430626 Horacio Caín Barrios Barrios**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -3816,8 +4026,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
     { term: "Capacidad Ociosa", definition: "Capacidad de producción no utilizada que genera pérdidas por costos fijos no cubiertos." }
   ],
   quiz: [
-    { 
-      question: "¿Qué indicador se utiliza para expresar el 'Tamaño Óptimo' de un proyecto en el estudio técnico?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué indicador se utiliza para expresar el 'Tamaño Óptimo' de un proyecto en el estudio técnico?", 
       options: [
         "El número total de empleados de la empresa", 
         "La capacidad instalada, expresada en unidades de producción por año", 
@@ -3826,8 +4037,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "En el diseño del proyecto, si logramos que el costo unitario de nuestro producto disminuya al aumentar nuestra capacidad de producción, ¿estamos aprovechando?", 
+    {
+  type: "multiple-choice",
+question: "En el diseño del proyecto, si logramos que el costo unitario de nuestro producto disminuya al aumentar nuestra capacidad de producción, ¿estamos aprovechando?", 
       options: [
         "Una Adenda técnica", 
         "Un Pliego Sastre", 
@@ -3836,8 +4048,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Por qué es fundamental realizar el Estudio Técnico antes de aprobar el presupuesto final de un proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué es fundamental realizar el Estudio Técnico antes de aprobar el presupuesto final de un proyecto?", 
       options: [
         "Porque de él se derivan los costos exactos de maquinaria, insumos y operación necesarios", 
         "Para cumplir con un requisito exclusivo del departamento de marketing", 
@@ -3846,8 +4059,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Qué evalúa la localización óptima?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué evalúa la localización óptima?", 
       options: [
         "Solo el precio del terreno", 
         "Factores como acceso, materias primas, mano de obra", 
@@ -3856,8 +4070,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el proceso de producción?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el proceso de producción?", 
       options: [
         "Solo vender productos", 
         "La descripción paso a paso de cómo se transforman los insumos en producto final", 
@@ -3866,8 +4081,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la capacidad instalada?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la capacidad instalada?", 
       options: [
         "El número de empleados", 
         "El volumen máximo de producción que puede alcanzar una planta", 
@@ -3876,8 +4092,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué sucede si una planta es muy pequeña?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué sucede si una planta es muy pequeña?", 
       options: [
         "No cubre la demanda", 
         "Genera pérdidas por capacidad ociosa", 
@@ -3886,8 +4103,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Qué sucede si una planta es muy grande?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué sucede si una planta es muy grande?", 
       options: [
         "Cubre perfectamente la demanda", 
         "Genera pérdidas por capacidad ociosa", 
@@ -3896,8 +4114,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la viabilidad operativa?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la viabilidad operativa?", 
       options: [
         "Confirmar si el proyecto es físicamente posible de realizar", 
         "Solo hacer marketing", 
@@ -3906,8 +4125,9 @@ Instrucciones: Define brevemente los siguientes tres puntos para tu estudio téc
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Cuál es el propósito principal del estudio técnico?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal del estudio técnico?", 
       options: [
         "Gastar mucho dinero", 
         "Demostrar que el proyecto se puede hacer física y operativamente", 
@@ -3926,9 +4146,11 @@ const content6_1: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202330517 Edgar Daniel Sierra Mantanico**
+**202330517 Edgar Daniel Sierra Mantanico**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -4134,8 +4356,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
     { term: "Autonomía del Estudiante", definition: "Capacidad del estudiante para dirigir su propio proceso de aprendizaje con mínima supervisión." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es la principal característica del ABP frente al método tradicional?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la principal característica del ABP frente al método tradicional?", 
       options: [
         "El estudiante es pasivo receptor de información", 
         "El estudiante es protagonista activo responsable de su aprendizaje", 
@@ -4144,8 +4367,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué rol desempeña el docente en la metodología ABP?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué rol desempeña el docente en la metodología ABP?", 
       options: [
         "Transmisor único de conocimiento", 
         "Facilitador, tutor y guía del proceso", 
@@ -4154,8 +4378,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cómo se evalúa principalmente en el ABP?", 
+    {
+  type: "multiple-choice",
+question: "¿Cómo se evalúa principalmente en el ABP?", 
       options: [
         "Con exámenes finales teóricos", 
         "Con evaluación continua basada en rúbricas y entregables", 
@@ -4164,8 +4389,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué tipo de organización promueve el ABP?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué tipo de organización promueve el ABP?", 
       options: [
         "Trabajo individual exclusivo", 
         "Trabajo colaborativo en equipos", 
@@ -4174,8 +4400,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué se desarrolla principalmente con el ABP?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué se desarrolla principalmente con el ABP?", 
       options: [
         "Memorización a corto plazo", 
         "Competencias profesionales y productos tangibles", 
@@ -4184,8 +4411,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué desafío presenta la implementación del ABP?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué desafío presenta la implementación del ABP?", 
       options: [
         "No requiere planificación", 
         "Planificación docente exhaustiva e infraestructura tecnológica", 
@@ -4194,8 +4422,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué mejora el ABP en los estudiantes?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué mejora el ABP en los estudiantes?", 
       options: [
         "Solo memorización", 
         "Motivación, calificaciones y retención de conocimientos", 
@@ -4204,8 +4433,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué habilidades se fomentan con el ABP?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué habilidades se fomentan con el ABP?", 
       options: [
         "Solo técnicas", 
         "Pensamiento crítico, comunicación efectiva y trabajo en equipo", 
@@ -4214,8 +4444,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué reduce el ABP?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué reduce el ABP?", 
       options: [
         "Aumenta la brecha entre aula e industria", 
         "Reduce la brecha entre el aula y las demandas de la industria", 
@@ -4224,8 +4455,9 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es fundamental en la evaluación ABP?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es fundamental en la evaluación ABP?", 
       options: [
         "Solo exámenes", 
         "Uso de rúbricas para evaluación objetiva de competencias", 
@@ -4244,9 +4476,11 @@ const content6_2: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202330517 Edgar Daniel Sierra Mantanico**
+**202330517 Edgar Daniel Sierra Mantanico**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -4441,8 +4675,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
     { term: "Paradoja de Krugman", definition: "Crítica a la obsesión por competitividad internacional, argumentando que la productividad interna es más importante." }
   ],
   quiz: [
-    { 
-      question: "¿Qué define la competitividad según el enfoque moderno?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué define la competitividad según el enfoque moderno?", 
       options: [
         "Solo recursos naturales y mano de obra barata", 
         "Capacidad de transformar recursos en soluciones de alto valor agregado", 
@@ -4451,8 +4686,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es la diferencia entre ventaja comparativa y competitiva?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la diferencia entre ventaja comparativa y competitiva?", 
       options: [
         "Son iguales", 
         "La comparativa se basa en recursos heredados, la competitiva en innovación y tecnología", 
@@ -4461,8 +4697,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué rol juega la ingeniería en la competitividad moderna?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué rol juega la ingeniería en la competitividad moderna?", 
       options: [
         "Solo mantenimiento operativo", 
         "Actúa estratégicamente diseñando futuros e innovando", 
@@ -4471,8 +4708,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué critica Paul Krugman sobre la competitividad?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué critica Paul Krugman sobre la competitividad?", 
       options: [
         "Que es muy importante", 
         "Que la obsesión por competencia exterior es un sofisma, la productividad interna es clave", 
@@ -4481,8 +4719,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cómo se ve el talento humano en el enfoque competitivo?", 
+    {
+  type: "multiple-choice",
+question: "¿Cómo se ve el talento humano en el enfoque competitivo?", 
       options: [
         "Como un costo operativo", 
         "Como un activo estratégico evaluado por desempeño", 
@@ -4491,8 +4730,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué enfoque educativo promueve la competitividad?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué enfoque educativo promueve la competitividad?", 
       options: [
         "Solo contenidos teóricos", 
         "Aprendizaje experiencial, CDIO y metodologías ágiles", 
@@ -4501,8 +4741,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué afecta la globalización a América Latina?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué afecta la globalización a América Latina?", 
       options: [
         "No tiene efecto", 
         "Fragmenta la producción y requiere inversión tecnológica para competir", 
@@ -4511,8 +4752,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el Diamante de Porter?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el Diamante de Porter?", 
       options: [
         "Una joya", 
         "Modelo para analizar competitividad industrial basado en factores estratégicos", 
@@ -4521,8 +4763,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué significa CDIO en educación?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué significa CDIO en educación?", 
       options: [
         "Solo teoría", 
         "Concebir, Diseñar, Implementar y Operar sistemas complejos", 
@@ -4531,8 +4774,9 @@ Diseñado para estudiantes de ingeniería industrial o civil basado en los casos
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué determina el estándar de vida según Krugman?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué determina el estándar de vida según Krugman?", 
       options: [
         "El comercio exterior", 
         "La productividad interna y eficiencia industrial", 
@@ -4551,7 +4795,7 @@ const content6_3: TopicContent = {
 
 ---
 
-**Investigación realizada por:** 202330517 Edgar Daniel Sierra Mantanico  
+## Realizado por 202330517 Edgar Daniel Sierra Mantanico  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
 
@@ -4783,8 +5027,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
     { term: "Visión Holística", definition: "Enfoque integral que considera todas las dimensiones de un proyecto para optimizar recursos y garantizar calidad." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es la principal ventaja económica de los geosintéticos frente al hormigón armado?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la principal ventaja económica de los geosintéticos frente al hormigón armado?", 
       options: [
         "Son más caros", 
         "Pueden ser 33% más económicos con ahorros significativos", 
@@ -4793,8 +5038,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuándo son mejores las metodologías ágiles?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuándo son mejores las metodologías ágiles?", 
       options: [
         "Solo en construcción", 
         "En entornos tecnológicos con alta incertidumbre y necesidad de adaptación", 
@@ -4803,8 +5049,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué hace el Project Manager?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué hace el Project Manager?", 
       options: [
         "Solo supervisa", 
         "Centraliza comunicación, controla riesgos y mejora resultados", 
@@ -4813,8 +5060,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es PERT?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es PERT?", 
       options: [
         "Un software", 
         "Método para estimar duración considerando incertidumbre", 
@@ -4823,8 +5071,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuándo es contraproducente usar Cascada?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuándo es contraproducente usar Cascada?", 
       options: [
         "En proyectos estables", 
         "En proyectos con alta incertidumbre y requisitos cambiantes", 
@@ -4833,8 +5082,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué caracteriza a las metodologías tradicionales?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué caracteriza a las metodologías tradicionales?", 
       options: [
         "Mucha flexibilidad", 
         "Requisitos fijos y ciclo lineal", 
@@ -4843,8 +5093,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el benchmarking?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el benchmarking?", 
       options: [
         "Un tipo de construcción", 
         "Comparación sistemática para identificar mejores prácticas", 
@@ -4853,8 +5104,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué ofrece el software libre?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué ofrece el software libre?", 
       options: [
         "Solo funciones básicas", 
         "Alternativas viables de alto rendimiento", 
@@ -4863,8 +5115,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la visión holística?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la visión holística?", 
       options: [
         "Ver solo una parte", 
         "Enfoque integral considerando todas las dimensiones del proyecto", 
@@ -4873,8 +5126,9 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es CPM?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es CPM?", 
       options: [
         "Un lenguaje de programación", 
         "Método de ruta crítica para identificar actividades que determinan la duración", 
@@ -4893,7 +5147,9 @@ const content1_4: TopicContent = {
 
 ---
 
-**Investigación realizada por:** 202430144 Henry Estuardo Estrada Rojas  
+## Realizado por
+
+**202430144 Henry Estuardo Estrada Rojas**  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
 
@@ -5100,8 +5356,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
     { term: "Hito (Milestone)", definition: "Punto de control clave en el cronograma para evaluar el avance del proyecto." }
   ],
   quiz: [
-    { 
-      question: "¿Qué es el 'scope creep' en planificación de proyectos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el 'scope creep' en planificación de proyectos?", 
       options: [
         "Un tipo de software de gestión", 
         "Crecimiento descontrolado de requisitos que agota recursos", 
@@ -5110,8 +5367,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué metodología es ideal para construir un puente?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué metodología es ideal para construir un puente?", 
       options: [
         "Modelo Ágil", 
         "Modelo Cascada", 
@@ -5120,8 +5378,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el Capacity Planning?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el Capacity Planning?", 
       options: [
         "Planificación de presupuestos", 
         "Equilibrar demanda de trabajo con capacidad del equipo", 
@@ -5130,8 +5389,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuándo es mejor usar metodología Ágil?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuándo es mejor usar metodología Ágil?", 
       options: [
         "Para construir edificios", 
         "Para proyectos con requisitos fijos", 
@@ -5140,8 +5400,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué es un entregable (deliverable)?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es un entregable (deliverable)?", 
       options: [
         "Un problema del proyecto", 
         "Un producto o resultado medible que debe producirse", 
@@ -5150,8 +5411,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es un hito (milestone)?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es un hito (milestone)?", 
       options: [
         "Un error en el proyecto", 
         "Un punto de control clave para evaluar avance", 
@@ -5160,8 +5422,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué caracteriza al modelo Cascada?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué caracteriza al modelo Cascada?", 
       options: [
         "Fases iterativas y flexibles", 
         "Fases lineales y secuenciales", 
@@ -5170,8 +5433,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es un sprint en metodologías ágiles?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es un sprint en metodologías ágiles?", 
       options: [
         "Una carrera de velocidad", 
         "Un período corto para completar entregables", 
@@ -5180,8 +5444,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Por qué es importante la gestión de riesgos?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué es importante la gestión de riesgos?", 
       options: [
         "No es importante", 
         "Identificar problemas antes de que ocurran y crear planes de contingencia", 
@@ -5190,8 +5455,9 @@ Los hitos son puntos de control clave en el cronograma. Sirven para evaluar si e
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Quién es el Project Manager?", 
+    {
+  type: "multiple-choice",
+question: "¿Quién es el Project Manager?", 
       options: [
         "Un cliente del proyecto", 
         "Un proveedor de materiales", 
@@ -5210,7 +5476,7 @@ const content1_3: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
 **202430144 Henry Estuardo Estrada Rojas**
 
@@ -5468,8 +5734,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
     { term: "Lean Manufacturing", definition: "Metodología de producción que busca maximizar el valor eliminando el desperdicio." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es la fase donde se define formalmente el alcance del proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la fase donde se define formalmente el alcance del proyecto?", 
       options: [
         "Ejecución", 
         "Inicio", 
@@ -5478,8 +5745,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué tipo de planificación se enfoca en el día a día del proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué tipo de planificación se enfoca en el día a día del proyecto?", 
       options: [
         "Estratégica", 
         "Táctica", 
@@ -5488,8 +5756,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué herramienta se usa para descomponer el proyecto en componentes manejables?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué herramienta se usa para descomponer el proyecto en componentes manejables?", 
       options: [
         "Diagrama de Gantt", 
         "EDT/WBS", 
@@ -5498,8 +5767,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿En qué fase se monitorean los KPIs y se hacen ajustes?", 
+    {
+  type: "multiple-choice",
+question: "¿En qué fase se monitorean los KPIs y se hacen ajustes?", 
       options: [
         "Inicio", 
         "Planificación", 
@@ -5508,8 +5778,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
       ], 
       correctAnswerIndex: 3 
     },
-    { 
-      question: "¿Qué modelo requiere que cada fase se complete antes de pasar a la siguiente?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué modelo requiere que cada fase se complete antes de pasar a la siguiente?", 
       options: [
         "Agile", 
         "Lean", 
@@ -5518,8 +5789,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué significa la sigla KPI en gestión de proyectos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué significa la sigla KPI en gestión de proyectos?", 
       options: [
         "Key Project Indicator", 
         "Key Performance Indicator", 
@@ -5528,8 +5800,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Quiénes son los stakeholders en un proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Quiénes son los stakeholders en un proyecto?", 
       options: [
         "Solo el equipo de proyecto", 
         "Interesados o partes afectadas por el proyecto", 
@@ -5538,8 +5811,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es un hito en un proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es un hito en un proyecto?", 
       options: [
         "Un problema inesperado", 
         "Un punto de referencia que marca un evento importante", 
@@ -5548,8 +5822,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué metodología busca eliminar desperdicio en la producción?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué metodología busca eliminar desperdicio en la producción?", 
       options: [
         "Agile", 
         "Scrum", 
@@ -5558,8 +5833,9 @@ Diagramas de Gantt, Software ERP, y herramientas de gestión como Microsoft Proj
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué tipo de planificación define el 'qué' y 'para qué' a largo plazo?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué tipo de planificación define el 'qué' y 'para qué' a largo plazo?", 
       options: [
         "Operativa", 
         "Táctica", 
@@ -5578,9 +5854,11 @@ const content4_1: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**[Investigador por determinar]**
+**[Investigador por determinar]**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -5863,8 +6141,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
     { term: "Prestaciones Legales", definition: "Beneficios obligatorios para trabajadores como aguinaldo, vacaciones e indemnizaciones." }
   ],
   quiz: [
-    { 
-      question: "¿Por qué el Estudio Legal tiene impacto directo en el Estudio Financiero?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué el Estudio Legal tiene impacto directo en el Estudio Financiero?", 
       options: [
         "Porque los abogados cobran honorarios muy altos", 
         "Porque el cumplimiento de leyes, permisos, impuestos y obligaciones se traduce en costos", 
@@ -5873,8 +6152,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "Si ubicas tu fábrica en una Zona Franca, ¿qué aspecto legal estás aprovechando?", 
+    {
+  type: "multiple-choice",
+question: "Si ubicas tu fábrica en una Zona Franca, ¿qué aspecto legal estás aprovechando?", 
       options: [
         "La exoneración de obligaciones laborales", 
         "Ventajas en la carga impositiva y posibles incentivos tributarios", 
@@ -5883,8 +6163,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "Las normativas de salud y seguridad ocupacional se clasifican dentro de:", 
+    {
+  type: "multiple-choice",
+question: "Las normativas de salud y seguridad ocupacional se clasifican dentro de:", 
       options: [
         "Propiedad Intelectual", 
         "Carga Impositiva", 
@@ -5893,8 +6174,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué es una Persona Jurídica?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es una Persona Jurídica?", 
       options: [
         "Una persona física", 
         "Una entidad que ejerce derechos a nombre de la empresa", 
@@ -5903,8 +6185,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué incluyen las medidas fitosanitarias?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué incluyen las medidas fitosanitarias?", 
       options: [
         "Solo impuestos", 
         "Normativas para proteger salud humana, animal y vegetal", 
@@ -5913,8 +6196,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el propósito principal del Estudio Legal?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal del Estudio Legal?", 
       options: [
         "Maximizar ganancias", 
         "Determinar viabilidad jurídica y cuantificar impacto financiero", 
@@ -5923,8 +6207,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la carga impositiva?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la carga impositiva?", 
       options: [
         "El peso de los materiales", 
         "Conjunto de impuestos y contribuciones obligatorias", 
@@ -5933,8 +6218,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Por qué el desconocimiento de la ley no exime de su cumplimiento?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué el desconocimiento de la ley no exime de su cumplimiento?", 
       options: [
         "Porque es injusto", 
         "Porque es un principio fundamental del derecho", 
@@ -5943,8 +6229,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué protege la propiedad intelectual?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué protege la propiedad intelectual?", 
       options: [
         "Solo edificios", 
         "Creaciones intelectuales como patentes y marcas", 
@@ -5953,8 +6240,9 @@ Cuando el proyecto desarrolla nuevas tecnologías, marcas o diseños industriale
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuándo se debe realizar el Estudio Legal?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuándo se debe realizar el Estudio Legal?", 
       options: [
         "Al final del proyecto", 
         "Desde las primeras etapas del proyecto", 
@@ -5973,9 +6261,11 @@ const content3_5: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202331882 Stivenn Raúl Fuentes Pérez**
+**202331882 Stivenn Raúl Fuentes Pérez**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -6228,8 +6518,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
     { term: "PMI", definition: "Project Management Institute, organización que establece estándares globales de gestión." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es la fase encargada de comparar el avance real contra el plan original?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la fase encargada de comparar el avance real contra el plan original?", 
       options: [
         "La fase de Inicio", 
         "La fase de Monitoreo y Control", 
@@ -6238,8 +6529,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "Si vas a construir un edificio donde es imposible cambiar los cimientos, ¿qué enfoque usar?", 
+    {
+  type: "multiple-choice",
+question: "Si vas a construir un edificio donde es imposible cambiar los cimientos, ¿qué enfoque usar?", 
       options: [
         "Enfoque Lineal (predictivo)", 
         "Enfoque Iterativo (ágil)", 
@@ -6248,8 +6540,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Qué es el Project Charter?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el Project Charter?", 
       options: [
         "Un informe de presupuesto final", 
         "El documento que se entrega en la reunión post-mortem", 
@@ -6258,8 +6551,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Cuál es el propósito principal de la metodología de implementación?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal de la metodología de implementación?", 
       options: [
         "Maximizar ganancias", 
         "Transformar planes teóricos en resultados físicos y operativos", 
@@ -6268,8 +6562,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la triple restricción?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la triple restricción?", 
       options: [
         "Tres veces más trabajo", 
         "Equilibrio entre alcance, tiempo y costo", 
@@ -6278,8 +6573,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuándo es apropiado usar metodología iterativa?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuándo es apropiado usar metodología iterativa?", 
       options: [
         "Proyectos de infraestructura estable", 
         "Proyectos tecnológicos con cambios frecuentes", 
@@ -6288,8 +6584,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué hace el Marco Lógico?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué hace el Marco Lógico?", 
       options: [
         "Construye edificios", 
         "Vincula actividades con objetivos mediante indicadores", 
@@ -6298,8 +6595,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué sucede en la fase de cierre?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué sucede en la fase de cierre?", 
       options: [
         "Solo se termina el trabajo", 
         "Entrega formal, liberación de recursos y reunión post-mortem", 
@@ -6308,8 +6606,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué caracteriza a un enfoque híbrido?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué caracteriza a un enfoque híbrido?", 
       options: [
         "Usa solo metodología lineal", 
         "Usa solo metodología ágil", 
@@ -6318,8 +6617,9 @@ Actúa como mecanismo de prevención que evita estimaciones inexactas de recurso
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Por qué es importante la planificación detallada?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué es importante la planificación detallada?", 
       options: [
         "Porque es un requisito legal", 
         "Porque previene estimaciones inexactas y sobrecostos", 
@@ -6338,9 +6638,11 @@ const content5_3: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**[Investigador por determinar]**
+**[Investigador por determinar]**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -6562,8 +6864,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
     { term: "Rendición de Cuentas", definition: "Responsabilidad de responder por las decisiones y sus impactos en la sociedad." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es la obligación primordial del ingeniero según la ética profesional?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la obligación primordial del ingeniero según la ética profesional?", 
       options: [
         "Maximizar beneficios empresariales", 
         "Salvaguardar la seguridad y bienestar de la sociedad", 
@@ -6572,8 +6875,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la ISO 26000?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la ISO 26000?", 
       options: [
         "Una norma obligatoria de seguridad", 
         "Una guía voluntaria para responsabilidad social", 
@@ -6582,8 +6886,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuándo es apropiado usar metodología PMBOK tradicional?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuándo es apropiado usar metodología PMBOK tradicional?", 
       options: [
         "Proyectos con cambios constantes", 
         "Proyectos estables de gran escala", 
@@ -6592,8 +6897,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la alienación en el contexto profesional?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la alienación en el contexto profesional?", 
       options: [
         "Promoción profesional", 
         "Especialización técnica", 
@@ -6602,8 +6908,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué caracteriza a las metodologías ágiles?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué caracteriza a las metodologías ágiles?", 
       options: [
         "Planificación rígida y secuencial", 
         "Entrega continua de valor y flexibilidad", 
@@ -6612,8 +6919,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Quiénes son los stakeholders en un proyecto?", 
+    {
+  type: "multiple-choice",
+question: "¿Quiénes son los stakeholders en un proyecto?", 
       options: [
         "Solo los accionistas", 
         "Solo los empleados", 
@@ -6622,8 +6930,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué significa RSE trascender la filantropía?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué significa RSE trascender la filantropía?", 
       options: [
         "No hacer donaciones", 
         "Integrarse en la estrategia central del negocio", 
@@ -6632,8 +6941,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el propósito de la rendición de cuentas en RSE?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito de la rendición de cuentas en RSE?", 
       options: [
         "Evitar impuestos", 
         "Responder por decisiones y sus impactos sociales", 
@@ -6642,8 +6952,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la sostenibilidad triple?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la sostenibilidad triple?", 
       options: [
         "Tres veces más rentabilidad", 
         "Equilibrio económico, social y ambiental", 
@@ -6652,8 +6963,9 @@ Genera alienación moral al priorizar beneficios empresariales sobre principios 
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cuál es el rol de los Aparatos Ideológicos del Estado?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el rol de los Aparatos Ideológicos del Estado?", 
       options: [
         "Construir infraestructura", 
         "Regular mercados financieros", 
@@ -6672,9 +6984,11 @@ const content4_6: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**Gonzalo Antonio Tamat Gramajo**
+**Gonzalo Antonio Tamat Gramajo**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -6941,8 +7255,9 @@ EFECTO: Resistencia comunitaria al proyecto
     { term: "Gestión Adaptativa", definition: "Capacidad de responder proactivamente a los resultados del monitoreo social." }
   ],
   quiz: [
-    { 
-      question: "¿Qué es un estudio social?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es un estudio social?", 
       options: [
         "Un estudio económico", 
         "Análisis de consecuencias humanas de intervenciones planeadas", 
@@ -6951,8 +7266,9 @@ EFECTO: Resistencia comunitaria al proyecto
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cómo se define un problema social?", 
+    {
+  type: "multiple-choice",
+question: "¿Cómo se define un problema social?", 
       options: [
         "Un problema individual", 
         "Una situación normal", 
@@ -6961,8 +7277,9 @@ EFECTO: Resistencia comunitaria al proyecto
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué herramienta organiza causas y efectos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué herramienta organiza causas y efectos?", 
       options: [
         "Matriz de costos", 
         "Árbol de Problemas", 
@@ -6971,8 +7288,9 @@ EFECTO: Resistencia comunitaria al proyecto
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la línea de base?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la línea de base?", 
       options: [
         "El final del proyecto", 
         "Indicadores iniciales para medir cambios", 
@@ -6981,8 +7299,9 @@ EFECTO: Resistencia comunitaria al proyecto
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué mide la Evaluación de Impacto Social?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué mide la Evaluación de Impacto Social?", 
       options: [
         "Solo costos económicos", 
         "Cambios en cultura y bienestar", 
@@ -6991,8 +7310,9 @@ EFECTO: Resistencia comunitaria al proyecto
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la Licencia Social para Operar?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la Licencia Social para Operar?", 
       options: [
         "Un permiso gubernamental", 
         "Aceptación comunitaria del proyecto", 
@@ -7001,8 +7321,9 @@ EFECTO: Resistencia comunitaria al proyecto
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la focalización?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la focalización?", 
       options: [
         "Distribuir recursos aleatoriamente", 
         "Asegurar recursos lleguen a población objetivo", 
@@ -7011,8 +7332,9 @@ EFECTO: Resistencia comunitaria al proyecto
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué busca el valor compartido?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué busca el valor compartido?", 
       options: [
         "Beneficios solo para la empresa", 
         "Beneficios solo para la sociedad", 
@@ -7021,8 +7343,9 @@ EFECTO: Resistencia comunitaria al proyecto
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué es la gestión adaptativa?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la gestión adaptativa?", 
       options: [
         "No cambiar nunca", 
         "Responder a resultados del monitoreo", 
@@ -7031,8 +7354,9 @@ EFECTO: Resistencia comunitaria al proyecto
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Por qué es importante el estudio social?", 
+    {
+  type: "multiple-choice",
+question: "¿Por qué es importante el estudio social?", 
       options: [
         "No es importante", 
         "Para entender impactos humanos y asegurar viabilidad", 
@@ -7051,9 +7375,11 @@ const content4_7: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**Gonzalo Antonio Tamat Gramajo**
+**Gonzalo Antonio Tamat Gramajo**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -7377,8 +7703,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
     { term: "Costo Hundido", definition: "Gastos realizados previamente que no afectan la decisión de inversión futura." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es el objetivo principal del estudio administrativo?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el objetivo principal del estudio administrativo?", 
       options: [
         "Solo construir edificios", 
         "Establecer características organizacionales y determinar costos", 
@@ -7387,8 +7714,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué estructura tiene pocos niveles jerárquicos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué estructura tiene pocos niveles jerárquicos?", 
       options: [
         "Estructura funcional", 
         "Estructura vertical", 
@@ -7397,8 +7725,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Qué incluye el direccionamiento estratégico?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué incluye el direccionamiento estratégico?", 
       options: [
         "Solo números y fechas", 
         "Misión, visión y objetivos", 
@@ -7407,8 +7736,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es el MOF?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es el MOF?", 
       options: [
         "Un software", 
         "Manual de organización y funciones", 
@@ -7417,8 +7747,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Cómo impacta el estudio administrativo en el flujo de caja?", 
+    {
+  type: "multiple-choice",
+question: "¿Cómo impacta el estudio administrativo en el flujo de caja?", 
       options: [
         "No tiene impacto", 
         "A través de gastos recurrentes como sueldos y servicios", 
@@ -7427,8 +7758,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la postinversión?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la postinversión?", 
       options: [
         "El inicio del proyecto", 
         "La fase de administración y operación después de construido", 
@@ -7437,8 +7769,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué estructura agrupa por especialidad?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué estructura agrupa por especialidad?", 
       options: [
         "Estructura matricial", 
         "Estructura funcional", 
@@ -7447,8 +7780,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué son los recursos administrativos?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué son los recursos administrativos?", 
       options: [
         "Solo dinero", 
         "Humanos, materiales/tecnológicos y financieros", 
@@ -7457,8 +7791,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Para qué sirve el Manual de Normas y Procedimientos?", 
+    {
+  type: "multiple-choice",
+question: "¿Para qué sirve el Manual de Normas y Procedimientos?", 
       options: [
         "No sirve para nada", 
         "Describir procesos secuenciales y reglas", 
@@ -7467,8 +7802,9 @@ El tipo de cargo, los requisitos mínimos para ocuparlo, las funciones específi
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué es la viabilidad administrativa?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué es la viabilidad administrativa?", 
       options: [
         "Capacidad de gestionar eficientemente el proyecto", 
         "Construir edificios", 
@@ -7487,9 +7823,11 @@ const content5_2: TopicContent = {
 
 ---
 
-## Investigador
+## Realizado por
 
-**202330360 Willy Alexander López Gómez**
+**202330360 Willy Alexander López Gómez**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
 
 ---
 
@@ -7616,8 +7954,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
     { term: "Condiciones Económicas", definition: "Presupuesto, sistema de precios, plazos de pago y garantías financieras establecidas en el pliego." }
   ],
   quiz: [
-    { 
-      question: "¿Cuál es la diferencia principal entre un Requisito Habilitante y un Factor de Escogencia?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es la diferencia principal entre un Requisito Habilitante y un Factor de Escogencia?", 
       options: [
         "El habilitante da puntos; el de escogencia no", 
         "El habilitante solo filtra (cumple/no cumple); el de escogencia otorga puntos para elegir al ganador", 
@@ -7626,8 +7965,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "Si el proyecto exige maquinaria de 'Marca XYZ, modelo 2024, color azul', estamos ante un posible:", 
+    {
+  type: "multiple-choice",
+question: "Si el proyecto exige maquinaria de 'Marca XYZ, modelo 2024, color azul', estamos ante un posible:", 
       options: [
         "Pliego Tipo", 
         "Pliego Sastre", 
@@ -7636,8 +7976,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué documento se emite para corregir un error en el cronograma de las bases antes de recibir ofertas?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué documento se emite para corregir un error en el cronograma de las bases antes de recibir ofertas?", 
       options: [
         "Una Adenda", 
         "Un nuevo Pliego Sastre", 
@@ -7646,8 +7987,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
       ], 
       correctAnswerIndex: 0 
     },
-    { 
-      question: "¿Cuál es el propósito principal de los pliegos de condiciones?", 
+    {
+  type: "multiple-choice",
+question: "¿Cuál es el propósito principal de los pliegos de condiciones?", 
       options: [
         "Aumentar los costos del proyecto", 
         "Estandarizar cómo se solicitan y comparan propuestas bajo las mismas reglas", 
@@ -7656,8 +7998,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué protegen los pliegos en proyectos de ingeniería?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué protegen los pliegos en proyectos de ingeniería?", 
       options: [
         "Solo los intereses del contratista", 
         "Contra materiales de baja calidad y fallos prematuros", 
@@ -7666,8 +8009,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué característica define a los Pliegos Tipo?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué característica define a los Pliegos Tipo?", 
       options: [
         "Son amañados y restrictivos", 
         "Son estandarizados y garantizan transparencia", 
@@ -7676,8 +8020,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué sucede si un proveedor cumple todos los requisitos habilitantes?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué sucede si un proveedor cumple todos los requisitos habilitantes?", 
       options: [
         "Gana automáticamente el contrato", 
         "Pasa a la evaluación de factores de escogencia", 
@@ -7686,8 +8031,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué elemento NO es parte de la estructura de un pliego?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué elemento NO es parte de la estructura de un pliego?", 
       options: [
         "Objeto del proyecto", 
         "Especificaciones técnicas", 
@@ -7696,8 +8042,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
       ], 
       correctAnswerIndex: 2 
     },
-    { 
-      question: "¿Cómo se relacionan los pagos con los hitos operativos?", 
+    {
+  type: "multiple-choice",
+question: "¿Cómo se relacionan los pagos con los hitos operativos?", 
       options: [
         "Se pagan independientemente de los hitos", 
         "Los hitos cumplidos habilitan los pagos al contratista", 
@@ -7706,8 +8053,9 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
       ], 
       correctAnswerIndex: 1 
     },
-    { 
-      question: "¿Qué prevalece en caso de disputa entre pliego y contrato?", 
+    {
+  type: "multiple-choice",
+question: "¿Qué prevalece en caso de disputa entre pliego y contrato?", 
       options: [
         "Siempre el contrato", 
         "Siempre el pliego", 
@@ -7723,6 +8071,14 @@ Los pliegos "blindan" el proyecto contra materiales de baja calidad o fallos pre
 // Content for 7.2 "Privadas"
 const content7_2: TopicContent = {
   summary: `# 7.2 Instituciones privadas relacionadas a proyectos
+
+## Realizado por
+
+**[Por determinar]**  
+**Centro Universitario de Occidente (CUNOC)**  
+**Universidad de San Carlos de Guatemala (USAC)**
+
+---
 
 ## Introducción
 
@@ -7785,51 +8141,61 @@ En sectores estratégicos como energía y recursos naturales, también se observ
   ],
   quiz: [
     {
+      type: "multiple-choice",
       question: "¿Qué distingue típicamente al rol privado frente al público en proyectos?",
       options: ["El privado suele ejecutar/innovar y optimizar eficiencia; el público regula/planifica y prioriza inversión social", "El privado solo regula", "El público solo busca rentabilidad financiera", "Ambos roles son idénticos por definición"],
       correctAnswerIndex: 0
     },
     {
+      type: "multiple-choice",
       question: "Una consultora de ingeniería suele encargarse de:",
       options: ["Definir leyes nacionales", "Diseño, supervisión y gestión técnica de proyectos", "Emitir licencias de conducir", "Fijar tasas de impuestos"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Cuál es una función clave de un colegio profesional?",
       options: ["Vender materiales de construcción", "Regular ética y competencia profesional", "Recaudar peajes", "Sustituir a los ministerios"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "En una APP, el Estado busca principalmente:",
       options: ["Rentabilidad social y calidad del servicio", "Máxima ganancia privada", "Eliminar supervisión", "Evitar contratos"],
       correctAnswerIndex: 0
     },
     {
+      type: "multiple-choice",
       question: "¿Qué suele motivar a un fondo de inversión en infraestructura?",
       options: ["Retorno esperado acorde al riesgo", "Evitar cualquier análisis financiero", "Solo donaciones sin criterios", "Impedir la innovación"],
       correctAnswerIndex: 0
     },
     {
+      type: "multiple-choice",
       question: "Una concesión vial normalmente implica que el privado:",
       options: ["Opera y mantiene la vía por un plazo, recuperando inversión con peajes u otros ingresos", "Solo hace estudios y se retira", "No asume riesgo alguno", "Elimina toda obligación de mantenimiento"],
       correctAnswerIndex: 0
     },
     {
+      type: "multiple-choice",
       question: "¿Por qué son importantes reglas claras y supervisión en APP?",
       options: ["Porque incrementan el riesgo para todos", "Porque aseguran cumplimiento, control de calidad y equilibrio de intereses", "Porque sustituyen la ingeniería", "Porque eliminan la necesidad de contratos"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "¿Qué tipo de instituciones privadas suelen ejecutar proyectos sociales en comunidades vulnerables?",
       options: ["ONG, fundaciones y cooperativas", "Bancos centrales", "Tribunales", "Contralorías"],
       correctAnswerIndex: 0
     },
     {
+      type: "multiple-choice",
       question: "El principio de asignación de riesgos sugiere que:",
       options: ["El Estado debe cargar con todos los riesgos", "Cada riesgo debe asignarse a quien mejor puede gestionarlo", "Los riesgos deben ignorarse", "Los riesgos se asignan al azar"],
       correctAnswerIndex: 1
     },
     {
+      type: "multiple-choice",
       question: "Un mecanismo de garantía en una concesión puede ser:",
       options: ["Asegurar un ingreso mínimo si la demanda real es menor a la proyectada", "Prohibir el mantenimiento", "Eliminar el monitoreo", "Impedir auditorías"],
       correctAnswerIndex: 0
@@ -7840,15 +8206,7 @@ En sectores estratégicos como energía y recursos naturales, también se observ
 
 // Function to get infographic URL if available
 const getInfographicUrl = (topicId: string): string => {
-  const availableInfographics = [
-    "1.1", "1.2", "1.4", "1.5", "1.6",
-    "2.1", "2.2", 
-    "3.1", "3.4",
-    "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8",
-    "5.1", "5.2",
-    "6.1", "6.2", "6.3",
-    "7.1", "7.2"
-  ];
+  const availableInfographics = ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "3.1", "3.4", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "5.1", "5.2", "6.1", "6.2", "6.3", "7.1", "7.2"];
   
   if (availableInfographics.includes(topicId)) {
     const extension = topicId === "2.2" ? ".jpg" : ".png";
@@ -7901,6 +8259,7 @@ Una empresa de ingeniería enfrenta el desafío de implementar soluciones innova
     { term: "Variable X", definition: "Factor crítico en este tipo de análisis." }
   ],
   quiz: Array.from({ length: 10 }, (_, i) => ({
+    type: "multiple-choice",
     question: `Pregunta ${i + 1} sobre ${title}. ¿Cuál es la opción correcta?`,
     options: ["Opción A (Incorrecta)", "Opción B (Correcta)", "Opción C (Incorrecta)", "Opción D (Incorrecta)"],
     correctAnswerIndex: 1
@@ -7924,7 +8283,6 @@ export const TOPIC_CONTENT_DATA: Record<string, TopicContent> = {
   
   // Sección 3 - Estudio de casos como herramienta en la ingeniería
   "3.1": content3_1,
-  "3.2": generatePlaceholderContent("3.2", "Conceptos y aplicaciones"),
   "3.3": content3_3,
   "3.4": content3_4,
   "3.5": content3_5,

@@ -13,6 +13,7 @@ interface LayoutProps {
   currentTopicId?: string;
   onNavigateToTopic?: (module: Module, topicId: string) => void;
   showContentTitle?: boolean;
+  topicAuthor?: string;
 }
 
 export const Layout: React.FC<LayoutProps> = ({ 
@@ -25,7 +26,8 @@ export const Layout: React.FC<LayoutProps> = ({
   onBack,
   currentTopicId,
   onNavigateToTopic,
-  showContentTitle = true
+  showContentTitle = true,
+  topicAuthor
 }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
@@ -36,45 +38,45 @@ export const Layout: React.FC<LayoutProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F5DC] text-[#333333] font-sans selection:bg-[#228B22] selection:text-white pb-20 flex">
+    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-principal selection:text-white pb-20 flex">
       {/* Background Accents */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#003366]/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-[#228B22]/5 rounded-full blur-[100px]" />
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-principal/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-green-500/5 rounded-full blur-[100px]" />
       </div>
 
       {/* Sidebar (Desktop) */}
-      <aside className={`fixed lg:sticky top-0 h-screen w-80 sm:w-72 bg-[#003366] text-white shadow-xl z-40 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
+      <aside className={`fixed lg:sticky top-0 h-screen w-80 sm:w-72 bg-principal text-white shadow-xl z-40 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="p-6 h-full flex flex-col">
           <div className="mb-8 flex items-center gap-3">
-             <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center font-bold text-lg shadow-lg shadow-black/20">
+             <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center font-bold text-lg shadow-lg shadow-black/20 text-white">
                PI
              </div>
              <div className="leading-tight">
                <h1 className="font-bold text-white tracking-tight">Prácticas Iniciales</h1>
-               <span className="text-xs text-blue-100">Ingeniería USAC</span>
+               <span className="text-[10px] text-blue-200 uppercase font-black tracking-widest">Ingeniería USAC</span>
              </div>
           </div>
 
           {user && (
             <div className="mb-8 p-4 bg-white/5 rounded-xl border border-white/20">
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-blue-50">{user.name}</span>
-                <span className="text-xs text-[#228B22] font-bold">{calculateProgress()}%</span>
+                <span className="text-sm font-bold text-blue-50">{user.name}</span>
+                <span className="bg-white/20 text-white px-2 py-0.5 rounded-full text-xs font-bold">{calculateProgress()}%</span>
               </div>
-              <div className="w-full bg-blue-900/60 rounded-full h-2 overflow-hidden">
+              <div className="w-full bg-black/20 rounded-full h-2 overflow-hidden border border-white/10">
                 <div 
-                  className="bg-gradient-to-r from-[#228B22] to-emerald-400 h-2 rounded-full transition-all duration-1000"
+                  className="bg-gradient-to-r from-blue-400 to-green-400 h-2 rounded-full transition-all duration-1000"
                   style={{ width: `${calculateProgress()}%` }}
                 />
               </div>
             </div>
           )}
 
-          <div className="flex-1 overflow-y-auto pr-2 space-y-6 custom-scrollbar">
+          <div className="flex-1 overflow-y-auto pr-2 space-y-6 no-scrollbar">
              {COURSE_MODULES.map(mod => (
                <div key={mod.id}>
-                 <h3 className="text-xs font-bold text-blue-200 uppercase tracking-wider mb-3 px-2">
+                 <h3 className="text-[10px] font-black text-blue-300 uppercase tracking-[0.2em] mb-3 px-2">
                    Módulo {mod.id}
                  </h3>
                  <div className="space-y-1">
@@ -89,15 +91,15 @@ export const Layout: React.FC<LayoutProps> = ({
                            if (onNavigateToTopic) onNavigateToTopic(mod, topic.id);
                            setSidebarOpen(false);
                          }}
-                         className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all flex items-center justify-between group ${
+                         className={`w-full text-left px-3 py-2.5 rounded-xl text-sm transition-all flex items-center justify-between group translate-z-0 ${
                            isActive 
-                             ? 'bg-white/10 text-white font-medium border border-white/30' 
-                             : 'text-blue-100/90 hover:text-white hover:bg-white/10'
+                             ? 'bg-white text-principal font-bold shadow-lg scale-105' 
+                             : 'text-blue-100/70 hover:text-white hover:bg-white/10 hover:translate-x-1'
                          }`}
                        >
                          <span className="truncate">{topic.id} {topic.title}</span>
                          {isCompleted && (
-                           <svg className="w-4 h-4 text-[#228B22] flex-shrink-0 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                           <div className={`w-2 h-2 rounded-full ${isActive ? 'bg-green-500' : 'bg-green-400'} shadow-sm shadow-black/20`} />
                          )}
                        </button>
                      );
@@ -111,17 +113,17 @@ export const Layout: React.FC<LayoutProps> = ({
             {user ? (
               <button 
                 onClick={onLogout}
-                className="flex items-center gap-2 text-blue-100/80 hover:text-red-200 text-sm transition-colors w-full px-2"
+                className="flex items-center gap-2 text-white/60 hover:text-red-300 text-xs font-bold uppercase tracking-widest transition-colors w-full px-2"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
                 Cerrar Sesión
               </button>
             ) : (
                <button 
                 onClick={onLoginClick}
-                className="flex items-center gap-2 text-blue-100 hover:text-white text-sm transition-colors w-full px-2 font-medium"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-widest transition-all w-full px-4 py-3 rounded-xl border border-white/20"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 0 1 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
                 Iniciar Sesión
               </button>
             )}
@@ -132,50 +134,121 @@ export const Layout: React.FC<LayoutProps> = ({
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile Header */}
-        <header className="sticky top-0 z-30 bg-[#003366] text-white border-b border-[#003366] lg:hidden px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
+        <header className="sticky top-0 z-30 bg-principal text-white lg:hidden px-4 h-16 flex items-center justify-between shadow-md">
            <button 
              onClick={() => setSidebarOpen(true)} 
-             className="p-2 sm:p-3 text-blue-100 hover:text-white active:scale-95 transition-transform"
+             className="p-2 -ml-2 text-white hover:bg-white/10 rounded-full transition-all active:scale-90"
              aria-label="Abrir menú"
            >
-             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
            </button>
-           <span className="font-bold text-white truncate max-w-[50%] sm:max-w-[60%] text-sm sm:text-base">
+           <span className="font-bold text-lg truncate max-w-[70%]">
              {title || 'Prácticas Iniciales'}
            </span>
-           <div className="w-8 sm:w-10"></div> {/* Spacer */}
+           <div className="w-10"></div> {/* Spacer */}
         </header>
 
         {/* Overlay for mobile sidebar */}
         {isSidebarOpen && (
           <div 
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30 lg:hidden"
+            className="fixed inset-0 bg-principal/60 backdrop-blur-md z-30 lg:hidden"
             onClick={() => setSidebarOpen(false)}
           />
         )}
 
-        <main className="flex-1 p-3 sm:p-4 md:p-6 lg:p-10 max-w-6xl mx-auto w-full relative z-10">
+        <main className="flex-1 p-3 sm:p-6 lg:p-10 max-w-6xl mx-auto w-full relative z-10">
           {(showContentTitle && (title || subtitle)) && (
-            <div className="mb-6 sm:mb-8 lg:mb-10 animate-fade-in">
-              <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div className="mb-10 animate-fade">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
                 {onBack && (
                   <button 
                     onClick={onBack}
-                    className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white border border-[#003366]/20 hover:bg-[#003366]/10 transition-colors text-[#003366] hover:text-[#003366] group active:scale-95"
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-principal/20 hover:border-principal/40 transition-all text-principal hover:translate-y-[-2px] shadow-sm active:scale-95"
                   >
-                    <svg className="group-hover:-translate-x-0.5 transition-transform" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                   </button>
                 )}
-                {title && <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#003366] leading-tight">{title}</h1>}
+                {title && <h1 className="text-3xl sm:text-4xl font-extrabold text-principal tracking-tight">{title}</h1>}
               </div>
-              {subtitle && <p className="text-sm sm:text-base md:text-lg text-[#555555] max-w-3xl ml-1">{subtitle}</p>}
+              {subtitle && <p className="text-lg text-gray-500 font-medium max-w-3xl leading-relaxed">{subtitle}</p>}
+              <div className="h-1 w-20 bg-principal/10 rounded-full mt-6" />
             </div>
           )}
           
-          <div className="animate-fade-in-up">
+          <div className="animate-fade">
             {children}
           </div>
         </main>
+
+        {/* Academic Footer */}
+        <footer className="mt-auto bg-hueso border-t border-gray-300 py-12 px-6 sm:px-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-10 mb-8">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-principal flex items-center justify-center font-bold text-white shadow-lg">
+                    PI
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-principal text-lg leading-tight uppercase tracking-tight">Prácticas Iniciales</h3>
+                    <p className="text-xs text-gray-500 font-bold uppercase tracking-widest">Ingeniería USAC • CUNOC</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed max-w-md">
+                  Plataforma académica diseñada para el fortalecimiento de conocimientos en ingeniería y gestión de proyectos, integrando investigación estudiantil y herramientas interactivas.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-principal font-bold text-sm uppercase tracking-widest mb-4 border-b border-principal/10 pb-2 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><circle cx="19" cy="11" r="2"/></svg>
+                  {topicAuthor ? 'Investigador' : 'Equipo de Investigación'}
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                  {topicAuthor ? (
+                    <div className="col-span-2 overflow-hidden">
+                       <p className="text-base sm:text-lg font-bold text-principal truncate italic">
+                         {topicAuthor}
+                       </p>
+                    </div>
+                  ) : (
+                    [
+                      { name: "Ángel Saul Rios Guzmán", id: "202432128" },
+                      { name: "Aneth Alejandra Avila Morales", id: "202531107" },
+                      { name: "Antony Edilsar Gómez Sánchez", id: "202430069" },
+                      { name: "Carlos Guillermo Obregón Custodio", id: "202231034" },
+                      { name: "Cecilia Mariann Alejandra López Estacuy", id: "202530214" },
+                      { name: "Edgar Daniel Sierra Mantanico", id: "202330517" },
+                      { name: "Fernando Josué Mejía Tezó", id: "202330526" },
+                      { name: "Gonzalo Antonio Tamat Gramajo", id: "202430045" },
+                      { name: "Henry Estuardo Estrada Rojas", id: "202430144" },
+                      { name: "Horacio Caín Barrios Barrios", id: "202430626" },
+                      { name: "José Mario Roberto Rodríguez Figueroa", id: "202431192" },
+                      { name: "Mynor Estuardo Ruano García", id: "202330066" },
+                      { name: "Stivenn Raúl Fuentes Pérez", id: "202331882" },
+                      { name: "Willy Alexander López Gómez", id: "202330360" }
+                    ].map((student, i) => (
+                      <div key={i} className="flex justify-between items-center text-[10px] sm:text-[11px] border-b border-gray-200 py-1.5 sm:py-1">
+                        <span className="font-medium text-gray-700 truncate mr-2">{student.name}</span>
+                        <span className="font-bold text-principal/60 font-mono flex-shrink-0">{student.id}</span>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-8 border-t border-gray-300 flex flex-col sm:flex-row justify-between items-center gap-4">
+              <span className="text-xs text-gray-400 font-medium italic">
+                Año Académico 2025 • Todos los derechos reservados
+              </span>
+              <div className="flex items-center gap-6">
+                 <img src="https://ingenieria.cunoc.edu.gt/portal/wp-content/uploads/2019/04/logo_usac.png" alt="USAC" className="h-10 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+                 <img src="https://ingenieria.cunoc.edu.gt/portal/wp-content/uploads/2019/04/logo_ingenieria.png" alt="Ingeniería CUNOC" className="h-10 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );

@@ -13,6 +13,9 @@ Plataforma educativa interactiva para el aprendizaje de prácticas iniciales de 
 - **Sistema de Progreso**: Seguimiento del avance del estudiante con autenticación Firebase
 - **Recursos Visuales**: Infografías específicas para cada tema disponible
 - **Diseño Responsivo**: Interfaz moderna y adaptable a diferentes dispositivos
+- **Diseño Académico Elegante**: Sistema de diseño profesional con paleta de colores académicos y tipografía formal
+- **Evaluaciones Diversificadas**: Sistema de evaluación con preguntas de opción múltiple y verdadero/falso
+- **Formato Estandarizado**: Contenido con formato "Realizado por:" para autoría consistente
 
 ## Módulos Disponibles
 
@@ -106,14 +109,24 @@ npm run build
 
 ## Actualizaciones Recientes
 
-### v1.4.0 (2026-04-05)
-- Integración de 6 infografías locales
-- Sistema automático de detección de infografías por tema
-- Mejora visual en la experiencia de aprendizaje
+### v2.4.0 (2026-04-08)
+- **Optimización Mobile Full-Responsive y Refinamiento UX Académico Final**
+  - Rediseño de contenedores y sistema de navegación para dispositivos móviles.
+  - Implementación de scroll horizontal suavizado en pestañas adaptativas.
+  - Optimización de Flashcards y Quiz para máxima legibilidad en pantallas pequeñas.
+  - Sincronización estética definitiva con la paleta de colores istitucional.
 
-### v1.3.0 (2026-03-30)
-- Optimización de interfaz eliminando pestañas no utilizadas
-- Mejora en estructura de contenido
+### v2.3.0 (2026-04-08)
+- **Refinamiento Estético Premium y Estandarización de Diseño (online_viewer_net.html)**
+  - Integración de Playfair Display de Google Fonts para encabezados académicos.
+  - Sistema de clases utilitarias académicas (.heading-serif, .academic-paper).
+  - Cards de Atribución estilizadas para el formato "Realizado por:".
+
+### v1.8.1 (2026-04-07)
+- **Mejoras de Formato y Evaluación**
+  - Cambio de "Investigador" a "Realizado por:" para estandarizar autoría.
+  - Implementación de preguntas de verdadero/falso junto a opción múltiple.
+- **Actualización de Componentes**: Todos los componentes actualizados con diseño académico elegante.
 
 ## Contribución
 

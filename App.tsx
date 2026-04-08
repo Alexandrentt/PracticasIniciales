@@ -190,10 +190,10 @@ function App() {
             onLogout={handleLogout}
             onLoginClick={() => setShowLoginModal(true)}
             title="Módulos de Aprendizaje" 
-            subtitle="Selecciona un módulo para comenzar tu ruta de aprendizaje."
+            subtitle="Selecciona un módulo para comenzar tu ruta de aprendizaje académica."
             onNavigateToTopic={handleSidebarNavigation}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {COURSE_MODULES.map(module => (
                 <ModuleCard 
                   key={module.id} 
@@ -212,7 +212,7 @@ function App() {
             onLogout={handleLogout}
             onLoginClick={() => setShowLoginModal(true)}
             title={viewState.module.title}
-            subtitle="Explora los temas de este módulo."
+            subtitle="Explora los temas de este módulo académico."
             onBack={goBack}
             onNavigateToTopic={handleSidebarNavigation}
           >
@@ -224,35 +224,35 @@ function App() {
                     <div 
                       key={topic.id}
                       onClick={() => navigateToTopic(viewState.module, topic)}
-                      className="group flex items-center justify-between p-6 rounded-2xl bg-white border border-[#003366]/15 hover:bg-[#F5F5DC] hover:border-[#003366] cursor-pointer transition-all duration-300 relative overflow-hidden"
+                      className="bg-hueso group flex items-center justify-between p-5 cursor-pointer transition-all duration-300 relative overflow-hidden rounded-xl border border-gray-300 shadow-sm hover:shadow-md active:scale-[0.99]"
                     >
                       {isCompleted && (
-                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#228B22]"></div>
+                        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-green-500"></div>
                       )}
 
                       <div className="flex items-center gap-6">
-                        <div className={`w-12 h-12 flex items-center justify-center rounded-xl text-lg font-bold border ${
+                        <div className={`w-12 h-12 flex items-center justify-center rounded-full text-lg font-bold border-2 ${
                           isCompleted 
-                            ? 'bg-[#228B22]/10 border-[#228B22]/50 text-[#228B22]' 
-                            : 'bg-[#003366]/5 border-[#003366]/30 text-[#003366]'
+                            ? 'bg-green-500 border-green-600 text-white' 
+                            : 'bg-white border-principal text-principal'
                         }`}>
                           {isCompleted ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                           ) : (
                             topic.id
                           )}
                         </div>
                         <div>
-                          <h3 className="text-xl font-medium text-[#003366] group-hover:text-[#228B22] transition-colors">
+                          <h3 className="text-xl text-principal font-bold transition-colors">
                             {topic.title}
                           </h3>
-                          <p className="text-sm text-[#555555] mt-1">
+                          <p className={`text-xs font-bold uppercase tracking-widest ${isCompleted ? 'text-green-600' : 'text-gray-500'}`}>
                             {isCompleted ? 'Completado' : 'Por estudiar'}
                           </p>
                         </div>
                       </div>
-                      <div className="text-[#777777] group-hover:text-[#003366] transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                      <div className="text-principal opacity-40 group-hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                       </div>
                     </div>
                   );
@@ -262,10 +262,10 @@ function App() {
               <div className="flex justify-center pt-4">
                 <button
                   onClick={goBack}
-                  className="px-6 py-3 rounded-full border border-[#003366]/40 bg-white hover:bg-[#F5F5DC] text-[#003366] font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md"
+                  className="academic-button flex items-center gap-2"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                  Volver al inicio
+                  Volver al módulo
                 </button>
               </div>
             </div>
@@ -283,6 +283,7 @@ function App() {
             onBack={goBack}
             onNavigateToTopic={handleSidebarNavigation}
             currentTopicId={viewState.topic.id}
+            topicAuthor={viewState.topic.author}
           >
             <TopicViewer 
               topic={viewState.topic} 

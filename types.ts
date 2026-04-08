@@ -1,8 +1,8 @@
-import { Type } from "@google/genai";
 
 export interface Topic {
   id: string;
   title: string;
+  author?: string;
 }
 
 export interface Module {
@@ -11,10 +11,14 @@ export interface Module {
   topics: Topic[];
 }
 
+export type QuestionType = 'multiple-choice' | 'true-false';
+
 export interface QuizQuestion {
   question: string;
-  options: string[];
-  correctAnswerIndex: number;
+  type: QuestionType;
+  options?: string[]; // Opcional para true-false
+  correctAnswerIndex?: number; // Para multiple-choice
+  correctAnswer?: boolean; // Para true-false
 }
 
 export interface Flashcard {
@@ -41,6 +45,7 @@ export interface TopicContent {
   quiz: QuizQuestion[];
   flashcards: Flashcard[];
   infographicUrl: string;
+  author?: string;
 }
 
 export interface UserProgress {
