@@ -384,20 +384,20 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
   }
 
   const TabButton = ({ id, label, icon }: { id: TabType, label: string, icon: React.ReactNode }) => (
-    <div className="flex flex-col items-center gap-1.5 group mb-2 flex-shrink-0 animate-fade">
+    <div className="flex flex-col items-center gap-1 group mb-1 flex-shrink-0 animate-fade">
       <button
         onClick={() => setActiveTab(id)}
         title={label}
         className={`
-          w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-md active:scale-90
+          w-9 h-9 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-md active:scale-90
           ${activeTab === id 
             ? 'bg-principal text-white scale-110 shadow-lg ring-4 ring-principal/10' 
             : 'bg-white dark:bg-card-bg text-principal dark:text-principal/90 hover:bg-crema dark:hover:bg-gray-600 hover:scale-105 border border-principal/20 dark:border-gray-500'}
         `}
       >
-        {icon}
+        <span className="w-4 h-4 sm:w-5 sm:h-5">{icon}</span>
       </button>
-      <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-widest transition-colors duration-300 ${activeTab === id ? 'text-principal' : 'text-gray-400 dark:text-gray-500'}`}>
+      <span className={`text-[8px] sm:text-[9px] lg:text-[10px] font-black uppercase tracking-widest transition-colors duration-300 ${activeTab === id ? 'text-principal' : 'text-gray-400 dark:text-gray-500'}`}>
         {label}
       </span>
     </div>
@@ -422,7 +422,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
       </div>
 
       {/* Navigation Tabs - Circular Design */}
-      <div className="flex justify-start sm:justify-center items-start gap-4 sm:gap-8 pb-4 overflow-x-auto no-scrollbar py-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+      <div className="flex justify-start sm:justify-center items-start gap-3 sm:gap-6 lg:gap-8 pb-2 overflow-x-auto no-scrollbar py-2 -mx-3 px-3 sm:-mx-4 sm:px-4 lg:mx-0 lg:px-0">
         <TabButton 
           id="investigacion" 
           label="Estudio" 
@@ -473,7 +473,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
       </div>
 
       {/* Content Area - Bone Card Style */}
-      <div className="bg-crema dark:bg-card-bg border border-principal/20 dark:border-gray-600 rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-10 min-h-[400px] animate-fade relative overflow-hidden">
+      <div className="bg-crema dark:bg-card-bg border border-principal/20 dark:border-gray-600 rounded-2xl sm:rounded-3xl shadow-2xl p-3 sm:p-6 lg:p-10 min-h-[400px] animate-fade relative overflow-hidden">
         {activeTab === 'investigacion' && (
           <div className="space-y-12 animate-fade-in-up">
             {/* Header Section from Image */}
@@ -750,13 +750,13 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
         )}
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 pt-3 sm:pt-4">
         {/* Navegación entre temas */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={navigateToPreviousTopic}
             disabled={!onNavigateToTopic || module.topics.findIndex(t => t.id === topic.id) === 0}
-            className="px-4 py-2 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-800 hover:bg-[#F5F5DC] dark:hover:bg-gray-700 text-[#003366] dark:text-white font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-800 hover:bg-[#F5F5DC] dark:hover:bg-gray-700 text-[#003366] dark:text-white font-medium text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
             Tema anterior
@@ -765,17 +765,17 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
           <button
             onClick={navigateToNextTopic}
             disabled={!onNavigateToTopic || module.topics.findIndex(t => t.id === topic.id) === module.topics.length - 1}
-            className="px-4 py-2 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-800 hover:bg-[#F5F5DC] dark:hover:bg-gray-700 text-[#003366] dark:text-white font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-800 hover:bg-[#F5F5DC] dark:hover:bg-gray-700 text-[#003366] dark:text-white font-medium text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Tema siguiente
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            Tema siguiente
           </button>
         </div>
 
         {/* Botón volver al módulo */}
         <button
           onClick={onBackToModule}
-          className="px-6 py-3 rounded-full border border-[#003366]/40 bg-white dark:bg-gray-800 hover:bg-[#F5F5DC] dark:hover:bg-gray-700 text-[#003366] dark:text-white font-medium text-sm flex items-center gap-2 transition-all shadow-sm hover:shadow-md"
+          className="bg-white dark:bg-gray-800 border border-[#003366]/20 dark:border-gray-600 text-[#003366] dark:text-white font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-xl transition-all shadow-lg hover:shadow-xl hover:bg-[#F5F5DC] dark:hover:bg-gray-700 flex items-center gap-2 sm:gap-3 text-base sm:text-lg"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
           Volver al módulo

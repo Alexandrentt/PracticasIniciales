@@ -75,7 +75,7 @@ export const Layout: React.FC<LayoutProps> = ({
       </div>
 
       {/* Sidebar (Desktop) */}
-      <aside className={`fixed lg:sticky top-0 h-screen w-80 sm:w-72 bg-crema dark:bg-marino text-carbon dark:text-white shadow-xl z-40 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
+      <aside className={`fixed lg:sticky top-0 h-screen w-72 sm:w-80 bg-crema dark:bg-marino text-carbon dark:text-white shadow-xl z-40 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="p-6 h-full flex flex-col">
           <div className="mb-8 flex items-center justify-between gap-3">
              <div className="flex items-center gap-3">
@@ -171,7 +171,7 @@ export const Layout: React.FC<LayoutProps> = ({
             ) : (
                <button 
                 onClick={onLoginClick}
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-widest transition-all w-full px-4 py-3 rounded-xl border border-white/20"
+                className="flex items-center gap-2 bg-principal hover:bg-principal/90 text-white text-xs font-bold uppercase tracking-widest transition-all w-full px-4 py-3 rounded-xl border border-principal/20 shadow-lg"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 0 1 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
                 Iniciar Sesión
@@ -184,18 +184,18 @@ export const Layout: React.FC<LayoutProps> = ({
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile Header */}
-        <header className="sticky top-0 z-30 bg-principal text-white lg:hidden px-4 h-16 flex items-center justify-between shadow-md">
+        <header className="sticky top-0 z-30 bg-principal text-white lg:hidden px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between shadow-md">
            <button 
              onClick={() => setSidebarOpen(true)} 
-             className="p-2 -ml-2 text-white hover:bg-white/10 rounded-full transition-all active:scale-90"
+             className="p-2 -ml-1 sm:-ml-2 text-white hover:bg-white/10 rounded-full transition-all active:scale-90"
              aria-label="Abrir menú"
            >
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
            </button>
-           <span className="font-bold text-lg truncate max-w-[70%]">
+           <span className="font-bold text-base sm:text-lg truncate max-w-[60%] sm:max-w-[70%]">
              {title || 'Prácticas Iniciales'}
            </span>
-           <div className="w-10"></div> {/* Spacer */}
+           <div className="w-8 sm:w-10"></div> {/* Spacer */}
         </header>
 
         {/* Overlay for mobile sidebar */}
@@ -206,7 +206,7 @@ export const Layout: React.FC<LayoutProps> = ({
           />
         )}
 
-        <main className="flex-1 p-3 sm:p-6 lg:p-10 max-w-6xl mx-auto w-full relative z-10">
+        <main className="flex-1 p-2 sm:p-4 lg:p-8 max-w-6xl mx-auto w-full relative z-10">
           {(showContentTitle && (title || subtitle)) && (
             <div className="mb-10 animate-fade">
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
