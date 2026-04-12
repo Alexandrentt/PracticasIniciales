@@ -219,7 +219,8 @@ En Guatemala, la gestión de proyectos está regulada por la **SEGEPLAN** a trav
       correctAnswerIndex: 0 
     }
   ],
-  infographicUrl: "/infografias/1.1.png"
+  infographicUrl: "/infografias/1.1.png",
+  videoUrl: "https://youtu.be/hMHda3u_hhE"
 };
 
 const content3_1: TopicContent = {
@@ -378,7 +379,8 @@ Los **líderes estratégicos** son responsables de asegurar que el proceso se ut
     }
   ],
   infographicUrl: "/infografias/3.1.png",
-  videoUrl: "/videos/3.1.mp4",
+  videoUrl: "https://youtu.be/ETHm0R3qPxA",
+  additionalVideos: ["https://youtu.be/ETHm0R3qPxA"],
   mindmapUrl: "/infografias/3.1-mindmap.svg"
 };
 
@@ -998,7 +1000,8 @@ question: "¿Por qué un ingeniero del sector privado debe conocer proyectos soc
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/1.2.png"
+  infographicUrl: "/infografias/1.2.png",
+  videoUrl: "https://youtu.be/uYUKUeUmRF0"
 };
 
 // Contenido para el tema 1.5 - Método y técnicas
@@ -1259,7 +1262,8 @@ question: "¿Qué es la holgura en una tarea?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/1.5.png"
+  infographicUrl: "/infografias/1.5.png",
+  videoUrl: "https://youtu.be/_iklDEMTs9o"
 };
 
 // Contenido para el tema 1.6 - Metodología de Proyectos Públicos y Privados
@@ -1514,7 +1518,8 @@ question: "¿Qué incluye la fase de preinversión?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/1.6.png"
+  infographicUrl: "/infografias/1.6.png",
+  videoUrl: "https://youtu.be/x4n_M7A9FPU"
 };
 
 // Contenido para el tema 2.1 - Tipos e instrumentos
@@ -2176,6 +2181,7 @@ question: "¿Cuál es el propósito principal de las normas de documentación?",
     }
   ],
   infographicUrl: "/infografias/3.3.png",
+  videoUrl: "https://youtu.be/ySusoVhA_GE",
   realWorldExample: `Pronto agregaremos un ejemplo práctico real para este tema.`,
   faqs: [
     { question: "¿Cuál es el punto central de este tema?", answer: "La comprensión de los fundamentos teóricos para aplicarlos en la resolución de problemas." }
@@ -2374,6 +2380,7 @@ question: "¿Qué evalúan las inspecciones de entidades financieras?",
     }
   ],
   infographicUrl: "/infografias/3.4.png",
+  videoUrl: "https://youtu.be/44wL7tRB5T4",
   realWorldExample: `Pronto agregaremos un ejemplo práctico real para este tema.`,
   faqs: [
     { question: "¿Cuál es el punto central de este tema?", answer: "La comprensión de los fundamentos teóricos para aplicarlos en la resolución de problemas." }
@@ -5222,7 +5229,8 @@ question: "¿Quién es el Project Manager?",
       correctAnswerIndex: 2 
     }
   ],
-  infographicUrl: "/infografias/1.4.png"
+  infographicUrl: "/infografias/1.4.png",
+  videoUrl: "https://youtu.be/xsAKkaEnOaE"
 };
 
 // Contenido para el tema 1.3 - Tipos de proyectos
@@ -5964,7 +5972,8 @@ question: "¿Cuándo se debe realizar el Estudio Legal?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/4.1.png"
+  infographicUrl: "/infografias/4.1.png",
+  videoUrl: "https://youtu.be/X71NPc3rr3w"
 };
 
 // Contenido para el tema 3.5 - Metodología para Implementación
@@ -6341,7 +6350,8 @@ question: "¿Por qué es importante la planificación detallada?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/3.5.png"
+  infographicUrl: "/infografias/3.5.png",
+  videoUrl: "https://youtu.be/vgUDfbTZi38"
 };
 
 // Contenido para el tema 5.3 - Ética y responsabilidad social
@@ -7925,8 +7935,7 @@ const getInfographicUrl = (topicId: string): string => {
 };
 
 // Placeholder content generator for other topics
-const generatePlaceholderContent = (topicId: string, title: string): TopicContent => ({
-  summary: `Este es el contenido de investigación para el tema "${title}" (${topicId}). \n\nAquí se detallará la teoría, normativas y procedimientos de ingeniería relacionados. Este contenido será reemplazado por la información curricular específica.`,
+const generatePlaceholderContent = (topicId: string, title: string): TopicContent => ({  summary: `Este es el contenido de investigación para el tema "${title}" (${topicId}). \n\nAquí se detallará la teoría, normativas y procedimientos de ingeniería relacionados. Este contenido será reemplazado por la información curricular específica.`,
   keyPoints: [
     "Punto clave 1 sobre ingeniería.",
     "Punto clave 2 sobre gestión.",

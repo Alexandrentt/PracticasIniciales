@@ -3,6 +3,7 @@ import { Topic, TopicContent, Module } from '../types';
 import { getTopicContent } from '../services/geminiService';
 import { Quiz } from './Quiz';
 import { Flashcards } from './Flashcards';
+import { YouTubePlayer } from './YouTubePlayer';
 
 interface TopicViewerProps {
   topic: Topic;
@@ -561,60 +562,52 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
           <div className="animate-fade-in-up space-y-8">
             <h3 className="text-3xl font-black text-principal heading-serif mb-8 flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-              Video Explicativo
+              Videos Explicativos
             </h3>
             
-            <div className="bg-white/70 dark:bg-card-bg border border-principal/15 dark:border-gray-500 rounded-2xl p-4 sm:p-6 shadow-xl relative group">
-              {content.videoUrl ? (
-                <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
-                  <video 
-                    src={content.videoUrl} 
-                    className="w-full h-full" 
-                    controls 
-                    preload="metadata"
-                  >
-                    Tu navegador no soporta el elemento de video.
-                  </video>
+            {/* Mostrar videos múltiples para tema 3.1 */}
+            {topic.id === '3.1' && content.additionalVideos ? (
+              <div className="space-y-6">
+                <div className="bg-white/70 dark:bg-card-bg border border-principal/15 dark:border-gray-500 rounded-2xl p-4 sm:p-6 shadow-xl relative group">
+                  <h4 className="text-xl font-bold text-principal mb-4 heading-serif">Video 3.1: Administración Estratégica por Casos</h4>
+                  <YouTubePlayer 
+                    videoId={content.videoUrl} 
+                    title="Video 3.1: Administración Estratégica por Casos"
+                  />
                 </div>
-              ) : (
-                <div className="aspect-video bg-principal/5 rounded-xl flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-principal/5 z-0" />
-                  <div className="relative z-10 text-center max-w-sm px-4">
-                    <div className="w-20 h-20 bg-principal text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform cursor-pointer">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="8 5 19 12 8 19 8 5"/></svg>
+                
+                <div className="bg-white/70 dark:bg-card-bg border border-principal/15 dark:border-gray-500 rounded-2xl p-4 sm:p-6 shadow-xl relative group">
+                  <h4 className="text-xl font-bold text-principal mb-4 heading-serif">Video 3.2: Metodología Ágil</h4>
+                  <YouTubePlayer 
+                    videoId={content.additionalVideos[0]} 
+                    title="Video 3.2: Metodología Ágil"
+                  />
+                </div>
+              </div>
+            ) : (
+              /* Video único para otros temas */
+              <div className="bg-white/70 dark:bg-card-bg border border-principal/15 dark:border-gray-500 rounded-2xl p-4 sm:p-6 shadow-xl relative group">
+                {content.videoUrl ? (
+                  <YouTubePlayer 
+                    videoId={content.videoUrl} 
+                    title={`Video del tema ${topic.id}`}
+                  />
+                ) : (
+                  <div className="aspect-video bg-principal/5 rounded-xl flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-principal/5 z-0" />
+                    <div className="relative z-10 text-center max-w-sm px-4">
+                      <div className="w-20 h-20 bg-principal text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="8 5 19 12 8 19 8 5"/></svg>
+                      </div>
+                      <h4 className="text-xl font-bold text-principal mb-2 heading-serif uppercase tracking-tight">Clase Magistral: Tema {topic.id}</h4>
+                      <p className="text-carbon/70 dark:text-gray-300 text-sm italic mb-6">Visualiza la explicación detallada del contenido para profundizar en los conceptos teóricos.</p>
                     </div>
-                    <h4 className="text-xl font-bold text-principal mb-2 heading-serif uppercase tracking-tight">Clase Magistral: Tema {topic.id}</h4>
-                    <p className="text-carbon/70 dark:text-gray-300 text-sm italic mb-6">Visualiza la explicación detallada del contenido para profundizar en los conceptos teóricos.</p>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            )}
 
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-principal/10 dark:border-gray-600 shadow-sm hover:shadow-md transition-shadow">
-                <h5 className="font-bold text-principal mb-2 heading-serif flex items-center gap-2">
-                  <div className="w-1.5 h-4 bg-principal/40 rounded-full" />
-                  Transcripción Académica
-                </h5>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">Documento completo con el guion técnico y explicativo del video en formato PDF.</p>
-                <button className="text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 rounded-full transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  Descargar PDF
-                </button>
-              </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-principal/10 dark:border-gray-600 shadow-sm hover:shadow-md transition-shadow">
-                <h5 className="font-bold text-principal mb-2 heading-serif flex items-center gap-2">
-                   <div className="w-1.5 h-4 bg-principal/40 rounded-full" />
-                   Material de Apoyo
-                </h5>
-                <p className="text-xs text-carbon/60 dark:text-gray-400 mb-4 leading-relaxed">Presentación formal utilizada durante la grabación para facilitar la toma de notas.</p>
-                <button className="text-white hover:text-white/80 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 px-3 py-1.5 bg-gray-800 dark:bg-gray-900 border border-gray-600 dark:border-gray-500 rounded-full transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                  Ver Diapositivas
-                </button>
-              </div>
-            </div>
-          </div>
+                      </div>
         )}
 
         {activeTab === 'infografia' && (
@@ -639,12 +632,15 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
                   href={content.infographicUrl} 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="flex items-center justify-center gap-3 text-principal border border-principal/30 px-8 py-3 rounded-full hover:bg-principal/5 transition-all text-sm font-bold uppercase tracking-widest"
+                  className="flex items-center justify-center gap-3 text-white dark:text-white border border-gray-600 dark:border-gray-500 px-8 py-3 rounded-full hover:bg-gray-700 dark:hover:bg-gray-600 transition-all text-sm font-bold uppercase tracking-widest"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   Descargar Infografía
                 </a>
-                <button className="flex items-center justify-center gap-3 text-white border border-gray-600 px-8 py-3 rounded-full hover:bg-gray-700 transition-all text-sm font-bold uppercase tracking-widest">
+                <button 
+                  onClick={() => window.open(content.infographicUrl, '_blank')}
+                  className="flex items-center justify-center gap-3 text-white dark:text-white border border-gray-600 dark:border-gray-500 px-8 py-3 rounded-full hover:bg-gray-700 dark:hover:bg-gray-600 transition-all text-sm font-bold uppercase tracking-widest"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                   Vista Pantalla Completa
                 </button>
