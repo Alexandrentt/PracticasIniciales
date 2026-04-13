@@ -292,7 +292,7 @@ export const Layout: React.FC<LayoutProps> = ({
                 <div className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10">
                   <h4 className="text-white font-black text-xs uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><circle cx="19" cy="11" r="2"/></svg>
-                    {topicAuthor ? 'Autor de Investigación' : 'Equipo de Investigación Académica'}
+                    {topicAuthor ? 'Autor de Investigación' : 'Proyect Managers'}
                   </h4>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-3">
                     {topicAuthor ? (
@@ -303,21 +303,9 @@ export const Layout: React.FC<LayoutProps> = ({
                       </div>
                     ) : (
                       [
-                        { name: "Ángel Saul Rios Guzmán", id: "202432128" },
-                        { name: "Aneth Alejandra Avila Morales", id: "202531107" },
-                        { name: "Antony Edilsar Gómez Sánchez", id: "202430069" },
-                        { name: "Carlos Guillermo Obregón Custodio", id: "202231034" },
-                        { name: "Cecilia Mariann Alejandra López Estacuy", id: "202530214" },
-                        { name: "Edgar Daniel Sierra Mantanico", id: "202330517" },
-                        { name: "Fernando Josué Mejía Tezó", id: "202330526" },
-                        { name: "Gonzalo Antonio Tamat Gramajo", id: "202430045" },
-                        { name: "Henry Estuardo Estrada Rojas", id: "202430144" },
-                        { name: "Horacio Caín Barrios Barrios", id: "202430626" },
-                        { name: "José Mario Roberto Rodríguez Figueroa", id: "202431192" },
-                        { name: "Mynor Estuardo Ruano García", id: "202330066" },
-                        { name: "Stivenn Raúl Fuentes Pérez", id: "202331882" },
-                        { name: "Willy Alexander López Gómez", id: "202330360" },
-                        { name: "Marbella Isabel Aguilar Tuc", id: "201830286" }
+                        { name: "Marbella Isabel Aguilar Tuc", id: "201830286" } ,
+                        { name: "Brandon Alexander Israel Pérez Gómez", id: "202431940" },
+
                       ].map((student, i) => (
                         <div key={i} className="flex justify-between items-center text-[10px] sm:text-[11px] border-b border-white/5 py-2 hover:bg-white/5 transition-colors px-2 rounded-lg group">
                           <span className="font-bold text-white/80 truncate mr-2 group-hover:text-white transition-colors">{student.name}</span>

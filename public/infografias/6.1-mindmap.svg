@@ -1,0 +1,113 @@
+<svg id="abp-mindmap" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="dropshadow" height="130%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="2" dy="2" result="offsetblur"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3"/>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="centralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <g class="mindmap-links">
+        <path class="mindmap-link" d="M300,300 L150,150" />
+        <path class="mindmap-link" d="M300,300 L450,150" />
+        <path class="mindmap-link" d="M300,300 L150,300" />
+        <path class="mindmap-link" d="M300,300 L450,300" />
+        <path class="mindmap-link" d="M300,300 L150,450" />
+        <path class="mindmap-link" d="M300,300 L450,450" />
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="75" y="100" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="150" y="125" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Fundamentos</text>
+        <text x="150" y="145" text-anchor="middle" fill="white" font-size="9">Constructivismo</text>
+        <text x="150" y="160" text-anchor="middle" fill="white" font-size="9">Aprendizaje Significativo</text>
+        <text x="150" y="175" text-anchor="middle" fill="white" font-size="9">Autonomía</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="375" y="100" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="450" y="125" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Actores</text>
+        <text x="450" y="145" text-anchor="middle" fill="white" font-size="9">Estudiante (Protagonista)</text>
+        <text x="450" y="160" text-anchor="middle" fill="white" font-size="9">Docente (Guía/Tutor)</text>
+        <text x="450" y="175" text-anchor="middle" fill="white" font-size="9">Colaboración activa</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="75" y="250" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="150" y="275" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Proceso</text>
+        <text x="150" y="295" text-anchor="middle" fill="white" font-size="9">Identificación del Problema</text>
+        <text x="150" y="310" text-anchor="middle" fill="white" font-size="9">Investigación/Planeación</text>
+        <text x="150" y="325" text-anchor="middle" fill="white" font-size="9">Desarrollo/Prototipado</text>
+        <text x="150" y="340" text-anchor="middle" fill="white" font-size="9">Presentación de Resultados</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="375" y="250" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="450" y="275" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Evaluación</text>
+        <text x="450" y="295" text-anchor="middle" fill="white" font-size="9">Rúbricas</text>
+        <text x="450" y="310" text-anchor="middle" fill="white" font-size="9">Autoevaluación</text>
+        <text x="450" y="325" text-anchor="middle" fill="white" font-size="9">Coevaluación</text>
+        <text x="450" y="340" text-anchor="middle" fill="white" font-size="9">Evaluación formativa</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="75" y="400" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="150" y="425" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Competencias</text>
+        <text x="150" y="445" text-anchor="middle" fill="white" font-size="9">Resolución de problemas</text>
+        <text x="150" y="460" text-anchor="middle" fill="white" font-size="9">Trabajo en equipo</text>
+        <text x="150" y="475" text-anchor="middle" fill="white" font-size="9">Pensamiento crítico</text>
+        <text x="150" y="490" text-anchor="middle" fill="white" font-size="9">Creatividad</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="375" y="400" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="450" y="425" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Resultados</text>
+        <text x="450" y="445" text-anchor="middle" fill="white" font-size="9">Proyectos concretos</text>
+        <text x="450" y="460" text-anchor="middle" fill="white" font-size="9">Aplicación práctica</text>
+        <text x="450" y="475" text-anchor="middle" fill="white" font-size="9">Impacto real</text>
+        <text x="450" y="490" text-anchor="middle" fill="white" font-size="9">Transferencia de conocimiento</text>
+    </g>
+    
+    <g class="mindmap-node">
+        <circle cx="300" cy="300" r="75" fill="url(#centralGradient)" />
+        <text x="300" y="290" text-anchor="middle" fill="white" font-size="15" font-weight="bold">APRENDIZAJE</text>
+        <text x="300" y="310" text-anchor="middle" fill="white" font-size="15" font-weight="bold">BASADO EN</text>
+        <text x="300" y="325" text-anchor="middle" fill="white" font-size="9">PROYECTOS (ABP)</text>
+    </g>
+
+    <style>
+        .mindmap-node {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .mindmap-node:hover {
+            transform: scale(1.08);
+            filter: brightness(1.2) url(#dropshadow);
+        }
+        .mindmap-link {
+            stroke: #6366f1;
+            stroke-width: 3;
+            fill: none;
+            opacity: 0.7;
+            stroke-linecap: round;
+        }
+        .dark .mindmap-link {
+            stroke: #93c5fd;
+            opacity: 0.8;
+        }
+    </style>
+</svg>

@@ -1,0 +1,96 @@
+<svg id="social-mindmap" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="dropshadow" height="130%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="2" dy="2" result="offsetblur"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3"/>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="centralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0891b2;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0e7490;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <g class="mindmap-links">
+        <path class="mindmap-link" d="M300,300 L150,150" />
+        <path class="mindmap-link" d="M300,300 L450,150" />
+        <path class="mindmap-link" d="M300,300 L150,300" />
+        <path class="mindmap-link" d="M300,300 L450,300" />
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="75" y="100" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="150" y="125" text-anchor="middle" fill="white" font-size="11" font-weight="bold">DIAGNÓSTICO</text>
+        <text x="150" y="145" text-anchor="middle" fill="white" font-size="9">Árbol de Problemas</text>
+        <text x="150" y="160" text-anchor="middle" fill="white" font-size="9">Matriz de Motricidad</text>
+        <text x="150" y="175" text-anchor="middle" fill="white" font-size="9">Análisis FODA</text>
+        <text x="150" y="190" text-anchor="middle" fill="white" font-size="9">Identificación de actores</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="375" y="100" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="450" y="125" text-anchor="middle" fill="white" font-size="11" font-weight="bold">MÉTRICAS</text>
+        <text x="450" y="145" text-anchor="middle" fill="white" font-size="9">Población Objetivo</text>
+        <text x="450" y="160" text-anchor="middle" fill="white" font-size="9">Línea de Base</text>
+        <text x="450" y="175" text-anchor="middle" fill="white" font-size="9">Indicadores Sociales</text>
+        <text x="450" y="190" text-anchor="middle" fill="white" font-size="9">Encuestas y entrevistas</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="75" y="250" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="150" y="275" text-anchor="middle" fill="white" font-size="11" font-weight="bold">EVALUACIÓN</text>
+        <text x="150" y="290" text-anchor="middle" fill="white" font-size="11" font-weight="bold">(EIS)</text>
+        <text x="150" y="310" text-anchor="middle" fill="white" font-size="9">Impactos Humanos</text>
+        <text x="150" y="325" text-anchor="middle" fill="white" font-size="9">Bienestar Intangible</text>
+        <text x="150" y="340" text-anchor="middle" fill="white" font-size="9">Calidad de vida</text>
+    </g>
+
+    <g class="mindmap-node" filter="url(#dropshadow)">
+        <rect x="375" y="250" width="150" height="100" rx="12" ry="12" fill="url(#nodeGradient)" />
+        <text x="450" y="275" text-anchor="middle" fill="white" font-size="11" font-weight="bold">LEGITIMIDAD</text>
+        <text x="450" y="295" text-anchor="middle" fill="white" font-size="9">Participación Pública</text>
+        <text x="450" y="310" text-anchor="middle" fill="white" font-size="9">Licencia Social</text>
+        <text x="450" y="325" text-anchor="middle" fill="white" font-size="9">Consentimiento Comunitario</text>
+        <text x="450" y="340" text-anchor="middle" fill="white" font-size="9">Sostenibilidad Social</text>
+    </g>
+    
+    <g class="mindmap-node">
+        <circle cx="300" cy="300" r="75" fill="url(#centralGradient)" />
+        <text x="300" y="285" text-anchor="middle" fill="white" font-size="14" font-weight="bold">ESTUDIO</text>
+        <text x="300" y="300" text-anchor="middle" fill="white" font-size="14" font-weight="bold">SOCIAL</text>
+        <text x="300" y="315" text-anchor="middle" fill="white" font-size="14" font-weight="bold">DE</text>
+        <text x="300" y="330" text-anchor="middle" fill="white" font-size="14" font-weight="bold">PROYECTOS</text>
+    </g>
+
+    <style>
+        .mindmap-node {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .mindmap-node:hover {
+            transform: scale(1.08);
+            filter: brightness(1.2) url(#dropshadow);
+        }
+        .mindmap-link {
+            stroke: #6366f1;
+            stroke-width: 3;
+            fill: none;
+            opacity: 0.7;
+            stroke-linecap: round;
+        }
+        .dark .mindmap-link {
+            stroke: #93c5fd;
+            opacity: 0.8;
+        }
+    </style>
+</svg>

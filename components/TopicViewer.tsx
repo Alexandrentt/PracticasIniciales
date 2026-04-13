@@ -135,6 +135,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
         /Carlos Guillermo Obregón Custodio/i,
         /Cecilia Mariann Alejandra López Estacuy/i,
         /Edgar Daniel Sierra Mantanico/i,
+        
         /Fernando Josué Mejía Tezó/i,
         /Gonzalo Antonio Tamat Gramajo/i,
         /Henry Estuardo Estrada Rojas/i,

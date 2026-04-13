@@ -62,9 +62,9 @@ export const COURSE_MODULES: Module[] = [
     id: 6,
     title: "Estrategias de Implementación",
     topics: [
-      { id: "6.1", title: "Corporativa", author: "202330517 Edgar Daniel Sierra Mantanico" },
-      { id: "6.2", title: "Competitiva", author: "202330517 Edgar Daniel Sierra Mantanico" },
-      { id: "6.3", title: "Comparativa", author: "202330517 Edgar Daniel Sierra Mantanico" },
+      { id: "6.1", title: "Corporativa", author: "202430886 Fernando Rogelio Gonón González" },
+      { id: "6.2", title: "Competitiva", author: "202430886 Fernando Rogelio Gonón González" },
+      { id: "6.3", title: "Comparativa", author: "202430886 Fernando Rogelio Gonón González" },
     ],
   },
   {
@@ -3966,6 +3966,7 @@ const content6_1: TopicContent = {
 
 ## Realizado por
 
+**Fernando Rogelio Gonón González**  
 **202330517 Edgar Daniel Sierra Mantanico**  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
@@ -4039,30 +4040,7 @@ Objetivo: Desarrollar un prototipo de software (o sistema embebido) que gestione
 9. ¿Qué peso debe tener el producto final frente al proceso de investigación en la calificación?
 10. ¿Cómo ayuda el ABP a que el estudiante sea más autodidacta?
 
----
 
-## Mapa Mental (Estructura Sugerida)**
-
-### Nodo Central: Aprendizaje Basado en Proyectos (ABP)
-
-#### Rama 1: Fundamentos
-- Constructivismo
-- Aprendizaje Significativo
-- Autonomía
-
-#### Rama 2: Actores
-- Estudiante (Protagonista)
-- Docente (Guía/Tutor)
-
-#### Rama 3: Proceso
-- Identificación del Problema
-- Investigación/Planeación
-- Desarrollo/Prototipado
-- Presentación de Resultados
-
-#### Rama 4: Evaluación**
-- Rúbricas
-- Autoevaluación
 - Coevaluación`,
   keyPoints: [
     "El ABP sitúa al estudiante en el centro del proceso de aprendizaje",
@@ -4280,7 +4258,8 @@ question: "¿Qué es fundamental en la evaluación ABP?",
     }
   ],
   infographicUrl: "/infografias/6.1.png",
-  videoUrl: "https://youtu.be/tvB3KYcJV3c"
+  videoUrl: "https://youtu.be/tvB3KYcJV3c",
+  mindmapUrl: "/infografias/6.1-mindmap.svg"
 };
 
 // Contenido para el tema 6.2 - Estrategia Competitiva
@@ -4291,6 +4270,7 @@ const content6_2: TopicContent = {
 
 ## Realizado por
 
+**Fernando Rogelio Gonón González**  
 **202330517 Edgar Daniel Sierra Mantanico**  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
@@ -4597,7 +4577,9 @@ const content6_3: TopicContent = {
 
 ---
 
-## Realizado por 202330517 Edgar Daniel Sierra Mantanico  
+## Realizado por
+
+**Fernando Rogelio Gonón González**  
 **Centro Universitario de Occidente (CUNOC)**  
 **Universidad de San Carlos de Guatemala (USAC)**
 
@@ -4672,27 +4654,7 @@ La irrupción del software libre y las herramientas gratuitas de gestión y dise
 10. ¿De qué manera la planificación de las "adquisiciones y contratos" difiere conceptualmente de los demás procesos de gestión del PMI?
 
 ---
-
-##  **Mapa Mental (Estructura Textual)**
-
-###  **Centro:** Estudios Comparativos en Proyectos
-
-#### ️ **Rama 1: Materiales y Estructuras (Ingeniería)**
-- **Edificaciones Comerciales:** Acero Estructural vs. Concreto Armado
-- **Estabilidad de Taludes:** Hormigón Armado vs. Suelos con Geosintéticos (Mayor economía y rapidez)
-
-####  **Rama 2: Metodologías de Gestión**
-- **Tradicionales (Predictivas):** PMBOK, PMI, Enfoque en control estricto de Alcance, Tiempo y Costo
-- **Ágiles (Adaptativas):** Scrum, Kanban, Enfoque en flexibilidad y entregas tempranas
-- **Aplicación Sectorial:** Diferencias en adopción entre Sector Público vs. Sector Privado
-
-#### ‍ **Rama 3: Dirección y Liderazgo**
-- **Con Project Manager:** Mayor centralización, mejor comunicación, control de riesgos
-- **Sin Project Manager:** Riesgo de dispersión y retrasos
-
-####  **Rama 4: Herramientas Tecnológicas**
-- **Gestión:** Software gratuito vs. de pago (Criterios: usabilidad, funciones)
-- **Diseño/Ingeniería:** CAD tradicional (AutoCAD) vs. Software libre e iniciativas relacionales`,
+`,
   keyPoints: [
     "Los estudios comparativos son herramientas indispensables para evaluar alternativas técnicas, económicas y metodológicas",
     "La dimensión económica analiza presupuestos y cronogramas usando métodos PERT y CPM",
@@ -4925,7 +4887,8 @@ question: "¿Qué es CPM?",
     }
   ],
   infographicUrl: "/infografias/6.3.png",
-  videoUrl: "https://youtu.be/JkYV2CbFrlA"
+  videoUrl: "https://youtu.be/JkYV2CbFrlA",
+  mindmapUrl: "/infografias/6.3-mindmap.svg"
 };
 
 // Contenido para el tema 1.4 - Etapas y ciclos
@@ -5239,7 +5202,8 @@ question: "¿Quién es el Project Manager?",
     }
   ],
   infographicUrl: "/infografias/1.4.png",
-  videoUrl: "https://youtu.be/xsAKkaEnOaE"
+  videoUrl: "https://youtu.be/xsAKkaEnOaE",
+  mindmapUrl: "/infografias/1.4-mindmap.svg"
 };
 
 // Contenido para el tema 1.3 - Tipos de proyectos
@@ -5300,29 +5264,6 @@ Monitoreo de **KPIs** y ajustes de calidad. Detección temprana de desviaciones.
 
 #### Cierre
 Entrega final, documentación y lecciones aprendidas. Formalización de la conclusión.
-
----
-
-## Mapa Mental de Planificación
-
-### PLANIFICACIÓN ESTRATÉGICA
-- **Objetivos a largo plazo**
-- **Visión del proyecto**
-- **Nivel organizacional**
-
-### PLANIFICACIÓN TÁCTICA
-- **Planes específicos**
-- **Por departamentos**
-- **Acciones concretas**
-
-### PLANIFICACIÓN OPERATIVA
-- **Calendarios detallados**
-- **Asignación diaria**
-- **Recursos inmediatos**
-
-### CICLO DE VIDA
-- **Inicio** → **Planificación** → **Ejecución** → **Control** → **Cierre**
-
 ---
 
 ## Conceptos Clave
@@ -6754,26 +6695,6 @@ La participación ciudadana legítima el proyecto. El diálogo de buena fe facil
 
 ---
 
-## Mapa Mental del Estudio Social
-
-### ESTUDIO SOCIAL
-#### DIAGNÓSTICO
-- Árbol de Problemas
-- Matriz de Motricidad
-
-#### MÉTRICAS
-- Población Objetivo
-- Línea de Base
-
-#### EVALUACIÓN (EIS)
-- Impactos Humanos
-- Bienestar Intangible
-
-#### LEGITIMIDAD
-- Participación Pública
-- Licencia Social
-
----
 
 ## Conceptos Clave
 
@@ -7101,7 +7022,8 @@ question: "¿Por qué es importante el estudio social?",
     }
   ],
   infographicUrl: "/infografias/4.6.png",
-  videoUrl: "https://youtu.be/CfbWB-jWSMY"
+  videoUrl: "https://youtu.be/CfbWB-jWSMY",
+  mindmapUrl: "/infografias/4.6-mindmap.svg"
 };
 
 // Contenido para el tema 4.7 - Estudio administrativo
@@ -7185,30 +7107,6 @@ Aspiración futura y estado deseado a largo plazo.
 
 #### Objetivos estratégicos:**
 Metas que guían la organización hacia su visión.
-
----
-
-## Mapa Mental del Estudio Administrativo
-
-### ESTUDIO ADMINISTRATIVO
-#### ETAPAS
-- Ejecución (Construcción)
-- Operación (Producción)
-
-#### ESTRUCTURAS
-- Funcional
-- Plana / Horizontal
-- Matricial
-
-#### RECURSOS
-- Humanos (Perfiles)
-- Materiales / Tech
-- Financieros
-
-#### NORMATIVA
-- MOF
-- Manual de Procedimientos
-- Salud y Seguridad
 
 ---
 
@@ -7550,7 +7448,8 @@ question: "¿Qué es la viabilidad administrativa?",
     }
   ],
   infographicUrl: "/infografias/4.7.png",
-  videoUrl: "https://youtu.be/vqR-aE-dHSU"
+  videoUrl: "https://youtu.be/vqR-aE-dHSU",
+  mindmapUrl: "/infografias/4.7-mindmap.svg"
 };
 
 // Contenido para el tema 5.2 - Bases de cotización
