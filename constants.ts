@@ -502,7 +502,8 @@ Finalmente, las instituciones públicas fungen como espacios clave para la **for
       correctAnswerIndex: 1
     }
   ],
-  infographicUrl: "/infografias/7.1.png"
+  infographicUrl: "/infografias/7.1.png",
+  videoUrl: "https://youtu.be/sgIwU8YRnr8"
 };
 
 // Contenido para el tema 5.1 - Términos de referencia
@@ -769,7 +770,8 @@ question: "¿Qué beneficio adicional proporcionan los TdR bien elaborados?",
       ], 
     }
   ],
-  infographicUrl: "/infografias/5.1.png"
+  infographicUrl: "/infografias/5.1.png",
+  videoUrl: "https://youtu.be/3mFM5b8OxzU"
 };
 
 // Contenido para el tema 1.2 - Importancia de las Prácticas Iniciales
@@ -1776,7 +1778,8 @@ question: "¿Cuál es el objetivo principal del diagnóstico?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/2.1.png"
+  infographicUrl: "/infografias/2.1.png",
+  videoUrl: "https://youtu.be/A6YHhbFZnLA"
 };
 
 // Contenido para el tema 2.2 - Niveles (Micro y Macrodiagnósticos)
@@ -1991,7 +1994,8 @@ question: "¿Cuál es el objetivo principal del diagnóstico en ingeniería?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/2.2.png"
+  infographicUrl: "/infografias/2.2.png",
+  videoUrl: "https://youtu.be/lXIDz1nwoio"
 };
 
 // Contenido para el tema 3.3 - Técnicas de documentación
@@ -3294,7 +3298,8 @@ question: "¿Qué es necesario para construir el Flujo de Caja?",
       correctAnswerIndex: 0 
     }
   ],
-  infographicUrl: "/infografias/4.4.png"
+  infographicUrl: "/infografias/4.4.png",
+  videoUrl: "https://youtu.be/AF3UIVxz4bs"
 };
 
 // Contenido para el tema 4.5 - Estudio financiero
@@ -3949,7 +3954,8 @@ question: "¿Cuál es el propósito principal del estudio técnico?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/4.8.png"
+  infographicUrl: "/infografias/4.8.png",
+  videoUrl: "https://youtu.be/pfdx821P9V8"
 };
 
 // Contenido para el tema 6.1 - Estrategia Corporativa
@@ -4273,7 +4279,8 @@ question: "¿Qué es fundamental en la evaluación ABP?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/6.1.png"
+  infographicUrl: "/infografias/6.1.png",
+  videoUrl: "https://youtu.be/tvB3KYcJV3c"
 };
 
 // Contenido para el tema 6.2 - Estrategia Competitiva
@@ -4580,7 +4587,8 @@ question: "¿Qué determina el estándar de vida según Krugman?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/6.2.png"
+  infographicUrl: "/infografias/6.2.png",
+  videoUrl: "https://youtu.be/cMXBI8_jhwA"
 };
 
 // Contenido para el tema 6.3 - Estrategia Comparativa
@@ -4916,7 +4924,8 @@ question: "¿Qué es CPM?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/6.3.png"
+  infographicUrl: "/infografias/6.3.png",
+  videoUrl: "https://youtu.be/JkYV2CbFrlA"
 };
 
 // Contenido para el tema 1.4 - Etapas y ciclos
@@ -7091,7 +7100,8 @@ question: "¿Por qué es importante el estudio social?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/4.6.png"
+  infographicUrl: "/infografias/4.6.png",
+  videoUrl: "https://youtu.be/CfbWB-jWSMY"
 };
 
 // Contenido para el tema 4.7 - Estudio administrativo
@@ -7539,7 +7549,8 @@ question: "¿Qué es la viabilidad administrativa?",
       correctAnswerIndex: 0 
     }
   ],
-  infographicUrl: "/infografias/4.7.png"
+  infographicUrl: "/infografias/4.7.png",
+  videoUrl: "https://youtu.be/vqR-aE-dHSU"
 };
 
 // Contenido para el tema 5.2 - Bases de cotización
@@ -7790,7 +7801,8 @@ question: "¿Qué prevalece en caso de disputa entre pliego y contrato?",
       correctAnswerIndex: 1 
     }
   ],
-  infographicUrl: "/infografias/5.2.png"
+  infographicUrl: "/infografias/5.2.png",
+  videoUrl: "https://youtu.be/d1wHprKCY9Q"
 };
 
 // Content for 7.2 "Privadas"
