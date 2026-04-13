@@ -423,7 +423,7 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
       </div>
 
       {/* Navigation Tabs - Circular Design */}
-      <div className="flex justify-start sm:justify-center items-start gap-3 sm:gap-6 lg:gap-8 pb-2 overflow-x-auto no-scrollbar py-2 -mx-3 px-3 sm:-mx-4 sm:px-4 lg:mx-0 lg:px-0">
+      <div className="flex justify-start sm:justify-center items-start gap-3 sm:gap-6 lg:gap-8 pb-2 overflow-x-auto no-scrollbar py-2 px-3 sm:px-4 lg:px-0">
         <TabButton 
           id="investigacion" 
           label="Estudio" 
@@ -787,3 +787,34 @@ export const TopicViewer: React.FC<TopicViewerProps> = ({ topic, module, onFinis
     </div>
   );
 };
+
+const styles = `
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade {
+    animation: fade 0.5s ease-out;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Asegurar que el scroll funcione bien en móviles */
+  .overflow-x-auto {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Espaciado adicional para las últimas pestañas */
+  .overflow-x-auto > :last-child {
+    margin-right: 1rem;
+  }
+`;
