@@ -89,7 +89,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-white border border-academic-primary/20 rounded-xl px-4 py-3 academic-body placeholder-academic-body focus:outline-none focus:ring-2 focus:ring-academic-primary/40 focus:border-academic-primary transition-all"
-              placeholder="estudiante@ingenieria.usac.edu.gt"
+              placeholder="carnetEstudiante@cunoc.edu.gt"
             />
           </div>
           <div>
